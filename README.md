@@ -7,10 +7,10 @@ Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 
 - Study type: **Clinical Application**
 - Tags: **OHDSI, Study-a-thon, COVID-19**
 - Study lead: **Talita Duarte-Salles, Kristin Kostka, Albert Prats-Uribe**
-- Study lead forums tag: **[[tduarte]](https://forums.ohdsi.org/u/tduarte)**, **[[krfeeney]](https://forums.ohdsi.org/u/krfeeney)**, **[[Albert_Prats]](https://forums.ohdsi.org/u/Albert_Prats)**
+- Study lead forums tag: **[tduarte](https://forums.ohdsi.org/u/tduarte)**, **[krfeeney](https://forums.ohdsi.org/u/krfeeney)**, **[Albert_Prats](https://forums.ohdsi.org/u/Albert_Prats)**
 - Study start date: **April 21, 2020**
 - Study end date: **Mid-June 2020**
-- Protocol: **-**
+- Protocol: **[Word Doc](https://github.com/ohdsi-studies/Covid19Characterization/blob/master/documents/Protocol_COVID-19%20Characterisation_V3.docx)**
 - Publications: **-**
 - Results explorer: **-**
 
