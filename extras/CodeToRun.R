@@ -65,7 +65,7 @@ Sys.setenv("R_REMOTES_NO_ERRORS_FROM_WARNINGS" = TRUE)
 # *******************************************************
 # SECTION 2: Running the package -------------------------------------------------------------------------------
 # *******************************************************
-library(Covid19Characterization)
+library(Covid19CharacterizationCharybdis)
 
 # Optional: specify where the temporary files (used by the ff package) will be created:
 fftempdir <- if (Sys.getenv("FFTEMP_DIR") == "") "~/fftemp" else Sys.getenv("FFTEMP_DIR")
