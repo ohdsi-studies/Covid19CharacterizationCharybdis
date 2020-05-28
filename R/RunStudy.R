@@ -283,9 +283,9 @@ runStudy <- function(connectionDetails = NULL,
         writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = covariates$covariateId)
         data <- formatCovariateValues(data, counts, minCellCount)
         writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = subset$cohortId)
-        recordTasksDone(cohortId = subset$cohortId,
+        recordTasksDone(cohortId = subset$cohortId[j],
                         task = task,
-                        checksum = subset$checksum,
+                        checksum = subset$checksum[j],
                         recordKeepingFile = recordKeepingFile,
                         incremental = incremental)
       }
