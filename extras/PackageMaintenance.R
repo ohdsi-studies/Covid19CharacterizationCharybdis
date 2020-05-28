@@ -54,11 +54,13 @@ insertCohortDefinitionSetInPackage <- function(fileName = "inst/settings/Cohorts
     stop("When generating R code, the input CSV file must be in the inst folder.")
   
   cohortsToCreate <- readr::read_csv(fileName, col_types = readr::cols())
+  cohortsToCreate <- cohortsToCreate[cohortsToCreate$atlasId > 0, ]
   
   # Inserting cohort JSON and SQL
   for (i in 1:nrow(cohortsToCreate)) {
     writeLines(paste("Inserting cohort:", cohortsToCreate$name[i]))
     insertCohortDefinitionInPackage(cohortId = cohortsToCreate$atlasId[i],
+                                    localCohortId = cohortsToCreate$cohortId[i],
                                     name = cohortsToCreate$name[i],
                                     baseUrl = baseUrl,
                                     jsonFolder = jsonFolder,
@@ -107,6 +109,7 @@ insertCohortDefinitionSetInPackage <- function(fileName = "inst/settings/Cohorts
 }
 
 insertCohortDefinitionInPackage <- function(cohortId,
+                                            localCohortId,
                                             name = NULL,
                                             jsonFolder = "inst/cohorts",
                                             sqlFolder = "inst/sql/sql_server",
@@ -125,7 +128,7 @@ insertCohortDefinitionInPackage <- function(cohortId,
   if (!file.exists(jsonFolder)) {
     dir.create(jsonFolder, recursive = TRUE)
   }
-  jsonFileName <- file.path(jsonFolder, paste(cohortId, "json", sep = "."))
+  jsonFileName <- file.path(jsonFolder, paste(localCohortId, "json", sep = "."))
   jsonlite::write_json(object$expression, jsonFileName, pretty = TRUE)
   writeLines(paste("- Created JSON file:", jsonFileName))
   
@@ -136,7 +139,7 @@ insertCohortDefinitionInPackage <- function(cohortId,
   if (!file.exists(sqlFolder)) {
     dir.create(sqlFolder, recursive = TRUE)
   }
-  sqlFileName <- file.path(sqlFolder, paste(cohortId, "sql", sep = "."))
+  sqlFileName <- file.path(sqlFolder, paste(localCohortId, "sql", sep = "."))
   SqlRender::writeSql(sql = sql, targetFile = sqlFileName)
   writeLines(paste("- Created SQL file:", sqlFileName))
 }
@@ -144,9 +147,9 @@ insertCohortDefinitionInPackage <- function(cohortId,
 cohortGroups <- read.csv("inst/settings/CohortGroups.csv")
 for (i in 1:nrow(cohortGroups)) {
   ParallelLogger::logInfo("* Importing cohorts in group: ", cohortGroups$cohortGroup[i], " *")
-  ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = file.path("inst/", cohortGroups$fileName[i]),
+  insertCohortDefinitionSetInPackage(fileName = file.path("inst/", cohortGroups$fileName[i]),
                                                    baseUrl = Sys.getenv("baseUrl"),
-                                                   insertTableSql = TRUE,
+                                                   insertTableSql = FALSE,
                                                    insertCohortCreationR = FALSE,
                                                    generateStats = FALSE,
                                                    packageName = "Covid19CharacterizationCharybdis")

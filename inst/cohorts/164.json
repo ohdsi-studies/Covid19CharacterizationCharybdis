@@ -1,0 +1,22 @@
+{
+  "cdmVersionRange": [">=5.0.0"],
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {
+        "Death": [false]
+      }
+    ],
+    "ObservationWindow": [0, 0],
+    "PrimaryCriteriaLimit": ["First"]
+  },
+  "ConceptSets": [],
+  "QualifiedLimit": ["First"],
+  "ExpressionLimit": ["First"],
+  "InclusionRules": [],
+  "CensoringCriteria": [],
+  "CollapseSettings": {
+    "CollapseType": ["ERA"],
+    "EraPad": [0]
+  },
+  "CensorWindow": {}
+}
