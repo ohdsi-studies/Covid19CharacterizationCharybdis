@@ -3,14 +3,14 @@ targetId,strataId,cohortId,cohortType,name
 140,1,140000011,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Full 30-day follow up
 129,1,129000011,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Full 30-day follow up
 114,1,114000011,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Full 30-day follow up
-116,1,116000011,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Full 30-day follow up
+116,1,116000011,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Full 30-day follow up
 132,1,132000011,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Full 30-day follow up
 135,1,135000011,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Full 30-day follow up
 130,1,130000011,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Full 30-day follow up
 138,1,138000011,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Full 30-day follow up
-137,1,137000011,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Full 30-day follow up
+137,1,137000011,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Full 30-day follow up
 126,1,126000011,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Full 30-day follow up
-115,1,115000011,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Full 30-day follow up
+115,1,115000011,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Full 30-day follow up
 111,1,111000011,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Full 30-day follow up
 139,1,139000011,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Full 30-day follow up
 141,1,141000011,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Full 30-day follow up
@@ -18,15 +18,15 @@ targetId,strataId,cohortId,cohortType,name
 112,1,112000011,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Full 30-day follow up
 127,1,127000011,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Full 30-day follow up
 128,1,128000011,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Full 30-day follow up
-136,1,136000011,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Full 30-day follow up
+136,1,136000011,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Full 30-day follow up
 133,1,133000011,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Full 30-day follow up
 134,1,134000011,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Full 30-day follow up
-136,2,136000021,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Female
+136,2,136000021,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Female
 130,2,130000021,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Female
 114,2,114000021,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Sex = Female
 128,2,128000021,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Sex = Female
 138,2,138000021,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Female
-137,2,137000021,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Sex = Female
+137,2,137000021,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Sex = Female
 111,2,111000021,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Sex = Female
 127,2,127000021,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Sex = Female
 126,2,126000021,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Sex = Female
@@ -38,13 +38,13 @@ targetId,strataId,cohortId,cohortType,name
 132,2,132000021,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Female
 113,2,113000021,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Sex = Female
 131,2,131000021,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Sex = Female
-116,2,116000021,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Sex = Female
-115,2,115000021,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Sex = Female
+116,2,116000021,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Sex = Female
+115,2,115000021,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Sex = Female
 141,2,141000021,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Sex = Female
 112,2,112000021,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Sex = Female
 134,2,134000021,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Female
 131,3,131000031,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age >= 18
-116,3,116000031,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Age >= 18
+116,3,116000031,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Age >= 18
 133,3,133000031,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Age >= 18
 113,3,113000031,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age >= 18
 140,3,140000031,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 18
@@ -52,14 +52,14 @@ targetId,strataId,cohortId,cohortType,name
 111,3,111000031,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age >= 18
 134,3,134000031,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 18
 126,3,126000031,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Age >= 18
-115,3,115000031,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Age >= 18
+115,3,115000031,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Age >= 18
 135,3,135000031,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age >= 18
 141,3,141000031,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Age >= 18
-136,3,136000031,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 18
+136,3,136000031,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 18
 129,3,129000031,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Age >= 18
 114,3,114000031,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Age >= 18
 127,3,127000031,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Age >= 18
-137,3,137000031,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age >= 18
+137,3,137000031,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Age >= 18
 132,3,132000031,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 18
 130,3,130000031,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 18
 112,3,112000031,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Age >= 18
@@ -71,25 +71,25 @@ targetId,strataId,cohortId,cohortType,name
 138,4,138000041,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 65
 141,4,141000041,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Age >= 65
 113,4,113000041,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age >= 65
-116,4,116000041,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Age >= 65
+116,4,116000041,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Age >= 65
 139,4,139000041,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Age >= 65
 112,4,112000041,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Age >= 65
-136,4,136000041,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 65
+136,4,136000041,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 65
 128,4,128000041,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Age >= 65
 126,4,126000041,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Age >= 65
 135,4,135000041,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age >= 65
-115,4,115000041,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Age >= 65
+115,4,115000041,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Age >= 65
 134,4,134000041,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 65
 114,4,114000041,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Age >= 65
 127,4,127000041,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Age >= 65
 129,4,129000041,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Age >= 65
-137,4,137000041,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age >= 65
+137,4,137000041,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Age >= 65
 140,4,140000041,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 65
 111,4,111000041,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age >= 65
 131,4,131000041,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age >= 65
 138,100,138001001,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
 128,100,128001001,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
-136,100,136001001,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
+136,100,136001001,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
 127,100,127001001,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent Type 2 Diabetes Mellitus
 112,100,112001001,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Type 2 Diabetes Mellitus
 129,100,129001001,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent Type 2 Diabetes Mellitus
@@ -99,22 +99,22 @@ targetId,strataId,cohortId,cohortType,name
 140,100,140001001,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
 141,100,141001001,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent Type 2 Diabetes Mellitus
 133,100,133001001,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent Type 2 Diabetes Mellitus
-115,100,115001001,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
+115,100,115001001,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
 111,100,111001001,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
 114,100,114001001,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Type 2 Diabetes Mellitus
 134,100,134001001,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
 139,100,139001001,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent Type 2 Diabetes Mellitus
 126,100,126001001,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
 113,100,113001001,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
-137,100,137001001,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Type 2 Diabetes Mellitus
-116,100,116001001,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent Type 2 Diabetes Mellitus
+137,100,137001001,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent Type 2 Diabetes Mellitus
+116,100,116001001,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent Type 2 Diabetes Mellitus
 135,100,135001001,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Type 2 Diabetes Mellitus
-116,101,116001011,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent hypertension
+116,101,116001011,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent hypertension
 141,101,141001011,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent hypertension
 133,101,133001011,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent hypertension
-115,101,115001011,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent hypertension
+115,101,115001011,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent hypertension
 129,101,129001011,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent hypertension
-136,101,136001011,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent hypertension
+136,101,136001011,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent hypertension
 132,101,132001011,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent hypertension
 138,101,138001011,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent hypertension
 140,101,140001011,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent hypertension
@@ -127,7 +127,7 @@ targetId,strataId,cohortId,cohortType,name
 139,101,139001011,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent hypertension
 134,101,134001011,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent hypertension
 126,101,126001011,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent hypertension
-137,101,137001011,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent hypertension
+137,101,137001011,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent hypertension
 113,101,113001011,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent hypertension
 130,101,130001011,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent hypertension
 135,101,135001011,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent hypertension
@@ -136,13 +136,13 @@ targetId,strataId,cohortId,cohortType,name
 141,102,141001021,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic kidney disease
 126,102,126001021,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent chronic kidney disease
 114,102,114001021,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent chronic kidney disease
-115,102,115001021,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent chronic kidney disease
-116,102,116001021,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent chronic kidney disease
-136,102,136001021,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent chronic kidney disease
+115,102,115001021,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent chronic kidney disease
+116,102,116001021,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent chronic kidney disease
+136,102,136001021,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent chronic kidney disease
 133,102,133001021,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic kidney disease
 138,102,138001021,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent chronic kidney disease
 130,102,130001021,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent chronic kidney disease
-137,102,137001021,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic kidney disease
+137,102,137001021,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic kidney disease
 112,102,112001021,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent chronic kidney disease
 131,102,131001021,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic kidney disease
 128,102,128001021,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent chronic kidney disease
@@ -160,19 +160,19 @@ targetId,strataId,cohortId,cohortType,name
 131,103,131001031,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent end stage renal disease
 113,103,113001031,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent end stage renal disease
 133,103,133001031,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent end stage renal disease
-115,103,115001031,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent end stage renal disease
+115,103,115001031,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent end stage renal disease
 129,103,129001031,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent end stage renal disease
 130,103,130001031,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent end stage renal disease
 112,103,112001031,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent end stage renal disease
 127,103,127001031,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent end stage renal disease
-137,103,137001031,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent end stage renal disease
+137,103,137001031,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent end stage renal disease
 139,103,139001031,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent end stage renal disease
 126,103,126001031,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent end stage renal disease
 111,103,111001031,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent end stage renal disease
 128,103,128001031,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent end stage renal disease
-116,103,116001031,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent end stage renal disease
+116,103,116001031,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent end stage renal disease
 134,103,134001031,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent end stage renal disease
-136,103,136001031,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent end stage renal disease
+136,103,136001031,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent end stage renal disease
 141,103,141001031,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent end stage renal disease
 114,103,114001031,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent end stage renal disease
 140,104,140001041,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent heart disease
@@ -188,15 +188,15 @@ targetId,strataId,cohortId,cohortType,name
 138,104,138001041,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent heart disease
 112,104,112001041,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent heart disease
 126,104,126001041,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent heart disease
-136,104,136001041,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent heart disease
-116,104,116001041,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent heart disease
+136,104,136001041,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent heart disease
+116,104,116001041,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent heart disease
 130,104,130001041,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent heart disease
 131,104,131001041,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent heart disease
 135,104,135001041,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent heart disease
 133,104,133001041,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent heart disease
 127,104,127001041,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent heart disease
-115,104,115001041,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent heart disease
-137,104,137001041,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent heart disease
+115,104,115001041,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent heart disease
+137,104,137001041,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent heart disease
 112,105,112001051,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 131,105,131001051,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 113,105,113001051,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
@@ -207,43 +207,43 @@ targetId,strataId,cohortId,cohortType,name
 132,105,132001051,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 128,105,128001051,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 135,105,135001051,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
-115,105,115001051,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
+115,105,115001051,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 138,105,138001051,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 140,105,140001051,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 111,105,111001051,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 139,105,139001051,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 133,105,133001051,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 141,105,141001051,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
-136,105,136001051,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
-137,105,137001051,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
+136,105,136001051,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
+137,105,137001051,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 134,105,134001051,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 130,105,130001051,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
-116,105,116001051,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
+116,105,116001051,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
 111,106,111001061,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 133,106,133001061,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent Human immunodeficiency virus infection
 114,106,114001061,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Human immunodeficiency virus infection
 139,106,139001061,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent Human immunodeficiency virus infection
 134,106,134001061,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 127,106,127001061,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent Human immunodeficiency virus infection
-137,106,137001061,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Human immunodeficiency virus infection
+137,106,137001061,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent Human immunodeficiency virus infection
 138,106,138001061,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 128,106,128001061,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 132,106,132001061,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 126,106,126001061,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
-115,106,115001061,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
+115,106,115001061,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 135,106,135001061,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Human immunodeficiency virus infection
-136,106,136001061,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
+136,106,136001061,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 141,106,141001061,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent Human immunodeficiency virus infection
 112,106,112001061,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Human immunodeficiency virus infection
 130,106,130001061,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 129,106,129001061,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent Human immunodeficiency virus infection
-116,106,116001061,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent Human immunodeficiency virus infection
+116,106,116001061,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent Human immunodeficiency virus infection
 140,106,140001061,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 113,106,113001061,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Human immunodeficiency virus infection
 131,106,131001061,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Human immunodeficiency virus infection
 111,107,111001071,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Hepatitis C
 134,107,134001071,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Hepatitis C
-115,107,115001071,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent Hepatitis C
+115,107,115001071,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent Hepatitis C
 130,107,130001071,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Hepatitis C
 129,107,129001071,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent Hepatitis C
 126,107,126001071,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent Hepatitis C
@@ -254,21 +254,21 @@ targetId,strataId,cohortId,cohortType,name
 135,107,135001071,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Hepatitis C
 133,107,133001071,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent Hepatitis C
 114,107,114001071,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Hepatitis C
-116,107,116001071,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent Hepatitis C
-137,107,137001071,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Hepatitis C
+116,107,116001071,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent Hepatitis C
+137,107,137001071,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent Hepatitis C
 131,107,131001071,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Hepatitis C
 113,107,113001071,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Hepatitis C
 139,107,139001071,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent Hepatitis C
 128,107,128001071,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent Hepatitis C
 138,107,138001071,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Hepatitis C
-136,107,136001071,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Hepatitis C
+136,107,136001071,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Hepatitis C
 112,107,112001071,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Hepatitis C
 135,108,135001081,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent obesity
 134,108,134001081,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent obesity
 126,108,126001081,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent obesity
 113,108,113001081,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent obesity
 140,108,140001081,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent obesity
-137,108,137001081,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent obesity
+137,108,137001081,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent obesity
 112,108,112001081,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent obesity
 139,108,139001081,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent obesity
 129,108,129001081,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent obesity
@@ -276,27 +276,27 @@ targetId,strataId,cohortId,cohortType,name
 131,108,131001081,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent obesity
 111,108,111001081,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent obesity
 114,108,114001081,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent obesity
-115,108,115001081,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent obesity
+115,108,115001081,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent obesity
 127,108,127001081,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent obesity
 128,108,128001081,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent obesity
 130,108,130001081,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent obesity
-136,108,136001081,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent obesity
-116,108,116001081,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent obesity
+136,108,136001081,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent obesity
+116,108,116001081,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent obesity
 138,108,138001081,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent obesity
 133,108,133001081,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent obesity
 141,108,141001081,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent obesity
 130,109,130001091,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Dementia
 126,109,126001091,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent Dementia
 134,109,134001091,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Dementia
-136,109,136001091,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Dementia
+136,109,136001091,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Dementia
 139,109,139001091,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent Dementia
 131,109,131001091,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Dementia
 141,109,141001091,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent Dementia
 132,109,132001091,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Dementia
 138,109,138001091,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Dementia
 111,109,111001091,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Dementia
-115,109,115001091,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent Dementia
-116,109,116001091,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent Dementia
+115,109,115001091,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent Dementia
+116,109,116001091,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent Dementia
 113,109,113001091,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Dementia
 114,109,114001091,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Dementia
 140,109,140001091,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Dementia
@@ -304,22 +304,22 @@ targetId,strataId,cohortId,cohortType,name
 135,109,135001091,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Dementia
 128,109,128001091,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent Dementia
 133,109,133001091,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent Dementia
-137,109,137001091,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Dementia
+137,109,137001091,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent Dementia
 112,109,112001091,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Dementia
 127,109,127001091,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent Dementia
 126,117,126001171,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent tuberculosis
-116,117,116001171,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent tuberculosis
+116,117,116001171,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent tuberculosis
 140,117,140001171,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent tuberculosis
 135,117,135001171,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent tuberculosis
 131,117,131001171,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent tuberculosis
 111,117,111001171,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent tuberculosis
 138,117,138001171,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent tuberculosis
 132,117,132001171,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent tuberculosis
-115,117,115001171,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent tuberculosis
-136,117,136001171,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent tuberculosis
+115,117,115001171,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent tuberculosis
+136,117,136001171,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent tuberculosis
 139,117,139001171,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent tuberculosis
 112,117,112001171,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent tuberculosis
-137,117,137001171,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent tuberculosis
+137,117,137001171,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent tuberculosis
 129,117,129001171,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent tuberculosis
 134,117,134001171,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent tuberculosis
 141,117,141001171,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent tuberculosis
@@ -329,7 +329,7 @@ targetId,strataId,cohortId,cohortType,name
 114,117,114001171,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent tuberculosis
 127,117,127001171,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent tuberculosis
 130,117,130001171,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent tuberculosis
-136,118,136001181,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Autoimmune condition
+136,118,136001181,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Autoimmune condition
 138,118,138001181,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Autoimmune condition
 127,118,127001181,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent Autoimmune condition
 111,118,111001181,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Autoimmune condition
@@ -339,14 +339,14 @@ targetId,strataId,cohortId,cohortType,name
 139,118,139001181,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent Autoimmune condition
 133,118,133001181,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent Autoimmune condition
 135,118,135001181,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Autoimmune condition
-115,118,115001181,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent Autoimmune condition
+115,118,115001181,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent Autoimmune condition
 129,118,129001181,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent Autoimmune condition
-116,118,116001181,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent Autoimmune condition
+116,118,116001181,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent Autoimmune condition
 130,118,130001181,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Autoimmune condition
 114,118,114001181,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Autoimmune condition
 126,118,126001181,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent Autoimmune condition
 141,118,141001181,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent Autoimmune condition
-137,118,137001181,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Autoimmune condition
+137,118,137001181,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent Autoimmune condition
 140,118,140001181,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Autoimmune condition
 113,118,113001181,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Autoimmune condition
 134,118,134001181,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Autoimmune condition
@@ -356,16 +356,16 @@ targetId,strataId,cohortId,cohortType,name
 140,119,140001191,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 135,119,135001191,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 127,119,127001191,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
-115,119,115001191,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
+115,119,115001191,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 138,119,138001191,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
-136,119,136001191,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
+136,119,136001191,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 128,119,128001191,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 113,119,113001191,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 126,119,126001191,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 141,119,141001191,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
-137,119,137001191,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
+137,119,137001191,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 131,119,131001191,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
-116,119,116001191,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
+116,119,116001191,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 114,119,114001191,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 133,119,133001191,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 111,119,111001191,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
@@ -375,15 +375,15 @@ targetId,strataId,cohortId,cohortType,name
 130,119,130001191,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 134,120,134001201,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Asthma without COPD
 128,120,128001201,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Prevalent Asthma without COPD
-136,120,136001201,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Asthma without COPD
+136,120,136001201,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Asthma without COPD
 140,120,140001201,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Asthma without COPD
 132,120,132001201,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Asthma without COPD
 127,120,127001201,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent Asthma without COPD
 111,120,111001201,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Asthma without COPD
 131,120,131001201,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Asthma without COPD
 113,120,113001201,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent Asthma without COPD
-115,120,115001201,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent Asthma without COPD
-137,120,137001201,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Asthma without COPD
+115,120,115001201,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent Asthma without COPD
+137,120,137001201,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent Asthma without COPD
 114,120,114001201,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent Asthma without COPD
 138,120,138001201,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Asthma without COPD
 133,120,133001201,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Prevalent Asthma without COPD
@@ -392,20 +392,20 @@ targetId,strataId,cohortId,cohortType,name
 129,120,129001201,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent Asthma without COPD
 141,120,141001201,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent Asthma without COPD
 135,120,135001201,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent Asthma without COPD
-116,120,116001201,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent Asthma without COPD
+116,120,116001201,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent Asthma without COPD
 126,120,126001201,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Prevalent Asthma without COPD
 130,120,130001201,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent Asthma without COPD
 114,125,114001251,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent pre-existing condition of COVID risk factor
 134,125,134001251,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent pre-existing condition of COVID risk factor
 141,125,141001251,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Prevalent pre-existing condition of COVID risk factor
 111,125,111001251,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent pre-existing condition of COVID risk factor
-115,125,115001251,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Prevalent pre-existing condition of COVID risk factor
-136,125,136001251,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent pre-existing condition of COVID risk factor
+115,125,115001251,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Prevalent pre-existing condition of COVID risk factor
+136,125,136001251,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent pre-existing condition of COVID risk factor
 139,125,139001251,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Prevalent pre-existing condition of COVID risk factor
 127,125,127001251,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Prevalent pre-existing condition of COVID risk factor
 132,125,132001251,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent pre-existing condition of COVID risk factor
-137,125,137001251,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Prevalent pre-existing condition of COVID risk factor
-116,125,116001251,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Prevalent pre-existing condition of COVID risk factor
+137,125,137001251,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Prevalent pre-existing condition of COVID risk factor
+116,125,116001251,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Prevalent pre-existing condition of COVID risk factor
 129,125,129001251,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Prevalent pre-existing condition of COVID risk factor
 112,125,112001251,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Prevalent pre-existing condition of COVID risk factor
 130,125,130001251,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent pre-existing condition of COVID risk factor
@@ -427,28 +427,28 @@ targetId,strataId,cohortId,cohortType,name
 135,199,135001991,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Pregnant women
 130,199,130001991,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Pregnant women
 132,199,132001991,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Pregnant women
-115,199,115001991,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Pregnant women
+115,199,115001991,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Pregnant women
 139,199,139001991,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Pregnant women
 134,199,134001991,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Pregnant women
 114,199,114001991,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Pregnant women
 131,199,131001991,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Pregnant women
-116,199,116001991,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Pregnant women
+116,199,116001991,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Pregnant women
 111,199,111001991,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Pregnant women
 128,199,128001991,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Pregnant women
-136,199,136001991,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Pregnant women
-137,199,137001991,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Pregnant women
+136,199,136001991,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Pregnant women
+137,199,137001991,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Pregnant women
 138,199,138001991,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Pregnant women
 126,199,126001991,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Pregnant women
 138,200,138002001,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Flu-like symptom episodes
 130,200,130002001,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Flu-like symptom episodes
-136,200,136002001,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Flu-like symptom episodes
+136,200,136002001,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Flu-like symptom episodes
 111,200,111002001,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Flu-like symptom episodes
 112,200,112002001,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Flu-like symptom episodes
-116,200,116002001,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Flu-like symptom episodes
+116,200,116002001,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Flu-like symptom episodes
 141,200,141002001,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Flu-like symptom episodes
 135,200,135002001,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Flu-like symptom episodes
 134,200,134002001,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Flu-like symptom episodes
-137,200,137002001,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Flu-like symptom episodes
+137,200,137002001,TwS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Flu-like symptom episodes
 140,200,140002001,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Flu-like symptom episodes
 129,200,129002001,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with Flu-like symptom episodes
 113,200,113002001,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Flu-like symptom episodes
@@ -456,7 +456,7 @@ targetId,strataId,cohortId,cohortType,name
 128,200,128002001,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Flu-like symptom episodes
 131,200,131002001,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Flu-like symptom episodes
 133,200,133002001,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Flu-like symptom episodes
-115,200,115002001,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Flu-like symptom episodes
+115,200,115002001,TwS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Flu-like symptom episodes
 114,200,114002001,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Flu-like symptom episodes
 139,200,139002001,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Flu-like symptom episodes
 127,200,127002001,TwS,Persons tested for SARS-CoV-2 with no required prior observation with Flu-like symptom episodes
@@ -465,14 +465,14 @@ targetId,strataId,cohortId,cohortType,name
 140,1,140000012,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with < 30-day follow up
 129,1,129000012,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation with < 30-day follow up
 114,1,114000012,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with < 30-day follow up
-116,1,116000012,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with < 30-day follow up
+116,1,116000012,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with < 30-day follow up
 132,1,132000012,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with < 30-day follow up
 135,1,135000012,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with < 30-day follow up
 130,1,130000012,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with < 30-day follow up
 138,1,138000012,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with < 30-day follow up
-137,1,137000012,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with < 30-day follow up
+137,1,137000012,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with < 30-day follow up
 126,1,126000012,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation with < 30-day follow up
-115,1,115000012,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with < 30-day follow up
+115,1,115000012,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with < 30-day follow up
 111,1,111000012,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with < 30-day follow up
 139,1,139000012,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with < 30-day follow up
 141,1,141000012,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with < 30-day follow up
@@ -480,15 +480,15 @@ targetId,strataId,cohortId,cohortType,name
 112,1,112000012,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with < 30-day follow up
 127,1,127000012,TwoS,Persons tested for SARS-CoV-2 with no required prior observation with < 30-day follow up
 128,1,128000012,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with < 30-day follow up
-136,1,136000012,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with < 30-day follow up
+136,1,136000012,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with < 30-day follow up
 133,1,133000012,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with < 30-day follow up
 134,1,134000012,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with < 30-day follow up
-136,2,136000022,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Male
+136,2,136000022,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Male
 130,2,130000022,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Male
 114,2,114000022,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Sex = Male
 128,2,128000022,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Sex = Male
 138,2,138000022,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Male
-137,2,137000022,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Sex = Male
+137,2,137000022,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Sex = Male
 111,2,111000022,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Sex = Male
 127,2,127000022,TwoS,Persons tested for SARS-CoV-2 with no required prior observation with Sex = Male
 126,2,126000022,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Sex = Male
@@ -500,13 +500,13 @@ targetId,strataId,cohortId,cohortType,name
 132,2,132000022,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Male
 113,2,113000022,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Sex = Male
 131,2,131000022,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Sex = Male
-116,2,116000022,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Sex = Male
-115,2,115000022,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Sex = Male
+116,2,116000022,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Sex = Male
+115,2,115000022,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Sex = Male
 141,2,141000022,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Sex = Male
 112,2,112000022,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Sex = Male
 134,2,134000022,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Male
 131,3,131000032,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age < 18
-116,3,116000032,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Age < 18
+116,3,116000032,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Age < 18
 133,3,133000032,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with Age < 18
 113,3,113000032,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age < 18
 140,3,140000032,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Age < 18
@@ -514,14 +514,14 @@ targetId,strataId,cohortId,cohortType,name
 111,3,111000032,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age < 18
 134,3,134000032,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 18
 126,3,126000032,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Age < 18
-115,3,115000032,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Age < 18
+115,3,115000032,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Age < 18
 135,3,135000032,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age < 18
 141,3,141000032,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Age < 18
-136,3,136000032,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 18
+136,3,136000032,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 18
 129,3,129000032,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation with Age < 18
 114,3,114000032,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Age < 18
 127,3,127000032,TwoS,Persons tested for SARS-CoV-2 with no required prior observation with Age < 18
-137,3,137000032,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age < 18
+137,3,137000032,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Age < 18
 132,3,132000032,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 18
 130,3,130000032,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 18
 112,3,112000032,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Age < 18
@@ -533,25 +533,25 @@ targetId,strataId,cohortId,cohortType,name
 138,4,138000042,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with Age < 65
 141,4,141000042,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with Age < 65
 113,4,113000042,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age < 65
-116,4,116000042,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with Age < 65
+116,4,116000042,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation with Age < 65
 139,4,139000042,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with Age < 65
 112,4,112000042,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with Age < 65
-136,4,136000042,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 65
+136,4,136000042,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 65
 128,4,128000042,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with Age < 65
 126,4,126000042,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation with Age < 65
 135,4,135000042,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age < 65
-115,4,115000042,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with Age < 65
+115,4,115000042,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation with Age < 65
 134,4,134000042,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 65
 114,4,114000042,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with Age < 65
 127,4,127000042,TwoS,Persons tested for SARS-CoV-2 with no required prior observation with Age < 65
 129,4,129000042,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation with Age < 65
-137,4,137000042,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age < 65
+137,4,137000042,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation with Age < 65
 140,4,140000042,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with Age < 65
 111,4,111000042,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age < 65
 131,4,131000042,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with Age < 65
 138,100,138001002,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
 128,100,128001002,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
-136,100,136001002,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
+136,100,136001002,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
 127,100,127001002,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent Type 2 Diabetes Mellitus
 112,100,112001002,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Type 2 Diabetes Mellitus
 129,100,129001002,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent Type 2 Diabetes Mellitus
@@ -561,22 +561,22 @@ targetId,strataId,cohortId,cohortType,name
 140,100,140001002,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
 141,100,141001002,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent Type 2 Diabetes Mellitus
 133,100,133001002,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent Type 2 Diabetes Mellitus
-115,100,115001002,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
+115,100,115001002,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
 111,100,111001002,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
 114,100,114001002,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Type 2 Diabetes Mellitus
 134,100,134001002,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
 139,100,139001002,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent Type 2 Diabetes Mellitus
 126,100,126001002,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
 113,100,113001002,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
-137,100,137001002,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Type 2 Diabetes Mellitus
-116,100,116001002,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent Type 2 Diabetes Mellitus
+137,100,137001002,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent Type 2 Diabetes Mellitus
+116,100,116001002,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent Type 2 Diabetes Mellitus
 135,100,135001002,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Type 2 Diabetes Mellitus
-116,101,116001012,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent hypertension
+116,101,116001012,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent hypertension
 141,101,141001012,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent hypertension
 133,101,133001012,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent hypertension
-115,101,115001012,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent hypertension
+115,101,115001012,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent hypertension
 129,101,129001012,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent hypertension
-136,101,136001012,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent hypertension
+136,101,136001012,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent hypertension
 132,101,132001012,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent hypertension
 138,101,138001012,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent hypertension
 140,101,140001012,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent hypertension
@@ -589,7 +589,7 @@ targetId,strataId,cohortId,cohortType,name
 139,101,139001012,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent hypertension
 134,101,134001012,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent hypertension
 126,101,126001012,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent hypertension
-137,101,137001012,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent hypertension
+137,101,137001012,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent hypertension
 113,101,113001012,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent hypertension
 130,101,130001012,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent hypertension
 135,101,135001012,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent hypertension
@@ -598,13 +598,13 @@ targetId,strataId,cohortId,cohortType,name
 141,102,141001022,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic kidney disease
 126,102,126001022,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent chronic kidney disease
 114,102,114001022,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent chronic kidney disease
-115,102,115001022,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent chronic kidney disease
-116,102,116001022,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent chronic kidney disease
-136,102,136001022,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent chronic kidney disease
+115,102,115001022,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent chronic kidney disease
+116,102,116001022,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent chronic kidney disease
+136,102,136001022,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent chronic kidney disease
 133,102,133001022,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic kidney disease
 138,102,138001022,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent chronic kidney disease
 130,102,130001022,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent chronic kidney disease
-137,102,137001022,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic kidney disease
+137,102,137001022,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic kidney disease
 112,102,112001022,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent chronic kidney disease
 131,102,131001022,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic kidney disease
 128,102,128001022,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent chronic kidney disease
@@ -622,19 +622,19 @@ targetId,strataId,cohortId,cohortType,name
 131,103,131001032,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent end stage renal disease
 113,103,113001032,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent end stage renal disease
 133,103,133001032,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent end stage renal disease
-115,103,115001032,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent end stage renal disease
+115,103,115001032,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent end stage renal disease
 129,103,129001032,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent end stage renal disease
 130,103,130001032,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent end stage renal disease
 112,103,112001032,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent end stage renal disease
 127,103,127001032,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent end stage renal disease
-137,103,137001032,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent end stage renal disease
+137,103,137001032,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent end stage renal disease
 139,103,139001032,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent end stage renal disease
 126,103,126001032,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent end stage renal disease
 111,103,111001032,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent end stage renal disease
 128,103,128001032,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent end stage renal disease
-116,103,116001032,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent end stage renal disease
+116,103,116001032,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent end stage renal disease
 134,103,134001032,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent end stage renal disease
-136,103,136001032,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent end stage renal disease
+136,103,136001032,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent end stage renal disease
 141,103,141001032,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent end stage renal disease
 114,103,114001032,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent end stage renal disease
 140,104,140001042,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent heart disease
@@ -650,15 +650,15 @@ targetId,strataId,cohortId,cohortType,name
 138,104,138001042,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent heart disease
 112,104,112001042,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent heart disease
 126,104,126001042,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent heart disease
-136,104,136001042,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent heart disease
-116,104,116001042,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent heart disease
+136,104,136001042,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent heart disease
+116,104,116001042,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent heart disease
 130,104,130001042,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent heart disease
 131,104,131001042,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent heart disease
 135,104,135001042,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent heart disease
 133,104,133001042,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent heart disease
 127,104,127001042,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent heart disease
-115,104,115001042,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent heart disease
-137,104,137001042,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent heart disease
+115,104,115001042,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent heart disease
+137,104,137001042,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent heart disease
 112,105,112001052,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 131,105,131001052,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 113,105,113001052,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
@@ -669,43 +669,43 @@ targetId,strataId,cohortId,cohortType,name
 132,105,132001052,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 128,105,128001052,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 135,105,135001052,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
-115,105,115001052,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
+115,105,115001052,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 138,105,138001052,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 140,105,140001052,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 111,105,111001052,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 139,105,139001052,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 133,105,133001052,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 141,105,141001052,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
-136,105,136001052,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
-137,105,137001052,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
+136,105,136001052,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
+137,105,137001052,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 134,105,134001052,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 130,105,130001052,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
-116,105,116001052,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
+116,105,116001052,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
 111,106,111001062,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 133,106,133001062,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent Human immunodeficiency virus infection
 114,106,114001062,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Human immunodeficiency virus infection
 139,106,139001062,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent Human immunodeficiency virus infection
 134,106,134001062,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 127,106,127001062,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent Human immunodeficiency virus infection
-137,106,137001062,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Human immunodeficiency virus infection
+137,106,137001062,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent Human immunodeficiency virus infection
 138,106,138001062,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 128,106,128001062,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 132,106,132001062,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 126,106,126001062,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
-115,106,115001062,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
+115,106,115001062,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 135,106,135001062,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Human immunodeficiency virus infection
-136,106,136001062,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
+136,106,136001062,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 141,106,141001062,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent Human immunodeficiency virus infection
 112,106,112001062,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Human immunodeficiency virus infection
 130,106,130001062,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 129,106,129001062,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent Human immunodeficiency virus infection
-116,106,116001062,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent Human immunodeficiency virus infection
+116,106,116001062,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent Human immunodeficiency virus infection
 140,106,140001062,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 113,106,113001062,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Human immunodeficiency virus infection
 131,106,131001062,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Human immunodeficiency virus infection
 111,107,111001072,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Hepatitis C
 134,107,134001072,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Hepatitis C
-115,107,115001072,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent Hepatitis C
+115,107,115001072,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent Hepatitis C
 130,107,130001072,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Hepatitis C
 129,107,129001072,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent Hepatitis C
 126,107,126001072,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent Hepatitis C
@@ -716,21 +716,21 @@ targetId,strataId,cohortId,cohortType,name
 135,107,135001072,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Hepatitis C
 133,107,133001072,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent Hepatitis C
 114,107,114001072,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Hepatitis C
-116,107,116001072,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent Hepatitis C
-137,107,137001072,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Hepatitis C
+116,107,116001072,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent Hepatitis C
+137,107,137001072,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent Hepatitis C
 131,107,131001072,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Hepatitis C
 113,107,113001072,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Hepatitis C
 139,107,139001072,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent Hepatitis C
 128,107,128001072,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent Hepatitis C
 138,107,138001072,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Hepatitis C
-136,107,136001072,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Hepatitis C
+136,107,136001072,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Hepatitis C
 112,107,112001072,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Hepatitis C
 135,108,135001082,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent obesity
 134,108,134001082,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent obesity
 126,108,126001082,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent obesity
 113,108,113001082,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent obesity
 140,108,140001082,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent obesity
-137,108,137001082,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent obesity
+137,108,137001082,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent obesity
 112,108,112001082,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent obesity
 139,108,139001082,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent obesity
 129,108,129001082,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent obesity
@@ -738,27 +738,27 @@ targetId,strataId,cohortId,cohortType,name
 131,108,131001082,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent obesity
 111,108,111001082,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent obesity
 114,108,114001082,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent obesity
-115,108,115001082,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent obesity
+115,108,115001082,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent obesity
 127,108,127001082,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent obesity
 128,108,128001082,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent obesity
 130,108,130001082,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent obesity
-136,108,136001082,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent obesity
-116,108,116001082,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent obesity
+136,108,136001082,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent obesity
+116,108,116001082,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent obesity
 138,108,138001082,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent obesity
 133,108,133001082,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent obesity
 141,108,141001082,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent obesity
 130,109,130001092,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Dementia
 126,109,126001092,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent Dementia
 134,109,134001092,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Dementia
-136,109,136001092,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Dementia
+136,109,136001092,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Dementia
 139,109,139001092,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent Dementia
 131,109,131001092,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Dementia
 141,109,141001092,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent Dementia
 132,109,132001092,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Dementia
 138,109,138001092,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Dementia
 111,109,111001092,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Dementia
-115,109,115001092,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent Dementia
-116,109,116001092,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent Dementia
+115,109,115001092,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent Dementia
+116,109,116001092,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent Dementia
 113,109,113001092,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Dementia
 114,109,114001092,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Dementia
 140,109,140001092,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Dementia
@@ -766,22 +766,22 @@ targetId,strataId,cohortId,cohortType,name
 135,109,135001092,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Dementia
 128,109,128001092,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent Dementia
 133,109,133001092,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent Dementia
-137,109,137001092,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Dementia
+137,109,137001092,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent Dementia
 112,109,112001092,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Dementia
 127,109,127001092,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent Dementia
 126,117,126001172,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent tuberculosis
-116,117,116001172,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent tuberculosis
+116,117,116001172,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent tuberculosis
 140,117,140001172,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent tuberculosis
 135,117,135001172,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent tuberculosis
 131,117,131001172,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent tuberculosis
 111,117,111001172,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent tuberculosis
 138,117,138001172,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent tuberculosis
 132,117,132001172,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent tuberculosis
-115,117,115001172,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent tuberculosis
-136,117,136001172,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent tuberculosis
+115,117,115001172,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent tuberculosis
+136,117,136001172,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent tuberculosis
 139,117,139001172,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent tuberculosis
 112,117,112001172,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent tuberculosis
-137,117,137001172,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent tuberculosis
+137,117,137001172,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent tuberculosis
 129,117,129001172,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent tuberculosis
 134,117,134001172,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent tuberculosis
 141,117,141001172,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent tuberculosis
@@ -791,7 +791,7 @@ targetId,strataId,cohortId,cohortType,name
 114,117,114001172,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent tuberculosis
 127,117,127001172,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent tuberculosis
 130,117,130001172,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent tuberculosis
-136,118,136001182,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Autoimmune condition
+136,118,136001182,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Autoimmune condition
 138,118,138001182,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Autoimmune condition
 127,118,127001182,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent Autoimmune condition
 111,118,111001182,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Autoimmune condition
@@ -801,14 +801,14 @@ targetId,strataId,cohortId,cohortType,name
 139,118,139001182,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent Autoimmune condition
 133,118,133001182,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent Autoimmune condition
 135,118,135001182,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Autoimmune condition
-115,118,115001182,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent Autoimmune condition
+115,118,115001182,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent Autoimmune condition
 129,118,129001182,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent Autoimmune condition
-116,118,116001182,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent Autoimmune condition
+116,118,116001182,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent Autoimmune condition
 130,118,130001182,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Autoimmune condition
 114,118,114001182,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Autoimmune condition
 126,118,126001182,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent Autoimmune condition
 141,118,141001182,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent Autoimmune condition
-137,118,137001182,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Autoimmune condition
+137,118,137001182,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent Autoimmune condition
 140,118,140001182,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Autoimmune condition
 113,118,113001182,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Autoimmune condition
 134,118,134001182,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Autoimmune condition
@@ -818,16 +818,16 @@ targetId,strataId,cohortId,cohortType,name
 140,119,140001192,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 135,119,135001192,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 127,119,127001192,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
-115,119,115001192,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
+115,119,115001192,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 138,119,138001192,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
-136,119,136001192,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
+136,119,136001192,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 128,119,128001192,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 113,119,113001192,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 126,119,126001192,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 141,119,141001192,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
-137,119,137001192,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
+137,119,137001192,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 131,119,131001192,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
-116,119,116001192,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
+116,119,116001192,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 114,119,114001192,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 133,119,133001192,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 111,119,111001192,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
@@ -837,15 +837,15 @@ targetId,strataId,cohortId,cohortType,name
 130,119,130001192,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent chronic obstructive pulmonary disease (COPD) without asthma
 134,120,134001202,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Asthma without COPD
 128,120,128001202,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Prevalent Asthma without COPD
-136,120,136001202,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Asthma without COPD
+136,120,136001202,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Asthma without COPD
 140,120,140001202,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Asthma without COPD
 132,120,132001202,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Asthma without COPD
 127,120,127001202,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent Asthma without COPD
 111,120,111001202,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Asthma without COPD
 131,120,131001202,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Asthma without COPD
 113,120,113001202,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent Asthma without COPD
-115,120,115001202,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent Asthma without COPD
-137,120,137001202,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Asthma without COPD
+115,120,115001202,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent Asthma without COPD
+137,120,137001202,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent Asthma without COPD
 114,120,114001202,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent Asthma without COPD
 138,120,138001202,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Asthma without COPD
 133,120,133001202,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Prevalent Asthma without COPD
@@ -854,20 +854,20 @@ targetId,strataId,cohortId,cohortType,name
 129,120,129001202,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent Asthma without COPD
 141,120,141001202,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent Asthma without COPD
 135,120,135001202,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent Asthma without COPD
-116,120,116001202,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent Asthma without COPD
+116,120,116001202,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent Asthma without COPD
 126,120,126001202,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Prevalent Asthma without COPD
 130,120,130001202,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent Asthma without COPD
 114,125,114001252,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent pre-existing condition of COVID risk factor
 134,125,134001252,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent pre-existing condition of COVID risk factor
 141,125,141001252,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Prevalent pre-existing condition of COVID risk factor
 111,125,111001252,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent pre-existing condition of COVID risk factor
-115,125,115001252,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Prevalent pre-existing condition of COVID risk factor
-136,125,136001252,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent pre-existing condition of COVID risk factor
+115,125,115001252,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Prevalent pre-existing condition of COVID risk factor
+136,125,136001252,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent pre-existing condition of COVID risk factor
 139,125,139001252,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Prevalent pre-existing condition of COVID risk factor
 127,125,127001252,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Prevalent pre-existing condition of COVID risk factor
 132,125,132001252,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent pre-existing condition of COVID risk factor
-137,125,137001252,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Prevalent pre-existing condition of COVID risk factor
-116,125,116001252,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Prevalent pre-existing condition of COVID risk factor
+137,125,137001252,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Prevalent pre-existing condition of COVID risk factor
+116,125,116001252,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Prevalent pre-existing condition of COVID risk factor
 129,125,129001252,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Prevalent pre-existing condition of COVID risk factor
 112,125,112001252,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Prevalent pre-existing condition of COVID risk factor
 130,125,130001252,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent pre-existing condition of COVID risk factor
@@ -889,28 +889,28 @@ targetId,strataId,cohortId,cohortType,name
 135,199,135001992,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Pregnant women
 130,199,130001992,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Pregnant women
 132,199,132001992,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Pregnant women
-115,199,115001992,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Pregnant women
+115,199,115001992,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Pregnant women
 139,199,139001992,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Pregnant women
 134,199,134001992,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Pregnant women
 114,199,114001992,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Pregnant women
 131,199,131001992,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Pregnant women
-116,199,116001992,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Pregnant women
+116,199,116001992,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Pregnant women
 111,199,111001992,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Pregnant women
 128,199,128001992,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Pregnant women
-136,199,136001992,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Pregnant women
-137,199,137001992,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Pregnant women
+136,199,136001992,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Pregnant women
+137,199,137001992,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Pregnant women
 138,199,138001992,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Pregnant women
 126,199,126001992,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without Pregnant women
 138,200,138002002,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without Flu-like symptom episodes
 130,200,130002002,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Flu-like symptom episodes
-136,200,136002002,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Flu-like symptom episodes
+136,200,136002002,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation without Flu-like symptom episodes
 111,200,111002002,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Flu-like symptom episodes
 112,200,112002002,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without Flu-like symptom episodes
-116,200,116002002,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without Flu-like symptom episodes
+116,200,116002002,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with no required prior observation without Flu-like symptom episodes
 141,200,141002002,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without Flu-like symptom episodes
 135,200,135002002,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Flu-like symptom episodes
 134,200,134002002,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Flu-like symptom episodes
-137,200,137002002,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Flu-like symptom episodes
+137,200,137002002,TwoS,Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation without Flu-like symptom episodes
 140,200,140002002,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without Flu-like symptom episodes
 129,200,129002002,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without Flu-like symptom episodes
 113,200,113002002,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Flu-like symptom episodes
@@ -918,7 +918,7 @@ targetId,strataId,cohortId,cohortType,name
 128,200,128002002,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without Flu-like symptom episodes
 131,200,131002002,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without Flu-like symptom episodes
 133,200,133002002,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without Flu-like symptom episodes
-115,200,115002002,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without Flu-like symptom episodes
+115,200,115002002,TwoS,Persons hospitalized with influenza dx or positive test and requiring services 2017-2018 with at least 365d prior observation without Flu-like symptom episodes
 114,200,114002002,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without Flu-like symptom episodes
 139,200,139002002,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without Flu-like symptom episodes
 127,200,127002002,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without Flu-like symptom episodes
