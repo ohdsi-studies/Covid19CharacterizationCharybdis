@@ -61,3 +61,5 @@ Incident depression with no prior treatment and no mania or psychoses,[COVID ID1
 Hospitalization for psychosis,[COVID ID196 V1] Hospitalization for psychosis,928,196
 Suicide and suicidal ideation,[COVID ID197 V1] Suicide and suicidal ideation,925,197
 Multi-system inflammatory syndrome (Kawasaki disease or toxic shock syndrome),[COVID ID198 V1] Multi-system inflammatory syndrome (Kawasaki disease or toxic shock syndrome),940,198
+Acute kidney injury (AKI) using diagnosis codes and change in measurements during hospitlization,Acute kidney injury (AKI) using diagnosis codes and change in measurements during hospitlization,-1,201 
+Discharge from hospitalization,Discharge from hospitalization,-1,202

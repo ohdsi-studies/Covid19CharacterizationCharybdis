@@ -1,5 +1,4 @@
 name,atlasName,atlasId,cohortId
-<<<<<<< HEAD
 Persons tested for CoV2 with at least 365d prior obs,[COVID ID126 V1] Persons tested for CoV2 with at least 365d prior obs,965,126
 Persons tested pos for CoV2 with at least 365d prior obs,[COVID ID128 V1] Persons tested pos for CoV2 with at least 365d prior obs,967,128
 Persons tested with a COVID-19 dx or CoV2 pos test with at least 365d prior obs,[COVID ID130 V1] Persons tested with a COVID-19 dx record or a CoV2 pos test with at least 365d prior obs,969,130
@@ -16,21 +15,3 @@ Persons hosp with a COVID-19 dx or a CoV2 pos test with no req prior obs,[COVID 
 Persons hosp and req svcs with a COVID dx or CoV2 pos test with no req prior obs,[COVID ID137 V1] Persons hosp and req svcs with a COVID-19 dx record or a CoV2 pos test with no req prior obs,976,137
 Persons hosp with a CoV2 pos test with no req prior obs,[COVID ID139 V1] Persons hosp with a CoV2 pos test with no req prior obs,979,139
 Persons hosp and req svcs with a CoV2 pos test with no req prior obs,[COVID ID141 V1] Persons hosp and req svcs with a CoV2 pos test with no req prior obs,981,141
-=======
-Persons tested for SARS-CoV-2 with at least 365d prior observation,[COVID ID126 V1] Persons tested for SARS-CoV-2 with at least 365d prior observation,965,126
-Persons tested positive for SARS-CoV-2 with at least 365d prior observation,[COVID ID128 V1] Persons tested positive for SARS-CoV-2 with at least 365d prior observation,967,128
-Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID130 V1] Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,969,130
-Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID132 V1] Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation,971,132
-Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID134 V1] Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,973,134
-Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID136 V1] Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,975,136
-Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID138 V1] Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation,978,138
-Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID140 V1] Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation,980,140
-Persons tested for SARS-CoV-2 with no required prior observation,[COVID ID127 V1] Persons tested for SARS-CoV-2 with no required prior observation,966,127
-Persons tested positive for SARS-CoV-2 with no required prior observation,[COVID ID129 V1] Persons tested positive for SARS-CoV-2 with no required prior observation,968,129
-Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,[COVID ID131 V1] Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,970,131
-Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation,[COVID ID133 V1] Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation,972,133
-Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,[COVID ID135 V1] Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,974,135
-Persons hospitalized and req services with a COVID-19 dx or a SARS-CoV-2 positive test with no required prior observation,[COVID ID137 V1] Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,976,137
-Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation,[COVID ID139 V1] Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation,979,139
-Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation,[COVID ID141 V1] Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation,981,141
->>>>>>> master
