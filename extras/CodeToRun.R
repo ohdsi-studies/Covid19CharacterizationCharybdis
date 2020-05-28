@@ -5,7 +5,7 @@
 #-----------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------
 # This CodeToRun.R is provided as an example of how to run this study package.
-# Below you will find 2 sections: the 1st is for installing the depenencies 
+# Below you will find 2 sections: the 1st is for installing the dependencies 
 # required to run the study and the 2nd for running the package.
 #
 # The code below makes use of R environment variables (denoted by "Sys.getenv(<setting>)") to 
@@ -60,7 +60,7 @@ Sys.setenv("R_REMOTES_NO_ERRORS_FROM_WARNINGS" = TRUE)
 # When asked to update packages, select '1' ('update all') (could be multiple times)
 # When asked whether to install from source, select 'No' (could be multiple times)
 #install.packages("devtools")
-#devtools::install_github("ohdsi-studies/Covid19Characterization")
+#devtools::install_github("ohdsi-studies/Covid19CharacterizationCharybdis")
 
 # *******************************************************
 # SECTION 2: Running the package -------------------------------------------------------------------------------
