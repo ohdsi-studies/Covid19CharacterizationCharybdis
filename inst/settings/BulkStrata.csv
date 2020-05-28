@@ -1,0 +1,5 @@
+generationScript,name,inverseName,parameterValue,cohortId
+StratifyByFollowUpTime.sql,Full 30-day follow up,< 30-day follow up,30,1
+StratifyByGender.sql,Sex = Female,Sex = Male,8532,2
+StratifyByAge.sql,Age >= 18,Age < 18,18,3
+StratifyByAge.sql,Age >= 65,Age < 65,65,4
