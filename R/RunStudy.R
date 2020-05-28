@@ -272,7 +272,7 @@ runStudy <- function(connectionDetails = NULL,
                                       incremental = incremental,
                                       recordKeepingFile = recordKeepingFile)
     if (nrow(subset) > 0) {
-      for (j in 1:length(subset)) {
+      for (j in 1:nrow(subset)) {
         #data <- lapply(split(subset, subset$cohortId), runCohortCharacterization, covariateSettings = covariateSettings, windowId = windowId)
         #data <- do.call(rbind, data)
         data <- runCohortCharacterization(cohortId = subset$cohortId[j], 
@@ -356,13 +356,13 @@ loadCohortsFromPackage <- function(cohortIds) {
     sql <- readChar(pathToSql, file.info(pathToSql)$size)
     return(sql)
   }
-  cohorts$sql <- sapply(cohorts$cohortName, getSql)
+  cohorts$sql <- sapply(cohorts$cohortId, getSql)
   getJson <- function(name) {
     pathToJson <- system.file("cohorts", paste0(name, ".json"), package = packageName)
     json <- readChar(pathToJson, file.info(pathToJson)$size)
     return(json)
   }
-  cohorts$json <- sapply(cohorts$cohortName, getJson)
+  cohorts$json <- sapply(cohorts$cohortId, getJson)
   return(cohorts)
 }
 
