@@ -114,9 +114,18 @@ GROUP BY p.person_id, p.event_id
 HAVING COUNT(A.TARGET_CONCEPT_ID) >= 1
 -- End Correlated Criteria
 
+UNION ALL
+-- Begin Demographic Criteria
+SELECT 1 as index_id, e.person_id, e.event_id
+FROM primary_events E
+JOIN @cdm_database_schema.PERSON P ON P.PERSON_ID = E.PERSON_ID
+WHERE (E.start_date >= DATEFROMPARTS(2016, 09, 01) and E.start_date <= DATEFROMPARTS(2020, 12, 31))
+GROUP BY e.person_id, e.event_id
+-- End Demographic Criteria
+
   ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
   GROUP BY E.person_id, E.event_id
-  HAVING COUNT(index_id) = 1
+  HAVING COUNT(index_id) = 2
 ) G
 -- End Criteria Group
 ) AC on AC.person_id = pe.person_id and AC.event_id = pe.event_id

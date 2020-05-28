@@ -43,7 +43,11 @@
         }
       }
     ],
-    "DemographicCriteriaList": [],
+    "DemographicCriteriaList": [
+      {
+        "OccurrenceStartDate": ["2016-09-01", "bt", "2020-12-31"]
+      }
+    ],
     "Groups": []
   },
   "ConceptSets": [

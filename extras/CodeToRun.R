@@ -65,7 +65,7 @@ Sys.setenv("R_REMOTES_NO_ERRORS_FROM_WARNINGS" = TRUE)
 # *******************************************************
 # SECTION 2: Running the package -------------------------------------------------------------------------------
 # *******************************************************
-library(Covid19CharacterizationCharybdis)
+library(Covid19Characterization)
 
 # Optional: specify where the temporary files (used by the ff package) will be created:
 fftempdir <- if (Sys.getenv("FFTEMP_DIR") == "") "~/fftemp" else Sys.getenv("FFTEMP_DIR")
@@ -133,13 +133,13 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 oracleTempSchema <- NULL
 
 # Details specific to the database:
-databaseId <- "DOD_S0"
-databaseName <- "DOD_S0"
-databaseDescription <- "DOD_S0"
+databaseId <- "CCAE_S0"
+databaseName <- "CCAE_S0"
+databaseDescription <- "CCAE_S0"
 
 # Details for connecting to the CDM and storing the results
 outputFolder <- file.path("E:/Covid19Characterization", databaseId)
-cdmDatabaseSchema <- "CDM_OPTUM_EXTENDED_DOD_V1194.dbo"
+cdmDatabaseSchema <- "CDM_IBM_CCAE_V1191.dbo"
 cohortDatabaseSchema <- "scratch.dbo"
 cohortTable <- paste0("AS_S0_full_", databaseId)
 cohortStagingTable <- paste0(cohortTable, "_stg")
