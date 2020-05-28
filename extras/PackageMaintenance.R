@@ -1,6 +1,6 @@
 # Copyright 2020 Observational Health Data Sciences and Informatics
 #
-# This file is part of Covid19Characterization
+# This file is part of Covid19CharacterizationCharybdis
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 
 # Format and check code ---------------------------------------------------
 OhdsiRTools::formatRFolder()
-OhdsiRTools::checkUsagePackage("Covid19Characterization")
+OhdsiRTools::checkUsagePackage("Covid19CharacterizationCharybdis")
 OhdsiRTools::updateCopyrightYearFolder()
 
 # Create manual -----------------------------------------------------------
-unlink("extras/Covid19Characterization.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/Covid19Characterization.pdf")
+unlink("extras/Covid19CharacterizationCharybdis.pdf")
+shell("R CMD Rd2pdf ./ --output=extras/Covid19CharacterizationCharybdis.pdf")
 
 pkgdown::build_site()
 
@@ -35,7 +35,7 @@ for (i in 1:nrow(cohortGroups)) {
                                                    insertTableSql = TRUE,
                                                    insertCohortCreationR = FALSE,
                                                    generateStats = FALSE,
-                                                   packageName = "Covid19Characterization")
+                                                   packageName = "Covid19CharacterizationCharybdis")
 }
 unlink("inst/cohorts/InclusionRules.csv")
 
@@ -99,4 +99,4 @@ readr::write_csv(targetStrataXRef, file.path(settingsPath, "targetStrataXref.csv
 
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::insertEnvironmentSnapshotInPackage("Covid19Characterization")
+OhdsiRTools::insertEnvironmentSnapshotInPackage("Covid19CharacterizationCharybdis")

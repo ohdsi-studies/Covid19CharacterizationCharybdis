@@ -41,7 +41,7 @@ getCohortsToCreate <- function() {
 }
 
 getThisPackageName <- function() {
-  return("Covid19Characterization")
+  return("Covid19CharacterizationCharybdis")
 }
 
 readCsv <- function(resourceFile) {

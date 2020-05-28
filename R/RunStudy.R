@@ -23,7 +23,7 @@ runStudy <- function(connectionDetails = NULL,
     dir.create(exportFolder, recursive = TRUE)
   }
   
-  ParallelLogger::addDefaultFileLogger(file.path(exportFolder, "covid19characterization.txt"))
+  ParallelLogger::addDefaultFileLogger(file.path(exportFolder, "Covid19CharacterizationCharybdis.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
   
   if (as.logical(Sys.getenv("USE_SUBSET")) == TRUE) {
