@@ -234,17 +234,17 @@ runStudy <- function(connectionDetails = NULL,
   featureExtractionCohorts <- cohortsForExport[cohortsForExport$cohortId %in% counts$cohortId, ]
   
   # Cohort characterization ---------------------------------------------------------------
-  runCohortCharacterization <- function(row, covariateSettings, windowId) {
-    ParallelLogger::logInfo("- Creating characterization for cohort: ", row$cohortName)
+  runCohortCharacterization <- function(cohortId, cohortName, covariateSettings, windowId) {
+    ParallelLogger::logInfo("- Creating characterization for cohort: ", cohortName)
     data <- getCohortCharacteristics(connection = connection,
                                      cdmDatabaseSchema = cdmDatabaseSchema,
                                      oracleTempSchema = oracleTempSchema,
                                      cohortDatabaseSchema = cohortDatabaseSchema,
                                      cohortTable = cohortTable,
-                                     cohortId = row$cohortId,
+                                     cohortId = cohortId,
                                      covariateSettings = covariateSettings)
     if (nrow(data) > 0) {
-      data$cohortId <- row$cohortId
+      data$cohortId <- cohortId
     }
     
     data$covariateId <- data$covariateId * 10 + windowId
@@ -275,7 +275,10 @@ runStudy <- function(connectionDetails = NULL,
       for (j in 1:length(subset)) {
         #data <- lapply(split(subset, subset$cohortId), runCohortCharacterization, covariateSettings = covariateSettings, windowId = windowId)
         #data <- do.call(rbind, data)
-        data <- runCohortCharacterization(row = subset[j], covariateSettings = covariateSettings, windowId = windowId)
+        data <- runCohortCharacterization(cohortId = subset$cohortId[j], 
+                                          cohortName = subset$cohortName[j],
+                                          covariateSettings = covariateSettings, 
+                                          windowId = windowId)
         covariates <- formatCovariates(data)
         writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = covariates$covariateId)
         data <- formatCovariateValues(data, counts, minCellCount)

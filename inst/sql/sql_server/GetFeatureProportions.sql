@@ -7,7 +7,7 @@ SELECT
   1.0*f.feature_count/c.total_count AS mean,
   sqrt(1.0*(total_count*f.feature_count - f.feature_count*f.feature_count)/(c.total_count*(c.total_count - 1))) AS sd
 FROM (
-  SELECT cohort_definition_id, COUNT(DISTINCT subject_id) total_count
+  SELECT cohort_definition_id, COUNT_BIG(DISTINCT subject_id) total_count
   FROM @cohort_database_schema.@cohort_table 
   GROUP BY cohort_definition_id
 ) c

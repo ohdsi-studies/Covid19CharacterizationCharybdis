@@ -7,7 +7,7 @@ CREATE TABLE @cohort_database_schema.@feature_summary_table (
   cohort_definition_id BIGINT, 
   feature_cohort_definition_id BIGINT,
   window_id INT, 
-	feature_count INT
+	feature_count BIGINT
 );
 
 /*
