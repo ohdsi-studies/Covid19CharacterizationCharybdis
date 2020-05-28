@@ -1,0 +1,19 @@
+name,atlasName,atlasId,cohortId
+Prevalent Type 2 Diabetes Mellitus,[COVID ID100 v1] Prevalent Type 2 Diabetes Mellitus,910,100
+Prevalent hypertension,[COVID ID101 v1] Prevalent hypertension,140,101
+Prevalent chronic obstructive pulmonary disease (COPD) without asthma,[COVID ID119 V1] Prevalent chronic obstructive pulmonary disease (COPD) without asthma,796,119
+Prevalent Asthma without COPD,[COVID ID120 V1] Prevalent Asthma without COPD,840,120
+Prevalent chronic kidney disease,[COVID ID102 v1] Prevalent chronic kidney disease,130,102
+Prevalent end stage renal disease,[COVID ID103 v1] Prevalent end stage renal disease,9,103
+Prevalent heart disease,[COVID ID104 v1] Prevalent heart disease,805,104
+Prevalent malignant neoplasm excluding non-melanoma skin cancer,[COVID ID105 v1] Prevalent malignant neoplasm excluding non-melanoma skin cancer,911,105
+Pregnant women,[COVID ID199 V1] Pregnant women,985,199
+Prevalent Human immunodeficiency virus infection,[COVID ID106 v1] Prevalent Human immunodeficiency virus infection,941,106
+Prevalent tuberculosis,[COVID ID106 v1] Prevalent tuberculosis,942,117
+Prevalent Hepatitis C,[COVID ID107 V1] Prevalent Hepatitis C,806,107
+Prevalent obesity,[COVID ID108 v1] Prevalent obesity,808,108
+Prevalent Dementia,[COVID ID109 v1] Prevalent Dementia,770,109
+Prevalent pre-existing condition of COVID risk factor,[COVID ID125 V1] Prevalent pre-existing condition of COVID risk factor,964,125
+Prevalent Autoimmune condition,[COVID ID118 v1] Prevalent Autoimmune condition,848,118
+Flu-like symptom episodes,[COVID ID200 v1] Flu-like symptom episodes,987,200
+

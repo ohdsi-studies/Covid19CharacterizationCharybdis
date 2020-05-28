@@ -1,0 +1,284 @@
+{
+  "cdmVersionRange": [">=5.0.0"],
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {
+        "ConditionOccurrence": {
+          "CodesetId": [0],
+          "ConditionTypeExclude": [false],
+          "Gender": [
+            {
+              "CONCEPT_ID": [8532],
+              "CONCEPT_NAME": ["FEMALE"],
+              "STANDARD_CONCEPT": {},
+              "STANDARD_CONCEPT_CAPTION": ["Unknown"],
+              "INVALID_REASON": {},
+              "INVALID_REASON_CAPTION": ["Unknown"],
+              "CONCEPT_CODE": ["F"],
+              "DOMAIN_ID": ["Gender"],
+              "VOCABULARY_ID": ["Gender"],
+              "CONCEPT_CLASS_ID": {}
+            }
+          ]
+        }
+      },
+      {
+        "Observation": {
+          "CodesetId": [0],
+          "ObservationTypeExclude": [false],
+          "Gender": [
+            {
+              "CONCEPT_ID": [8532],
+              "CONCEPT_NAME": ["FEMALE"],
+              "STANDARD_CONCEPT": {},
+              "STANDARD_CONCEPT_CAPTION": ["Unknown"],
+              "INVALID_REASON": {},
+              "INVALID_REASON_CAPTION": ["Unknown"],
+              "CONCEPT_CODE": ["F"],
+              "DOMAIN_ID": ["Gender"],
+              "VOCABULARY_ID": ["Gender"],
+              "CONCEPT_CLASS_ID": {}
+            }
+          ]
+        }
+      }
+    ],
+    "ObservationWindow": [0, 0],
+    "PrimaryCriteriaLimit": ["All"]
+  },
+  "ConceptSets": [
+    {
+      "id": [0],
+      "name": ["Livebirth"],
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_ID": [4092289],
+              "CONCEPT_NAME": ["Livebirth"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["281050002"],
+              "DOMAIN_ID": ["Condition"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Clinical Finding"]
+            },
+            "isExcluded": [false],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": [4163851],
+              "CONCEPT_NAME": ["Multiple birth"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["45384004"],
+              "DOMAIN_ID": ["Condition"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Clinical Finding"]
+            },
+            "isExcluded": [false],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": [4015162],
+              "CONCEPT_NAME": ["Twins - both stillborn"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["169830007"],
+              "DOMAIN_ID": ["Condition"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Clinical Finding"]
+            },
+            "isExcluded": [true],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": [40483101],
+              "CONCEPT_NAME": ["Twin liveborn born in hospital by cesarean section"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["442342003"],
+              "DOMAIN_ID": ["Observation"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Context-dependent"]
+            },
+            "isExcluded": [false],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": [40482735],
+              "CONCEPT_NAME": ["Liveborn born in hospital"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["442311008"],
+              "DOMAIN_ID": ["Observation"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Context-dependent"]
+            },
+            "isExcluded": [false],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          }
+        ]
+      }
+    },
+    {
+      "id": [1],
+      "name": ["Post term delivery"],
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_ID": [437369],
+              "CONCEPT_NAME": ["Postmature infancy"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["16207008"],
+              "DOMAIN_ID": ["Condition"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Clinical Finding"]
+            },
+            "isExcluded": [false],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": [440833],
+              "CONCEPT_NAME": ["Postmaturity of fetus"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["433145001"],
+              "DOMAIN_ID": ["Condition"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Clinical Finding"]
+            },
+            "isExcluded": [false],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": [441128],
+              "CONCEPT_NAME": ["Post-term infant, not heavy-for-dates"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["79995002"],
+              "DOMAIN_ID": ["Condition"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Clinical Finding"]
+            },
+            "isExcluded": [false],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": [432695],
+              "CONCEPT_NAME": ["Post-term pregnancy"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["90968009"],
+              "DOMAIN_ID": ["Condition"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Clinical Finding"]
+            },
+            "isExcluded": [false],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": [439894],
+              "CONCEPT_NAME": ["Post-term pregnancy - delivered"],
+              "STANDARD_CONCEPT": ["S"],
+              "STANDARD_CONCEPT_CAPTION": ["Standard"],
+              "INVALID_REASON": ["V"],
+              "INVALID_REASON_CAPTION": ["Valid"],
+              "CONCEPT_CODE": ["199063009"],
+              "DOMAIN_ID": ["Condition"],
+              "VOCABULARY_ID": ["SNOMED"],
+              "CONCEPT_CLASS_ID": ["Clinical Finding"]
+            },
+            "isExcluded": [false],
+            "includeDescendants": [true],
+            "includeMapped": [false]
+          }
+        ]
+      }
+    }
+  ],
+  "QualifiedLimit": ["First"],
+  "ExpressionLimit": ["All"],
+  "InclusionRules": [
+    {
+      "name": ["Post term delivery"],
+      "expression": {
+        "Type": ["ANY"],
+        "CriteriaList": [
+          {
+            "Criteria": {
+              "ConditionOccurrence": {
+                "CodesetId": [1],
+                "ConditionTypeExclude": [false]
+              }
+            },
+            "StartWindow": {
+              "Start": [0, -1],
+              "End": [0, 1],
+              "UseIndexEnd": [false],
+              "UseEventEnd": [false]
+            },
+            "RestrictVisit": [false],
+            "IgnoreObservationPeriod": [false],
+            "Occurrence": {
+              "Type": [2],
+              "Count": [1],
+              "IsDistinct": [false]
+            }
+          }
+        ],
+        "DemographicCriteriaList": [],
+        "Groups": []
+      }
+    }
+  ],
+  "EndStrategy": {
+    "DateOffset": {
+      "DateField": ["EndDate"],
+      "Offset": [1]
+    }
+  },
+  "CensoringCriteria": [],
+  "CollapseSettings": {
+    "CollapseType": ["ERA"],
+    "EraPad": [90]
+  },
+  "CensorWindow": {}
+}

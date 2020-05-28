@@ -1,0 +1,64 @@
+name,atlasName,atlasId,cohortId
+Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),[COVID ID121 V1] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),801,121
+Asthma-COPD Step 1,[COVID ID122 V1] Asthma-COPD Step 1,851,122
+Asthma-COPD Step 2,[COVID ID123 V1] Asthma-COPD Step 2,850,123
+Asthma-COPD Step 3,[COVID ID124 V1] Asthma-COPD Step 3,852,124
+Gestational diabetes,[COVID ID110 v1] Gestational diabetes episodes,771,110
+Eclampsia and pre-eclampsia,[COVID ID142 v1] Eclampsia and pre-eclampsia episodes,824,142
+Fever,[COVID ID143 v1] Fever episodes,809,143
+Cough,[COVID ID144 v1] Cough episodes,913,144
+Myalgia,[COVID ID145 v1] Myalgia episodes,914,145
+Malaise or fatigue,[COVID ID146 v1] Malaise or fatigue episodes,915,146
+Dyspnea,[COVID ID147 v1] Dyspnea episodes,916,147
+Anosmia OR Hyposmia OR Dysgeusia,[COVID ID148 v1] Anosmia OR Hyposmia OR Dysgeusia episodes,912,148
+Persons with additional testing for SARS-Cov-2 (prior test 1d or more before test),[COVID ID149 V1] Persons with additional testing for SARS-Cov-2 (prior test 1d or more before test),982,149
+Persons with additional testing for SARS-Cov-2 (prior test 5d or more before test),[COVID ID150 V1] Persons with additional testing for SARS-Cov-2 (prior test 5d or more before test),983,150
+Hospitalization episodes,[COVID ID151 V1] Hospitalization episodes,917,151
+Pneumonia during hospitalization,[COVID ID152 V1] Pneumonia during hospitalization,781,152
+Acute Respiratory Distress syndrome (ARDS) during hospitalization,[COVID ID153 V1] Acute Respiratory Distress syndrome (ARDS) during hospitalization,76,153
+Acute kidney injury (AKI) diagnosis during hospitalization,[COVID ID154 V1] Acute kidney injury (AKI) diagnosis during hospitalization,849,154
+Sepsis during hospitalization,[COVID ID155 V1] Sepsis during hospitalization,923,155
+Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events,[COVID ID156 V1] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events,7,156
+Pulmonary Embolism events,[COVID ID157 V1] Pulmonary Embolism events,918,157
+Deep vein thrombosis events,[COVID ID158 V1] Deep vein thrombosis events,920,158
+Heart failure during hospitalization,[COVID ID159 V1] Heart failure during hospitalization,932,159
+Cardiac arrhythmia during hospitalization,[COVID ID160 V1] Cardiac arrhythmia during hospitalization,841,160
+Bradycardia or heart block during hospitalization,[COVID ID161 V1] Bradycardia or heart block during hospitalization,817,161
+Supraventricular arrythymia during hospitalization,[COVID ID162 V1] Supraventricular arrythymia during hospitalization,816,162
+ventricular arrhythmia or cardiac arrest during hospitalization,[COVID ID163 V1] ventricular arrhythmia or cardiac arrest during hospitalization,842,163
+death,[COVID ID164 V1] Death,166,164
+Stillbirth,[COVID ID165 V1] Stillbirth,769,165
+Livebirth Delivery,[COVID ID166 V1] Livebirth Delivery,930,166
+Livebirth Preterm Delivery,[COVID ID167 V1] Livebirth Preterm Delivery,772,167
+Livebirth Post term Delivery,[COVID ID168 V1] Livebirth Post term Delivery,773,168
+Livebirth excluding preterm and post term delivery,[COVID ID169 V1] Livebirth excluding preterm and post term delivery,774,169
+Abortion,[COVID ID170 V1] Abortion,775,170
+Premature Rupture of Membranes,[COVID ID171 V1] Premature Rupture of Membranes,818,171
+Fetal growth restriction,[COVID ID172 V1] Fetal growth restriction,819,172
+Cesarean section,[COVID ID173 V1] Cesarean section,931,173
+Hospitalization for Asthma,[COVID ID174 V1] Hospitalization for Asthma,814,174
+Hospitalization for COPD,[COVID ID175 V1] Hospitalization for COPD,813,175
+Pneumonia episodes,[COVID ID176 V1] Pneumonia episodes,938,176
+intensive services during hospitalization,[COVID ID177 V1] intensive services during hospitalization,933,177
+mechanical ventilation during hospitalization,[COVID ID178 V1] mechanical ventilation during hospitalization,934,178
+tracheostomy during hospitalization,[COVID ID179 V1] tracheostomy during hospitalization,936,179
+ECMO during hospitalization,[COVID ID180 V1] ECMO during hospitalization,935,180
+dialysis during hospitalization,[COVID ID181 V1] dialysis during hospitalization,937,181
+Persons with chest pain or angina,[COVID ID182 V1] Persons with chest pain or angina,6,182
+Angina during hospitalization,[COVID ID183 V1] Angina during hospitalization,929,183
+Persons with hepatic failure,[COVID ID184 V1] Persons with hepatic failure,10,184
+Acute pancreatitis events,[COVID ID185 V1] Acute pancreatitis events,11,185
+Total cardiovascular disease events,[COVID ID186 V1] Total cardiovascular disease events,245,186
+Gastrointestinal bleeding events,[COVID ID187 V1] Gastrointestinal bleeding events,17,187
+Cardiovascular-related mortality,[COVID ID188 V1] Cardiovascular-related mortality,19,188
+Transient ischemic attack events,[COVID ID189 V1] Transient ischemic attack events,20,189
+Stroke (ischemic or hemorrhagic) events,[COVID ID190 V1] Stroke (ischemic or hemorrhagic) events,21,190
+Ischemic stroke events,[COVID ID191 V1] Ischemic stroke events,924,191
+Hemorrhagic stroke (intracerebral bleeding) events,[COVID ID192 V1] Hemorrhagic stroke (intracerebral bleeding) events,926,192
+Acute myocardial infarction events,[COVID ID193 V1] Acute myocardial infarction events,22,193
+Bleeding during hospitalization,[COVID ID194 V1] Bleeding during hospitalization,939,194
+Incident depression with no prior treatment and no mania or psychoses,[COVID ID195 V1] Incident depression with no prior treatment and no mania or psychoses,927,195
+Hospitalization for psychosis,[COVID ID196 V1] Hospitalization for psychosis,928,196
+Suicide and suicidal ideation,[COVID ID197 V1] Suicide and suicidal ideation,925,197
+Multi-system inflammatory syndrome (Kawasaki disease or toxic shock syndrome),[COVID ID198 V1] Multi-system inflammatory syndrome (Kawasaki disease or toxic shock syndrome),940,198
+Acute kidney injury (AKI) using diagnosis codes and change in measurements during hospitlization,Acute kidney injury (AKI) using diagnosis codes and change in measurements during hospitlization,-1,201 

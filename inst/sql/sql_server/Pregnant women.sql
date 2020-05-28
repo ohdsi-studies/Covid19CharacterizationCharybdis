@@ -1,0 +1,416 @@
+CREATE TABLE #Codesets (
+  codeset_id int NOT NULL,
+  concept_id bigint NOT NULL
+)
+;
+
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 10 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4059050,4149783,4125440,4060034,442631,4064724,137974,314099,440216,4061847,4007285,4064723,4034155,4316171,4101126,4233425,4111088,441092,4061809,3022304,3045859,4086931,4041176,4041177,4042555,4042557,4314756,2004824,2004808,4056119,4056118,4057159,4056114,433880,4057154,4043930,4077055,4060259,4061530,4061528,4061793,42739740,2101814,2101807,2101815,2101809,2100998,2101013,2101808,2101806,2101593,4079835,4015137,4061154,4237327,4015139,4153436,439656,4061435,4061434,4060245,4060098,4060240,4147941,4181975,4047845,4084186,4257036,4254205,4170305,4062361,4087243,4152443,4087235,40483080,4015140,4085933,4257039,4152444,45432060,45428790,4152445,4061131,4061157,4310443,4061802,4081196,435887,4060264,4061156,4014472,4014304,4016464,318247,2006861,2004542,4239302,2004526,2004525,42739500,2213363,2213362,42739560,4090719,4062636,2004347,4028644,2213365,2213364,3022007,4014291,4182460,4014612,4014740,4016487,4015277,4014465,40404580,40759180,4034150,4042936,4014314,4015160,4192676,4015307,4014441,73019,443330,77624,81086,73282,4066258,4015144,40766620,45757110,2004722,4055694,4012802,317669,42742390,4065094,2110305,2110304,444292,4048139,4132566,197043,4127841,4192036,2004790,4152029,4253751,40479780,4014738,4021397,2004785,4024006,434167,195870,435875,4309151,4129020,37110280,4182769,4008239,441964,4145939,4071869,4071195,4194229,4220675,200791,4149398,4048592,4060252,380533,2004823,4015590,443243,434715,440481,437062,432396,4252738,4127549,4028634,4034076,4129700,4028636,4062551,2514560,4060107,3011536,4038495,43054890,4061795,4156955,4150421,4243314,4058243,3030608,2004805,4124226,2006934,434482,4016060,4173784,4314846,4313768,4309556,4086786,2004490,2004489,4138740,4074867,4072420,4084845,4063155,200524,80471,439658,4195545,201091,432443,4071745,4048738,4149463,4149462,4087245,443250,435359,4122728,4193062,4064450,441412,4207588,4031038,4241991,4108901,4265609,4327048,4253816,2004766,4345685,4059478,4182148,2004848,4170151,2108121,4147078,40479820,2213361,2004769,2004787,4070533,4001541,4061800,4060255,4061527,4061152,4100327,439923,4079844,4323285,4334808,2004809,4210896,4127418,4145315,4015303,433309,432429,436218,4070421,4118054,434744,441127,436517,440829,442148,432734,4299735,4015304,4014437,4129553,2110289,4042411,4042923,2721174,4344625,4154314,4127854,4124636,4104311,195877,4116804,4124634,432441,439156,4124479,4199274,4128832,4199558,4124637,4126258,4265118,4096531,4140071,2004727,4109462,2004711,4060108,4127104,4072421,4150651,4061522,42594970,4055678,4164266,4204988,4084217,4006949,45757130,440218,2004708,2004709,4016061,42739010,42739010,3048599,441630,4062565,4151190,2514576,4041368,4041367,4320940,2110306,2004426,2004791,4030415,2004851,4049777,4311629,2110084,2004745,4344630,44804250,4136449,4062356,4014439,4028781,4060312,4085257,2514556,2514569,2514555,2514558,42739630,2514563,2213360,3046418,2004750,2004749,2004804,4072424,4311540,2004806,4074869,4199599,4058246,4079751,36712670,4173577,4221837,40760190,4152967,4021675,4251314,4032749,2722205,2722217,2106488,3002314,4071073,4145062,434474,4061791,4081274,40482740,4096534,45769910,2004703,2004704,4129022,4106176,4214980,4130310,4280517,2004845,2004763,2004826,2004764,4010041,4244279,40485050,40483250,40484590,434697,42534810,4062359,4062628,4126725,4129174,4127049,2004762,2721012,4091197,4188630,4060424,2004705,2004706,4305717,4252093,4330861,4014582,4014316,4102166,4142637,3045823,2213206,2213201,4236626,4212326,4071721,252442,434154,440840,4172864,4049043,4143745,4129185,4302027,193323,4173170,4071202,4150930,23034,4337102,4172867,443618,4174302,76221,435656,81400,439140,318856,4048751,137099,4047937,4048755,194598,2101016,2101598,4324051,4079843,42739020,40480440,4060249,4124478,4305304,4080067,4015147,4289014,42739010,4193440,3002549,4021781,4091321,2721745,4061473,4141544,4129186,4084521,4080059,4090071,4095947,4302541,4062124,4070225,4039090,4038571,4038572,4039088,4039610,4207166,4039609,4038763,4038573,4038762,4034650,4153591,4073719,4072862,4145318,4146393,4169003,45757160,4345344,4060109,4061149,4061526,4061525,3016572,2004723,4080867,195075,4131053,40664800,260212,4024541,4187201,4048152,195064,4162557,4089917,45757140,45757140,4119977,4014585,4096532,4090740,2007465,4328506,4014717,4014444,4028624,4012558,437369,440833,4194423,4015415,4015152,4015410,4014446,4169982,4215564,4014445,4015154,4062362,4034146,4151029,2110314,4203918,45773070,4012240,440465,441128,433542,4057979,4063042,4063043,3005975,4148890,4064793,4063126,4064791,37208880,44806660,4302270,4094911,4094910,37208880,4077075,3171301,3188475,4034085,4299535,4059984,4040733,4089558,40770920,4119100,4205452,4244737,4148926,4330449,4142640,4049024,4133029,4060105,4082072,4088432,4095809,45757170,4136097,2004782,4061423,4091640,3046853,4150401,77619,4190767,4081292,4084693,4082067,4214930,4089069,3040000,2004546,4153287,4123182,2004842,2004829,2004830,2004843,2004828,2004770,4075175,4086797,319138,4061848,437061,4129345,4014584,4061812,4086932,2004346,4113995,2004351,2004362,2004308,2004307,2004306,4120817,4047853,4074158,4083415,4260976,4089029,42742500,4071063,4235812,4092760,45757170,45757170,4127241,4060253,4150640,4065627,4065625,198212,4092290,4047868,4063159,42739010,2514557,42739550,2514564,2514572,42740400,2514571,2514570,4238119,43530880,43530890,43530880,43530890,4129023,4071588,4024302,4075040,139895,4047866,2004331,2004725,40664770,4172865,433604,4327033,439149,435076,2007012,436234,321683,4014290,4145940,4219108,2211785,3031159,2721352,40756970,45519120,45887770,45888650,45888040,45888750,2211756,2211755,2211757,4028913,4157006,4152021,4079860,4125141,4241830,4028642,4080866,2004742,4060623,4060622,4061129,2110338,4129703,4034079,4129015,4129016,4193463,4129043,2004728,2004729,4170459,4072710,4145316,315881,4079752,4129689,40767420,4132649,4071866,4085140,2006756)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4059050,4149783,4125440,4060034,442631,4064724,137974,314099,440216,4061847,4007285,4064723,4034155,4316171,4101126,4233425,4111088,441092,4061809,3022304,3045859,4086931,4041176,4041177,4042555,4042557,4314756,2004824,2004808,4056119,4056118,4057159,4056114,433880,4057154,4043930,4077055,4060259,4061530,4061528,4061793,42739740,2101814,2101807,2101815,2101809,2100998,2101013,2101808,2101806,2101593,4079835,4015137,4061154,4237327,4015139,4153436,439656,4061435,4061434,4060245,4060098,4060240,4147941,4181975,4047845,4084186,4257036,4254205,4170305,4062361,4087243,4152443,4087235,40483080,4015140,4085933,4257039,4152444,45432060,45428790,4152445,4061131,4061157,4310443,4061802,4081196,435887,4060264,4061156,4014472,4014304,4016464,318247,2006861,2004542,4239302,2004526,2004525,42739500,2213363,2213362,42739560,4090719,4062636,2004347,4028644,2213365,2213364,3022007,4014291,4182460,4014612,4014740,4016487,4015277,4014465,40404580,40759180,4034150,4042936,4014314,4015160,4192676,4015307,4014441,73019,443330,77624,81086,73282,4066258,4015144,40766620,45757110,2004722,4055694,4012802,317669,42742390,4065094,2110305,2110304,444292,4048139,4132566,197043,4127841,4192036,2004790,4152029,4253751,40479780,4014738,4021397,2004785,4024006,434167,195870,435875,4309151,4129020,37110280,4182769,4008239,441964,4145939,4071869,4071195,4194229,4220675,200791,4149398,4048592,4060252,380533,2004823,4015590,443243,434715,440481,437062,432396,4252738,4127549,4028634,4034076,4129700,4028636,4062551,2514560,4060107,3011536,4038495,43054890,4061795,4156955,4150421,4243314,4058243,3030608,2004805,4124226,2006934,434482,4016060,4173784,4314846,4313768,4309556,4086786,2004490,2004489,4138740,4074867,4072420,4084845,4063155,200524,80471,439658,4195545,201091,432443,4071745,4048738,4149463,4149462,4087245,443250,435359,4122728,4193062,4064450,441412,4207588,4031038,4241991,4108901,4265609,4327048,4253816,2004766,4345685,4059478,4182148,2004848,4170151,2108121,4147078,40479820,2213361,2004769,2004787,4070533,4001541,4061800,4060255,4061527,4061152,4100327,439923,4079844,4323285,4334808,2004809,4210896,4127418,4145315,4015303,433309,432429,436218,4070421,4118054,434744,441127,436517,440829,442148,432734,4299735,4015304,4014437,4129553,2110289,4042411,4042923,2721174,4344625,4154314,4127854,4124636,4104311,195877,4116804,4124634,432441,439156,4124479,4199274,4128832,4199558,4124637,4126258,4265118,4096531,4140071,2004727,4109462,2004711,4060108,4127104,4072421,4150651,4061522,42594970,4055678,4164266,4204988,4084217,4006949,45757130,440218,2004708,2004709,4016061,42739010,42739010,3048599,441630,4062565,4151190,2514576,4041368,4041367,4320940,2110306,2004426,2004791,4030415,2004851,4049777,4311629,2110084,2004745,4344630,44804250,4136449,4062356,4014439,4028781,4060312,4085257,2514556,2514569,2514555,2514558,42739630,2514563,2213360,3046418,2004750,2004749,2004804,4072424,4311540,2004806,4074869,4199599,4058246,4079751,36712670,4173577,4221837,40760190,4152967,4021675,4251314,4032749,2722205,2722217,2106488,3002314,4071073,4145062,434474,4061791,4081274,40482740,4096534,45769910,2004703,2004704,4129022,4106176,4214980,4130310,4280517,2004845,2004763,2004826,2004764,4010041,4244279,40485050,40483250,40484590,434697,42534810,4062359,4062628,4126725,4129174,4127049,2004762,2721012,4091197,4188630,4060424,2004705,2004706,4305717,4252093,4330861,4014582,4014316,4102166,4142637,3045823,2213206,2213201,4236626,4212326,4071721,252442,434154,440840,4172864,4049043,4143745,4129185,4302027,193323,4173170,4071202,4150930,23034,4337102,4172867,443618,4174302,76221,435656,81400,439140,318856,4048751,137099,4047937,4048755,194598,2101016,2101598,4324051,4079843,42739020,40480440,4060249,4124478,4305304,4080067,4015147,4289014,42739010,4193440,3002549,4021781,4091321,2721745,4061473,4141544,4129186,4084521,4080059,4090071,4095947,4302541,4062124,4070225,4039090,4038571,4038572,4039088,4039610,4207166,4039609,4038763,4038573,4038762,4034650,4153591,4073719,4072862,4145318,4146393,4169003,45757160,4345344,4060109,4061149,4061526,4061525,3016572,2004723,4080867,195075,4131053,40664800,260212,4024541,4187201,4048152,195064,4162557,4089917,45757140,45757140,4119977,4014585,4096532,4090740,2007465,4328506,4014717,4014444,4028624,4012558,437369,440833,4194423,4015415,4015152,4015410,4014446,4169982,4215564,4014445,4015154,4062362,4034146,4151029,2110314,4203918,45773070,4012240,440465,441128,433542,4057979,4063042,4063043,3005975,4148890,4064793,4063126,4064791,37208880,44806660,4302270,4094911,4094910,37208880,4077075,3171301,3188475,4034085,4299535,4059984,4040733,4089558,40770920,4119100,4205452,4244737,4148926,4330449,4142640,4049024,4133029,4060105,4082072,4088432,4095809,45757170,4136097,2004782,4061423,4091640,3046853,4150401,77619,4190767,4081292,4084693,4082067,4214930,4089069,3040000,2004546,4153287,4123182,2004842,2004829,2004830,2004843,2004828,2004770,4075175,4086797,319138,4061848,437061,4129345,4014584,4061812,4086932,2004346,4113995,2004351,2004362,2004308,2004307,2004306,4120817,4047853,4074158,4083415,4260976,4089029,42742500,4071063,4235812,4092760,45757170,45757170,4127241,4060253,4150640,4065627,4065625,198212,4092290,4047868,4063159,42739010,2514557,42739550,2514564,2514572,42740400,2514571,2514570,4238119,43530880,43530890,43530880,43530890,4129023,4071588,4024302,4075040,139895,4047866,2004331,2004725,40664770,4172865,433604,4327033,439149,435076,2007012,436234,321683,4014290,4145940,4219108,2211785,3031159,2721352,40756970,45519120,45887770,45888650,45888040,45888750,2211756,2211755,2211757,4028913,4157006,4152021,4079860,4125141,4241830,4028642,4080866,2004742,4060623,4060622,4061129,2110338,4129703,4034079,4129015,4129016,4193463,4129043,2004728,2004729,4170459,4072710,4145316,315881,4079752,4129689,40767420,4132649,4071866,4085140,2006756)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 11 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (42739740,2101807,2004526,2004525,4014461,4151169,4149449,4149457,4014299,4149451,4150406,4150405,4150404,4028644,4216316,4192676,193277,444113,441641,4128030,2004489,4138740,4074867,4195545,4170151,4282169,194694,75605,436228,4148097,4118056,4063309,72726,40482740,4171115,2721012,433260,440847,437369,440833,4194423,441128,432695,40539860,4086393,4147874,4064709,4058403,36712700,4150401,4153287,4086797,4170121,136530,2514572,42740400,2514571,2514570,4297250,2110328)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (42739740,2101807,2004526,2004525,4014461,4151169,4149449,4149457,4014299,4149451,4150406,4150405,4150404,4028644,4216316,4192676,193277,444113,441641,4128030,2004489,4138740,4074867,4195545,4170151,4282169,194694,75605,436228,4148097,4118056,4063309,72726,40482740,4171115,2721012,433260,440847,437369,440833,4194423,441128,432695,40539860,4086393,4147874,4064709,4058403,36712700,4150401,4153287,4086797,4170121,136530,2514572,42740400,2514571,2514570,4297250,2110328)
+  and c.invalid_reason is null
+
+) I
+) C;
+
+
+with primary_events (event_id, person_id, start_date, end_date, op_start_date, op_end_date, visit_occurrence_id) as
+(
+-- Begin Primary Events
+select P.ordinal as event_id, P.person_id, P.start_date, P.end_date, op_start_date, op_end_date, cast(P.visit_occurrence_id as bigint) as visit_occurrence_id
+FROM
+(
+  select E.person_id, E.start_date, E.end_date,
+         row_number() OVER (PARTITION BY E.person_id ORDER BY E.sort_date ASC) ordinal,
+         OP.observation_period_start_date as op_start_date, OP.observation_period_end_date as op_end_date, cast(E.visit_occurrence_id as bigint) as visit_occurrence_id
+  FROM 
+  (
+  -- Begin Condition Occurrence Criteria
+SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date,
+       C.CONDITION_CONCEPT_ID as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.condition_start_date as sort_date
+FROM 
+(
+  SELECT co.* 
+  FROM @cdm_database_schema.CONDITION_OCCURRENCE co
+  JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 10))
+) C
+JOIN @cdm_database_schema.PERSON P on C.person_id = P.person_id
+WHERE (YEAR(C.condition_start_date) - P.year_of_birth >= 12 and YEAR(C.condition_start_date) - P.year_of_birth <= 55)
+AND P.gender_concept_id in (8532)
+-- End Condition Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 10))
+) C
+JOIN @cdm_database_schema.PERSON P on C.person_id = P.person_id
+WHERE (YEAR(C.procedure_date) - P.year_of_birth >= 12 and YEAR(C.procedure_date) - P.year_of_birth <= 55)
+AND P.gender_concept_id in (8532)
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Observation Criteria
+select C.person_id, C.observation_id as event_id, C.observation_date as start_date, DATEADD(d,1,C.observation_date) as END_DATE,
+       C.observation_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.observation_date as sort_date
+from 
+(
+  select o.* 
+  FROM @cdm_database_schema.OBSERVATION o
+JOIN #Codesets codesets on ((o.observation_concept_id = codesets.concept_id and codesets.codeset_id = 10))
+) C
+JOIN @cdm_database_schema.PERSON P on C.person_id = P.person_id
+WHERE (YEAR(C.observation_date) - P.year_of_birth >= 12 and YEAR(C.observation_date) - P.year_of_birth <= 55)
+AND P.gender_concept_id in (8532)
+-- End Observation Criteria
+
+  ) E
+	JOIN @cdm_database_schema.observation_period OP on E.person_id = OP.person_id and E.start_date >=  OP.observation_period_start_date and E.start_date <= op.observation_period_end_date
+  WHERE DATEADD(day,0,OP.OBSERVATION_PERIOD_START_DATE) <= E.START_DATE AND DATEADD(day,0,E.START_DATE) <= OP.OBSERVATION_PERIOD_END_DATE
+) P
+
+-- End Primary Events
+
+)
+SELECT event_id, person_id, start_date, end_date, op_start_date, op_end_date, visit_occurrence_id
+INTO #qualified_events
+FROM 
+(
+  select pe.event_id, pe.person_id, pe.start_date, pe.end_date, pe.op_start_date, pe.op_end_date, row_number() over (partition by pe.person_id order by pe.start_date ASC) as ordinal, cast(pe.visit_occurrence_id as bigint) as visit_occurrence_id
+  FROM primary_events pe
+  
+) QE
+
+;
+
+--- Inclusion Rule Inserts
+
+select 0 as inclusion_rule_id, person_id, event_id
+INTO #Inclusion_0
+FROM 
+(
+  select pe.person_id, pe.event_id
+  FROM #qualified_events pe
+  
+JOIN (
+-- Begin Criteria Group
+select 0 as index_id, person_id, event_id
+FROM
+(
+  select E.person_id, E.event_id 
+  FROM #qualified_events E
+  INNER JOIN
+  (
+    -- Begin Correlated Criteria
+SELECT 0 as index_id, p.person_id, p.event_id
+FROM #qualified_events P
+INNER JOIN
+(
+  -- Begin Condition Occurrence Criteria
+SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date,
+       C.CONDITION_CONCEPT_ID as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.condition_start_date as sort_date
+FROM 
+(
+  SELECT co.* 
+  FROM @cdm_database_schema.CONDITION_OCCURRENCE co
+  JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 11))
+) C
+
+
+-- End Condition Occurrence Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,1,P.START_DATE) AND A.START_DATE <= P.OP_END_DATE
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(A.TARGET_CONCEPT_ID) >= 1
+-- End Correlated Criteria
+
+UNION ALL
+-- Begin Correlated Criteria
+SELECT 1 as index_id, p.person_id, p.event_id
+FROM #qualified_events P
+INNER JOIN
+(
+  -- Begin Observation Criteria
+select C.person_id, C.observation_id as event_id, C.observation_date as start_date, DATEADD(d,1,C.observation_date) as END_DATE,
+       C.observation_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.observation_date as sort_date
+from 
+(
+  select o.* 
+  FROM @cdm_database_schema.OBSERVATION o
+JOIN #Codesets codesets on ((o.observation_concept_id = codesets.concept_id and codesets.codeset_id = 11))
+) C
+
+
+-- End Observation Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,1,P.START_DATE) AND A.START_DATE <= P.OP_END_DATE
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(A.TARGET_CONCEPT_ID) >= 1
+-- End Correlated Criteria
+
+UNION ALL
+-- Begin Correlated Criteria
+SELECT 2 as index_id, p.person_id, p.event_id
+FROM #qualified_events P
+INNER JOIN
+(
+  -- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 11))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,1,P.START_DATE) AND A.START_DATE <= P.OP_END_DATE
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(A.TARGET_CONCEPT_ID) >= 1
+-- End Correlated Criteria
+
+  ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
+  GROUP BY E.person_id, E.event_id
+  HAVING COUNT(index_id) > 0
+) G
+-- End Criteria Group
+) AC on AC.person_id = pe.person_id AND AC.event_id = pe.event_id
+) Results
+;
+
+SELECT inclusion_rule_id, person_id, event_id
+INTO #inclusion_events
+FROM (select inclusion_rule_id, person_id, event_id from #Inclusion_0) I;
+TRUNCATE TABLE #Inclusion_0;
+DROP TABLE #Inclusion_0;
+
+
+with cteIncludedEvents(event_id, person_id, start_date, end_date, op_start_date, op_end_date, ordinal) as
+(
+  SELECT event_id, person_id, start_date, end_date, op_start_date, op_end_date, row_number() over (partition by person_id order by start_date ASC) as ordinal
+  from
+  (
+    select Q.event_id, Q.person_id, Q.start_date, Q.end_date, Q.op_start_date, Q.op_end_date, SUM(coalesce(POWER(cast(2 as bigint), I.inclusion_rule_id), 0)) as inclusion_rule_mask
+    from #qualified_events Q
+    LEFT JOIN #inclusion_events I on I.person_id = Q.person_id and I.event_id = Q.event_id
+    GROUP BY Q.event_id, Q.person_id, Q.start_date, Q.end_date, Q.op_start_date, Q.op_end_date
+  ) MG -- matching groups
+
+  -- the matching group with all bits set ( POWER(2,# of inclusion rules) - 1 = inclusion_rule_mask
+  WHERE (MG.inclusion_rule_mask = POWER(cast(2 as bigint),1)-1)
+
+)
+select event_id, person_id, start_date, end_date, op_start_date, op_end_date
+into #included_events
+FROM cteIncludedEvents Results
+
+;
+
+-- date offset strategy
+
+select event_id, person_id, 
+  case when DATEADD(day,300,start_date) > start_date then DATEADD(day,300,start_date) else start_date end as end_date
+INTO #strategy_ends
+from #included_events;
+
+
+-- generate cohort periods into #final_cohort
+with cohort_ends (event_id, person_id, end_date) as
+(
+	-- cohort exit dates
+  -- End Date Strategy
+SELECT event_id, person_id, end_date from #strategy_ends
+
+UNION ALL
+-- Censor Events
+select i.event_id, i.person_id, MIN(c.start_date) as end_date
+FROM #included_events i
+JOIN
+(
+-- Begin Condition Occurrence Criteria
+SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date,
+       C.CONDITION_CONCEPT_ID as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.condition_start_date as sort_date
+FROM 
+(
+  SELECT co.* 
+  FROM @cdm_database_schema.CONDITION_OCCURRENCE co
+  JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 11))
+) C
+
+
+-- End Condition Occurrence Criteria
+
+) C on C.person_id = I.person_id and C.start_date >= I.start_date and C.START_DATE <= I.op_end_date
+GROUP BY i.event_id, i.person_id
+
+UNION ALL
+select i.event_id, i.person_id, MIN(c.start_date) as end_date
+FROM #included_events i
+JOIN
+(
+-- Begin Observation Criteria
+select C.person_id, C.observation_id as event_id, C.observation_date as start_date, DATEADD(d,1,C.observation_date) as END_DATE,
+       C.observation_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.observation_date as sort_date
+from 
+(
+  select o.* 
+  FROM @cdm_database_schema.OBSERVATION o
+JOIN #Codesets codesets on ((o.observation_concept_id = codesets.concept_id and codesets.codeset_id = 11))
+) C
+
+
+-- End Observation Criteria
+
+) C on C.person_id = I.person_id and C.start_date >= I.start_date and C.START_DATE <= I.op_end_date
+GROUP BY i.event_id, i.person_id
+
+UNION ALL
+select i.event_id, i.person_id, MIN(c.start_date) as end_date
+FROM #included_events i
+JOIN
+(
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 11))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+) C on C.person_id = I.person_id and C.start_date >= I.start_date and C.START_DATE <= I.op_end_date
+GROUP BY i.event_id, i.person_id
+
+
+),
+first_ends (person_id, start_date, end_date) as
+(
+	select F.person_id, F.start_date, F.end_date
+	FROM (
+	  select I.event_id, I.person_id, I.start_date, E.end_date, row_number() over (partition by I.person_id, I.event_id order by E.end_date) as ordinal 
+	  from #included_events I
+	  join cohort_ends E on I.event_id = E.event_id and I.person_id = E.person_id and E.end_date >= I.start_date
+	) F
+	WHERE F.ordinal = 1
+)
+select person_id, start_date, end_date
+INTO #cohort_rows
+from first_ends;
+
+with cteEndDates (person_id, end_date) AS -- the magic
+(	
+	SELECT
+		person_id
+		, DATEADD(day,-1 * 60, event_date)  as end_date
+	FROM
+	(
+		SELECT
+			person_id
+			, event_date
+			, event_type
+			, MAX(start_ordinal) OVER (PARTITION BY person_id ORDER BY event_date, event_type ROWS UNBOUNDED PRECEDING) AS start_ordinal 
+			, ROW_NUMBER() OVER (PARTITION BY person_id ORDER BY event_date, event_type) AS overall_ord
+		FROM
+		(
+			SELECT
+				person_id
+				, start_date AS event_date
+				, -1 AS event_type
+				, ROW_NUMBER() OVER (PARTITION BY person_id ORDER BY start_date) AS start_ordinal
+			FROM #cohort_rows
+		
+			UNION ALL
+		
+
+			SELECT
+				person_id
+				, DATEADD(day,60,end_date) as end_date
+				, 1 AS event_type
+				, NULL
+			FROM #cohort_rows
+		) RAWDATA
+	) e
+	WHERE (2 * e.start_ordinal) - e.overall_ord = 0
+),
+cteEnds (person_id, start_date, end_date) AS
+(
+	SELECT
+		 c.person_id
+		, c.start_date
+		, MIN(e.end_date) AS end_date
+	FROM #cohort_rows c
+	JOIN cteEndDates e ON c.person_id = e.person_id AND e.end_date >= c.start_date
+	GROUP BY c.person_id, c.start_date
+)
+select person_id, min(start_date) as start_date, end_date
+into #final_cohort
+from cteEnds
+group by person_id, end_date
+;
+
+DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;
+INSERT INTO @target_database_schema.@target_cohort_table (cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)
+select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date 
+FROM #final_cohort CO
+;
+
+
+
+TRUNCATE TABLE #strategy_ends;
+DROP TABLE #strategy_ends;
+
+
+TRUNCATE TABLE #cohort_rows;
+DROP TABLE #cohort_rows;
+
+TRUNCATE TABLE #final_cohort;
+DROP TABLE #final_cohort;
+
+TRUNCATE TABLE #inclusion_events;
+DROP TABLE #inclusion_events;
+
+TRUNCATE TABLE #qualified_events;
+DROP TABLE #qualified_events;
+
+TRUNCATE TABLE #included_events;
+DROP TABLE #included_events;
+
+TRUNCATE TABLE #Codesets;
+DROP TABLE #Codesets;

@@ -1,0 +1,25 @@
+Package: Covid19Characterization
+Type: Package
+Title: Characterization of COVID-19 and Influenza patients
+Version: 0.0.1
+Author: Anthony G. Sena [aut, cre]
+Maintainer: Anthony G. Sena <asena5@its.jnj.com>
+Description: A package for characterizing COVID-19 patients with and without various features.
+Depends:
+  DatabaseConnector (>= 2.2.0)
+Imports:
+	ParallelLogger,
+	OhdsiSharing (>= 0.2.1),
+	readr,
+	ggplot2 (<= 3.2.1)
+Suggests:
+    knitr,
+    rmarkdown
+Remotes:
+    ohdsi/OhdsiSharing
+License: Apache License 2.0
+VignetteBuilder: knitr
+URL: 
+BugReports: 
+LazyData: TRUE
+RoxygenNote: 7.1.0

@@ -1,0 +1,7 @@
+name,atlasName,atlasId,cohortId
+Fever,[COVID ID143 v1] Fever episodes,809,143
+Cough,[COVID ID144 v1] Cough episodes,913,144
+Myalgia,[COVID ID145 v1] Myalgia episodes,914,145
+Malaise or fatigue,[COVID ID146 v1] Malaise or fatigue episodes,915,146
+Dyspnea,[COVID ID147 v1] Dyspnea episodes,916,147
+Anosmia OR Hyposmia OR Dysgeusia,[COVID ID148 v1] Anosmia OR Hyposmia OR Dysgeusia episodes,912,148
