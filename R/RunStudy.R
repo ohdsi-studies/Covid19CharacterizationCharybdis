@@ -135,7 +135,7 @@ runStudy <- function(connectionDetails = NULL,
                        oracleTempSchema = oracleTempSchema,
                        incremental = incremental,
                        incrementalFolder = incrementalFolder)
-  
+
   # Compute the features
   ParallelLogger::logInfo("**********************************************************")
   ParallelLogger::logInfo(" ---- Create feature proportions ---- ")
@@ -165,28 +165,16 @@ runStudy <- function(connectionDetails = NULL,
 
   # Counting staging cohorts ---------------------------------------------------------------
   ParallelLogger::logInfo("Counting staging cohorts")
-  subset <- subsetToRequiredCohorts(cohorts = loadCohortsFromPackage(cohortIds),
-                                    task = "getStagingCohortCounts",
-                                    incremental = incremental,
-                                    recordKeepingFile = recordKeepingFile)
-  if (nrow(subset) > 0) {
-    counts <- getCohortCounts(connection = connection,
-                              cohortDatabaseSchema = cohortDatabaseSchema,
-                              cohortTable = cohortStagingTable,
-                              cohortIds = subset$cohortId)
-    if (nrow(counts) > 0) {
-      counts$databaseId <- databaseId
-      counts <- enforceMinCellValue(counts, "cohortEntries", minCellCount)
-      counts <- enforceMinCellValue(counts, "cohortSubjects", minCellCount)
-    }
-    writeToCsv(counts, file.path(exportFolder, "cohort_staging_count.csv"), incremental = incremental, cohortId = subset$cohortId)
-    recordTasksDone(cohortId = subset$cohortId,
-                    task = "getStagingCohortCounts",
-                    checksum = subset$checksum,
-                    recordKeepingFile = recordKeepingFile,
-                    incremental = incremental)
+  counts <- getCohortCounts(connection = connection,
+                            cohortDatabaseSchema = cohortDatabaseSchema,
+                            cohortTable = cohortStagingTable)
+  if (nrow(counts) > 0) {
+    counts$databaseId <- databaseId
+    counts <- enforceMinCellValue(counts, "cohortEntries", minCellCount)
+    counts <- enforceMinCellValue(counts, "cohortSubjects", minCellCount)
   }
-  
+  writeToCsv(counts, file.path(exportFolder, "cohort_staging_count.csv"), incremental = incremental, cohortId = counts$cohortId)
+
   # Counting cohorts -----------------------------------------------------------------------
   ParallelLogger::logInfo("Counting cohorts")
   counts <- getCohortCounts(connection = connection,
@@ -197,12 +185,7 @@ runStudy <- function(connectionDetails = NULL,
     counts <- enforceMinCellValue(counts, "cohortEntries", minCellCount)
     counts <- enforceMinCellValue(counts, "cohortSubjects", minCellCount)
   }
-  writeToCsv(counts, file.path(exportFolder, "cohort_count.csv"))
-  recordTasksDone(cohortId = subset$cohortId,
-                  task = "getCohortCounts",
-                  checksum = NULL,
-                  recordKeepingFile = recordKeepingFile,
-                  incremental = incremental)
+  writeToCsv(counts, file.path(exportFolder, "cohort_count.csv"), incremental = incremental, cohortId = counts$cohortId)
 
   # Read in the cohort counts
   counts <- readr::read_csv(file.path(exportFolder, "cohort_count.csv"), col_types = readr::cols())
@@ -222,7 +205,7 @@ runStudy <- function(connectionDetails = NULL,
   writeToCsv(features, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = features$covariateId)
   featureValues <- formatCovariateValues(featureProportions, counts, minCellCount)
   featureValues <- featureValues[,c("cohortId", "covariateId", "mean", "sd", "databaseId")]
-  writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, covariateId = features$covariateId)
+  writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, covariateId = featureValues$covariateId)
   # Also keeping a raw output for debugging
   writeToCsv(featureProportions, file.path(exportFolder, "feature_proportions.csv"))
 
@@ -230,8 +213,6 @@ runStudy <- function(connectionDetails = NULL,
   counts <- readr::read_csv(file.path(exportFolder, "cohort_count.csv"), col_types = readr::cols())
   colnames(counts) <- SqlRender::snakeCaseToCamelCase(colnames(counts))
   
-  # Subset the cohorts to the target/strata for running feature extraction
-  featureExtractionCohorts <- cohortsForExport[cohortsForExport$cohortId %in% counts$cohortId, ]
   
   # Cohort characterization ---------------------------------------------------------------
   runCohortCharacterization <- function(cohortId, cohortName, covariateSettings, windowId) {
@@ -251,7 +232,9 @@ runStudy <- function(connectionDetails = NULL,
     return(data)
   }
   
+  # Subset the cohorts to the target/strata for running feature extraction
   featureTimeWindows <- getFeatureTimeWindows()  
+  featureExtractionCohorts <- cohortsForExport[cohortsForExport$cohortId %in% counts$cohortId, ]
   for (i in 1:length(featureTimeWindows)) {
     windowStart <- featureTimeWindows$windowStart[i]
     windowEnd <- featureTimeWindows$windowEnd[i]
@@ -267,14 +250,18 @@ runStudy <- function(connectionDetails = NULL,
                                                                             shortTermStartDays = windowStart,
                                                                             endDays = windowEnd)
     task <- paste0("runCohortCharacterizationWindowId", windowId)
-    subset <- subsetToRequiredCohorts(cohorts = featureExtractionCohorts,
-                                      task = task,
-                                      incremental = incremental,
-                                      recordKeepingFile = recordKeepingFile)
+    if (incremental) {
+      featureExtractionCohorts$checksum <- computeChecksum((featureExtractionCohorts$cohortId * 1000) + windowId)
+      subset <- subsetToRequiredCohorts(cohorts = featureExtractionCohorts,
+                                        task = task,
+                                        incremental = incremental,
+                                        recordKeepingFile = recordKeepingFile)
+    } else {
+      subset <- featureExtractionCohorts
+    }
+    
     if (nrow(subset) > 0) {
       for (j in 1:nrow(subset)) {
-        #data <- lapply(split(subset, subset$cohortId), runCohortCharacterization, covariateSettings = covariateSettings, windowId = windowId)
-        #data <- do.call(rbind, data)
         data <- runCohortCharacterization(cohortId = subset$cohortId[j], 
                                           cohortName = subset$cohortName[j],
                                           covariateSettings = covariateSettings, 
@@ -282,12 +269,14 @@ runStudy <- function(connectionDetails = NULL,
         covariates <- formatCovariates(data)
         writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = covariates$covariateId)
         data <- formatCovariateValues(data, counts, minCellCount)
-        writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = subset$cohortId)
-        recordTasksDone(cohortId = subset$cohortId[j],
-                        task = task,
-                        checksum = subset$checksum[j],
-                        recordKeepingFile = recordKeepingFile,
-                        incremental = incremental)
+        writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = data$cohortId)
+        if (incremental) {
+          recordTasksDone(cohortId = subset$cohortId[j],
+                          task = task,
+                          checksum = subset$checksum[j],
+                          recordKeepingFile = recordKeepingFile,
+                          incremental = incremental)
+        }
       }
     }
   }

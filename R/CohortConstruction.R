@@ -489,14 +489,16 @@ instantiateCohortSet <- function(connectionDetails = NULL,
                                  results_database_schema.cohort_inclusion = "#cohort_inclusion",
                                  results_database_schema.cohort_inclusion_result = "#cohort_inc_result",
                                  results_database_schema.cohort_inclusion_stats = "#cohort_inc_stats",
-                                 results_database_schema.cohort_summary_stats = "#cohort_summary_stats")
+                                 results_database_schema.cohort_summary_stats = "#cohort_summary_stats",
+                                 warnOnMissingParameters = FALSE)
       } else {
         sql <- SqlRender::render(sql,
                                  cdm_database_schema = cdmDatabaseSchema,
                                  vocabulary_database_schema = cdmDatabaseSchema,
                                  target_database_schema = cohortDatabaseSchema,
                                  target_cohort_table = cohortTable,
-                                 target_cohort_id = cohorts$cohortId[i])
+                                 target_cohort_id = cohorts$cohortId[i],
+                                 warnOnMissingParameters = FALSE)
       }
       sql <- SqlRender::translate(sql,
                                   targetDialect = connectionDetails$dbms,
