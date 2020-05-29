@@ -168,7 +168,7 @@ runStudy(connectionDetails = connectionDetails,
          minCellCount = minCellCount) 
 
 #CohortDiagnostics::preMergeDiagnosticsFiles(outputFolder)
-#CohortDiagnostics::launchDiagnosticsExplorer(outputFolder)
+#launchShinyApp(outputFolder)
 
 # Upload results to OHDSI SFTP server:
 #uploadResults(outputFolder, keyFileName, userName)
