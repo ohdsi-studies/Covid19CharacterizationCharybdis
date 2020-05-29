@@ -149,16 +149,6 @@ runStudy <- function(connectionDetails = NULL,
                            incremental = incremental,
                            incrementalFolder = incrementalFolder)
   
-<<<<<<< Updated upstream
-  cohortsForExport <- loadCohortsForExportFromPackage(cohortIds = cohortIds)
-  writeToCsv(cohortsForExport, file.path(exportFolder, "cohort.csv"))
-
-  if (incremental) {
-    recordKeepingFile <- file.path(incrementalFolder, "CreatedAnalyses.csv")
-  }
-
-=======
->>>>>>> Stashed changes
   ParallelLogger::logInfo("Saving database metadata")
   database <- data.frame(databaseId = databaseId,
                          databaseName = databaseName,
