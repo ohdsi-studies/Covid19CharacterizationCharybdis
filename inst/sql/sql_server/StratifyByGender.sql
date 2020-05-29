@@ -1,5 +1,12 @@
 @target_strata_xref_table_create
 
+<<<<<<< Updated upstream
+=======
+DELETE FROM @cohort_database_schema.@cohort_staging_table
+WHERE cohort_definition_id IN (SELECT DISTINCT cohort_id FROM #TARGET_STRATA_XREF)
+;
+
+>>>>>>> Stashed changes
 INSERT INTO @cohort_database_schema.@cohort_staging_table (
   cohort_definition_id,
   subject_id,

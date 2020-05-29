@@ -149,6 +149,7 @@ runStudy <- function(connectionDetails = NULL,
                            incremental = incremental,
                            incrementalFolder = incrementalFolder)
   
+<<<<<<< Updated upstream
   cohortsForExport <- loadCohortsForExportFromPackage(cohortIds = cohortIds)
   writeToCsv(cohortsForExport, file.path(exportFolder, "cohort.csv"))
 
@@ -156,6 +157,8 @@ runStudy <- function(connectionDetails = NULL,
     recordKeepingFile <- file.path(incrementalFolder, "CreatedAnalyses.csv")
   }
 
+=======
+>>>>>>> Stashed changes
   ParallelLogger::logInfo("Saving database metadata")
   database <- data.frame(databaseId = databaseId,
                          databaseName = databaseName,
@@ -190,7 +193,11 @@ runStudy <- function(connectionDetails = NULL,
   # Read in the cohort counts
   counts <- readr::read_csv(file.path(exportFolder, "cohort_count.csv"), col_types = readr::cols())
   colnames(counts) <- SqlRender::snakeCaseToCamelCase(colnames(counts))
-
+  
+  # Export the cohorts from the study
+  cohortsForExport <- loadCohortsForExportFromPackage(cohortIds = counts$cohortId)
+  writeToCsv(cohortsForExport, file.path(exportFolder, "cohort.csv"))
+  
   # Extract feature counts -----------------------------------------------------------------------
   ParallelLogger::logInfo("Extract feature counts")
   featureProportions <- exportFeatureProportions(connection = connection,
