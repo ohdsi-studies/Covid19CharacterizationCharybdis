@@ -40,6 +40,17 @@ getCohortsToCreate <- function() {
   return(cohorts)  
 }
 
+getAllStrata <- function() {
+  colNames <- c("name", "cohortId", "generationScript") # Use this to subset to the columns of interest
+  bulkStrata <- getBulkStrata()
+  bulkStrata <- bulkStrata[, match(colNames, names(bulkStrata))]
+  atlasCohortStrata <- getCohortBasedStrata()
+  atlasCohortStrata$generationScript <- paste0(atlasCohortStrata$cohortId, ".sql")
+  atlasCohortStrata <- atlasCohortStrata[, match(colNames, names(atlasCohortStrata))]
+  strata <- rbind(bulkStrata, atlasCohortStrata)
+  return(strata)  
+}
+
 getThisPackageName <- function() {
   return("Covid19CharacterizationCharybdis")
 }

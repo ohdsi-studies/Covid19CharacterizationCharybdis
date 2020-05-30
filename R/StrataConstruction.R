@@ -3,13 +3,7 @@ createBulkStrata <- function(connection,
                              cohortDatabaseSchema,
                              cohortStagingTable,
                              targetIds, 
-                             oracleTempSchema,
-                             incremental,
-                             incrementalFolder) {
-  
-  if (incremental) {
-    recordKeepingFile <- file.path(incrementalFolder, "StratifiedCohorts.csv")
-  }
+                             oracleTempSchema) {
   
   # Create the bulk strata from the CSV
   createBulkStrataFromFile(connection,
@@ -17,9 +11,7 @@ createBulkStrata <- function(connection,
                            cohortDatabaseSchema,
                            cohortStagingTable,
                            targetIds, 
-                           oracleTempSchema,
-                           incremental,
-                           recordKeepingFile)
+                           oracleTempSchema)
   
   # Create the bulk strata from the cohorts of interest
   createBulkStrataFromCohorts(connection,
@@ -27,9 +19,7 @@ createBulkStrata <- function(connection,
                                cohortDatabaseSchema,
                                cohortStagingTable,
                                targetIds, 
-                               oracleTempSchema,
-                               incremental,
-                               recordKeepingFile)
+                               oracleTempSchema)
   
 }
 
@@ -38,45 +28,31 @@ createBulkStrataFromFile <- function(connection,
                                      cohortDatabaseSchema,
                                      cohortStagingTable,
                                      targetIds, 
-                                     oracleTempSchema,
-                                     incremental,
-                                     recordKeepingFile) {
+                                     oracleTempSchema) {
   packageName <- getThisPackageName()
   bulkStrataToCreate <- getBulkStrata()
   targetStrataXref <- getTargetStrataXref()
   
-  if (incremental) {
-    bulkStrataToCreate$checksum <- computeChecksum(serializeBulkStrataName(bulkStrataToCreate))
-  }
-  
   for (i in 1:nrow(bulkStrataToCreate)) {
     strataId <- bulkStrataToCreate$cohortId[i]
-    if (!incremental || isTaskRequired(cohortId = strataId,
-                                       checksum = bulkStrataToCreate$checksum[i],
-                                       recordKeepingFile = recordKeepingFile)) {
-      # Get the strata to create for the targets selected
-      tsXrefSubset <- targetStrataXref[targetStrataXref$targetId %in% targetIds & targetStrataXref$strataId == strataId, ]
-      # Create the SQL for the temp table to hold the cohorts to be stratified
-      tsXrefTempTableSql <- cohortStrataXrefTempTableSql(connection, tsXrefSubset, oracleTempSchema)
-      # Execute the SQL to create the stratified cohorts
-      ParallelLogger::logInfo(paste0("Stratify by ", bulkStrataToCreate$name[i]))
-      sql <- SqlRender::loadRenderTranslateSql(dbms = attr(connection, "dbms"),
-                                               sqlFilename = bulkStrataToCreate$generationScript[i], 
-                                               packageName = packageName,
-                                               warnOnMissingParameters = FALSE,
-                                               oracleTempSchema = oracleTempSchema,
-                                               cdm_database_schema = cdmDatabaseSchema,
-                                               cohort_database_schema = cohortDatabaseSchema,
-                                               cohort_staging_table = cohortStagingTable,
-                                               strata_value = bulkStrataToCreate$parameterValue[i],
-                                               target_strata_xref_table_create = tsXrefTempTableSql$create,
-                                               target_strata_xref_table_drop = tsXrefTempTableSql$drop)
-      DatabaseConnector::executeSql(connection, sql)
-      
-      if (incremental) {
-        recordTasksDone(cohortId = strataId, checksum = bulkStrataToCreate$checksum[i], recordKeepingFile = recordKeepingFile)
-      }
-    }
+    # Get the strata to create for the targets selected
+    tsXrefSubset <- targetStrataXref[targetStrataXref$targetId %in% targetIds & targetStrataXref$strataId == strataId, ]
+    # Create the SQL for the temp table to hold the cohorts to be stratified
+    tsXrefTempTableSql <- cohortStrataXrefTempTableSql(connection, tsXrefSubset, oracleTempSchema)
+    # Execute the SQL to create the stratified cohorts
+    ParallelLogger::logInfo(paste0("Stratify by ", bulkStrataToCreate$name[i]))
+    sql <- SqlRender::loadRenderTranslateSql(dbms = attr(connection, "dbms"),
+                                             sqlFilename = bulkStrataToCreate$generationScript[i], 
+                                             packageName = packageName,
+                                             warnOnMissingParameters = FALSE,
+                                             oracleTempSchema = oracleTempSchema,
+                                             cdm_database_schema = cdmDatabaseSchema,
+                                             cohort_database_schema = cohortDatabaseSchema,
+                                             cohort_staging_table = cohortStagingTable,
+                                             strata_value = bulkStrataToCreate$parameterValue[i],
+                                             target_strata_xref_table_create = tsXrefTempTableSql$create,
+                                             target_strata_xref_table_drop = tsXrefTempTableSql$drop)
+    DatabaseConnector::executeSql(connection, sql)
   }
 }
 
@@ -85,9 +61,7 @@ createBulkStrataFromCohorts <- function(connection,
                                         cohortDatabaseSchema,
                                         cohortStagingTable,
                                         targetIds, 
-                                        oracleTempSchema,
-                                        incremental,
-                                        recordKeepingFile) {
+                                        oracleTempSchema) {
   packageName <- getThisPackageName()
   strataCohorts <- getCohortBasedStrata()
   targetStrataXref <- getTargetStrataXref()
@@ -108,17 +82,8 @@ createBulkStrataFromCohorts <- function(connection,
                                            target_strata_xref_table_create = tsXrefTempTableSql$create,
                                            target_strata_xref_table_drop = tsXrefTempTableSql$drop)
   
-  cohortId <- 200 # Represents the range of stratified cohorts created in this process
-  if (!incremental || isTaskRequired(cohortId = cohortId,
-                                     checksum = computeChecksum(sql),
-                                     recordKeepingFile = recordKeepingFile)) {
-    
-    ParallelLogger::logInfo("Stratify by cohorts")
-    DatabaseConnector::executeSql(connection, sql)
-    if (incremental) {
-      recordTasksDone(cohortId = cohortId, checksum = computeChecksum(sql), recordKeepingFile = recordKeepingFile)
-    }
-  }
+  ParallelLogger::logInfo("Stratify by cohorts")
+  DatabaseConnector::executeSql(connection, sql)
 }
 
 cohortStrataXrefTempTableSql <- function(connection, targetStrataXref, oracleTempSchema) {
@@ -153,12 +118,3 @@ serializeBulkStrataName <- function(bulkStrataToCreate) {
   return(paste(bulkStrataToCreate$generationScript, bulkStrataToCreate$name, bulkStrataToCreate$parameterValue, sep = "|"))
 }
 
-getAllStrata <- function() {
-  colNames <- c("name", "cohortId") # Use this to subset to the columns of interest
-  bulkStrata <- getBulkStrata()
-  bulkStrata <- bulkStrata[, match(colNames, names(bulkStrata))]
-  atlasCohortStrata <- getCohortBasedStrata()
-  atlasCohortStrata <- atlasCohortStrata[, match(colNames, names(atlasCohortStrata))]
-  strata <- rbind(bulkStrata, atlasCohortStrata)
-  return(strata)  
-}
