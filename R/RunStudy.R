@@ -202,7 +202,7 @@ runStudy <- function(connectionDetails = NULL,
   writeToCsv(features, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = features$covariateId)
   featureValues <- formatCovariateValues(featureProportions, counts, minCellCount)
   featureValues <- featureValues[,c("cohortId", "covariateId", "mean", "sd", "databaseId")]
-  writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, covariateId = featureValues$covariateId)
+  writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = featureValues$cohortId, covariateId = featureValues$covariateId)
   # Also keeping a raw output for debugging
   writeToCsv(featureProportions, file.path(exportFolder, "feature_proportions.csv"))
 
@@ -232,6 +232,9 @@ runStudy <- function(connectionDetails = NULL,
   # Subset the cohorts to the target/strata for running feature extraction
   featureTimeWindows <- getFeatureTimeWindows()  
   featureExtractionCohorts <- cohortsForExport[cohortsForExport$cohortId %in% counts$cohortId, ]
+  if (incremental) {
+    recordKeepingFile <- file.path(incrementalFolder, "CreatedAnalyses.csv")
+  }
   for (i in 1:length(featureTimeWindows)) {
     windowStart <- featureTimeWindows$windowStart[i]
     windowEnd <- featureTimeWindows$windowEnd[i]
@@ -266,7 +269,7 @@ runStudy <- function(connectionDetails = NULL,
         covariates <- formatCovariates(data)
         writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = covariates$covariateId)
         data <- formatCovariateValues(data, counts, minCellCount)
-        writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = data$cohortId)
+        writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = data$cohortId, data$covariateId)
         if (incremental) {
           recordTasksDone(cohortId = subset$cohortId[j],
                           task = task,
