@@ -3,9 +3,7 @@ createFeatureProportions <- function(connection,
                                      cohortStagingTable,
                                      cohortTable,
                                      featureSummaryTable,
-                                     oracleTempSchema,
-                                     incremental,
-                                     incrementalFolder) {
+                                     oracleTempSchema) {
   packageName <- getThisPackageName()
   featureIds <- getAllFeatures()$cohortId
   featureTimeWindows <- getFeatureTimeWindows()

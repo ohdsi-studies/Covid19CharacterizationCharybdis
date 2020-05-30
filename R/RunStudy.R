@@ -118,9 +118,7 @@ runStudy <- function(connectionDetails = NULL,
                    cohortDatabaseSchema = cohortDatabaseSchema,
                    cohortStagingTable = cohortStagingTable,
                    targetIds = targetCohortIds,
-                   oracleTempSchema = oracleTempSchema,
-                   incremental = incremental,
-                   incrementalFolder = incrementalFolder)
+                   oracleTempSchema = oracleTempSchema)
 
   # Copy and censor cohorts to the final table
   ParallelLogger::logInfo("**********************************************************")
@@ -132,9 +130,7 @@ runStudy <- function(connectionDetails = NULL,
                        cohortTable = cohortTable,
                        minCellCount = minCellCount,
                        targetIds = targetCohortIds,
-                       oracleTempSchema = oracleTempSchema,
-                       incremental = incremental,
-                       incrementalFolder = incrementalFolder)
+                       oracleTempSchema = oracleTempSchema)
 
   # Compute the features
   ParallelLogger::logInfo("**********************************************************")
@@ -145,9 +141,7 @@ runStudy <- function(connectionDetails = NULL,
                            cohortStagingTable = cohortStagingTable,
                            cohortTable = cohortTable,
                            featureSummaryTable = featureSummaryTable,
-                           oracleTempSchema = oracleTempSchema,
-                           incremental = incremental,
-                           incrementalFolder = incrementalFolder)
+                           oracleTempSchema = oracleTempSchema)
   
   ParallelLogger::logInfo("Saving database metadata")
   database <- data.frame(databaseId = databaseId,
@@ -202,7 +196,7 @@ runStudy <- function(connectionDetails = NULL,
   writeToCsv(features, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = features$covariateId)
   featureValues <- formatCovariateValues(featureProportions, counts, minCellCount)
   featureValues <- featureValues[,c("cohortId", "covariateId", "mean", "sd", "databaseId")]
-  writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, covariateId = featureValues$covariateId)
+  writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = featureValues$cohortId, covariateId = featureValues$covariateId)
   # Also keeping a raw output for debugging
   writeToCsv(featureProportions, file.path(exportFolder, "feature_proportions.csv"))
 
@@ -230,8 +224,11 @@ runStudy <- function(connectionDetails = NULL,
   }
   
   # Subset the cohorts to the target/strata for running feature extraction
+  if (incremental) {
+    recordKeepingFile <- file.path(incrementalFolder, "CreatedAnalyses.csv")
+  }
   featureTimeWindows <- getFeatureTimeWindows()  
-  featureExtractionCohorts <- cohortsForExport[cohortsForExport$cohortId %in% counts$cohortId, ]
+  featureExtractionCohorts <-  loadCohortsForExportWithChecksumFromPackage(counts$cohortId)
   for (i in 1:length(featureTimeWindows)) {
     windowStart <- featureTimeWindows$windowStart[i]
     windowEnd <- featureTimeWindows$windowEnd[i]
@@ -248,7 +245,6 @@ runStudy <- function(connectionDetails = NULL,
                                                                             endDays = windowEnd)
     task <- paste0("runCohortCharacterizationWindowId", windowId)
     if (incremental) {
-      featureExtractionCohorts$checksum <- computeChecksum((featureExtractionCohorts$cohortId * 1000) + windowId)
       subset <- subsetToRequiredCohorts(cohorts = featureExtractionCohorts,
                                         task = task,
                                         incremental = incremental,
@@ -266,7 +262,7 @@ runStudy <- function(connectionDetails = NULL,
         covariates <- formatCovariates(data)
         writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = covariates$covariateId)
         data <- formatCovariateValues(data, counts, minCellCount)
-        writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = data$cohortId)
+        writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = data$cohortId, data$covariateId)
         if (incremental) {
           recordTasksDone(cohortId = subset$cohortId[j],
                           task = task,
@@ -352,7 +348,7 @@ loadCohortsFromPackage <- function(cohortIds) {
   return(cohorts)
 }
 
-loadCohortsForExportFromPackage <- function(cohortIds, packageName) {
+loadCohortsForExportFromPackage <- function(cohortIds) {
   packageName = getThisPackageName()
   cohorts <- getCohortsToCreate()
   cohorts$atlasId <- NULL
@@ -364,7 +360,6 @@ loadCohortsForExportFromPackage <- function(cohortIds, packageName) {
   
   # Get the stratified cohorts for the study
   # and join to the cohorts to create to get the names
-  #strataCohorts <- getAllStrata()
   targetStrataXref <- getTargetStrataXref()
   targetStrataXref <- dplyr::rename(targetStrataXref, cohortName = "name")
   targetStrataXref$cohortFullName <- targetStrataXref$cohortName
@@ -379,6 +374,43 @@ loadCohortsForExportFromPackage <- function(cohortIds, packageName) {
   }
 
   return(cohorts)
+}
+
+loadCohortsForExportWithChecksumFromPackage <- function(cohortIds) {
+  packageName = getThisPackageName()
+  strata <- getAllStrata()
+  targetStrataXref <- getTargetStrataXref()
+  cohorts <- loadCohortsForExportFromPackage(cohortIds)
+  
+  # Match up the cohorts in the study w/ the targetStrataXref and 
+  # set the target/strata columns
+  cohortsWithStrata <- dplyr::left_join(cohorts, targetStrataXref, by="cohortId")
+  cohortsWithStrata <- dplyr::rename(cohortsWithStrata, cohortType = "cohortType.x")
+  cohortsWithStrata$targetId <- ifelse(is.na(cohortsWithStrata$targetId), cohortsWithStrata$cohortId, cohortsWithStrata$targetId)
+  cohortsWithStrata$strataId <- ifelse(is.na(cohortsWithStrata$strataId), 0, cohortsWithStrata$strataId)
+  
+  getChecksum <- function(targetId, strataId, cohortType) {
+    pathToSql <- system.file("sql", "sql_server", paste0(targetId, ".sql"), package = packageName)
+    sql <- readChar(pathToSql, file.info(pathToSql)$size)
+    if (strataId > 0) {
+      sqlFileName <- strata[strata$cohortId == strataId, c("generationScript")][[1]]
+      pathToSql <- system.file("sql", "sql_server", sqlFileName, package = packageName)
+      strataSql <- readChar(pathToSql, file.info(pathToSql)$size)
+      sql <- paste(sql, strataSql, cohortType)
+    }
+    checksum <- computeChecksum(sql)
+    return(checksum)
+  }
+  cohortsWithStrata$checksum <- mapply(getChecksum, 
+                                       cohortsWithStrata$targetId, 
+                                       strataId = cohortsWithStrata$strataId, 
+                                       cohortType = cohortsWithStrata$cohortType)
+  
+  if (!is.null(cohortIds)) {
+    cohortsWithStrata <- cohortsWithStrata[cohortsWithStrata$cohortId %in% cohortIds, ]
+  }
+  
+  return(cohortsWithStrata)
 }
 
 writeToCsv <- function(data, fileName, incremental = FALSE, ...) {

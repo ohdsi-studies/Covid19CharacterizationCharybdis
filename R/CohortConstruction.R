@@ -608,9 +608,7 @@ copyAndCensorCohorts <- function(connection,
                                  cohortTable,
                                  targetIds, 
                                  minCellCount,
-                                 oracleTempSchema,
-                                 incremental = incremental,
-                                 incrementalFolder = incrementalFolder) {
+                                 oracleTempSchema) {
   packageName = getThisPackageName()
   # Create the SQL for the temp table to hold the cohorts to be stratified
   targetStrataXref <- getTargetStrataXref()
