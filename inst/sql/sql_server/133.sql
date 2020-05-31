@@ -90,7 +90,7 @@ from
 JOIN #Codesets codesets on ((m.measurement_concept_id = codesets.concept_id and codesets.codeset_id = 2))
 ) C
 
-WHERE C.measurement_date < DATEFROMPARTS(2019, 12, 01)
+WHERE C.measurement_date > DATEFROMPARTS(2019, 12, 01)
 AND C.value_as_concept_id in (4126681,45877990,9191,45884080,4181412,45879440)
 -- End Measurement Criteria
 
@@ -122,7 +122,7 @@ FROM
   JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 4))
 ) C
 
-WHERE C.condition_start_date < DATEFROMPARTS(2019, 12, 01)
+WHERE C.condition_start_date > DATEFROMPARTS(2019, 12, 01)
 -- End Condition Occurrence Criteria
 
   ) E

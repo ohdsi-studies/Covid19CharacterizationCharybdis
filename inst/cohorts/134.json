@@ -5,7 +5,7 @@
       {
         "VisitOccurrence": {
           "CodesetId": [5],
-          "OccurrenceStartDate": ["2019-12-01", "lt"],
+          "OccurrenceStartDate": ["2019-12-01", "gt"],
           "VisitTypeExclude": [false]
         }
       }
