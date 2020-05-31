@@ -1,5 +1,9 @@
 @target_strata_xref_table_create
 
+DELETE FROM @cohort_database_schema.@cohort_staging_table
+WHERE cohort_definition_id IN (SELECT DISTINCT cohort_id FROM #TARGET_STRATA_XREF)
+;
+
 --find T with S, create a temp table to hold these new cohorts
 select cr1.cohort_id cohort_definition_id, 
   t.subject_id,

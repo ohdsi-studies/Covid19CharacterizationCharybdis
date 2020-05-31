@@ -1,25 +1,71 @@
 targetId,strataId,cohortId,cohortType,name
-111,1,111000011,TwS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with Full 30-day follow up
-112,1,112000011,TwS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with Full 30-day follow up
-111,2,111000021,TwS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with Sex = Female
-112,2,112000021,TwS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with Sex = Female
-112,3,112000031,TwS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with Age >= 18
-111,3,111000031,TwS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with Age >= 18
-112,4,112000041,TwS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with Age >= 65
-111,4,111000041,TwS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with Age >= 65
-111,100,111001001,TwS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with Prevalent Type 2 Diabetes Mellitus
-112,100,112001001,TwS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with Prevalent Type 2 Diabetes Mellitus
-111,101,111001011,TwS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with Prevalent hypertension
-112,101,112001011,TwS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with Prevalent hypertension
-111,1,111000012,TwoS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with < 30-day follow up
-112,1,112000012,TwoS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with < 30-day follow up
-111,2,111000022,TwoS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with Sex = Male
-112,2,112000022,TwoS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with Sex = Male
-112,3,112000032,TwoS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with Age < 18
-111,3,111000032,TwoS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with Age < 18
-112,4,112000042,TwoS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation with Age < 65
-111,4,111000042,TwoS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation with Age < 65
-111,100,111001002,TwoS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation without Prevalent Type 2 Diabetes Mellitus
-112,100,112001002,TwoS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation without Prevalent Type 2 Diabetes Mellitus
-111,101,111001012,TwoS,Influenza diagnosed or with a positive test 2017-2018 with at least 365d prior observation without Prevalent hypertension
-112,101,112001012,TwoS,Influenza diagnosed or with a positive test 2017-2018 with no required prior observation without Prevalent hypertension
+111,1,111000011,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Full 30-day follow up
+127,1,127000011,TwS,Persons tested for CoV2 with no req prior obs with Full 30-day follow up
+113,1,113000011,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Full 30-day follow up
+132,1,132000011,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Full 30-day follow up
+134,1,134000011,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Full 30-day follow up
+111,2,111000021,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Sex = Female
+134,2,134000021,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Female
+127,2,127000021,TwS,Persons tested for CoV2 with no req prior obs with Sex = Female
+113,2,113000021,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Sex = Female
+132,2,132000021,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Female
+111,3,111000031,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age >= 18
+113,3,113000031,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age >= 18
+127,3,127000031,TwS,Persons tested for CoV2 with no req prior obs with Age >= 18
+132,3,132000031,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 18
+134,3,134000031,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 18
+113,4,113000041,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age >= 65
+132,4,132000041,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 65
+134,4,134000041,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age >= 65
+111,4,111000041,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age >= 65
+127,4,127000041,TwS,Persons tested for CoV2 with no req prior obs with Age >= 65
+111,101,111001011,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent hypertension
+127,101,127001011,TwS,Persons tested for CoV2 with no req prior obs with Prevalent hypertension
+132,101,132001011,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent hypertension
+113,101,113001011,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent hypertension
+134,101,134001011,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent hypertension
+111,105,111001051,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
+134,105,134001051,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
+127,105,127001051,TwS,Persons tested for CoV2 with no req prior obs with Prevalent malignant neoplasm excluding non-melanoma skin cancer
+132,105,132001051,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
+113,105,113001051,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Prevalent malignant neoplasm excluding non-melanoma skin cancer
+134,199,134001991,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Pregnant women
+113,199,113001991,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Pregnant women
+132,199,132001991,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Pregnant women
+111,199,111001991,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Pregnant women
+127,199,127001991,TwS,Persons tested for CoV2 with no req prior obs with Pregnant women
+111,1,111000012,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with < 30-day follow up
+127,1,127000012,TwoS,Persons tested for CoV2 with no req prior obs with < 30-day follow up
+113,1,113000012,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with < 30-day follow up
+132,1,132000012,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with < 30-day follow up
+134,1,134000012,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with < 30-day follow up
+111,2,111000022,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Sex = Male
+134,2,134000022,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Male
+127,2,127000022,TwoS,Persons tested for CoV2 with no req prior obs with Sex = Male
+113,2,113000022,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Sex = Male
+132,2,132000022,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Sex = Male
+111,3,111000032,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age < 18
+113,3,113000032,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age < 18
+127,3,127000032,TwoS,Persons tested for CoV2 with no req prior obs with Age < 18
+132,3,132000032,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 18
+134,3,134000032,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 18
+113,4,113000042,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age < 65
+132,4,132000042,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 65
+134,4,134000042,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with Age < 65
+111,4,111000042,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with Age < 65
+127,4,127000042,TwoS,Persons tested for CoV2 with no req prior obs with Age < 65
+111,101,111001012,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent hypertension
+127,101,127001012,TwoS,Persons tested for CoV2 with no req prior obs without Prevalent hypertension
+132,101,132001012,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent hypertension
+113,101,113001012,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent hypertension
+134,101,134001012,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent hypertension
+111,105,111001052,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
+134,105,134001052,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
+127,105,127001052,TwoS,Persons tested for CoV2 with no req prior obs without Prevalent malignant neoplasm excluding non-melanoma skin cancer
+132,105,132001052,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
+113,105,113001052,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Prevalent malignant neoplasm excluding non-melanoma skin cancer
+134,199,134001992,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without Pregnant women
+113,199,113001992,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Pregnant women
+132,199,132001992,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without Pregnant women
+111,199,111001992,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without Pregnant women
+127,199,127001992,TwoS,Persons tested for CoV2 with no req prior obs without Pregnant women

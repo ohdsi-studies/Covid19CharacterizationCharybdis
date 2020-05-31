@@ -65,6 +65,8 @@ inner join (
 ) cs1 ON s.cohort_definition_id = cs1.cohort_definition_id
 ;
 
+CREATE INDEX IDX_COHORT ON @cohort_database_schema.@cohort_table (cohort_definition_id, subject_id, cohort_start_date);
+
 TRUNCATE TABLE #cohort_summary;
 DROP TABLE #cohort_summary;
 

@@ -53,6 +53,7 @@ createBulkStrataFromFile <- function(connection,
                                              target_strata_xref_table_create = tsXrefTempTableSql$create,
                                              target_strata_xref_table_drop = tsXrefTempTableSql$drop)
     DatabaseConnector::executeSql(connection, sql)
+    #write(sql,paste0(i, ".sql"))
   }
 }
 
@@ -83,6 +84,7 @@ createBulkStrataFromCohorts <- function(connection,
                                            target_strata_xref_table_drop = tsXrefTempTableSql$drop)
   
   ParallelLogger::logInfo("Stratify by cohorts")
+  #write(sql,"stratify.sql")
   DatabaseConnector::executeSql(connection, sql)
 }
 

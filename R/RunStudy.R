@@ -142,11 +142,12 @@ runStudy <- function(connectionDetails = NULL,
                            cohortTable = cohortTable,
                            featureSummaryTable = featureSummaryTable,
                            oracleTempSchema = oracleTempSchema)
-  
+
   ParallelLogger::logInfo("Saving database metadata")
   database <- data.frame(databaseId = databaseId,
                          databaseName = databaseName,
                          description = databaseDescription,
+                         vocabularyVersion = getVocabularyInfo(),
                          isMetaAnalysis = 0)
   writeToCsv(database, file.path(exportFolder, "database.csv"))
 
@@ -160,6 +161,8 @@ runStudy <- function(connectionDetails = NULL,
     counts <- enforceMinCellValue(counts, "cohortEntries", minCellCount)
     counts <- enforceMinCellValue(counts, "cohortSubjects", minCellCount)
   }
+  allStudyCohorts <- getAllStudyCohorts()
+  counts <- dplyr::left_join(x = allStudyCohorts, y = counts, by="cohortId")
   writeToCsv(counts, file.path(exportFolder, "cohort_staging_count.csv"), incremental = incremental, cohortId = counts$cohortId)
 
   # Counting cohorts -----------------------------------------------------------------------
@@ -177,11 +180,11 @@ runStudy <- function(connectionDetails = NULL,
   # Read in the cohort counts
   counts <- readr::read_csv(file.path(exportFolder, "cohort_count.csv"), col_types = readr::cols())
   colnames(counts) <- SqlRender::snakeCaseToCamelCase(colnames(counts))
-  
+
   # Export the cohorts from the study
   cohortsForExport <- loadCohortsForExportFromPackage(cohortIds = counts$cohortId)
   writeToCsv(cohortsForExport, file.path(exportFolder, "cohort.csv"))
-  
+
   # Extract feature counts -----------------------------------------------------------------------
   ParallelLogger::logInfo("Extract feature counts")
   featureProportions <- exportFeatureProportions(connection = connection,
@@ -203,11 +206,11 @@ runStudy <- function(connectionDetails = NULL,
   # Read in the cohort counts
   counts <- readr::read_csv(file.path(exportFolder, "cohort_count.csv"), col_types = readr::cols())
   colnames(counts) <- SqlRender::snakeCaseToCamelCase(colnames(counts))
-  
-  
+
+
   # Cohort characterization ---------------------------------------------------------------
-  runCohortCharacterization <- function(cohortId, cohortName, covariateSettings, windowId) {
-    ParallelLogger::logInfo("- Creating characterization for cohort: ", cohortName)
+  runCohortCharacterization <- function(cohortId, cohortName, covariateSettings, windowId, curIndex, totalCount) {
+    ParallelLogger::logInfo("- (windowId=", windowId, ", ", curIndex, " of ", totalCount, ") Creating characterization for cohort: ", cohortName)
     data <- getCohortCharacteristics(connection = connection,
                                      cdmDatabaseSchema = cdmDatabaseSchema,
                                      oracleTempSchema = oracleTempSchema,
@@ -218,16 +221,16 @@ runStudy <- function(connectionDetails = NULL,
     if (nrow(data) > 0) {
       data$cohortId <- cohortId
     }
-    
+
     data$covariateId <- data$covariateId * 10 + windowId
     return(data)
   }
-  
+
   # Subset the cohorts to the target/strata for running feature extraction
   if (incremental) {
     recordKeepingFile <- file.path(incrementalFolder, "CreatedAnalyses.csv")
   }
-  featureTimeWindows <- getFeatureTimeWindows()  
+  featureTimeWindows <- getFeatureTimeWindows()
   featureExtractionCohorts <-  loadCohortsForExportWithChecksumFromPackage(counts$cohortId)
   for (i in 1:length(featureTimeWindows)) {
     windowStart <- featureTimeWindows$windowStart[i]
@@ -252,13 +255,15 @@ runStudy <- function(connectionDetails = NULL,
     } else {
       subset <- featureExtractionCohorts
     }
-    
+
     if (nrow(subset) > 0) {
       for (j in 1:nrow(subset)) {
-        data <- runCohortCharacterization(cohortId = subset$cohortId[j], 
+        data <- runCohortCharacterization(cohortId = subset$cohortId[j],
                                           cohortName = subset$cohortName[j],
-                                          covariateSettings = covariateSettings, 
-                                          windowId = windowId)
+                                          covariateSettings = covariateSettings,
+                                          windowId = windowId,
+                                          curIndex = j,
+                                          totalCount = nrow(subset))
         covariates <- formatCovariates(data)
         writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = covariates$covariateId)
         data <- formatCovariateValues(data, counts, minCellCount)
@@ -282,12 +287,19 @@ runStudy <- function(connectionDetails = NULL,
   on.exit(setwd(oldWd), add = TRUE)
   DatabaseConnector::createZipFile(zipFile = zipName, files = files)
   ParallelLogger::logInfo("Results are ready for sharing at:", zipName)
-  
+
   delta <- Sys.time() - start
   ParallelLogger::logInfo(paste("Running study took",
                                 signif(delta, 3),
                                 attr(delta, "units")))
   
+}
+
+getVocabularyInfo <- function(connection, cdmDatabaseSchema, oracleTempSchema) {
+  sql <- "SELECT vocabulary_version FROM @cdm_database_schema.vocabulary WHERE vocabulary_id = 'None';"
+  sql <- SqlRender::render(sql, cdm_database_schema = cdmDatabaseSchema)
+  sql <- SqlRender::translate(sql, targetDialect = attr(connection, "dbms"), oracleTempSchema = oracleTempSchema)
+  return(DatabaseConnector::querySql(connection, sql))
 }
 
 #' @export
@@ -328,7 +340,7 @@ loadCohortsFromPackage <- function(cohortIds) {
     cohorts <- cohorts[cohorts$cohortId %in% cohortIds, ]
   }
   if ("atlasName" %in% colnames(cohorts)) {
-    cohorts <- dplyr::rename(cohorts, cohortName = "name", cohortFullName = "atlasName")
+    cohorts <- dplyr::rename(cohorts, cohortName = "name", cohortFullName = "name")
   } else {
     cohorts <- dplyr::rename(cohorts, cohortName = "name", cohortFullName = "fullName")
   }

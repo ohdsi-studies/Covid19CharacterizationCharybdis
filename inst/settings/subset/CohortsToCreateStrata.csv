@@ -1,3 +1,4 @@
 name,atlasName,atlasId,cohortId
 Prevalent hypertension,[COVID ID101 v1] Prevalent hypertension,140,101
 Prevalent malignant neoplasm excluding non-melanoma skin cancer,[COVID ID105 v1] Prevalent malignant neoplasm excluding non-melanoma skin cancer,911,105
+Pregnant women,[COVID ID199 V1] Pregnant women,985,199

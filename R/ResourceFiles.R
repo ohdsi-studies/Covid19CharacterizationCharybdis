@@ -51,6 +51,15 @@ getAllStrata <- function() {
   return(strata)  
 }
 
+getAllStudyCohorts <- function() {
+  cohortsToCreate <- getCohortsToCreate()
+  targetStrataXref <- getTargetStrataXref()
+  colNames <- c("name", "cohortId")
+  cohortsToCreate <- cohortsToCreate[, match(colNames, names(cohortsToCreate))]
+  targetStrataXref <- targetStrataXref[, match(colNames, names(targetStrataXref))]
+  allCohorts <- rbind(cohortsToCreate, targetStrataXref)
+}
+
 getThisPackageName <- function() {
   return("Covid19CharacterizationCharybdis")
 }
