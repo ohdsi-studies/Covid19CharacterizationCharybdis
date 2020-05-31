@@ -1,8 +1,8 @@
 name,atlasName,atlasId,cohortId
 Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),[COVID ID121 V1] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),801,121
-Asthma-COPD Step 1,[COVID ID122 V1] Asthma-COPD Step 1,851,122
-Asthma-COPD Step 2,[COVID ID123 V1] Asthma-COPD Step 2,850,123
-Asthma-COPD Step 3,[COVID ID124 V1] Asthma-COPD Step 3,852,124
+Asthma/COPD Step 1,[COVID ID122 V1] Asthma/COPD Step 1,851,122
+Asthma/COPD Step 2,[COVID ID123 V1] Asthma/COPD Step 2,850,123
+Asthma/COPD Step 3,[COVID ID124 V1] Asthma/COPD Step 3,852,124
 Gestational diabetes,[COVID ID110 v1] Gestational diabetes episodes,771,110
 Eclampsia and pre-eclampsia,[COVID ID142 v1] Eclampsia and pre-eclampsia episodes,824,142
 Fever,[COVID ID143 v1] Fever episodes,809,143
@@ -11,14 +11,14 @@ Myalgia,[COVID ID145 v1] Myalgia episodes,914,145
 Malaise or fatigue,[COVID ID146 v1] Malaise or fatigue episodes,915,146
 Dyspnea,[COVID ID147 v1] Dyspnea episodes,916,147
 Anosmia OR Hyposmia OR Dysgeusia,[COVID ID148 v1] Anosmia OR Hyposmia OR Dysgeusia episodes,912,148
-Persons with additional testing for SARS-Cov-2 (prior test 1d or more before test),[COVID ID149 V1] Persons with additional testing for SARS-Cov-2 (prior test 1d or more before test),982,149
-Persons with additional testing for SARS-Cov-2 (prior test 5d or more before test),[COVID ID150 V1] Persons with additional testing for SARS-Cov-2 (prior test 5d or more before test),983,150
+Persons with additional testing for SARS-Cov-2 (prior test >=1d before test),[COVID ID149 V1] Persons with additional testing for SARS-Cov-2 (prior test >=1d before test),982,149
+Persons with additional testing for SARS-Cov-2 (prior test >=5d before test),[COVID ID150 V1] Persons with additional testing for SARS-Cov-2 (prior test >=5d before test),983,150
 Hospitalization episodes,[COVID ID151 V1] Hospitalization episodes,917,151
 Pneumonia during hospitalization,[COVID ID152 V1] Pneumonia during hospitalization,781,152
 Acute Respiratory Distress syndrome (ARDS) during hospitalization,[COVID ID153 V1] Acute Respiratory Distress syndrome (ARDS) during hospitalization,76,153
 Acute kidney injury (AKI) diagnosis during hospitalization,[COVID ID154 V1] Acute kidney injury (AKI) diagnosis during hospitalization,849,154
 Sepsis during hospitalization,[COVID ID155 V1] Sepsis during hospitalization,923,155
-Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events,[COVID ID156 V1] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events,7,156
+Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events ,[COVID ID156 V1] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events ,7,156
 Pulmonary Embolism events,[COVID ID157 V1] Pulmonary Embolism events,918,157
 Deep vein thrombosis events,[COVID ID158 V1] Deep vein thrombosis events,920,158
 Heart failure during hospitalization,[COVID ID159 V1] Heart failure during hospitalization,932,159
@@ -57,7 +57,7 @@ Ischemic stroke events,[COVID ID191 V1] Ischemic stroke events,924,191
 Hemorrhagic stroke (intracerebral bleeding) events,[COVID ID192 V1] Hemorrhagic stroke (intracerebral bleeding) events,926,192
 Acute myocardial infarction events,[COVID ID193 V1] Acute myocardial infarction events,22,193
 Bleeding during hospitalization,[COVID ID194 V1] Bleeding during hospitalization,939,194
-Incident depression with no prior treatment and no mania or psychoses,[COVID ID195 V1] Incident depression with no prior treatment and no mania or psychoses,927,195
+Incident depression with no prior treatment and no mania/psychoses,[COVID ID195 V1] Incident depression with no prior treatment and no mania/psychoses,927,195
 Hospitalization for psychosis,[COVID ID196 V1] Hospitalization for psychosis,928,196
 Suicide and suicidal ideation,[COVID ID197 V1] Suicide and suicidal ideation,925,197
 Multi-system inflammatory syndrome (Kawasaki disease or toxic shock syndrome),[COVID ID198 V1] Multi-system inflammatory syndrome (Kawasaki disease or toxic shock syndrome),940,198

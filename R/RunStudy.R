@@ -147,7 +147,9 @@ runStudy <- function(connectionDetails = NULL,
   database <- data.frame(databaseId = databaseId,
                          databaseName = databaseName,
                          description = databaseDescription,
-                         vocabularyVersion = getVocabularyInfo(),
+                         vocabularyVersion = getVocabularyInfo(connection = connection,
+                                                               cdmDatabaseSchema = cdmDatabaseSchema,
+                                                               oracleTempSchema = oracleTempSchema),
                          isMetaAnalysis = 0)
   writeToCsv(database, file.path(exportFolder, "database.csv"))
 
@@ -299,7 +301,8 @@ getVocabularyInfo <- function(connection, cdmDatabaseSchema, oracleTempSchema) {
   sql <- "SELECT vocabulary_version FROM @cdm_database_schema.vocabulary WHERE vocabulary_id = 'None';"
   sql <- SqlRender::render(sql, cdm_database_schema = cdmDatabaseSchema)
   sql <- SqlRender::translate(sql, targetDialect = attr(connection, "dbms"), oracleTempSchema = oracleTempSchema)
-  return(DatabaseConnector::querySql(connection, sql))
+  vocabInfo <- DatabaseConnector::querySql(connection, sql)
+  return(vocabInfo[[1]])
 }
 
 #' @export

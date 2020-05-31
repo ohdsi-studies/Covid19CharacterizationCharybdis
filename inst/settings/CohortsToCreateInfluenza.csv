@@ -1,7 +1,7 @@
 name,atlasName,atlasId,cohortId
-Persons with Influenza dx or pos test 2017-2018 with at least 365d prior obs,[COVID ID111 v1] Persons with Influenza dx or pos test 2017-2018 with at least 365d prior obs,957,111
-Persons hosp with influenza dx or pos test 2017-2018 with at least 365d prior obs,[COVID ID113 v1] Persons hosp with influenza dx or pos test 2017-2018 with at least 365d prior obs,960,113
-Persons hosp with influenza dx or pos test and req svcs 2017-2018 with at least 365d prior obs,[COVID ID115 v1] Persons hosp with influenza dx or pos test and req svcs 2017-2018 with at least 365d prior obs,962,115
-Persons with Influenza dx or pos test 2017-2018 with no req prior obs,[COVID ID112 v1] Persons with Influenza dx or pos test 2017-2018 with no req prior obs,958,112
-Persons hosp with influenza dx or pos test 2017-2018 with no req prior obs,[COVID ID114 v1] Persons hosp with influenza dx or pos test 2017-2018 with no req prior obs,961,114
-Persons hosp with influenza dx or pos test and req svcs 2017-2018 with no req prior obs,[COVID ID116 v1] Persons hosp with influenza dx or pos test and req svcs 2017-2018 with no req prior obs,963,116
+Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,[COVID ID111 v1] Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,957,111
+Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,[COVID ID113 v1] Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,960,113
+Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation,[COVID ID115 v1] Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation,962,115
+Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation,[COVID ID112 v1] Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation,958,112
+Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation,[COVID ID114 v1] Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation,961,114
+Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation,[COVID ID116 v1] Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation,963,116
