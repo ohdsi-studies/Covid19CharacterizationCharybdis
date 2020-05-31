@@ -205,11 +205,6 @@ runStudy <- function(connectionDetails = NULL,
   # Also keeping a raw output for debugging
   writeToCsv(featureProportions, file.path(exportFolder, "feature_proportions.csv"))
 
-  # Read in the cohort counts
-  counts <- readr::read_csv(file.path(exportFolder, "cohort_count.csv"), col_types = readr::cols())
-  colnames(counts) <- SqlRender::snakeCaseToCamelCase(colnames(counts))
-
-
   # Cohort characterization ---------------------------------------------------------------
   runCohortCharacterization <- function(cohortId, cohortName, covariateSettings, windowId, curIndex, totalCount) {
     ParallelLogger::logInfo("- (windowId=", windowId, ", ", curIndex, " of ", totalCount, ") Creating characterization for cohort: ", cohortName)
@@ -234,7 +229,7 @@ runStudy <- function(connectionDetails = NULL,
   }
   featureTimeWindows <- getFeatureTimeWindows()
   featureExtractionCohorts <-  loadCohortsForExportWithChecksumFromPackage(counts$cohortId)
-  for (i in 1:length(featureTimeWindows)) {
+  for (i in 1:nrow(featureTimeWindows)) {
     windowStart <- featureTimeWindows$windowStart[i]
     windowEnd <- featureTimeWindows$windowEnd[i]
     windowId <- featureTimeWindows$windowId[i]
@@ -368,6 +363,7 @@ loadCohortsForExportFromPackage <- function(cohortIds) {
   cohorts <- getCohortsToCreate()
   cohorts$atlasId <- NULL
   if ("atlasName" %in% colnames(cohorts)) {
+    cohorts$atlasName <- cohorts$name # Hack to always use the name field
     cohorts <- dplyr::rename(cohorts, cohortName = "name", cohortFullName = "atlasName")
   } else {
     cohorts <- dplyr::rename(cohorts, cohortName = "name", cohortFullName = "fullName")
