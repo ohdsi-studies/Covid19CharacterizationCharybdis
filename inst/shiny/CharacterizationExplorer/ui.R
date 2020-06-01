@@ -13,8 +13,16 @@ addInfo <- function(item, infoId) {
 }
 
 dashboardPage(
-  dashboardHeader(title = "Cohort Diagnostics"),
-  dashboardSidebar(
+  dashboardHeader(
+    title = "CHARYBDIS",
+    #titleWidth = 400,
+    tags$li(div(img(src = 'logo.png',
+                    title = "Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2", 
+                    height = "40px", 
+                    width = "40px"),
+                style = "padding-top:0px; padding-bottom:0px;"),
+            class = "dropdown")    
+    ),  dashboardSidebar(
     sidebarMenu(id = "tabs",
                 if (exists("cohortCount")) addInfo(menuItem("Cohort Counts", tabName = "cohortCounts"), "cohortCountsInfo"),
                 #if (exists("incidenceRate")) addInfo(menuItem("Incidence Rate", tabName = "incidenceRate"), "incidenceRateInfo"),

@@ -133,9 +133,9 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 oracleTempSchema <- NULL
 
 # Details specific to the database:
-databaseId <- "PREMIER_COVID_SUBSET_F1"
-databaseName <- "PREMIER_COVID_SUBSET_F"
-databaseDescription <- "PREMIER_COVID_SUBSET_F1"
+databaseId <- "PREMIER_COVID_F1"
+databaseName <- "PREMIER_COVID_F1"
+databaseDescription <- "PREMIER_COVID_F1"
 
 # Details for connecting to the CDM and storing the results
 outputFolder <- file.path("E:/Covid19Characterization", databaseId)
