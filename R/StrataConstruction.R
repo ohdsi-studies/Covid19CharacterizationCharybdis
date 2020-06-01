@@ -113,6 +113,9 @@ cohortStrataXrefTempTableSql <- function(connection, targetStrataXref, oracleTem
                               oracleTempSchema = oracleTempSchema)
   
   dropSql <- "TRUNCATE TABLE #TARGET_STRATA_XREF;\nDROP TABLE #TARGET_STRATA_XREF;\n\n"
+  dropSql <- SqlRender::translate(sql = dropSql, 
+                                  targetDialect = attr(connection, "dbms"),
+                                  oracleTempSchema = oracleTempSchema)
   return(list(create = sql, drop = dropSql))
 }
 

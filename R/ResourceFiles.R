@@ -74,6 +74,9 @@ readCsv <- function(resourceFile) {
 getPathToResource <- function(useSubset = Sys.getenv("USE_SUBSET")) {
   path <- "settings/"
   useSubset <- as.logical(useSubset)
+  if (is.na(useSubset)) {
+    useSubset = FALSE
+  }
   if (useSubset) {
     path <- file.path(path, "subset/")
   }

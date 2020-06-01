@@ -42,7 +42,12 @@ dashboardPage(
                                  checkboxGroupInput("databases", "Database", database$databaseId, selected = database$databaseId[1])
                 ),
                 conditionalPanel(condition = "input.tabs!='cohortCounts' & input.tabs!='databaseInformation'",
-                                 selectInput("cohort", "Cohort (Target)", choices = cohort$cohortFullName, selectize = FALSE)
+                                 #selectInput("cohort", "Cohort (Target)", choices = cohort$cohortFullName, selectize = FALSE)
+                                 shinyWidgets::pickerInput("cohort", "Cohort (Target)",
+                                                           choices = cohort$cohortFullName,
+                                                           selected = cohort$cohortFullName,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE),
+                                                           multiple = TRUE)                                 
                 ),
                 conditionalPanel(condition = "input.tabs=='includedConcepts' | input.tabs=='orphanConcepts'",
                                  selectInput("conceptSet", "Concept Set", c(""), selectize = FALSE)

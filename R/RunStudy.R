@@ -13,6 +13,7 @@ runStudy <- function(connectionDetails = NULL,
                      databaseId,
                      databaseName = databaseId,
                      databaseDescription = "",
+                     useBulkCharacterization = FALSE,
                      minCellCount = 5,
                      incremental = TRUE,
                      incrementalFolder = file.path(exportFolder, "RecordKeeping")) {
@@ -199,13 +200,15 @@ runStudy <- function(connectionDetails = NULL,
   }
   features <- formatCovariates(featureProportions)
   writeToCsv(features, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = features$covariateId)
-  featureValues <- formatCovariateValues(featureProportions, counts, minCellCount)
+  featureValues <- formatCovariateValues(featureProportions, counts, minCellCount, databaseId)
   featureValues <- featureValues[,c("cohortId", "covariateId", "mean", "sd", "databaseId")]
   writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = featureValues$cohortId, covariateId = featureValues$covariateId)
   # Also keeping a raw output for debugging
   writeToCsv(featureProportions, file.path(exportFolder, "feature_proportions.csv"))
 
   # Cohort characterization ---------------------------------------------------------------
+  # Note to package maintainer: If any of the logic to this changes, you'll need to revist
+  # the function createBulkCharacteristics
   runCohortCharacterization <- function(cohortId, cohortName, covariateSettings, windowId, curIndex, totalCount) {
     ParallelLogger::logInfo("- (windowId=", windowId, ", ", curIndex, " of ", totalCount, ") Creating characterization for cohort: ", cohortName)
     data <- getCohortCharacteristics(connection = connection,
@@ -224,53 +227,64 @@ runStudy <- function(connectionDetails = NULL,
   }
 
   # Subset the cohorts to the target/strata for running feature extraction
-  if (incremental) {
-    recordKeepingFile <- file.path(incrementalFolder, "CreatedAnalyses.csv")
-  }
-  featureTimeWindows <- getFeatureTimeWindows()
-  featureExtractionCohorts <-  loadCohortsForExportWithChecksumFromPackage(counts$cohortId)
-  for (i in 1:nrow(featureTimeWindows)) {
-    windowStart <- featureTimeWindows$windowStart[i]
-    windowEnd <- featureTimeWindows$windowEnd[i]
-    windowId <- featureTimeWindows$windowId[i]
+  # that are >= 140 per protocol to improve efficency
+  featureExtractionCohorts <-  loadCohortsForExportWithChecksumFromPackage(counts[counts$cohortSubjects >= 140, c("cohortId")]$cohortId)
+  # Bulk approach ----------------------
+  if (useBulkCharacterization) {
     ParallelLogger::logInfo("********************************************************************************************")
-    ParallelLogger::logInfo(paste0("Characterize concept features for start: ", windowStart, ", end: ", windowEnd, " (windowId=", windowId, ")"))
+    ParallelLogger::logInfo("Bulk characterization of all cohorts for all time windows")
     ParallelLogger::logInfo("********************************************************************************************")
-    createDemographics <- (i == 1)
-    covariateSettings <- FeatureExtraction::createCovariateSettings(useDemographicsGender = createDemographics,
-                                                                            useDemographicsAgeGroup = createDemographics,
-                                                                            useConditionGroupEraShortTerm = TRUE,
-                                                                            useDrugGroupEraShortTerm = TRUE,
-                                                                            shortTermStartDays = windowStart,
-                                                                            endDays = windowEnd)
-    task <- paste0("runCohortCharacterizationWindowId", windowId)
+    createBulkCharacteristics(connection, oracleTempSchema, featureExtractionCohorts$cohortId)
+    writeBulkCharacteristics(connection, oracleTempSchema, counts, minCellCount, databaseId, exportFolder)
+  } else {
+    # Sequential Approach --------------------------------
     if (incremental) {
-      subset <- subsetToRequiredCohorts(cohorts = featureExtractionCohorts,
-                                        task = task,
-                                        incremental = incremental,
-                                        recordKeepingFile = recordKeepingFile)
-    } else {
-      subset <- featureExtractionCohorts
+      recordKeepingFile <- file.path(incrementalFolder, "CreatedAnalyses.csv")
     }
-
-    if (nrow(subset) > 0) {
-      for (j in 1:nrow(subset)) {
-        data <- runCohortCharacterization(cohortId = subset$cohortId[j],
-                                          cohortName = subset$cohortName[j],
-                                          covariateSettings = covariateSettings,
-                                          windowId = windowId,
-                                          curIndex = j,
-                                          totalCount = nrow(subset))
-        covariates <- formatCovariates(data)
-        writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = covariates$covariateId)
-        data <- formatCovariateValues(data, counts, minCellCount)
-        writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = data$cohortId, data$covariateId)
-        if (incremental) {
-          recordTasksDone(cohortId = subset$cohortId[j],
-                          task = task,
-                          checksum = subset$checksum[j],
-                          recordKeepingFile = recordKeepingFile,
-                          incremental = incremental)
+    featureTimeWindows <- getFeatureTimeWindows()
+    for (i in 1:nrow(featureTimeWindows)) {
+      windowStart <- featureTimeWindows$windowStart[i]
+      windowEnd <- featureTimeWindows$windowEnd[i]
+      windowId <- featureTimeWindows$windowId[i]
+      ParallelLogger::logInfo("********************************************************************************************")
+      ParallelLogger::logInfo(paste0("Characterize concept features for start: ", windowStart, ", end: ", windowEnd, " (windowId=", windowId, ")"))
+      ParallelLogger::logInfo("********************************************************************************************")
+      createDemographics <- (i == 1)
+      covariateSettings <- FeatureExtraction::createCovariateSettings(useDemographicsGender = createDemographics,
+                                                                      useDemographicsAgeGroup = createDemographics,
+                                                                      useConditionGroupEraShortTerm = TRUE,
+                                                                      useDrugGroupEraShortTerm = TRUE,
+                                                                      shortTermStartDays = windowStart,
+                                                                      endDays = windowEnd)
+      task <- paste0("runCohortCharacterizationWindowId", windowId)
+      if (incremental) {
+        subset <- subsetToRequiredCohorts(cohorts = featureExtractionCohorts,
+                                          task = task,
+                                          incremental = incremental,
+                                          recordKeepingFile = recordKeepingFile)
+      } else {
+        subset <- featureExtractionCohorts
+      }
+      
+      if (nrow(subset) > 0) {
+        for (j in 1:nrow(subset)) {
+          data <- runCohortCharacterization(cohortId = subset$cohortId[j],
+                                            cohortName = subset$cohortName[j],
+                                            covariateSettings = covariateSettings,
+                                            windowId = windowId,
+                                            curIndex = j,
+                                            totalCount = nrow(subset))
+          covariates <- formatCovariates(data)
+          writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = covariates$covariateId)
+          data <- formatCovariateValues(data, counts, minCellCount, databaseId)
+          writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = data$cohortId, data$covariateId)
+          if (incremental) {
+            recordTasksDone(cohortId = subset$cohortId[j],
+                            task = task,
+                            checksum = subset$checksum[j],
+                            recordKeepingFile = recordKeepingFile,
+                            incremental = incremental)
+          }
         }
       }
     }
@@ -318,7 +332,7 @@ formatCovariates <- function(data) {
   return(covariates)
 }
 
-formatCovariateValues <- function(data, counts, minCellCount) {
+formatCovariateValues <- function(data, counts, minCellCount, databaseId) {
   data$covariateName <- NULL
   data$analysisId <- NULL
   if (nrow(data) > 0) {

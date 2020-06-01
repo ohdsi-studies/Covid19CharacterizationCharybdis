@@ -151,3 +151,86 @@ checkIfCohortInstantiated <- function(connection, cohortDatabaseSchema, cohortTa
   return(count > 0)
 }
 
+
+#' Create cohort characteristics in bulk
+#'
+#' @description
+#' This function will perform the same actions as the main RunStudy.R::runStudy()
+#' function but in a single SQL operation. 
+#'
+createBulkCharacteristics <- function(connection, oracleTempSchema, cohortIds) {
+  packageName <- getThisPackageName()
+
+  # Subset to the cohorts selected
+  cohortSubsetSql <- cohortSubsetTempTableSql(connection, cohortIds, oracleTempSchema)
+
+  # Get the time windows
+  featureTimeWindows <- getFeatureTimeWindows()
+  featureTimeWindowTempTableSql <- featureWindowsTempTableSql(connection, featureTimeWindows, oracleTempSchema)
+  
+  # Generate the bulk creation script
+  sql <- SqlRender::loadRenderTranslateSql(dbms = attr(connection, "dbms"),
+                                           sqlFilename = "BulkFeatureExtraction.sql",
+                                           packageName = packageName,
+                                           oracleTempSchema = oracleTempSchema,
+                                           warnOnMissingParameters = TRUE,
+                                           cohort_subset_table_create = cohortSubsetSql$create,
+                                           cohort_subset_table_drop = cohortSubsetSql$drop,
+                                           feature_time_window_table_create = featureTimeWindowTempTableSql$create,
+                                           feature_time_window_table_drop = featureTimeWindowTempTableSql$drop,
+                                           cdm_database_schema = cdmDatabaseSchema,
+                                           cohort_database_schema = cohortDatabaseSchema,
+                                           cohort_table = cohortTable)
+  DatabaseConnector::executeSql(connection = connection, sql = sql)  
+}
+
+#' Write cohort characteristics in bulk to the file system
+#'
+#' @description
+#' This function will retrieve the results from the temp tables created
+#' in createBulkCharacteristics
+#'
+writeBulkCharacteristics <- function(connection, oracleTempSchema, counts, minCellCount, databaseId, exportFolder) {
+  sql <- "SELECT ar.cohort_id, ar.covariate_id, ar.mean, ar.sd, cr.covariate_name, cr.analysis_id
+          FROM #analysis_results ar
+          INNER JOIN #cov_ref cr ON ar.covariate_id = cr.covariate_id
+          ;"
+  sql <- SqlRender::translate(sql = sql,
+                              targetDialect = attr(connection, "dbms"), 
+                              oracleTempSchema = oracleTempSchema)
+  data <- DatabaseConnector::querySql(connection, sql = sql)
+  names(data) <- SqlRender::snakeCaseToCamelCase(colnames(data))
+  covariates <- formatCovariates(data)
+  writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = TRUE, covariateId = covariates$covariateId)
+  data <- formatCovariateValues(data, counts, minCellCount, databaseId)
+  writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = TRUE, cohortId = data$cohortId, data$covariateId)
+}
+
+cohortSubsetTempTableSql <- function(connection, cohortIds, oracleTempSchema) {
+  sql <- "WITH data AS (
+            @unions
+          ) 
+          SELECT cohort_id
+          INTO #cohort_subset
+          FROM data;"
+  unions <- "";
+  unions <- "";
+  for(i in 1:length(cohortIds)) {
+    stmt <- paste0("SELECT ", cohortIds[i], " cohort_id")
+    unions <- paste(unions, stmt, sep="\n")
+    if (i < length(cohortIds)) {
+      unions <- paste(unions, "UNION ALL", sep="\n")
+    }
+  }
+  sql <- SqlRender::render(sql, unions = unions)
+  sql <- SqlRender::translate(sql = sql, 
+                              targetDialect = attr(connection, "dbms"),
+                              oracleTempSchema = oracleTempSchema)
+  
+  dropSql <- "TRUNCATE TABLE #cohort_subset;\nDROP TABLE #cohort_subset;\n\n"
+  dropSql <- SqlRender::translate(sql = dropSql, 
+                                  targetDialect = attr(connection, "dbms"),
+                                  oracleTempSchema = oracleTempSchema)
+  return(list(create = sql, drop = dropSql))
+}
+

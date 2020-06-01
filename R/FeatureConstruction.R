@@ -89,6 +89,9 @@ featureWindowsTempTableSql <- function(connection, featureWindows, oracleTempSch
                               oracleTempSchema = oracleTempSchema)
   
   dropSql <- "TRUNCATE TABLE #feature_windows;\nDROP TABLE #feature_windows;\n\n"
+  dropSql <- SqlRender::translate(sql = dropSql, 
+                                  targetDialect = attr(connection, "dbms"),
+                                  oracleTempSchema = oracleTempSchema)
   return(list(create = sql, drop = dropSql))
 }
 
