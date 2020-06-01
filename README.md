@@ -165,7 +165,9 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 # - cohortStagingTable := The name of the table used to stage the cohorts used in this study
 # - featureSummaryTable := The name of the table to hold the feature summary for this study
 # - minCellCount := Aggregate stats that yield a value < minCellCount are censored in the output
-# 
+# - useBulkCharacterization := When set to TRUE, this will attempt to do all of the characterization operations for the whole 
+#                              study via SQL vs sequentially per cohort and time window. This is recommended if your DB platform is 
+#                              robust to perform this type of operation. Best to test this using the USE_SUBSET option to test.
 # Also worth noting: The runStudy function below allows for the input of cohort groups (covid and/or influenza)
 # in the event that you would like to characterize a subset of these 2 target groups. To run the analysis
 # on a single group, uncomment the parameter "cohortGroups = c("covid", "influenza")" and change the list
@@ -188,6 +190,7 @@ cohortTable <- paste0("AS_S0_full_", databaseId)
 cohortStagingTable <- paste0(cohortTable, "_stg")
 featureSummaryTable <- paste0(cohortTable, "_smry")
 minCellCount <- 5
+useBulkCharacterization <- FALSE
 
 # For uploading the results. You should have received the key file from the study coordinator:
 keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
@@ -208,6 +211,7 @@ runStudy(connectionDetails = connectionDetails,
          databaseDescription = databaseDescription,
          #cohortGroups = c("covid", "influenza"),
          incremental = TRUE,
+         useBulkCharacterization = useBulkCharacterization,
          minCellCount = minCellCount) 
 
 #CohortDiagnostics::preMergeDiagnosticsFiles(outputFolder)

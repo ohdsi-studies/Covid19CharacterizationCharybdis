@@ -122,6 +122,9 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 # - cohortStagingTable := The name of the table used to stage the cohorts used in this study
 # - featureSummaryTable := The name of the table to hold the feature summary for this study
 # - minCellCount := Aggregate stats that yield a value < minCellCount are censored in the output
+# - useBulkCharacterization := When set to TRUE, this will attempt to do all of the characterization operations for the whole 
+#                              study via SQL vs sequentially per cohort and time window. This is recommended if your DB platform is 
+#                              robust to perform this type of operation. Best to test this using the USE_SUBSET option to test.
 # 
 # Also worth noting: The runStudy function below allows for the input of cohort groups (covid and/or influenza)
 # in the event that you would like to characterize a subset of these 2 target groups. To run the analysis
