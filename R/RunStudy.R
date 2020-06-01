@@ -308,9 +308,13 @@ getUserSelectableCohortGroups <- function() {
 
 formatCovariates <- function(data) {
   # Drop covariates with mean = 0 after rounding to 4 digits:
-  data <- data[round(data$mean, 4) != 0, ]
-  covariates <- unique(data[, c("covariateId", "covariateName", "analysisId")])
-  colnames(covariates)[[3]] <- "covariateAnalysisId"
+  if (nrow(data) > 0) {
+    data <- data[round(data$mean, 4) != 0, ]
+    covariates <- unique(data[, c("covariateId", "covariateName", "analysisId")])
+    colnames(covariates)[[3]] <- "covariateAnalysisId"
+  } else {
+    covariates <- list("covariateId" = "", "covariateName" = "", "covariateAnalysisId" = "")
+  }
   return(covariates)
 }
 
