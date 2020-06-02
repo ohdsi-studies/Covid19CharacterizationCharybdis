@@ -1,10 +1,10 @@
 Package: Covid19CharacterizationCharybdis
 Type: Package
-Title: Characterization of COVID-19 and Influenza patients
+Title: Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 (CHARYBDIS)
 Version: 0.0.1
 Author: Anthony G. Sena [aut, cre]
 Maintainer: Anthony G. Sena <asena5@its.jnj.com>
-Description: A package for characterizing COVID-19 patients with and without various features.
+Description: Describe the baseline demographic, clinical characteristics, treatments and outcomes of interest among individuals tested for SARS-CoV-2 and/or diagnosed with COVID-19 overall and stratified by sex, age and specific comorbidities. This package also describes the same baseline and outcomes for patients hospitalized with influenza between September 2017 and April 2018.
 Depends:
   DatabaseConnector (>= 2.2.0)
 Imports:

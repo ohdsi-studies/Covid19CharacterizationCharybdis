@@ -137,19 +137,19 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 oracleTempSchema <- NULL
 
 # Details specific to the database:
-databaseId <- "PREMIER_COVID_SUBSET_BULK"
-databaseName <- "PREMIER_COVID_SUBSET_BULK"
-databaseDescription <- "PREMIER_COVID_SUBSET_BULK"
+databaseId <- "PREMIER_COVID_BULK_F1"
+databaseName <- "PREMIER_COVID_BULK_F1"
+databaseDescription <- "PREMIER_COVID_BULK_F1"
 
 # Details for connecting to the CDM and storing the results
 outputFolder <- file.path("E:/Covid19Characterization/TestRuns", databaseId)
 cdmDatabaseSchema <- "CDM_Premier_v1214.dbo"
 cohortDatabaseSchema <- "scratch.dbo"
-cohortTable <- paste0("AS_S0_subset_", databaseId)
+cohortTable <- paste0("AS_S0_full_", databaseId)
 cohortStagingTable <- paste0(cohortTable, "_stg")
 featureSummaryTable <- paste0(cohortTable, "_smry")
 minCellCount <- 5
-useBulkCharacterization <- FALSE
+useBulkCharacterization <- TRUE
 cohortIdsToExclude <- c()
 
 # For uploading the results. You should have received the key file from the study coordinator:
