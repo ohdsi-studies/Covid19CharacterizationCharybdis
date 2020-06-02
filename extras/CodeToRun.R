@@ -149,8 +149,8 @@ cohortTable <- paste0("AS_S0_subset_", databaseId)
 cohortStagingTable <- paste0(cohortTable, "_stg")
 featureSummaryTable <- paste0(cohortTable, "_smry")
 minCellCount <- 5
-useBulkCharacterization <- TRUE
-cohortIdsToExclude <- c(126,128,199)
+useBulkCharacterization <- FALSE
+cohortIdsToExclude <- c()
 
 # For uploading the results. You should have received the key file from the study coordinator:
 keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
