@@ -27,10 +27,11 @@ runStudy <- function(connectionDetails = NULL,
   ParallelLogger::addDefaultFileLogger(file.path(exportFolder, "Covid19CharacterizationCharybdis.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
   
-  if (as.logical(Sys.getenv("USE_SUBSET")) == TRUE) {
-    warning("Running in subset mode for testing")
+  useSubset = Sys.getenv("USE_SUBSET")
+  if (!is.na(as.logical(useSubset)) && as.logical(useSubset)) {
+    ParallelLogger::logWarn("Running in subset mode for testing")
   }
-  
+
   if (incremental) {
     if (is.null(incrementalFolder)) {
       stop("Must specify incrementalFolder when incremental = TRUE")
