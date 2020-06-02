@@ -8,6 +8,7 @@ Description: A package for characterizing COVID-19 patients with and without var
 Depends:
   DatabaseConnector (>= 2.2.0)
 Imports:
+  CohortDiagnostics (>= 0.1.2),
 	ParallelLogger,
 	OhdsiSharing (>= 0.2.1),
 	readr,
