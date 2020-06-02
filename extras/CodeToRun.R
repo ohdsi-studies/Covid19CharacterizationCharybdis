@@ -122,6 +122,7 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 # - cohortStagingTable := The name of the table used to stage the cohorts used in this study
 # - featureSummaryTable := The name of the table to hold the feature summary for this study
 # - minCellCount := Aggregate stats that yield a value < minCellCount are censored in the output
+# - cohortIdsToExclude := A vector of cohort IDs to exclude from the study. This is useful if a particular cohort is problematic in your environment
 # - useBulkCharacterization := When set to TRUE, this will attempt to do all of the characterization operations for the whole 
 #                              study via SQL vs sequentially per cohort and time window. This is recommended if your DB platform is 
 #                              robust to perform this type of operation. Best to test this using the USE_SUBSET option to test.
@@ -136,19 +137,20 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 oracleTempSchema <- NULL
 
 # Details specific to the database:
-databaseId <- "PREMIER_COVID_SUB_SEQ_BULK"
-databaseName <- "PREMIER_COVID_SUB_SEQ_BULK"
-databaseDescription <- "PREMIER_COVID_SUB_SEQ_BULK"
+databaseId <- "PREMIER_COVID_SUBSET_BULK"
+databaseName <- "PREMIER_COVID_SUBSET_BULK"
+databaseDescription <- "PREMIER_COVID_SUBSET_BULK"
 
 # Details for connecting to the CDM and storing the results
-outputFolder <- file.path("E:/Covid19Characterization", databaseId)
+outputFolder <- file.path("E:/Covid19Characterization/TestRuns", databaseId)
 cdmDatabaseSchema <- "CDM_Premier_v1214.dbo"
 cohortDatabaseSchema <- "scratch.dbo"
 cohortTable <- paste0("AS_S0_subset_", databaseId)
 cohortStagingTable <- paste0(cohortTable, "_stg")
 featureSummaryTable <- paste0(cohortTable, "_smry")
 minCellCount <- 5
-useBulkCharacterization <- FALSE
+useBulkCharacterization <- TRUE
+cohortIdsToExclude <- c(126,128,199)
 
 # For uploading the results. You should have received the key file from the study coordinator:
 keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
@@ -168,6 +170,7 @@ runStudy(connectionDetails = connectionDetails,
          databaseName = databaseName,
          databaseDescription = databaseDescription,
          #cohortGroups = c("covid", "influenza"),
+         cohortIdsToExclude = cohortIdsToExclude,
          incremental = TRUE,
          useBulkCharacterization = useBulkCharacterization,
          minCellCount = minCellCount) 
