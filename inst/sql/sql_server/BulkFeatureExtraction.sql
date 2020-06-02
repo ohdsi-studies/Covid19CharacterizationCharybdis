@@ -49,7 +49,7 @@ IF OBJECT_ID('tempdb..#age_group', 'U') IS NOT NULL DROP TABLE #age_group
 SELECT 
   cohort.cohort_definition_id,
   CAST(FLOOR((YEAR(cohort_start_date) - year_of_birth) / 5) * 1000 + @age_group_analysis_id AS BIGINT) AS covariate_id,
-	COUNT(DISTINCT cohort.subject_id) AS sum_value
+	COUNT_BIG(DISTINCT cohort.subject_id) AS sum_value
 INTO #age_group
 FROM @cohort_database_schema.@cohort_table cohort
 INNER JOIN #cohort_subset xref ON cohort.cohort_definition_id = xref.cohort_id
@@ -91,7 +91,7 @@ IF OBJECT_ID('tempdb..#gender', 'U') IS NOT NULL drop table #gender
 SELECT 
   cohort_definition_id,
 	CAST(gender_concept_id AS BIGINT) * 1000 + @gender_analysis_id AS covariate_id,
-	COUNT(DISTINCT cohort.subject_id) AS sum_value
+	COUNT_BIG(DISTINCT cohort.subject_id) AS sum_value
 INTO #gender
 FROM @cohort_database_schema.@cohort_table cohort
 INNER JOIN #cohort_subset xref ON cohort.cohort_definition_id = xref.cohort_id
