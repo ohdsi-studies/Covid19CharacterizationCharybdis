@@ -3,6 +3,11 @@ getBulkStrata <- function() {
   return(readCsv(resourceFile))
 }
 
+getCohortGroupsForDiagnostics <- function () {
+  resourceFile <- file.path(getPathToResource(), "CohortGroupsDiagnostics.csv")
+  return(readCsv(resourceFile))
+}
+
 getCohortGroups <- function () {
   resourceFile <- file.path(getPathToResource(), "CohortGroups.csv")
   return(readCsv(resourceFile))
@@ -28,9 +33,8 @@ getTargetStrataXref <- function() {
   return(readCsv(resourceFile))
 }
 
-getCohortsToCreate <- function() {
+getCohortsToCreate <- function(cohortGroups = getCohortGroups()) {
   packageName <- getThisPackageName()
-  cohortGroups <- getCohortGroups()
   cohorts <- data.frame()
   for(i in 1:nrow(cohortGroups)) {
     c <- readr::read_csv(system.file(cohortGroups$fileName[i], package = packageName), col_types = readr::cols())

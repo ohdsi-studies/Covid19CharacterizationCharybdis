@@ -5,7 +5,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                  cohortDatabaseSchema = cdmDatabaseSchema,
                                  cohortStagingTable = "cohort_stg",
                                  oracleTempSchema = cohortDatabaseSchema,
-                                 cohortGroups = getCohortGroups(),
+                                 cohortGroups = getCohortGroupsForDiagnostics(),
                                  exportFolder,
                                  databaseId = "Unknown",
                                  databaseName = "Unknown",
@@ -36,7 +36,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
   }
 
   # Create cohorts -----------------------------
-  cohorts <- getCohortsToCreate()
+  cohorts <- getCohortsToCreate(cohortGroups = cohortGroups)
   ParallelLogger::logInfo("Creating cohorts in incremental mode")  
   instantiateCohortSet(connectionDetails = connectionDetails,
                        connection = connection,
