@@ -5,7 +5,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                  cohortDatabaseSchema = cdmDatabaseSchema,
                                  cohortStagingTable = "cohort_stg",
                                  oracleTempSchema = cohortDatabaseSchema,
-                                 cohortGroups = getUserSelectableCohortGroups(),
+                                 cohortGroups = getCohortGroups(),
                                  exportFolder,
                                  databaseId = "Unknown",
                                  databaseName = "Unknown",
@@ -18,15 +18,16 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
   # and main study code (RunStudy.R) will share the same
   # RecordKeeping folder so that we can ensure that cohorts
   # are only created one time.
-  outputFolder <- file.path(outputFolder, "diagnostics")
-  if (!file.exists(outputFolder)) {
-    dir.create(outputFolder, recursive = TRUE)
+  diagnosticOutputFolder <- file.path(exportFolder, "diagnostics")
+  if (!file.exists(diagnosticOutputFolder)) {
+    dir.create(diagnosticOutputFolder, recursive = TRUE)
   }
+
   if (!is.null(getOption("fftempdir")) && !file.exists(getOption("fftempdir"))) {
     warning("fftempdir '", getOption("fftempdir"), "' not found. Attempting to create folder")
     dir.create(getOption("fftempdir"), recursive = TRUE)
   }
-  ParallelLogger::addDefaultFileLogger(file.path(outputFolder, "cohortDiagnosticsLog.txt"))
+  ParallelLogger::addDefaultFileLogger(file.path(diagnosticOutputFolder, "cohortDiagnosticsLog.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
   
   if (is.null(connection)) {
@@ -49,31 +50,35 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                        generateInclusionStats = FALSE,
                        incremental = TRUE,
                        incrementalFolder = incrementalFolder,
-                       inclusionStatisticsFolder = outputFolder)
+                       inclusionStatisticsFolder = diagnosticOutputFolder)
   
   # Run diagnostics -----------------------------
   ParallelLogger::logInfo("Running cohort diagnostics")
-  CohortDiagnostics::runCohortDiagnostics(packageName = getThisPackageName(),
-                                          connection = connection,
-                                          connectionDetails = connectionDetails,
-                                          cdmDatabaseSchema = cdmDatabaseSchema,
-                                          oracleTempSchema = oracleTempSchema,
-                                          cohortDatabaseSchema = cohortDatabaseSchema,
-                                          cohortTable = cohortStagingTable,
-                                          inclusionStatisticsFolder = outputFolder,
-                                          exportFolder = ouputFolder,
-                                          databaseId = databaseId,
-                                          databaseName = databaseName,
-                                          databaseDescription = databaseDescription,
-                                          runInclusionStatistics = FALSE,
-                                          runIncludedSourceConcepts = TRUE,
-                                          runOrphanConcepts = TRUE,
-                                          runTimeDistributions = TRUE,
-                                          runBreakdownIndexEvents = TRUE,
-                                          runIncidenceRate = TRUE,
-                                          runCohortOverlap = TRUE,
-                                          runCohortCharacterization = FALSE,
-                                          minCellCount = minCellCount,
-                                          incremental = TRUE,
-                                          incrementalFolder = incrementalFolder)  
+  
+  for (i in 1:nrow(cohortGroups)) {
+    CohortDiagnostics::runCohortDiagnostics(packageName = getThisPackageName(),
+                                            connection = connection,
+                                            cohortToCreateFile = cohortGroups$fileName[i],
+                                            connectionDetails = connectionDetails,
+                                            cdmDatabaseSchema = cdmDatabaseSchema,
+                                            oracleTempSchema = oracleTempSchema,
+                                            cohortDatabaseSchema = cohortDatabaseSchema,
+                                            cohortTable = cohortStagingTable,
+                                            inclusionStatisticsFolder = diagnosticOutputFolder,
+                                            exportFolder = diagnosticOutputFolder,
+                                            databaseId = databaseId,
+                                            databaseName = databaseName,
+                                            databaseDescription = databaseDescription,
+                                            runInclusionStatistics = FALSE,
+                                            runIncludedSourceConcepts = FALSE,
+                                            runOrphanConcepts = FALSE,
+                                            runTimeDistributions = FALSE,
+                                            runBreakdownIndexEvents = FALSE,
+                                            runIncidenceRate = TRUE,
+                                            runCohortOverlap = FALSE,
+                                            runCohortCharacterization = FALSE,
+                                            minCellCount = minCellCount,
+                                            incremental = TRUE,
+                                            incrementalFolder = incrementalFolder)  
+  }
 }
