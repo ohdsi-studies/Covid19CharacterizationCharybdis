@@ -5,14 +5,25 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                  cohortDatabaseSchema = cdmDatabaseSchema,
                                  cohortStagingTable = "cohort_stg",
                                  oracleTempSchema = cohortDatabaseSchema,
-                                 cohortGroups = getCohortGroupsForDiagnostics(),
+                                 cohortGroupNames = getCohortGroupNamesForDiagnostics(),
                                  exportFolder,
                                  databaseId = "Unknown",
                                  databaseName = "Unknown",
                                  databaseDescription = "Unknown",
                                  incrementalFolder = file.path(exportFolder, "RecordKeeping"),
                                  minCellCount = 5) {
-  # NOTE: The exportFolder is the root folder where the 
+  # Verify that the cohortGroups are the ones that are specified in the 
+  # CohortGroupsDiagnostics.csv
+  cohortGroups <- getCohortGroupsForDiagnostics()
+  cohortGroupsExist <- cohortGroupNames %in% cohortGroups$cohortGroup
+  if (!all(cohortGroupsExist)) {
+    ParallelLogger::logError(paste("Invalid cohort group name. Must be one of:", paste(getCohortGroupNamesForDiagnostics(), collapse = ', ')))
+    stop()
+  }
+  cohortGroups <- cohortGroups[cohortGroups$cohortGroup %in% cohortGroupNames, ]
+  ParallelLogger::logDebug(paste("CohortGroups: ", cohortGroups))
+  
+  # NOTE: The exportFolder is the root folder where the
   # study results will live. The diagnostics will be written
   # to a subfolder called "diagnostics". Both the diagnostics
   # and main study code (RunStudy.R) will share the same
@@ -29,7 +40,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
   }
   ParallelLogger::addDefaultFileLogger(file.path(diagnosticOutputFolder, "cohortDiagnosticsLog.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
-  
+
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
@@ -37,7 +48,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
 
   # Create cohorts -----------------------------
   cohorts <- getCohortsToCreate(cohortGroups = cohortGroups)
-  ParallelLogger::logInfo("Creating cohorts in incremental mode")  
+  ParallelLogger::logInfo("Creating cohorts in incremental mode")
   instantiateCohortSet(connectionDetails = connectionDetails,
                        connection = connection,
                        cdmDatabaseSchema = cdmDatabaseSchema,
@@ -51,10 +62,10 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                        incremental = TRUE,
                        incrementalFolder = incrementalFolder,
                        inclusionStatisticsFolder = diagnosticOutputFolder)
-  
+
   # Run diagnostics -----------------------------
   ParallelLogger::logInfo("Running cohort diagnostics")
-  
+
   for (i in 1:nrow(cohortGroups)) {
     CohortDiagnostics::runCohortDiagnostics(packageName = getThisPackageName(),
                                             connection = connection,
@@ -79,6 +90,6 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                             runCohortCharacterization = FALSE,
                                             minCellCount = minCellCount,
                                             incremental = TRUE,
-                                            incrementalFolder = incrementalFolder)  
+                                            incrementalFolder = incrementalFolder)
   }
 }

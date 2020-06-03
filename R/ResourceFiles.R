@@ -3,6 +3,10 @@ getBulkStrata <- function() {
   return(readCsv(resourceFile))
 }
 
+getCohortGroupNamesForDiagnostics <- function() {
+  cohortGroupNames <- getCohortGroupsForDiagnostics()$cohortGroup
+}
+
 getCohortGroupsForDiagnostics <- function () {
   resourceFile <- file.path(getPathToResource(), "CohortGroupsDiagnostics.csv")
   return(readCsv(resourceFile))
