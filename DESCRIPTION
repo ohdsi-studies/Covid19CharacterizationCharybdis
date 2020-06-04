@@ -10,20 +10,24 @@ Depends:
 Imports:
   CohortDiagnostics,
   FeatureExtraction,
-	ParallelLogger,
-	OhdsiSharing (>= 0.2.1),
-	SqlRender,
-	ff,
-	digest,
-	readr,
-	dplyr,
-	ggplot2 (<= 3.2.1),
-	tibble
+  ParallelLogger,
+  OhdsiSharing (>= 0.2.1),
+  SqlRender,
+  ff,
+  digest,
+  readr,
+  dplyr,
+  ggplot2 (<= 3.2.1),
+  tibble
 Suggests:
-    knitr,
-    rmarkdown
+  knitr,
+  rmarkdown
 Remotes:
-    ohdsi/OhdsiSharing
+  OHDSI/CohortDiagnostics,
+  OHDSI/FeatureExtraction,
+  OHDSI/ParallelLogger,
+  OHDSI/SqlRender,
+  OHDSI/OhdsiSharing
 License: Apache License 2.0
 VignetteBuilder: knitr
 URL: 
