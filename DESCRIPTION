@@ -8,10 +8,17 @@ Description: A package for characterizing COVID-19 patients with and without var
 Depends:
   DatabaseConnector (>= 2.2.0)
 Imports:
+  CohortDiagnostics,
+  FeatureExtraction,
 	ParallelLogger,
 	OhdsiSharing (>= 0.2.1),
+	SqlRender,
+	ff,
+	digest,
 	readr,
-	ggplot2 (<= 3.2.1)
+	dplyr,
+	ggplot2 (<= 3.2.1),
+	tibble
 Suggests:
     knitr,
     rmarkdown
