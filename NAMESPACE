@@ -2,6 +2,7 @@
 
 export(compareCohortCharacteristics)
 export(createCohortTable)
+export(exportResults)
 export(getCohortCharacteristics)
 export(getInclusionStatistics)
 export(getInclusionStatisticsFromFiles)

@@ -65,7 +65,7 @@ See [this video](https://youtu.be/K9_0s2Rchbo) for instructions on how to set up
 #
 #    DBMS = "postgresql"
 #    DB_SERVER = "database.server.com"
-#    DB_PORT = 17001
+#    DB_PORT = 5432
 #    DB_USER = "database_user_name_goes_here"
 #    DB_PASSWORD = "your_secret_password"
 #    FFTEMP_DIR = "E:/fftemp"
@@ -165,32 +165,38 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 # - cohortStagingTable := The name of the table used to stage the cohorts used in this study
 # - featureSummaryTable := The name of the table to hold the feature summary for this study
 # - minCellCount := Aggregate stats that yield a value < minCellCount are censored in the output
+# - cohortIdsToExcludeFromExecution := A vector of cohort IDs to exclude from generation in the study. This is useful if a particular cohort is problematic in your environment.
+# - cohortIdsToExcludeFromResultsExport := A vector of cohort IDs to exclude from the export of the study. This is useful when you'd like to still generate the cohort, evaluate the results but do not want to share the cohort. 
+#                                         The default is NULL so that all output generated will be available for review. Use the "exportResults" function in this package
+#                                         to further refine the exported results to share with the study lead.
 # - useBulkCharacterization := When set to TRUE, this will attempt to do all of the characterization operations for the whole 
 #                              study via SQL vs sequentially per cohort and time window. This is recommended if your DB platform is 
 #                              robust to perform this type of operation. Best to test this using the USE_SUBSET option to test.
+# 
 # Also worth noting: The runStudy function below allows for the input of cohort groups (covid and/or influenza)
 # in the event that you would like to characterize a subset of these 2 target groups. To run the analysis
 # on a single group, uncomment the parameter "cohortGroups = c("covid", "influenza")" and change the list
 # to reflect the cohort group(s) you'd like to use. By default, the package will use both sets of cohorts
 #-----------------------------------------------------------------------------------------------
-
 # For Oracle: define a schema that can be used to emulate temp tables:
 oracleTempSchema <- NULL
 
 # Details specific to the database:
-databaseId <- "DOD_S0"
-databaseName <- "DOD_S0"
-databaseDescription <- "DOD_S0"
+databaseId <- "PREMIER_COVID_SUBSET_BULK"
+databaseName <- "PREMIER_COVID_SUBSET_BULK"
+databaseDescription <- "PREMIER_COVID_SUBSET_BULK"
 
 # Details for connecting to the CDM and storing the results
-outputFolder <- file.path("E:/Covid19Characterization", databaseId)
-cdmDatabaseSchema <- "CDM_OPTUM_EXTENDED_DOD_V1194.dbo"
+outputFolder <- file.path("E:/Covid19Characterization/TestRuns", databaseId)
+cdmDatabaseSchema <- "CDM_Premier_v1214.dbo"
 cohortDatabaseSchema <- "scratch.dbo"
-cohortTable <- paste0("AS_S0_full_", databaseId)
+cohortTable <- paste0("AS_S0_subset_", databaseId)
 cohortStagingTable <- paste0(cohortTable, "_stg")
 featureSummaryTable <- paste0(cohortTable, "_smry")
 minCellCount <- 5
 useBulkCharacterization <- FALSE
+cohortIdsToExcludeFromExecution <- c()
+cohortIdsToExcludeFromResultsExport <- NULL
 
 # For uploading the results. You should have received the key file from the study coordinator:
 keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
@@ -210,12 +216,14 @@ runStudy(connectionDetails = connectionDetails,
          databaseName = databaseName,
          databaseDescription = databaseDescription,
          #cohortGroups = c("covid", "influenza"),
+         cohortIdsToExcludeFromExecution = cohortIdsToExcludeFromExecution,
+         cohortIdsToExcludeFromResultsExport = cohortIdsToExcludeFromResultsExport,
          incremental = TRUE,
          useBulkCharacterization = useBulkCharacterization,
          minCellCount = minCellCount) 
 
 #CohortDiagnostics::preMergeDiagnosticsFiles(outputFolder)
-#CohortDiagnostics::launchDiagnosticsExplorer(outputFolder)
+#launchShinyApp(outputFolder)
 ````
 4. If the study code runs to completion, your outputFolder will have the following contents:
 - RecordKeeping = a folder designed to store incremental information such that if the study code dies, it will restart where it left off
