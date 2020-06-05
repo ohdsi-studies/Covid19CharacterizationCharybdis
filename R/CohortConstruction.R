@@ -476,7 +476,7 @@ instantiateCohortSet <- function(connectionDetails = NULL,
     if (!incremental || isTaskRequired(cohortId = cohorts$cohortId[i],
                                        checksum = cohorts$checksum[i],
                                        recordKeepingFile = recordKeepingFile)) {
-      ParallelLogger::logInfo("Instantiation cohort ", cohorts$cohortFullName[i], "  (", cohorts$cohortId[i], ".sql)")
+      ParallelLogger::logInfo(i, "/", nrow(cohorts), ": Instantiation cohort ", cohorts$cohortFullName[i], "  (", cohorts$cohortId[i], ".sql)")
       sql <- cohorts$sql[i]
       
       if (generateInclusionStats) {
