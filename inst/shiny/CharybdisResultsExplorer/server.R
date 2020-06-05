@@ -146,16 +146,16 @@ shinyServer(function(input, output, session) {
                    paging = TRUE,
                    info = TRUE,
                    scrollX = TRUE,
-                   fixedColumns = list(leftColumns = 2),
+                   rowGroup = list(dataSrc = 0),
                    columnDefs = list(minCellCountDef(2:(length(databaseIds) - 1))))
-    extensions = list("fixedColumns")
+    extensions = c('RowGroup')
     
     dataTable <- datatable(table,
                            options = options,
                            rownames = FALSE,
                            container = sketch, 
                            escape = FALSE,
-                           extensions = c('FixedColumns'),
+                           extensions = extensions,
                            class = "stripe nowrap compact")
     return(dataTable)
   })
