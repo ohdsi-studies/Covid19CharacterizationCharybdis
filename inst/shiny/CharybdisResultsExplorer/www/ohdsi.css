@@ -1,11 +1,15 @@
 .skin-blue .main-header .logo {
- background-color: #8A9DA4;
+ background-color: #415f74;
 }
 .skin-blue .main-header .logo:hover {
- background-color: #8A9DA4;
+ background-color: #415f74;
 }
 .skin-blue .main-header .navbar {
-  background-color: #8A9DA4;
+ background-color: #415f74;
+}
+
+.skin-blue .main-sidebar {
+  background-color: #20425A;
 }
 
 .dropdown-toggle {
@@ -19,3 +23,7 @@ ul.dropdown-menu.inner li > a {
 ul.dropdown-menu.inner li > a.selected {
   color: #000000 !important;
 } 
+
+table.dataTable > tbody > tr.odd > td {
+  /*background-color: #EAE0A8;*/
+}
