@@ -103,6 +103,7 @@ shinyServer(function(input, output, session) {
   })
   
   output$cohortCountsTable <- renderDataTable({
+    print(input$databases)
     data <- cohortCount[cohortCount$databaseId %in% input$databases & cohortCount$cohortId %in% cohortIdList(), ]
     if (nrow(data) == 0) {
       return(NULL)
@@ -144,13 +145,17 @@ shinyServer(function(input, output, session) {
                    ordering = TRUE,
                    paging = TRUE,
                    info = TRUE,
+                   scrollX = TRUE,
+                   fixedColumns = list(leftColumns = 2),
                    columnDefs = list(minCellCountDef(2:(length(databaseIds) - 1))))
+    extensions = list("fixedColumns")
     
     dataTable <- datatable(table,
                            options = options,
                            rownames = FALSE,
                            container = sketch, 
                            escape = FALSE,
+                           extensions = c('FixedColumns'),
                            class = "stripe nowrap compact")
     return(dataTable)
   })

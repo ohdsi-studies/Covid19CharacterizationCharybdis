@@ -36,7 +36,12 @@ dashboardPage(
                    selectInput("database", "Database", database$databaseId, selectize = FALSE)
                 ),
                 conditionalPanel(condition = "input.tabs=='cohortCharacterization' | input.tabs=='cohortCounts'",
-                   checkboxGroupInput("databases", "Database", database$databaseId, selected = database$databaseId[1])
+                   #checkboxGroupInput("databases", "Database", database$databaseId, selected = database$databaseId[1])
+                   shinyWidgets::pickerInput("databases", "Database",
+                                             choices = database$databaseId,
+                                             selected = database$databaseId,
+                                             options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                             multiple = TRUE)
                 ),
                 conditionalPanel(condition = "input.tabs=='cohortCounts'",
                    shinyWidgets::pickerInput("targetCohortList", "Cohort",
