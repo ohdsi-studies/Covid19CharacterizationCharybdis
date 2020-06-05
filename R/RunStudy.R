@@ -7,7 +7,8 @@ runStudy <- function(connectionDetails = NULL,
                      cohortStagingTable = "cohort_stg",
                      cohortTable = "cohort",
                      featureSummaryTable = "cohort_smry",
-                     cohortIds = NULL,
+                     cohortIdsToExcludeFromExecution = c(),
+                     cohortIdsToExcludeFromResultsExport = NULL,
                      cohortGroups = getUserSelectableCohortGroups(),
                      exportFolder,
                      databaseId,
@@ -27,10 +28,11 @@ runStudy <- function(connectionDetails = NULL,
   ParallelLogger::addDefaultFileLogger(file.path(exportFolder, "Covid19CharacterizationCharybdis.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
   
-  if (as.logical(Sys.getenv("USE_SUBSET")) == TRUE) {
-    warning("Running in subset mode for testing")
+  useSubset = Sys.getenv("USE_SUBSET")
+  if (!is.na(as.logical(useSubset)) && as.logical(useSubset)) {
+    ParallelLogger::logWarn("Running in subset mode for testing")
   }
-  
+
   if (incremental) {
     if (is.null(incrementalFolder)) {
       stop("Must specify incrementalFolder when incremental = TRUE")
@@ -52,6 +54,8 @@ runStudy <- function(connectionDetails = NULL,
   
   # Instantiate cohorts -----------------------------------------------------------------------
   cohorts <- getCohortsToCreate()
+  # Remove any cohorts that are to be excluded
+  cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution), ]
   targetCohortIds <- cohorts[cohorts$cohortType %in% cohortGroups$cohortGroup, "cohortId"][[1]]
   strataCohortIds <- cohorts[cohorts$cohortType == "strata", "cohortId"][[1]]
   featureCohortIds <- cohorts[cohorts$cohortType == "feature", "cohortId"][[1]]
@@ -197,6 +201,7 @@ runStudy <- function(connectionDetails = NULL,
   if (nrow(featureProportions) > 0) {
     featureProportions$databaseId <- databaseId
     featureProportions <- enforceMinCellValue(featureProportions, "featureCount", minCellCount)
+    featureProportions <- featureProportions[featureProportions$totalCount >= getMinimumSubjectCountForCharacterization(), ]
   }
   features <- formatCovariates(featureProportions)
   writeToCsv(features, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = features$covariateId)
@@ -228,7 +233,7 @@ runStudy <- function(connectionDetails = NULL,
 
   # Subset the cohorts to the target/strata for running feature extraction
   # that are >= 140 per protocol to improve efficency
-  featureExtractionCohorts <-  loadCohortsForExportWithChecksumFromPackage(counts[counts$cohortSubjects >= 140, c("cohortId")]$cohortId)
+  featureExtractionCohorts <-  loadCohortsForExportWithChecksumFromPackage(counts[counts$cohortSubjects >= getMinimumSubjectCountForCharacterization(), c("cohortId")]$cohortId)
   # Bulk approach ----------------------
   if (useBulkCharacterization) {
     ParallelLogger::logInfo("********************************************************************************************")
@@ -289,21 +294,62 @@ runStudy <- function(connectionDetails = NULL,
       }
     }
   }
+  
+  # Export to zip file -------------------------------------------------------------------------------
+  exportResults(exportFolder, databaseId, cohortIdsToExcludeFromResultsExport)
+  delta <- Sys.time() - start
+  ParallelLogger::logInfo(paste("Running study took",
+                                signif(delta, 3),
+                                attr(delta, "units")))
+}
 
-  # Add all to zip file -------------------------------------------------------------------------------
+#' @export
+exportResults <- function(exportFolder, databaseId, cohortIdsToExcludeFromResultsExport = NULL) {
+  filesWithCohortIds <- c("covariate_value.csv","cohort_count.csv")
+  tempFolder <- NULL
   ParallelLogger::logInfo("Adding results to zip file")
+  if (!is.null(cohortIdsToExcludeFromResultsExport)) {
+    ParallelLogger::logInfo("Exclude cohort ids: ", paste(cohortIdsToExcludeFromResultsExport, collapse = ", "))
+    # Copy files to temp location to remove the cohorts to remove
+    tempFolder <- file.path(exportFolder, "temp")
+    files <- list.files(exportFolder, pattern = ".*\\.csv$")
+    if (!file.exists(tempFolder)) {
+      dir.create(tempFolder)
+    }
+    file.copy(file.path(exportFolder, files), tempFolder)
+
+    # Censor out the cohorts based on the IDs passed in
+    for(i in 1:length(filesWithCohortIds)) {
+      fileName <- file.path(tempFolder, filesWithCohortIds[i])
+      fileContents <- readr::read_csv(fileName, col_types = readr::cols())
+      fileContents <- fileContents[!(fileContents$cohort_id %in% cohortIdsToExcludeFromResultsExport),]
+      readr::write_csv(fileContents, fileName)
+    }
+    
+    # Zip the results and copy to the main export folder
+    zipName <- zipResults(tempFolder, databaseId)
+    file.copy(zipName, exportFolder)
+    unlink(tempFolder, recursive = TRUE)
+    zipName <- file.path(exportFolder, basename(zipName))
+  } else {
+    zipName <- zipResults(exportFolder, databaseId)
+  }
+  ParallelLogger::logInfo("Results are ready for sharing at:", zipName)
+}
+
+zipResults <- function(exportFolder, databaseId) {
   zipName <- file.path(exportFolder, paste0("Results_", databaseId, ".zip"))
   files <- list.files(exportFolder, pattern = ".*\\.csv$")
   oldWd <- setwd(exportFolder)
   on.exit(setwd(oldWd), add = TRUE)
   DatabaseConnector::createZipFile(zipFile = zipName, files = files)
-  ParallelLogger::logInfo("Results are ready for sharing at:", zipName)
+  return(zipName)
+}
 
-  delta <- Sys.time() - start
-  ParallelLogger::logInfo(paste("Running study took",
-                                signif(delta, 3),
-                                attr(delta, "units")))
-  
+# Per protocol, we will only characterize cohorts with
+# >= 140 subjects to improve efficency
+getMinimumSubjectCountForCharacterization <- function() {
+  return(140)
 }
 
 getVocabularyInfo <- function(connection, cdmDatabaseSchema, oracleTempSchema) {
@@ -346,7 +392,6 @@ formatCovariateValues <- function(data, counts, minCellCount, databaseId) {
   }
   return(data)  
 }
-
 
 loadCohortsFromPackage <- function(cohortIds) {
   packageName = getThisPackageName()
