@@ -2,6 +2,9 @@ library(shiny)
 library(shinydashboard)
 library(DT)
 
+ohdsiBlueHex <- "#20425A"
+ohdsiLightYellowHex <- "FBC209"
+
 addInfo <- function(item, infoId) {
   infoTag <- tags$small(class = "badge pull-right action-button",
                         style = "padding: 1px 6px 2px 6px; background-color: steelblue;",
@@ -21,7 +24,9 @@ dashboardPage(
                     width = "40px"),
                 style = "padding-top:0px; padding-bottom:0px;"),
             class = "dropdown")    
-    ),  dashboardSidebar(
+    ),  
+  dashboardSidebar(
+    tags$head(tags$style(HTML(paste0('.main-header { background-color: ', ohdsiBlueHex, '; }')))),
     sidebarMenu(id = "tabs",
                 if (exists("cohortCount")) addInfo(menuItem("Cohort Counts", tabName = "cohortCounts"), "cohortCountsInfo"),
                 if (exists("covariateValue")) addInfo(menuItem("Cohort Characterization", tabName = "cohortCharacterization"), "cohortCharacterizationInfo"),
@@ -86,6 +91,10 @@ dashboardPage(
     )
   ),
   dashboardBody(
+    tags$head(
+      tags$link(rel="stylesheet", type="text/css", href="ohdsi.css")
+    ),
+    ### changing theme
     tabItems(
       tabItem(tabName = "cohortCounts",
               dataTableOutput("cohortCountsTable")

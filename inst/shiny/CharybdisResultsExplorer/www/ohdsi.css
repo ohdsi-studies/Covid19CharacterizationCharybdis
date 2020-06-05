@@ -1,0 +1,21 @@
+.skin-blue .main-header .logo {
+ background-color: #8A9DA4;
+}
+.skin-blue .main-header .logo:hover {
+ background-color: #8A9DA4;
+}
+.skin-blue .main-header .navbar {
+  background-color: #8A9DA4;
+}
+
+.dropdown-toggle {
+  background-color: #FFFFFF;
+}
+
+ul.dropdown-menu.inner li > a {
+  color: #000000;
+} 
+
+ul.dropdown-menu.inner li > a.selected {
+  color: #000000 !important;
+} 
