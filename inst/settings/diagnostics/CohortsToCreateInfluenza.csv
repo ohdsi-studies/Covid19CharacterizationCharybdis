@@ -1,0 +1,7 @@
+name,atlasName,atlasId,cohortId
+111,[COVID ID111 v1] Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,957,111
+113,[COVID ID113 v1] Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,960,113
+115,[COVID ID115 v1] Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation,962,115
+112,[COVID ID112 v1] Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation,958,112
+114,[COVID ID114 v1] Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation,961,114
+116,[COVID ID116 v1] Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation,963,116

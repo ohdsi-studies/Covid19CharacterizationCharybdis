@@ -1,0 +1,17 @@
+name,atlasName,atlasId,cohortId
+126,[COVID ID126 V1] Persons tested for SARS-CoV-2 with at least 365d prior observation,965,126
+128,[COVID ID128 V1] Persons tested positive for SARS-CoV-2 with at least 365d prior observation,967,128
+130,[COVID ID130 V1] Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,969,130
+132,[COVID ID132 V1] Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation,971,132
+134,[COVID ID134 V1] Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,973,134
+136,[COVID ID136 V1] Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,975,136
+138,[COVID ID138 V1] Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation,978,138
+140,[COVID ID140 V1] Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation,980,140
+127,[COVID ID127 V1] Persons tested for SARS-CoV-2 with no required prior observation,966,127
+129,[COVID ID129 V1] Persons tested positive for SARS-CoV-2 with no required prior observation,968,129
+131,[COVID ID131 V1] Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,970,131
+133,[COVID ID133 V1] Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation,972,133
+135,[COVID ID135 V1] Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,974,135
+137,[COVID ID137 V1] Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,976,137
+139,[COVID ID139 V1] Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation,979,139
+141,[COVID ID141 V1] Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation,981,141
