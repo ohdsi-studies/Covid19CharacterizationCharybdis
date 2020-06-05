@@ -105,9 +105,11 @@ dashboardPage(
               dataTableOutput("cohortCountsTable")
       ),
       tabItem(tabName = "cohortCharacterization",
+              htmlOutput("cohortName"),
               dataTableOutput("characterizationTable")
       ),
       tabItem(tabName = "compareCohortCharacterization",
+              htmlOutput("comparisonName"),
               radioButtons("charCompareType", "", c("Table", "Plot"), selected = "Table", inline = TRUE),
               conditionalPanel(condition = "input.charCompareType=='Table'",
                                dataTableOutput("charCompareTable")

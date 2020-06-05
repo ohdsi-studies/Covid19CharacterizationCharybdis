@@ -24,6 +24,15 @@ ul.dropdown-menu.inner li > a.selected {
   color: #000000 !important;
 } 
 
+/*
 table.dataTable > tbody > tr.odd > td {
-  /*background-color: #EAE0A8;*/
+  
+}
+*/
+
+div.cohort-heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-bottom: 2px solid #F28F1B;
 }

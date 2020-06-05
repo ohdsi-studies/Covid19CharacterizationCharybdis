@@ -78,6 +78,24 @@ shinyServer(function(input, output, session) {
     return(strataCohort$strataId[strataCohort$strataName %in% input$strataCohortList])
   })
   
+  targetCohortName <- reactive({
+    cohort <- cohortXref[cohortXref$cohortId == cohortId(), c("targetName", "strataId", "strataName")]
+    fullCohortName <- cohort$targetName[1]
+    if (cohort$strataId[1] > 0) {
+      fullCohortName <- paste(fullCohortName, cohort$strataName[1])
+    }
+     return(fullCohortName)
+  })
+  
+  comparatorCohortName <- reactive({
+    cohort <- cohortXref[cohortXref$cohortId == comparatorCohortId(), c("targetName", "strataId", "strataName")]
+    fullCohortName <- cohort$targetName[1]
+    if (cohort$strataId[1] > 0) {
+      fullCohortName <- paste(fullCohortName, cohort$strataName[1])
+    }
+    return(fullCohortName)
+  })
+  
   cohortId <- reactive({
     return(unlist(cohortXref[cohortXref$targetId == targetId() & cohortXref$strataName == input$strataCohort,c("cohortId")]))
   })
@@ -103,7 +121,6 @@ shinyServer(function(input, output, session) {
   })
   
   output$cohortCountsTable <- renderDataTable({
-    print(input$databases)
     data <- cohortCount[cohortCount$databaseId %in% input$databases & cohortCount$cohortId %in% cohortIdList(), ]
     if (nrow(data) == 0) {
       return(NULL)
@@ -158,6 +175,21 @@ shinyServer(function(input, output, session) {
                            extensions = extensions,
                            class = "stripe nowrap compact")
     return(dataTable)
+  })
+
+  output$cohortName <- renderUI({ 
+    return(withTags(
+      div(class="cohort-heading",
+          h4(targetCohortName()), 
+      )))
+  })
+  
+  output$comparisonName <- renderUI({
+    return(withTags(
+      div(class="cohort-heading",
+          h5(paste0("Target: ", targetCohortName())),
+          h5(paste0("Comparator: ", comparatorCohortName())),
+      )))
   })
   
   output$characterizationTable <- renderDataTable({
