@@ -1,0 +1,65 @@
+name,atlasName,atlasId,cohortId
+121,[COVID ID121 V1] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),801,121
+122,[COVID ID122 V1] Asthma/COPD Step 1,851,122
+123,[COVID ID123 V1] Asthma/COPD Step 2,850,123
+124,[COVID ID124 V1] Asthma/COPD Step 3,852,124
+110,[COVID ID110 v1] Gestational diabetes episodes,771,110
+142,[COVID ID142 v1] Eclampsia and pre-eclampsia episodes,824,142
+143,[COVID ID143 v1] Fever episodes,809,143
+144,[COVID ID144 v1] Cough episodes,913,144
+145,[COVID ID145 v1] Myalgia episodes,914,145
+146,[COVID ID146 v1] Malaise or fatigue episodes,915,146
+147,[COVID ID147 v1] Dyspnea episodes,916,147
+148,[COVID ID148 v1] Anosmia OR Hyposmia OR Dysgeusia episodes,912,148
+149,[COVID ID149 V1] Persons with additional testing for SARS-Cov-2 (prior test >=1d before test),982,149
+150,[COVID ID150 V1] Persons with additional testing for SARS-Cov-2 (prior test >=5d before test),983,150
+151,[COVID ID151 V1] Hospitalization episodes,917,151
+152,[COVID ID152 V1] Pneumonia during hospitalization,781,152
+153,[COVID ID153 V1] Acute Respiratory Distress syndrome (ARDS) during hospitalization,76,153
+154,[COVID ID154 V1] Acute kidney injury (AKI) diagnosis during hospitalization,849,154
+155,[COVID ID155 V1] Sepsis during hospitalization,923,155
+156,[COVID ID156 V1] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events,7,156
+157,[COVID ID157 V1] Pulmonary Embolism events,918,157
+158,[COVID ID158 V1] Deep vein thrombosis events,920,158
+159,[COVID ID159 V1] Heart failure during hospitalization,932,159
+160,[COVID ID160 V1] Cardiac arrhythmia during hospitalization,841,160
+161,[COVID ID161 V1] Bradycardia or heart block during hospitalization,817,161
+162,[COVID ID162 V1] Supraventricular arrythymia during hospitalization,816,162
+163,[COVID ID163 V1] ventricular arrhythmia or cardiac arrest during hospitalization,842,163
+164,[COVID ID164 V1] Death,166,164
+165,[COVID ID165 V1] Stillbirth,769,165
+166,[COVID ID166 V1] Livebirth Delivery,930,166
+167,[COVID ID167 V1] Livebirth Preterm Delivery,772,167
+168,[COVID ID168 V1] Livebirth Post term Delivery,773,168
+169,[COVID ID169 V1] Livebirth excluding preterm and post term delivery,774,169
+170,[COVID ID170 V1] Abortion,775,170
+171,[COVID ID171 V1] Premature Rupture of Membranes,818,171
+172,[COVID ID172 V1] Fetal growth restriction,819,172
+173,[COVID ID173 V1] Cesarean section,931,173
+174,[COVID ID174 V1] Hospitalization for Asthma,814,174
+175,[COVID ID175 V1] Hospitalization for COPD,813,175
+176,[COVID ID176 V1] Pneumonia episodes,938,176
+177,[COVID ID177 V1] intensive services during hospitalization,933,177
+178,[COVID ID178 V1] mechanical ventilation during hospitalization,934,178
+179,[COVID ID179 V1] tracheostomy during hospitalization,936,179
+180,[COVID ID180 V1] ECMO during hospitalization,935,180
+181,[COVID ID181 V1] dialysis during hospitalization,937,181
+182,[COVID ID182 V1] Persons with chest pain or angina,6,182
+183,[COVID ID183 V1] Angina during hospitalization,929,183
+184,[COVID ID184 V1] Persons with hepatic failure,10,184
+185,[COVID ID185 V1] Acute pancreatitis events,11,185
+186,[COVID ID186 V1] Total cardiovascular disease events,245,186
+187,[COVID ID187 V1] Gastrointestinal bleeding events,17,187
+188,[COVID ID188 V1] Cardiovascular-related mortality,19,188
+189,[COVID ID189 V1] Transient ischemic attack events,20,189
+190,[COVID ID190 V1] Stroke (ischemic or hemorrhagic) events,21,190
+191,[COVID ID191 V1] Ischemic stroke events,924,191
+192,[COVID ID192 V1] Hemorrhagic stroke (intracerebral bleeding) events,926,192
+193,[COVID ID193 V1] Acute myocardial infarction events,22,193
+194,[COVID ID194 V1] Bleeding during hospitalization,939,194
+195,[COVID ID195 V1] Incident depression with no prior treatment and no mania/psychoses,927,195
+196,[COVID ID196 V1] Hospitalization for psychosis,928,196
+197,[COVID ID197 V1] Suicide and suicidal ideation,925,197
+198,[COVID ID198 V1] Multi-system inflammatory syndrome (Kawasaki disease or toxic shock syndrome),940,198
+201,Acute kidney injury (AKI) using diagnosis codes and change in measurements during hospitlization,-1,201
+202,Discharge from hospitalization,-1,202

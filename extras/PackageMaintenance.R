@@ -26,6 +26,8 @@ shell("R CMD Rd2pdf ./ --output=extras/Covid19CharacterizationCharybdis.pdf")
 pkgdown::build_site()
 
 
+# AGS: Had to copy these functions from OhdsiRWebAPI since we're using
+# the cohortId for the SQL file names
 # Insert cohort definitions from ATLAS into package -----------------------
 insertCohortDefinitionSetInPackage <- function(fileName = "inst/settings/CohortsToCreate.csv",
                                                baseUrl,
@@ -144,7 +146,7 @@ insertCohortDefinitionInPackage <- function(cohortId,
   writeLines(paste("- Created SQL file:", sqlFileName))
 }
 
-cohortGroups <- read.csv("inst/settings/CohortGroups.csv")
+cohortGroups <- readr::read_csv("inst/settings/CohortGroups.csv", col_types=readr::cols())
 for (i in 1:nrow(cohortGroups)) {
   ParallelLogger::logInfo("* Importing cohorts in group: ", cohortGroups$cohortGroup[i], " *")
   insertCohortDefinitionSetInPackage(fileName = file.path("inst/", cohortGroups$fileName[i]),
@@ -155,6 +157,15 @@ for (i in 1:nrow(cohortGroups)) {
                                                    packageName = "Covid19CharacterizationCharybdis")
 }
 unlink("inst/cohorts/InclusionRules.csv")
+
+# Create the corresponding diagnostic file 
+for (i in 1:nrow(cohortGroups)) {
+  ParallelLogger::logInfo("* Creating diagnostics settings file for: ", cohortGroups$cohortGroup[i], " *")
+  cohortsToCreate <- readr::read_csv(file.path("inst/", cohortGroups$fileName[i]), col_types = readr::cols())
+  cohortsToCreate$name <- cohortsToCreate$cohortId
+  readr::write_csv(cohortsToCreate, file.path("inst/settings/diagnostics/", basename(cohortGroups$fileName[i])))
+}
+
 
 # Create the list of combinations of T, TwS, TwoS for the combinations of strata ----------------------------
 settingsPath <- "inst/settings"
