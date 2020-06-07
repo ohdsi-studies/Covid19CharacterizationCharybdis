@@ -193,7 +193,7 @@ runStudy(connectionDetails = connectionDetails,
          minCellCount = minCellCount) 
 
 
-#CohortDiagnostics::preMergeDiagnosticsFiles("outputFolder")
+#CohortDiagnostics::preMergeDiagnosticsFiles(outputFolder)
 #launchShinyApp(outputFolder)
 
 # For uploading the results. You should have received the key file from the study coordinator:
