@@ -129,11 +129,10 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 # - useBulkCharacterization := When set to TRUE, this will attempt to do all of the characterization operations for the whole 
 #                              study via SQL vs sequentially per cohort and time window. This is recommended if your DB platform is 
 #                              robust to perform this type of operation. Best to test this using the USE_SUBSET option to test.
-# 
-# Also worth noting: The runStudy function below allows for the input of cohort groups (covid and/or influenza)
-# in the event that you would like to characterize a subset of these 2 target groups. To run the analysis
-# on a single group, uncomment the parameter "cohortGroups = c("covid", "influenza")" and change the list
-# to reflect the cohort group(s) you'd like to use. By default, the package will use both sets of cohorts
+# - cohortGroups := Optional parameter that allows you to specify which cohorts to use when running the study or diagnostics. By default
+#                   both function will run using all cohorts for the study. For diagnostics, you may specify a vector with 1 or more
+#                   of the following values: c("covid", "influenza", "strata", and "feature"). The runStudy function allows for 
+#                   the specification of c("covid", "influenza"). 
 #-----------------------------------------------------------------------------------------------
 
 # For Oracle: define a schema that can be used to emulate temp tables:
@@ -162,8 +161,8 @@ runCohortDiagnostics(connectionDetails = connectionDetails,
                      cohortDatabaseSchema = cohortDatabaseSchema,
                      cohortStagingTable = cohortStagingTable,
                      oracleTempSchema = oracleTempSchema,
-                     #cohortGroupNames = cohortGroups,
                      exportFolder = outputFolder,
+                     #cohortGroups = c("covid", "influenza", "strata", "feature"), # Optional - will use all groups by default
                      databaseId = databaseId,
                      databaseName = databaseName,
                      databaseDescription = databaseDescription,
@@ -186,7 +185,7 @@ runStudy(connectionDetails = connectionDetails,
          databaseId = databaseId,
          databaseName = databaseName,
          databaseDescription = databaseDescription,
-         #cohortGroups = c("covid", "influenza"),
+         #cohortGroups = c("covid", "influenza"), # Optional - will use all groups by default
          cohortIdsToExcludeFromExecution = cohortIdsToExcludeFromExecution,
          cohortIdsToExcludeFromResultsExport = cohortIdsToExcludeFromResultsExport,
          incremental = TRUE,
@@ -194,7 +193,7 @@ runStudy(connectionDetails = connectionDetails,
          minCellCount = minCellCount) 
 
 
-#CohortDiagnostics::preMergeDiagnosticsFiles(outputFolder)
+#CohortDiagnostics::preMergeDiagnosticsFiles("outputFolder")
 #launchShinyApp(outputFolder)
 
 # For uploading the results. You should have received the key file from the study coordinator:
