@@ -30,6 +30,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
   # RecordKeeping folder so that we can ensure that cohorts
   # are only created one time.
   diagnosticOutputFolder <- file.path(exportFolder, "diagnostics")
+  cohortGroups$outputFolder <- file.path(diagnosticOutputFolder, cohortGroups$cohortGroup)
   if (!file.exists(diagnosticOutputFolder)) {
     dir.create(diagnosticOutputFolder, recursive = TRUE)
   }
@@ -76,17 +77,17 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                             cohortDatabaseSchema = cohortDatabaseSchema,
                                             cohortTable = cohortStagingTable,
                                             inclusionStatisticsFolder = diagnosticOutputFolder,
-                                            exportFolder = diagnosticOutputFolder,
+                                            exportFolder = cohortGroups$outputFolder[i],
                                             databaseId = databaseId,
                                             databaseName = databaseName,
                                             databaseDescription = databaseDescription,
                                             runInclusionStatistics = FALSE,
-                                            runIncludedSourceConcepts = FALSE,
-                                            runOrphanConcepts = FALSE,
-                                            runTimeDistributions = FALSE,
-                                            runBreakdownIndexEvents = FALSE,
+                                            runIncludedSourceConcepts = TRUE,
+                                            runOrphanConcepts = TRUE,
+                                            runTimeDistributions = TRUE,
+                                            runBreakdownIndexEvents = TRUE,
                                             runIncidenceRate = TRUE,
-                                            runCohortOverlap = FALSE,
+                                            runCohortOverlap = TRUE,
                                             runCohortCharacterization = FALSE,
                                             minCellCount = minCellCount,
                                             incremental = TRUE,
