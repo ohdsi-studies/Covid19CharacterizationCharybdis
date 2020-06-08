@@ -1,6 +1,7 @@
 library(shiny)
 library(shinydashboard)
 library(DT)
+library(htmltools)
 source("PlotsAndTables.R")
 
 
@@ -178,18 +179,19 @@ shinyServer(function(input, output, session) {
   })
 
   output$cohortName <- renderUI({ 
-    return(withTags(
-      div(class="cohort-heading",
-          h4(targetCohortName()), 
-      )))
+    return(htmltools::withTags(
+        div(class="cohort-heading",
+          h4(targetCohortName())
+        )
+      ))
   })
   
   output$comparisonName <- renderUI({
-    return(withTags(
-      div(class="cohort-heading",
-          h5(paste0("Target: ", targetCohortName())),
-          h5(paste0("Comparator: ", comparatorCohortName())),
-      )))
+    return(htmltools::withTags(
+        div(class="cohort-heading",
+            h4("Target: ", targetCohortName()),
+            h4("Comparator: ", comparatorCohortName()))
+        ))
   })
   
   output$characterizationTable <- renderDataTable({
