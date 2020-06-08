@@ -32,10 +32,10 @@ dashboardPage(
                 if (exists("covariateValue")) addInfo(menuItem("Cohort Characterization", tabName = "cohortCharacterization"), "cohortCharacterizationInfo"),
                 if (exists("covariateValue")) addInfo(menuItem("Compare Cohort Char.", tabName = "compareCohortCharacterization"), "compareCohortCharacterizationInfo"),
                 menuItem("Database information", tabName = "databaseInformation"), 
-                conditionalPanel(condition = "input.tabs=='cohortCharacterization' | input.tabs=='compareCohortCharacterization'",
+                conditionalPanel(condition = "input.tabs=='compareCohortCharacterization'",
                    selectInput("database", "Database", database$databaseId, selectize = FALSE)
                 ),
-                conditionalPanel(condition = "input.tabs=='cohortCounts'",
+                conditionalPanel(condition = "input.tabs=='cohortCharacterization' | input.tabs=='cohortCounts'",
                    #checkboxGroupInput("databases", "Database", database$databaseId, selected = database$databaseId[1])
                    shinyWidgets::pickerInput("databases", "Database",
                                              choices = database$databaseId,

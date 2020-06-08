@@ -195,10 +195,9 @@ shinyServer(function(input, output, session) {
   })
   
   output$characterizationTable <- renderDataTable({
-    data <- covariateValue[covariateValue$cohortId == cohortId() & covariateValue$databaseId %in% input$database, ]
+    data <- covariateValue[covariateValue$cohortId == cohortId() & covariateValue$databaseId %in% input$databases, ]
     data$cohortId <- NULL
     databaseIds <- unique(data$databaseId)
-    
     table <- data[data$databaseId == databaseIds[1], c("covariateId", "mean")]
     colnames(table)[2] <- paste(colnames(table)[2], databaseIds[1], sep = "_")
     if (length(databaseIds) > 1) {
@@ -210,7 +209,7 @@ shinyServer(function(input, output, session) {
     }
     columnDefs <- list(
       truncateStringDef(0, 150),
-      minCellPercentDef(seq(1, by = 2, length = length(databaseIds)))
+      minCellPercentDef(1:length(databaseIds))
     )
     covariateFiltered <- getFilteredCovariates()
     table <- table[isCovariateContinuous(table$covariateId) == FALSE, ]
@@ -224,6 +223,7 @@ shinyServer(function(input, output, session) {
                    lengthChange = TRUE,
                    ordering = TRUE,
                    paging = TRUE,
+                   deferRender = TRUE,
                    columnDefs = columnDefs
     )
     sketch <- htmltools::withTags(table(
@@ -231,7 +231,7 @@ shinyServer(function(input, output, session) {
       thead(
         tr(
           th(rowspan = 2, 'Covariate Name'),
-          lapply(databaseIds, th, colspan = 2, class = "dt-center")
+          lapply(databaseIds, th, colspan = 1, class = "dt-center")
         ),
         tr(
           lapply(rep(c("Proportion"), length(databaseIds)), th)
@@ -241,11 +241,11 @@ shinyServer(function(input, output, session) {
     table <- datatable(table,
                        options = options,
                        rownames = FALSE,
-                       container = sketch, 
+                       container = sketch,
                        escape = FALSE,
                        class = "stripe nowrap compact")
     table <- formatStyle(table = table,
-                         columns = 2*(1:length(databaseIds)),
+                         columns = 1:length(databaseIds),
                          background = styleColorBar(c(0,1), "lightblue"),
                          backgroundSize = "98% 88%",
                          backgroundRepeat = "no-repeat",
@@ -289,6 +289,7 @@ shinyServer(function(input, output, session) {
                    lengthChange = TRUE,
                    ordering = TRUE,
                    paging = TRUE,
+                   deferRender = TRUE,
                    columnDefs = columnDefs
     )
     table <- datatable(table,
