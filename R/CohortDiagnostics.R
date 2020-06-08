@@ -6,6 +6,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                  cohortStagingTable = "cohort_stg",
                                  oracleTempSchema = cohortDatabaseSchema,
                                  cohortGroupNames = getCohortGroupNamesForDiagnostics(),
+                                 cohortIdsToExcludeFromExecution = c(),
                                  exportFolder,
                                  databaseId = "Unknown",
                                  databaseName = "Unknown",
@@ -49,6 +50,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
 
   # Create cohorts -----------------------------
   cohorts <- getCohortsToCreate(cohortGroups = cohortGroups)
+  cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution), ]
   ParallelLogger::logInfo("Creating cohorts in incremental mode")
   instantiateCohortSet(connectionDetails = connectionDetails,
                        connection = connection,
@@ -66,7 +68,6 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
 
   # Run diagnostics -----------------------------
   ParallelLogger::logInfo("Running cohort diagnostics")
-
   for (i in 1:nrow(cohortGroups)) {
     CohortDiagnostics::runCohortDiagnostics(packageName = getThisPackageName(),
                                             connection = connection,
