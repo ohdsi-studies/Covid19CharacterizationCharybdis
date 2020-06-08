@@ -195,7 +195,7 @@ shinyServer(function(input, output, session) {
   })
   
   output$characterizationTable <- renderDataTable({
-    data <- covariateValue[covariateValue$cohortId == cohortId() & covariateValue$databaseId %in% input$databases, ]
+    data <- covariateValue[covariateValue$cohortId == cohortId() & covariateValue$databaseId %in% input$database, ]
     data$cohortId <- NULL
     databaseIds <- unique(data$databaseId)
     
