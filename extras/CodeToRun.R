@@ -161,6 +161,7 @@ runCohortDiagnostics(connectionDetails = connectionDetails,
                      cohortDatabaseSchema = cohortDatabaseSchema,
                      cohortStagingTable = cohortStagingTable,
                      oracleTempSchema = oracleTempSchema,
+                     cohortIdsToExcludeFromExecution = cohortIdsToExcludeFromExecution,
                      exportFolder = outputFolder,
                      #cohortGroups = c("covid", "influenza", "strata", "feature"), # Optional - will use all groups by default
                      databaseId = databaseId,
