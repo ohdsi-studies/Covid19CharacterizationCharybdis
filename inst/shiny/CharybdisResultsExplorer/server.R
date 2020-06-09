@@ -85,7 +85,7 @@ shinyServer(function(input, output, session) {
     if (cohort$strataId[1] > 0) {
       fullCohortName <- paste(fullCohortName, cohort$strataName[1])
     }
-     return(fullCohortName)
+    return(fullCohortName)
   })
   
   comparatorCohortName <- reactive({
@@ -147,7 +147,7 @@ shinyServer(function(input, output, session) {
       class = 'display',
       thead(
         tr(
-          th(rowspan = 2, 'Target'),
+          th(rowspan = 2, 'Cohort'),
           th(rowspan = 2, 'Strata'),
           lapply(databaseIds, th, colspan = 1, class = "dt-center")
         ),
@@ -156,6 +156,26 @@ shinyServer(function(input, output, session) {
         )
       )
     ))
+
+    sortCallback <- c(
+      "var dt = table.table().node();",
+      "$(dt).on('order.dt', function(e, ctx, order) {",
+        "console.log(order);",
+        " if (Array.isArray(order) && order.length > 0) {",
+        "    console.log(order[0]);",
+        "    col = order[0].col;",
+        "    if (col < 2) {",
+        "      var api = new $.fn.DataTable.Api(this);",
+        "      var orderingArr = [];",
+        "      for (var i=0 ; i<order.length ; i++) {",
+        "        orderingArr.push(order[i].col);",
+        "      }",
+        #"      api.rowGroup().dataSrc(orderingArr);",
+        "    }",
+        "  }",
+        "})"
+    )
+    
     
     options = list(pageLength = 25,
                    searching = TRUE,
@@ -163,12 +183,18 @@ shinyServer(function(input, output, session) {
                    ordering = TRUE,
                    paging = TRUE,
                    info = TRUE,
+                   dom = 'tip',
                    scrollX = TRUE,
                    rowGroup = list(dataSrc = 0),
-                   columnDefs = list(minCellCountDef(2:(length(databaseIds) - 1))))
+                   columnDefs = list(
+                      list(targets = c(0), visible = 0),
+                      minCellCountDef(2:(length(databaseIds) - 1))
+                     )
+                   )
     extensions = c('RowGroup')
     
     dataTable <- datatable(table,
+                           callback = JS(sortCallback),
                            options = options,
                            rownames = FALSE,
                            container = sketch, 
@@ -187,10 +213,12 @@ shinyServer(function(input, output, session) {
   })
   
   output$comparisonName <- renderUI({
+    targetCount <- cohortCount[cohortCount$cohortId == cohortId() & cohortCount$databaseId == input$database, c("cohortSubjects")] 
+    comparatorCount <- cohortCount[cohortCount$cohortId == comparatorCohortId() & cohortCount$databaseId == input$database, c("cohortSubjects")] 
     return(htmltools::withTags(
         div(class="cohort-heading",
-            h4("Target: ", targetCohortName()),
-            h4("Comparator: ", comparatorCohortName()))
+            h4("Target: ", targetCohortName(), " (n=", targetCount$cohortSubjects, ")"),
+            h4("Comparator: ", comparatorCohortName(), " (n=", comparatorCount$cohortSubjects, ")"))
         ))
   })
   
@@ -199,9 +227,8 @@ shinyServer(function(input, output, session) {
     counts <- cohortCount[cohortCount$cohortId == cohortId() & cohortCount$databaseId %in% input$databases, ] 
     data$cohortId <- NULL
     databaseIds <- unique(data$databaseId)
-    databaseIdsWithCounts <- merge(databaseIds, counts, by.x="x", by.y="databaseId", all=TRUE)
+    databaseIdsWithCounts <- merge(databaseIds, counts, by.x="x", by.y="databaseId")
     databaseIdsWithCounts <- dplyr::rename(databaseIdsWithCounts, databaseId="x")
-    print(databaseIdsWithCounts)
     table <- data[data$databaseId == databaseIds[1], c("covariateId", "mean")]
     colnames(table)[2] <- paste(colnames(table)[2], databaseIds[1], sep = "_")
     if (length(databaseIds) > 1) {
@@ -235,13 +262,13 @@ shinyServer(function(input, output, session) {
       thead(
         tr(
           th(rowspan = 3, 'Covariate Name'),
-          lapply(databaseIdsWithCounts$databaseId, th, colspan = 1, class = "dt-center no-border")
+          lapply(databaseIdsWithCounts$databaseId, th, colspan = 1, class = "dt-center no-border no-padding")
         ),
         tr(
-          lapply(paste0("(n = ", databaseIdsWithCounts$cohortSubjects, ")"), th, colspan = 1, class = "dt-center")
+          lapply(paste0("(n = ", format(databaseIdsWithCounts$cohortSubjects, big.mark = ","), ")"), th, colspan = 1, class = "dt-center no-padding")
         ),
         tr(
-          lapply(rep(c("Proportion"), length(databaseIds)), th, colspan = 1, class="dt-center")
+          lapply(rep(c("Proportion"), length(databaseIds)), th, colspan = 1)
         )
       )
     ))
