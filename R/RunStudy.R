@@ -295,6 +295,16 @@ runStudy <- function(connectionDetails = NULL,
     }
   }
   
+  # Format results -----------------------------------------------------------------------------------
+  ParallelLogger::logInfo("********************************************************************************************")
+  ParallelLogger::logInfo("Formatting Results")
+  ParallelLogger::logInfo("********************************************************************************************")
+  # Ensure that the covariate_value.csv is free of any duplicative values. This can happen after more than
+  # one run of the package.
+  cv <- readr::read_csv(file.path(exportFolder, "covariate_value.csv"), col_types = readr::cols())
+  cv <- unique(cv)
+  writeToCsv(cv, file.path(exportFolder, "covariate_value.csv"), incremental = FALSE)
+  
   # Export to zip file -------------------------------------------------------------------------------
   exportResults(exportFolder, databaseId, cohortIdsToExcludeFromResultsExport)
   delta <- Sys.time() - start
