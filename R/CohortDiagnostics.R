@@ -50,7 +50,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
 
   # Create cohorts -----------------------------
   cohorts <- getCohortsToCreate(cohortGroups = cohortGroups)
-  cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution), ]
+  cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution) & cohorts$atlasId > 0, ] # cohorts$atlasId > 0 is used to avoid those cohorts that use custom SQL identified with an atlasId == -1
   ParallelLogger::logInfo("Creating cohorts in incremental mode")
   instantiateCohortSet(connectionDetails = connectionDetails,
                        connection = connection,
