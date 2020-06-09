@@ -24,6 +24,11 @@ ul.dropdown-menu.inner li > a.selected {
   color: #000000 !important;
 } 
 
+.no-border {
+  border: 0;
+  padding-bottom: 0px;
+}
+
 /*
 table.dataTable > tbody > tr.odd > td {
   

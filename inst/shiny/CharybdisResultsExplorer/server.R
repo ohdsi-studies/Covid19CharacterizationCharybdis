@@ -196,8 +196,12 @@ shinyServer(function(input, output, session) {
   
   output$characterizationTable <- renderDataTable({
     data <- covariateValue[covariateValue$cohortId == cohortId() & covariateValue$databaseId %in% input$databases, ]
+    counts <- cohortCount[cohortCount$cohortId == cohortId() & cohortCount$databaseId %in% input$databases, ] 
     data$cohortId <- NULL
     databaseIds <- unique(data$databaseId)
+    databaseIdsWithCounts <- merge(databaseIds, counts, by.x="x", by.y="databaseId", all=TRUE)
+    databaseIdsWithCounts <- dplyr::rename(databaseIdsWithCounts, databaseId="x")
+    print(databaseIdsWithCounts)
     table <- data[data$databaseId == databaseIds[1], c("covariateId", "mean")]
     colnames(table)[2] <- paste(colnames(table)[2], databaseIds[1], sep = "_")
     if (length(databaseIds) > 1) {
@@ -230,11 +234,14 @@ shinyServer(function(input, output, session) {
       class = 'display',
       thead(
         tr(
-          th(rowspan = 2, 'Covariate Name'),
-          lapply(databaseIds, th, colspan = 1, class = "dt-center")
+          th(rowspan = 3, 'Covariate Name'),
+          lapply(databaseIdsWithCounts$databaseId, th, colspan = 1, class = "dt-center no-border")
         ),
         tr(
-          lapply(rep(c("Proportion"), length(databaseIds)), th)
+          lapply(paste0("(n = ", databaseIdsWithCounts$cohortSubjects, ")"), th, colspan = 1, class = "dt-center")
+        ),
+        tr(
+          lapply(rep(c("Proportion"), length(databaseIds)), th, colspan = 1, class="dt-center")
         )
       )
     ))
