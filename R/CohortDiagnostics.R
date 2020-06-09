@@ -6,6 +6,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                  cohortStagingTable = "cohort_stg",
                                  oracleTempSchema = cohortDatabaseSchema,
                                  cohortGroupNames = getCohortGroupNamesForDiagnostics(),
+                                 cohortIdsToExcludeFromExecution = c(),
                                  exportFolder,
                                  databaseId = "Unknown",
                                  databaseName = "Unknown",
@@ -30,6 +31,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
   # RecordKeeping folder so that we can ensure that cohorts
   # are only created one time.
   diagnosticOutputFolder <- file.path(exportFolder, "diagnostics")
+  cohortGroups$outputFolder <- file.path(diagnosticOutputFolder, cohortGroups$cohortGroup)
   if (!file.exists(diagnosticOutputFolder)) {
     dir.create(diagnosticOutputFolder, recursive = TRUE)
   }
@@ -48,6 +50,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
 
   # Create cohorts -----------------------------
   cohorts <- getCohortsToCreate(cohortGroups = cohortGroups)
+  cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution) & cohorts$atlasId > 0, ] # cohorts$atlasId > 0 is used to avoid those cohorts that use custom SQL identified with an atlasId == -1
   ParallelLogger::logInfo("Creating cohorts in incremental mode")
   instantiateCohortSet(connectionDetails = connectionDetails,
                        connection = connection,
@@ -65,7 +68,6 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
 
   # Run diagnostics -----------------------------
   ParallelLogger::logInfo("Running cohort diagnostics")
-
   for (i in 1:nrow(cohortGroups)) {
     CohortDiagnostics::runCohortDiagnostics(packageName = getThisPackageName(),
                                             connection = connection,
@@ -75,18 +77,19 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                             oracleTempSchema = oracleTempSchema,
                                             cohortDatabaseSchema = cohortDatabaseSchema,
                                             cohortTable = cohortStagingTable,
+                                            cohortIds = cohorts$cohortId,
                                             inclusionStatisticsFolder = diagnosticOutputFolder,
-                                            exportFolder = diagnosticOutputFolder,
+                                            exportFolder = cohortGroups$outputFolder[i],
                                             databaseId = databaseId,
                                             databaseName = databaseName,
                                             databaseDescription = databaseDescription,
                                             runInclusionStatistics = FALSE,
-                                            runIncludedSourceConcepts = FALSE,
-                                            runOrphanConcepts = FALSE,
-                                            runTimeDistributions = FALSE,
-                                            runBreakdownIndexEvents = FALSE,
+                                            runIncludedSourceConcepts = TRUE,
+                                            runOrphanConcepts = TRUE,
+                                            runTimeDistributions = TRUE,
+                                            runBreakdownIndexEvents = TRUE,
                                             runIncidenceRate = TRUE,
-                                            runCohortOverlap = FALSE,
+                                            runCohortOverlap = TRUE,
                                             runCohortCharacterization = FALSE,
                                             minCellCount = minCellCount,
                                             incremental = TRUE,

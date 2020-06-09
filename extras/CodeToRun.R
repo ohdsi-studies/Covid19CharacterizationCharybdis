@@ -129,36 +129,49 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 # - useBulkCharacterization := When set to TRUE, this will attempt to do all of the characterization operations for the whole 
 #                              study via SQL vs sequentially per cohort and time window. This is recommended if your DB platform is 
 #                              robust to perform this type of operation. Best to test this using the USE_SUBSET option to test.
-# 
-# Also worth noting: The runStudy function below allows for the input of cohort groups (covid and/or influenza)
-# in the event that you would like to characterize a subset of these 2 target groups. To run the analysis
-# on a single group, uncomment the parameter "cohortGroups = c("covid", "influenza")" and change the list
-# to reflect the cohort group(s) you'd like to use. By default, the package will use both sets of cohorts
+# - cohortGroups := Optional parameter that allows you to specify which cohorts to use when running the study or diagnostics. By default
+#                   both function will run using all cohorts for the study. For diagnostics, you may specify a vector with 1 or more
+#                   of the following values: c("covid", "influenza", "strata", and "feature"). The runStudy function allows for 
+#                   the specification of c("covid", "influenza"). 
 #-----------------------------------------------------------------------------------------------
 
 # For Oracle: define a schema that can be used to emulate temp tables:
 oracleTempSchema <- NULL
 
 # Details specific to the database:
-databaseId <- "PREMIER_COVID_BULK_F1"
-databaseName <- "PREMIER_COVID_BULK_F1"
-databaseDescription <- "PREMIER_COVID_BULK_F1"
+databaseId <- "CPRD_COVID"
+databaseName <- "CPRD_COVID"
+databaseDescription <- "CPRD_COVID"
 
 # Details for connecting to the CDM and storing the results
-outputFolder <- file.path("E:/Covid19Characterization/TestRuns", databaseId)
-cdmDatabaseSchema <- "CDM_Premier_v1214.dbo"
+outputFolder <- file.path("E:/Covid19Characterization/Results", databaseId)
+cdmDatabaseSchema <- "CDM_CPRD_v1226.dbo"
 cohortDatabaseSchema <- "scratch.dbo"
-cohortTable <- paste0("AS_S0_full_", databaseId)
+cohortTable <- paste0("AS_CHARYBDIS_", databaseId)
 cohortStagingTable <- paste0(cohortTable, "_stg")
 featureSummaryTable <- paste0(cohortTable, "_smry")
 minCellCount <- 5
-useBulkCharacterization <- FALSE
+useBulkCharacterization <- TRUE
 cohortIdsToExcludeFromExecution <- c()
 cohortIdsToExcludeFromResultsExport <- NULL
 
-# For uploading the results. You should have received the key file from the study coordinator:
-keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
-userName <- "study-data-site-covid19"
+# Run cohort diagnostics -----------------------------------
+runCohortDiagnostics(connectionDetails = connectionDetails,
+                     cdmDatabaseSchema = cdmDatabaseSchema,
+                     cohortDatabaseSchema = cohortDatabaseSchema,
+                     cohortStagingTable = cohortStagingTable,
+                     oracleTempSchema = oracleTempSchema,
+                     cohortIdsToExcludeFromExecution = cohortIdsToExcludeFromExecution,
+                     exportFolder = outputFolder,
+                     #cohortGroupNames = c("covid", "influenza", "strata", "feature"), # Optional - will use all groups by default
+                     databaseId = databaseId,
+                     databaseName = databaseName,
+                     databaseDescription = databaseDescription,
+                     minCellCount = minCellCount)
+
+# Use the next command to review cohort diagnostics and replace "covid" with
+# one of these options: "covid", "influenza", "strata", "feature"
+# CohortDiagnostics::launchDiagnosticsExplorer(file.path(outputFolder, "diagnostics", "covid"))
 
 # Use this to run the study. The results will be stored in a zip file called 
 # 'AllResults_<databaseId>.zip in the outputFolder. 
@@ -173,15 +186,20 @@ runStudy(connectionDetails = connectionDetails,
          databaseId = databaseId,
          databaseName = databaseName,
          databaseDescription = databaseDescription,
-         #cohortGroups = c("covid", "influenza"),
+         #cohortGroups = c("covid", "influenza"), # Optional - will use all groups by default
          cohortIdsToExcludeFromExecution = cohortIdsToExcludeFromExecution,
          cohortIdsToExcludeFromResultsExport = cohortIdsToExcludeFromResultsExport,
          incremental = TRUE,
          useBulkCharacterization = useBulkCharacterization,
          minCellCount = minCellCount) 
 
+
 #CohortDiagnostics::preMergeDiagnosticsFiles(outputFolder)
 #launchShinyApp(outputFolder)
+
+# For uploading the results. You should have received the key file from the study coordinator:
+keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
+userName <- "study-data-site-covid19"
 
 # Upload results to OHDSI SFTP server:
 #uploadResults(outputFolder, keyFileName, userName)

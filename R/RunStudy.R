@@ -56,7 +56,7 @@ runStudy <- function(connectionDetails = NULL,
   cohorts <- getCohortsToCreate()
   # Remove any cohorts that are to be excluded
   cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution), ]
-  targetCohortIds <- cohorts[cohorts$cohortType %in% cohortGroups$cohortGroup, "cohortId"][[1]]
+  targetCohortIds <- cohorts[cohorts$cohortType %in% cohortGroups, "cohortId"][[1]]
   strataCohortIds <- cohorts[cohorts$cohortType == "strata", "cohortId"][[1]]
   featureCohortIds <- cohorts[cohorts$cohortType == "feature", "cohortId"][[1]]
   
@@ -295,6 +295,16 @@ runStudy <- function(connectionDetails = NULL,
     }
   }
   
+  # Format results -----------------------------------------------------------------------------------
+  ParallelLogger::logInfo("********************************************************************************************")
+  ParallelLogger::logInfo("Formatting Results")
+  ParallelLogger::logInfo("********************************************************************************************")
+  # Ensure that the covariate_value.csv is free of any duplicative values. This can happen after more than
+  # one run of the package.
+  cv <- readr::read_csv(file.path(exportFolder, "covariate_value.csv"), col_types = readr::cols())
+  cv <- unique(cv)
+  writeToCsv(cv, file.path(exportFolder, "covariate_value.csv"), incremental = FALSE)
+  
   # Export to zip file -------------------------------------------------------------------------------
   exportResults(exportFolder, databaseId, cohortIdsToExcludeFromResultsExport)
   delta <- Sys.time() - start
@@ -363,7 +373,7 @@ getVocabularyInfo <- function(connection, cdmDatabaseSchema, oracleTempSchema) {
 #' @export
 getUserSelectableCohortGroups <- function() {
   cohortGroups <- getCohortGroups()
-  return(cohortGroups[cohortGroups$userCanSelect == TRUE, ])
+  return(unlist(cohortGroups[cohortGroups$userCanSelect == TRUE, c("cohortGroup")], use.names = FALSE))
 }
 
 formatCovariates <- function(data) {
