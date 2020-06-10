@@ -7,11 +7,11 @@ CREATE TABLE #Codesets (
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 0 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (44784220,38001140,38001140,4169095,4103295)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (44784217,38001137,38001138,4169095,4103295)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (44784220,38001140,38001140,4103295)
+  and ca.ancestor_concept_id in (44784217,38001137,38001138,4103295)
   and c.invalid_reason is null
 
 ) I
@@ -19,11 +19,11 @@ UNION  select c.concept_id
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 1 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (21600250)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (21600248)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (21600250)
+  and ca.ancestor_concept_id in (21600248)
   and c.invalid_reason is null
 
 ) I
@@ -31,11 +31,11 @@ UNION  select c.concept_id
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 2 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (45890330,45890400,2107068,4051932,4051938,2313791,2756785,4019139,2615874,2615956,2615795,2615958,2615957,2615796,2100778,2313929)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (45890325,45890400,2107068,4051932,4051938,2313791,2756785,4019139,2615874,2615956,2615795,2615958,2615957,2615796,2100778,2313929)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (45890330,45890400,2107068,4051932,4051938,2313791,2756785,4019139,2615874,2615956,2615795,2615958,2615957,2615796)
+  and ca.ancestor_concept_id in (45890325,45890400,2107068,4051932,4051938,2313791,2756785,4019139,2615874,2615956,2615795,2615958,2615957,2615796)
   and c.invalid_reason is null
 
 ) I

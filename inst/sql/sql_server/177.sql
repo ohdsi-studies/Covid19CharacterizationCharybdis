@@ -19,21 +19,21 @@ UNION  select c.concept_id
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 5 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4230167,40481550,4080957,4168966,4232550,4235361,2745440,2745444,2745447,4013354,37116690,40487540,4332501,37206830,765576,44509480,4219858,4237618,4251737,44791140,4072633)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4230167,40481547,4080957,4168966,4232550,4235361,2745440,2745444,2745447,4013354,37116689,40487536,4332501,37206832,765576,44509482,4219858,4237618,4251737,44791135,4072633)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4230167,40481550,4080957,4168966,4232550,4235361,2745440,2745444,2745447,4013354,37116690,40487540,4332501,37206830,765576,44509480,4219858,4237618,4251737,44791140,4072633)
+  and ca.ancestor_concept_id in (4230167,40481547,4080957,4168966,4232550,4235361,2745440,2745444,2745447,4013354,37116689,40487536,4332501,37206832,765576,44509482,4219858,4237618,4251737,44791135,4072633)
   and c.invalid_reason is null
 
 ) I
 LEFT JOIN
 (
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4031379,4074663,4348300,4021786,2108642,2108641,4107247,4232891,44808560,4006318,4254108,4259233,4254905,4353715)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4031379,4074663,4348300,4021786,2108642,2108641,4107247,4232891,44808555,4006318,4254108,4259233,4254905,4353715)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4031379,4074663,4348300,4021786,2108642,2108641,4107247,4232891,44808560,4006318,4254108,4259233,4254905,4353715)
+  and ca.ancestor_concept_id in (4031379,4074663,4348300,4021786,2108642,2108641,4107247,4232891,44808555,4006318,4254108,4259233,4254905,4353715)
   and c.invalid_reason is null
 
 ) E ON I.concept_id = E.concept_id
@@ -65,11 +65,11 @@ WHERE E.concept_id is null
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 7 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4338595,2787821,46257590,1531632,1531631,1531630,2787820,44515640,4052536,2002247,44811010)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4338595,2787821,46257586,1531632,1531631,1531630,2787820,44515635,4052536,2002247,44811012)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (46257590,44515640,4052536,2002247)
+  and ca.ancestor_concept_id in (46257586,44515635,4052536,2002247)
   and c.invalid_reason is null
 
 ) I

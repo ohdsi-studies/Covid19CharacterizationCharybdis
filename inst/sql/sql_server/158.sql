@@ -7,21 +7,21 @@ CREATE TABLE #Codesets (
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 13 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (444247,40481090)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (444247,40481089)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (444247,40481090)
+  and ca.ancestor_concept_id in (444247,40481089)
   and c.invalid_reason is null
 
 ) I
 LEFT JOIN
 (
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (45768890,435616,435887,196715,4102202,4062269,45768890,45771020,442055,433832,435026,440477,313219,318137,199837,438820,440417,43530610,254662,4121618,36713110,35615060,4235812,320741,195294,4319329,4187790)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (45768888,435616,435887,196715,4102202,4062269,45768887,45771016,442055,433832,435026,440477,313219,318137,199837,438820,440417,43530605,254662,4121618,36713113,35615055,4235812,320741,195294,4319329,4187790)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (45768890,435616,435887,196715,4102202,4062269,45768890,45771020,442055,433832,435026,440477,313219,318137,199837,438820,440417,43530610,254662,4121618,36713110,35615060,4235812,320741,195294,4319329,4187790)
+  and ca.ancestor_concept_id in (45768888,435616,435887,196715,4102202,4062269,45768887,45771016,442055,433832,435026,440477,313219,318137,199837,438820,440417,43530605,254662,4121618,36713113,35615055,4235812,320741,195294,4319329,4187790)
   and c.invalid_reason is null
 
 ) E ON I.concept_id = E.concept_id

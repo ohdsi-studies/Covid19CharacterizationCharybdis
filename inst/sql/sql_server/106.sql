@@ -7,11 +7,11 @@ CREATE TABLE #Codesets (
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 13 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4276586,44783360,439727)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4276586,44783356,439727)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4276586,44783360,439727)
+  and ca.ancestor_concept_id in (4276586,44783356,439727)
   and c.invalid_reason is null
 
 ) I
@@ -30,11 +30,11 @@ WHERE E.concept_id is null
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 15 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (1736971,1789428,1727223,964008,42874220,1756831,1747157,1724869,43560390,35200450,1738135,42874210,1703069,1717002,1758536,1736829,42544020,1711523,1704183,1738170,1787101,1715472,1769389,1712889,40238930,1748921,1746244,1781406,1710281,1736999,1724827,1710612)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (1736971,1789428,1727223,964008,42874220,1756831,1747157,1724869,43560385,35200446,1738135,42874212,1703069,1717002,1758536,1736829,42544019,1711523,1704183,1738170,1787101,1715472,1769389,1712889,40238930,1748921,1746244,1781406,1710281,1736999,1724827,1710612)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (1736971,1789428,1727223,964008,42874220,1756831,1747157,1724869,43560390,35200450,1738135,42874210,1703069,1717002,1758536,1736829,42544020,1711523,1704183,1738170,1787101,1715472,1769389,1712889,40238930,1748921,1746244,1781406,1710281,1736999,1724827,1710612)
+  and ca.ancestor_concept_id in (1736971,1789428,1727223,964008,42874220,1756831,1747157,1724869,43560385,35200446,1738135,42874212,1703069,1717002,1758536,1736829,42544019,1711523,1704183,1738170,1787101,1715472,1769389,1712889,40238930,1748921,1746244,1781406,1710281,1736999,1724827,1710612)
   and c.invalid_reason is null
 
 ) I

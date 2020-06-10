@@ -1,153 +1,162 @@
 {
-  "cdmVersionRange": [">=5.0.0"],
-  "PrimaryCriteria": {
-    "CriteriaList": [
-      {
-        "ConditionOccurrence": {
-          "CodesetId": [0],
-          "ConditionTypeExclude": [false]
-        }
-      }
-    ],
-    "ObservationWindow": [0, 0],
-    "PrimaryCriteriaLimit": ["First"]
-  },
-  "ConceptSets": [
-    {
-      "id": [0],
-      "name": ["Type 2 Diabetes Mellitus"],
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": [201820],
-              "CONCEPT_NAME": ["Diabetes mellitus"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["73211009"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [442793],
-              "CONCEPT_NAME": ["Diabetic complication"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["74627003"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [443238],
-              "CONCEPT_NAME": ["Diabetic - poor control"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["268519009"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [201254],
-              "CONCEPT_NAME": ["Type 1 diabetes mellitus"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["46635009"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4058243],
-              "CONCEPT_NAME": ["Diabetes mellitus during pregnancy, childbirth and the puerperium"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["199223000"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [435216],
-              "CONCEPT_NAME": ["Disorder due to type 1 diabetes mellitus"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["420868002"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [40484648],
-              "CONCEPT_NAME": ["Type 1 diabetes mellitus uncontrolled"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["444073006"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          }
-        ]
-      }
-    }
-  ],
-  "QualifiedLimit": ["First"],
-  "ExpressionLimit": ["First"],
-  "InclusionRules": [],
-  "CensoringCriteria": [],
-  "CollapseSettings": {
-    "CollapseType": ["ERA"],
-    "EraPad": [0]
-  },
-  "CensorWindow": {}
+	"cdmVersionRange" : ">=5.0.0",
+	"PrimaryCriteria" : {
+		"CriteriaList" : [
+			{
+				"ConditionOccurrence" : {
+					"CodesetId" : 0,
+					"ConditionTypeExclude" : false
+				}
+			}
+		],
+		"ObservationWindow" : {
+			"PriorDays" : 0,
+			"PostDays" : 0
+		},
+		"PrimaryCriteriaLimit" : {
+			"Type" : "First"
+		}
+	},
+	"ConceptSets" : [
+		{
+			"id" : 0,
+			"name" : "Type 2 Diabetes Mellitus",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 201820,
+							"CONCEPT_NAME" : "Diabetes mellitus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "73211009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 442793,
+							"CONCEPT_NAME" : "Diabetic complication",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "74627003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 443238,
+							"CONCEPT_NAME" : "Diabetic - poor control",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "268519009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 201254,
+							"CONCEPT_NAME" : "Type 1 diabetes mellitus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "46635009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4058243,
+							"CONCEPT_NAME" : "Diabetes mellitus during pregnancy, childbirth and the puerperium",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "199223000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 435216,
+							"CONCEPT_NAME" : "Disorder due to type 1 diabetes mellitus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "420868002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.048465e+07,
+							"CONCEPT_NAME" : "Type 1 diabetes mellitus uncontrolled",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "444073006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		}
+	],
+	"QualifiedLimit" : {
+		"Type" : "First"
+	},
+	"ExpressionLimit" : {
+		"Type" : "First"
+	},
+	"InclusionRules" : [],
+	"CensoringCriteria" : [],
+	"CollapseSettings" : {
+		"CollapseType" : "ERA",
+		"EraPad" : 0
+	},
+	"CensorWindow" : {}
 }
