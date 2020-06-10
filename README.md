@@ -12,7 +12,7 @@ Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 
 - Study end date: **Mid-June 2020**
 - Protocol: **[Word Doc](https://github.com/ohdsi-studies/Covid19CharacterizationCharybdis/blob/master/documents/Protocol_COVID-19%20Characterisation_V3.docx)**
 - Publications: **-**
-- Results explorer: **-**
+- Results explorer: **[Shiny App](https://data.ohdsi.org/Covid19CharacterizationCharybdis/)**
 
 **Objectives:**<br>
 1) Describe the baseline demographic, clinical characteristics, treatments and outcomes of interest among individuals tested for SARS-CoV-2 and/or diagnosed with COVID-19 overall and stratified by sex, age and specific comorbidities;<br>
