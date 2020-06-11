@@ -177,15 +177,18 @@ covidCohorts <- read.csv(file.path(settingsPath, "CohortsToCreateCovid.csv"))
 influenzaCohorts <- read.csv(file.path(settingsPath, "CohortsToCreateInfluenza.csv"))
 bulkStrata <- read.csv(file.path(settingsPath, "BulkStrata.csv"))
 atlasCohortStrata <- read.csv(file.path(settingsPath, "CohortsToCreateStrata.csv"))
+featureCohorts <- read.csv(file.path(settingsPath, "CohortsToCreateFeature.csv"))
 
 
 # Ensure all of the IDs are unique
 allCohortIds <- c(covidCohorts[,match("cohortId", names(covidCohorts))], 
                   influenzaCohorts[,match("cohortId", names(influenzaCohorts))],
                   bulkStrata[,match("cohortId", names(bulkStrata))],
-                  atlasCohortStrata[,match("cohortId", names(atlasCohortStrata))])
+                  atlasCohortStrata[,match("cohortId", names(atlasCohortStrata))],
+                  featureCohorts[,match("cohortId", names(featureCohorts))])
+allCohortIds <- sort(allCohortIds)
 
-totalRows <- nrow(covidCohorts) + nrow(influenzaCohorts) + nrow(bulkStrata) + nrow(atlasCohortStrata)
+totalRows <- nrow(covidCohorts) + nrow(influenzaCohorts) + nrow(bulkStrata) + nrow(atlasCohortStrata) + nrow(featureCohorts)
 if (length(unique(allCohortIds)) != totalRows) {
   warning("There are duplicate cohort IDs in the settings files!")
 }
