@@ -16,7 +16,6 @@
 			},
 			{
 				"Observation" : {
-					"CodesetId" : 5,
 					"ObservationTypeExclude" : false
 				}
 			}
@@ -344,74 +343,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 2745440,
-							"CONCEPT_NAME" : "Insertion of Endotracheal Airway into Trachea, Percutaneous Approach",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0BH13EZ",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 2745444,
-							"CONCEPT_NAME" : "Insertion of Endotracheal Airway into Trachea, Via Natural or Artificial Opening",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0BH17EZ",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 2745447,
-							"CONCEPT_NAME" : "Insertion of Endotracheal Airway into Trachea, Via Natural or Artificial Opening Endoscopic",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0BH18EZ",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4013354,
-							"CONCEPT_NAME" : "Insertion of endotracheal tube",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "112798008",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 3.711669e+07,
 							"CONCEPT_NAME" : "Insertion of endotracheal ventilation catheter",
 							"STANDARD_CONCEPT" : "S",
@@ -531,6 +462,23 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 2108681,
+							"CONCEPT_NAME" : "Patient receiving care in the intensive care unit (ICU) and receiving mechanical ventilation, 24 hours or less (CRIT)",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "4168F",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4219858,
 							"CONCEPT_NAME" : "Problem with patient ventilator",
 							"STANDARD_CONCEPT" : "S",
@@ -565,6 +513,57 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 2788037,
+							"CONCEPT_NAME" : "Respiratory Ventilation, 24-96 Consecutive Hours",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "5A1945Z",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD10PCS",
+							"CONCEPT_CLASS_ID" : "ICD10PCS"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2788038,
+							"CONCEPT_NAME" : "Respiratory Ventilation, Greater than 96 Consecutive Hours",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "5A1955Z",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD10PCS",
+							"CONCEPT_CLASS_ID" : "ICD10PCS"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2788036,
+							"CONCEPT_NAME" : "Respiratory Ventilation, Less than 24 Consecutive Hours",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "5A1935Z",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD10PCS",
+							"CONCEPT_CLASS_ID" : "ICD10PCS"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4006318,
 							"CONCEPT_NAME" : "Respiratory assist, manual",
 							"STANDARD_CONCEPT" : "S",
@@ -594,6 +593,57 @@
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
 						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.58878e+07,
+							"CONCEPT_NAME" : "Ventilation assist and management, initiation of pressure or volume preset ventilators for assisted or controlled breathing",
+							"STANDARD_CONCEPT" : "C",
+							"STANDARD_CONCEPT_CAPTION" : "Classification",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1014859",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4 Hierarchy"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.273885e+07,
+							"CONCEPT_NAME" : "Ventilation assist and management, initiation of pressure or volume preset ventilators for assisted or controlled breathing; first day",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "94656",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.273885e+07,
+							"CONCEPT_NAME" : "Ventilation assist and management, initiation of pressure or volume preset ventilators for assisted or controlled breathing; subsequent days",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "94657",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4"
+						},
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},

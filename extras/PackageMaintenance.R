@@ -192,6 +192,14 @@ if (length(unique(allCohortIds)) != totalRows) {
   warning("There are duplicate cohort IDs in the settings files!")
 }
 
+# When necessary, use this to view the full list of cohorts in the study
+fullCohortList <- rbind(covidCohorts[,c("cohortId", "atlasId", "name")],
+                        influenzaCohorts[,c("cohortId", "atlasId", "name")],
+                        atlasCohortStrata[,c("cohortId", "atlasId", "name")],
+                        featureCohorts[,c("cohortId", "atlasId", "name")])
+
+fullCohortList <- fullCohortList[order(fullCohortList$cohortId),]
+
 # Target cohorts
 colNames <- c("name", "cohortId") # Use this to subset to the columns of interest
 targetCohorts <- rbind(covidCohorts, influenzaCohorts)
