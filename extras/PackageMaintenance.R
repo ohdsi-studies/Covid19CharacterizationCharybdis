@@ -209,7 +209,7 @@ targetStrataCP <- do.call(expand.grid, lapply(list(targetCohorts$targetId, strat
 names(targetStrataCP) <- c("targetId", "strataId")
 targetStrataCP <- merge(targetStrataCP, targetCohorts)
 targetStrataCP <- merge(targetStrataCP, strata)
-targetStrataCP <- targetStrataCP[order(targetId, strataId),]
+targetStrataCP <- targetStrataCP[order(targetStrataCP$strataId, targetStrataCP$targetId),]
 targetStrataCP$cohortId <- (targetStrataCP$targetId * 1000000) + (targetStrataCP$strataId*10)
 tWithS <- targetStrataCP
 tWithoutS <- targetStrataCP[targetStrataCP$strataId %in% atlasCohortStrata$cohortId, ]
