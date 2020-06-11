@@ -21,17 +21,13 @@ FROM (
     c.cohort_definition_id, 
     c.subject_id, 
     c.cohort_start_date, 
-    c.cohort_end_date,
-    CASE 
-      WHEN DATEDIFF(dd, c.cohort_start_date, op.observation_period_end_date) + 1 >= @strata_value THEN 'TwS'
-      ELSE 'TwoS'
-    END cohort_type
-  FROM @cohort_database_schema.@cohort_staging_table c
+    c.cohort_end_date  FROM @cohort_database_schema.@cohort_staging_table c
   INNER JOIN (SELECT DISTINCT target_id FROM #TARGET_STRATA_XREF) x ON x.target_id = c.cohort_definition_id
-  INNER JOIN @cdm_database_schema.observation_period op ON op.person_id = c.subject_id 
-    AND (c.cohort_start_date >= OP.observation_period_start_date AND c.cohort_start_date <= op.observation_period_end_date)
+  INNER JOIN @cdm_database_schema.person p ON c.subject_id = p.person_id
+    AND YEAR(c.cohort_start_date) - p.year_of_birth @op @strata_value
 ) s
-INNER JOIN #TARGET_STRATA_XREF x ON s.cohort_definition_id = x.target_id AND s.cohort_type = x.cohort_type
+INNER JOIN #TARGET_STRATA_XREF x ON s.cohort_definition_id = x.target_id
 ;
+
 
 @target_strata_xref_table_drop

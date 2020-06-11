@@ -49,7 +49,8 @@ createBulkStrataFromFile <- function(connection,
                                              cdm_database_schema = cdmDatabaseSchema,
                                              cohort_database_schema = cohortDatabaseSchema,
                                              cohort_staging_table = cohortStagingTable,
-                                             strata_value = bulkStrataToCreate$parameterValue[i],
+                                             op = bulkStrataToCreate$op[i],
+                                             strata_value = bulkStrataToCreate$strataValue[i],
                                              target_strata_xref_table_create = tsXrefTempTableSql$create,
                                              target_strata_xref_table_drop = tsXrefTempTableSql$drop)
     DatabaseConnector::executeSql(connection, sql)
@@ -74,7 +75,7 @@ createBulkStrataFromCohorts <- function(connection,
   
   
   sql <- SqlRender::loadRenderTranslateSql(dbms = attr(connection, "dbms"),
-                                           sqlFilename = "StratifyByCohort.sql",
+                                           sqlFilename = "strata/StratifyByCohort.sql",
                                            packageName = packageName,
                                            oracleTempSchema = oracleTempSchema,
                                            warnOnMissingParameters = TRUE,
@@ -84,7 +85,6 @@ createBulkStrataFromCohorts <- function(connection,
                                            target_strata_xref_table_drop = tsXrefTempTableSql$drop)
   
   ParallelLogger::logInfo("Stratify by cohorts")
-  #write(sql,"stratify.sql")
   DatabaseConnector::executeSql(connection, sql)
 }
 
@@ -118,6 +118,11 @@ cohortStrataXrefTempTableSql <- function(connection, targetStrataXref, oracleTem
                                   oracleTempSchema = oracleTempSchema)
   return(list(create = sql, drop = dropSql))
 }
+
+# getStrataSqlFile <- function(fileName, includeDirectoryEscape = TRUE) {
+#   dirEscape <- ifelse(includeDirectoryEscape == TRUE, "/", "")
+#   return(paste0(dirEscape, "strata/", fileName))
+# }
 
 serializeBulkStrataName <- function(bulkStrataToCreate) {
   return(paste(bulkStrataToCreate$generationScript, bulkStrataToCreate$name, bulkStrataToCreate$parameterValue, sep = "|"))
