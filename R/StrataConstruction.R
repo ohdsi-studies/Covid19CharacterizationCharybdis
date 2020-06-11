@@ -121,11 +121,6 @@ cohortStrataXrefTempTableSql <- function(connection, targetStrataXref, oracleTem
   return(list(create = sql, drop = dropSql))
 }
 
-# getStrataSqlFile <- function(fileName, includeDirectoryEscape = TRUE) {
-#   dirEscape <- ifelse(includeDirectoryEscape == TRUE, "/", "")
-#   return(paste0(dirEscape, "strata/", fileName))
-# }
-
 serializeBulkStrataName <- function(bulkStrataToCreate) {
   return(paste(bulkStrataToCreate$generationScript, bulkStrataToCreate$name, bulkStrataToCreate$parameterValue, sep = "|"))
 }
