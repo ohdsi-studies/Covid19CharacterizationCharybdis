@@ -196,29 +196,29 @@ targetCohorts <- rbind(covidCohorts, influenzaCohorts)
 targetCohorts <- targetCohorts[, match(colNames, names(targetCohorts))]
 names(targetCohorts) <- c("targetName", "targetId")
 # Strata cohorts
-bulkStrataColNames <- c("inverseName", "name", "cohortId") # Use this to subset to the columns of interest
-bulkStrata <- bulkStrata[, match(bulkStrataColNames, names(bulkStrata))]
+bulkStrata <- bulkStrata[, match(colNames, names(bulkStrata))]
 bulkStrata$name <- paste("with", bulkStrata$name)
-bulkStrata$inverseName <- paste("with", bulkStrata$inverseName)
+bulkStrata$inverseName <- paste("without", bulkStrata$name)
 atlasCohortStrata <- atlasCohortStrata[, match(colNames, names(atlasCohortStrata))]
-atlasCohortStrata$inverseName <- paste0("without ", atlasCohortStrata$name) 
-atlasCohortStrata$name <- paste0("with ", atlasCohortStrata$name) 
+atlasCohortStrata$name <- paste("with ", atlasCohortStrata$name) 
+atlasCohortStrata$inverseName <- paste("without ", atlasCohortStrata$name) 
 strata <- rbind(bulkStrata, atlasCohortStrata)
-names(strata) <- c("strataInverseName", "strataName", "strataId")
+names(strata) <- c("strataName", "strataId", "strataInverseName")
 # Get all of the unique combinations of target + strata
 targetStrataCP <- do.call(expand.grid, lapply(list(targetCohorts$targetId, strata$strataId), unique))
 names(targetStrataCP) <- c("targetId", "strataId")
 targetStrataCP <- merge(targetStrataCP, targetCohorts)
 targetStrataCP <- merge(targetStrataCP, strata)
+targetStrataCP <- targetStrataCP[order(targetId, strataId),]
 targetStrataCP$cohortId <- (targetStrataCP$targetId * 1000000) + (targetStrataCP$strataId*10)
 tWithS <- targetStrataCP
-tWithoutS <- targetStrataCP
+tWithoutS <- targetStrataCP[targetStrataCP$strataId %in% atlasCohortStrata$cohortId, ]
 tWithS$cohortId <- tWithS$cohortId + 1
 tWithS$cohortType <- "TwS"
 tWithS$name <- paste(tWithS$targetName, tWithS$strataName)
 tWithoutS$cohortId <- tWithoutS$cohortId + 2
 tWithoutS$cohortType <- "TwoS"
-tWithoutS$name <- paste(tWithS$targetName, tWithS$strataInverseName)
+tWithoutS$name <- paste(tWithoutS$targetName, tWithoutS$strataInverseName)
 targetStrataXRef <- rbind(tWithS, tWithoutS)
 targetStrataXRef <- targetStrataXRef[,c("targetId","strataId","cohortId","cohortType","name")]
 
