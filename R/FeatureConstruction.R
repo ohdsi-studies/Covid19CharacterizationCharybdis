@@ -56,7 +56,7 @@ formatFeatureProportions <- function(data) {
                                                              data$windowEnd,
                                                              data$windowType,
                                                              data$featureName)
-  data$analysisId <- data$featureCohortDefinitionId
+  data$analysisId <- 10000
   return(data)
 }
 
