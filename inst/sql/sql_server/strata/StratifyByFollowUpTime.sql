@@ -26,7 +26,10 @@ FROM (
   INNER JOIN (SELECT DISTINCT target_id FROM #TARGET_STRATA_XREF) x ON x.target_id = c.cohort_definition_id
   INNER JOIN @cdm_database_schema.observation_period op ON op.person_id = c.subject_id 
     AND (c.cohort_start_date >= OP.observation_period_start_date AND c.cohort_start_date <= op.observation_period_end_date)
-    AND DATEDIFF(dd, c.cohort_start_date, op.observation_period_end_date) + 1 @op @strata_value
+    AND (
+      DATEDIFF(dd, c.cohort_start_date, op.observation_period_end_date) + 1 @lb_operator @lb_strata_value AND
+      DATEDIFF(dd, c.cohort_start_date, op.observation_period_end_date) + 1 @ub_operator @ub_strata_value
+    )
 ) s
 INNER JOIN #TARGET_STRATA_XREF x ON s.cohort_definition_id = x.target_id
 ;

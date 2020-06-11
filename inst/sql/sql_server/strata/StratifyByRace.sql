@@ -26,7 +26,7 @@ FROM (
   INNER JOIN (SELECT DISTINCT target_id FROM #TARGET_STRATA_XREF) x ON x.target_id = c.cohort_definition_id
   INNER JOIN @cdm_database_schema.person p ON c.subject_id = p.person_id
   INNER JOIN @cdm_database_schema.concept_ancestor ca ON p.race_concept_id = ca.descendant_concept_id
-    AND ca.ancestor_concept_id = @strata_value
+    AND ca.ancestor_concept_id = @lb_strata_value
 ) s
 INNER JOIN #TARGET_STRATA_XREF x ON s.cohort_definition_id = x.target_id
 ;

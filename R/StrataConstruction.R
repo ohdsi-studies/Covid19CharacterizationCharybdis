@@ -49,8 +49,10 @@ createBulkStrataFromFile <- function(connection,
                                              cdm_database_schema = cdmDatabaseSchema,
                                              cohort_database_schema = cohortDatabaseSchema,
                                              cohort_staging_table = cohortStagingTable,
-                                             op = bulkStrataToCreate$op[i],
-                                             strata_value = bulkStrataToCreate$strataValue[i],
+                                             lb_operator = bulkStrataToCreate$lbOperator[i],
+                                             lb_strata_value = bulkStrataToCreate$lbStrataValue[i],
+                                             ub_operator = bulkStrataToCreate$ubOperator[i],
+                                             ub_strata_value = bulkStrataToCreate$ubStrataValue[i],
                                              target_strata_xref_table_create = tsXrefTempTableSql$create,
                                              target_strata_xref_table_drop = tsXrefTempTableSql$drop)
     DatabaseConnector::executeSql(connection, sql)
