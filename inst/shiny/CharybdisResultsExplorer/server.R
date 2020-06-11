@@ -183,11 +183,11 @@ shinyServer(function(input, output, session) {
                    ordering = TRUE,
                    paging = TRUE,
                    info = TRUE,
-                   dom = 'tip',
+                   #dom = 'tip',
                    scrollX = TRUE,
-                   rowGroup = list(dataSrc = 0),
+                  # rowGroup = list(dataSrc = 0),
                    columnDefs = list(
-                      list(targets = c(0), visible = 0),
+                      #list(targets = c(0), visible = 0),
                       minCellCountDef(2:(length(databaseIds) - 1))
                      )
                    )
@@ -199,7 +199,7 @@ shinyServer(function(input, output, session) {
                            rownames = FALSE,
                            container = sketch, 
                            escape = FALSE,
-                           extensions = extensions,
+                           #extensions = extensions,
                            class = "stripe nowrap compact")
     return(dataTable)
   })
