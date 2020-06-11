@@ -7,11 +7,11 @@ CREATE TABLE #Codesets (
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 0 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4092289,4163851,40483100,40482740)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4092289,4163851,40483101,40482735)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4092289,4163851,40483100,40482740)
+  and ca.ancestor_concept_id in (4092289,4163851,40483101,40482735)
   and c.invalid_reason is null
 
 ) I
@@ -30,11 +30,11 @@ WHERE E.concept_id is null
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 1 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4014461,4151169,4149449,4149457,4014299,4149451,4150406,4150405,4150404,4195545,4148097,4118056,72726,4171115,440847,4086393,4147874,4175637,4064709,4058403,45757180,45757180,36712700,136530,2514572,42740400,2514571,2514570)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4014461,4151169,4149449,4149457,4014299,4149451,4150406,4150405,4150404,4195545,4148097,4118056,72726,4171115,440847,4086393,4147874,4175637,4064709,4058403,45757175,45757176,36712702,136530,2514572,42740403,2514571,2514570)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4014461,4151169,4149449,4149457,4014299,4149451,4150406,4150405,4150404,4195545,4148097,4118056,72726,4171115,440847,4086393,4147874,4175637,4064709,4058403,45757180,45757180,36712700,136530,2514572,42740400,2514571,2514570)
+  and ca.ancestor_concept_id in (4014461,4151169,4149449,4149457,4014299,4149451,4150406,4150405,4150404,4195545,4148097,4118056,72726,4171115,440847,4086393,4147874,4175637,4064709,4058403,45757175,45757176,36712702,136530,2514572,42740403,2514571,2514570)
   and c.invalid_reason is null
 
 ) I

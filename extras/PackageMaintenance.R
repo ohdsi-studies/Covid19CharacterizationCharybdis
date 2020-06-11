@@ -131,13 +131,12 @@ insertCohortDefinitionInPackage <- function(cohortId,
     dir.create(jsonFolder, recursive = TRUE)
   }
   jsonFileName <- file.path(jsonFolder, paste(localCohortId, "json", sep = "."))
-  jsonlite::write_json(object$expression, jsonFileName, pretty = TRUE)
+  json <- RJSONIO::toJSON(object$expression, pretty = TRUE)
+  SqlRender::writeSql(sql = json, targetFile = jsonFileName)
   writeLines(paste("- Created JSON file:", jsonFileName))
   
   # Fetch SQL
-  sql <- ROhdsiWebApi::getCohortDefinitionSql(baseUrl = baseUrl,
-                                              cohortId = cohortId,
-                                              generateStats = generateStats)
+  sql <- ROhdsiWebApi::getCohortSql(baseUrl = baseUrl, cohortDefinition = object, generateStats = generateStats)
   if (!file.exists(sqlFolder)) {
     dir.create(sqlFolder, recursive = TRUE)
   }
@@ -192,6 +191,14 @@ totalRows <- nrow(covidCohorts) + nrow(influenzaCohorts) + nrow(bulkStrata) + nr
 if (length(unique(allCohortIds)) != totalRows) {
   warning("There are duplicate cohort IDs in the settings files!")
 }
+
+# When necessary, use this to view the full list of cohorts in the study
+fullCohortList <- rbind(covidCohorts[,c("cohortId", "atlasId", "name")],
+                        influenzaCohorts[,c("cohortId", "atlasId", "name")],
+                        atlasCohortStrata[,c("cohortId", "atlasId", "name")],
+                        featureCohorts[,c("cohortId", "atlasId", "name")])
+
+fullCohortList <- fullCohortList[order(fullCohortList$cohortId),]
 
 # Target cohorts
 colNames <- c("name", "cohortId") # Use this to subset to the columns of interest
