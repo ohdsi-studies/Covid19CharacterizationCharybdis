@@ -13,4 +13,5 @@ FROM (
 ) c
 INNER JOIN @cohort_database_schema.@feature_summary_table f -- Feature Count
   ON c.cohort_definition_id = f.cohort_definition_id
+  AND c.total_count > 1 -- Prevent divide by zero
 ;

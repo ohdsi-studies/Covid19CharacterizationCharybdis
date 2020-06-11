@@ -49,7 +49,10 @@ createBulkStrataFromFile <- function(connection,
                                              cdm_database_schema = cdmDatabaseSchema,
                                              cohort_database_schema = cohortDatabaseSchema,
                                              cohort_staging_table = cohortStagingTable,
-                                             strata_value = bulkStrataToCreate$parameterValue[i],
+                                             lb_operator = bulkStrataToCreate$lbOperator[i],
+                                             lb_strata_value = bulkStrataToCreate$lbStrataValue[i],
+                                             ub_operator = bulkStrataToCreate$ubOperator[i],
+                                             ub_strata_value = bulkStrataToCreate$ubStrataValue[i],
                                              target_strata_xref_table_create = tsXrefTempTableSql$create,
                                              target_strata_xref_table_drop = tsXrefTempTableSql$drop)
     DatabaseConnector::executeSql(connection, sql)
@@ -74,7 +77,7 @@ createBulkStrataFromCohorts <- function(connection,
   
   
   sql <- SqlRender::loadRenderTranslateSql(dbms = attr(connection, "dbms"),
-                                           sqlFilename = "StratifyByCohort.sql",
+                                           sqlFilename = "strata/StratifyByCohort.sql",
                                            packageName = packageName,
                                            oracleTempSchema = oracleTempSchema,
                                            warnOnMissingParameters = TRUE,
@@ -84,7 +87,6 @@ createBulkStrataFromCohorts <- function(connection,
                                            target_strata_xref_table_drop = tsXrefTempTableSql$drop)
   
   ParallelLogger::logInfo("Stratify by cohorts")
-  #write(sql,"stratify.sql")
   DatabaseConnector::executeSql(connection, sql)
 }
 
