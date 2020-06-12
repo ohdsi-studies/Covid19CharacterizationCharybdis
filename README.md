@@ -198,7 +198,7 @@ CohortDiagnostics::preMergeDiagnosticsFiles(outputFolder)
 launchShinyApp(outputFolder)
 ````
 
-6. If the study code runs to completion, your outputFolder will have the following contents:
+8. If the study code runs to completion, your outputFolder will have the following contents:
 - RecordKeeping = a folder designed to store incremental information such that if the study code dies, it will restart where it left off
 - cohort.csv: An export of the cohort definitions used in the study. This is simply a cross reference for the other files and does not contain sensitive information.
 - _**cohort_count.csv**_: Contains the list of target and strata cohorts in the study with their counts. The fields `cohort_entries` and cohort_subjects` contain the number of people in the cohort. 
@@ -212,7 +212,7 @@ Those files noted in **_bold italics_** above should be reviewed for sensitive i
 
 As a data owner, you will want to inspect these files for adherence to the minCellCount you input. You may find that only some files are generated. If this happens, please reach out to the study leads to debug. 
 
-5. To utilize the `OhdsiSharing` library to connect and upload results to the OHDSI STFP server, you will need a site key. You may reach out to the study leads to get a key file. You will store this key file in a place that is retrievable by your `R`/`RStudio` environment (e.g. on your desktop if local `R` or uploaded to a folder in the cloud for `RServer`)
+9. To utilize the `OhdsiSharing` library to connect and upload results to the OHDSI STFP server, you will need a site key. You may reach out to the study leads to get a key file. You will store this key file in a place that is retrievable by your `R`/`RStudio` environment (e.g. on your desktop if local `R` or uploaded to a folder in the cloud for `RServer`)
 
 Once you have checked results, you can use the following code to send:
 ````
