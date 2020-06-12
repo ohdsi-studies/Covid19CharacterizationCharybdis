@@ -21,16 +21,13 @@ FROM (
     c.cohort_definition_id, 
     c.subject_id, 
     c.cohort_start_date, 
-    c.cohort_end_date,
-    CASE 
-      WHEN p.gender_concept_id = @strata_value THEN 'TwS'
-      ELSE 'TwoS'
-    END cohort_type
+    c.cohort_end_date
   FROM @cohort_database_schema.@cohort_staging_table c
-  INNER JOIN @cdm_database_schema.person p ON c.subject_id = p.person_id
   INNER JOIN (SELECT DISTINCT target_id FROM #TARGET_STRATA_XREF) x ON x.target_id = c.cohort_definition_id
+  INNER JOIN @cdm_database_schema.person p ON c.subject_id = p.person_id
+    AND p.gender_concept_id @lb_operator @lb_strata_value
 ) s
-INNER JOIN #TARGET_STRATA_XREF x ON s.cohort_definition_id = x.target_id AND s.cohort_type = x.cohort_type
+INNER JOIN #TARGET_STRATA_XREF x ON s.cohort_definition_id = x.target_id
 ;
 
 @target_strata_xref_table_drop

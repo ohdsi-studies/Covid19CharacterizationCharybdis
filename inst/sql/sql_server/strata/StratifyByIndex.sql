@@ -21,16 +21,14 @@ FROM (
     c.cohort_definition_id, 
     c.subject_id, 
     c.cohort_start_date, 
-    c.cohort_end_date,
-    CASE 
-      WHEN YEAR(c.cohort_start_date) - p.year_of_birth >= @strata_value THEN 'TwS'
-      ELSE 'TwoS'
-    END cohort_type
-  FROM @cohort_database_schema.@cohort_staging_table c
-  INNER JOIN @cdm_database_schema.person p ON c.subject_id = p.person_id
+    c.cohort_end_date  FROM @cohort_database_schema.@cohort_staging_table c
   INNER JOIN (SELECT DISTINCT target_id FROM #TARGET_STRATA_XREF) x ON x.target_id = c.cohort_definition_id
+    AND (
+		c.cohort_start_date @lb_operator @lb_strata_value AND 
+		c.cohort_start_date @ub_operator @ub_strata_value
+	)
 ) s
-INNER JOIN #TARGET_STRATA_XREF x ON s.cohort_definition_id = x.target_id AND s.cohort_type = x.cohort_type
+INNER JOIN #TARGET_STRATA_XREF x ON s.cohort_definition_id = x.target_id
 ;
 
 

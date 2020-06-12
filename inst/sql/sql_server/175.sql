@@ -108,7 +108,7 @@ FROM
   JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 2))
 ) C
 
-WHERE C.condition_type_concept_id  in (38000180,38000200,44786630,38000180,38000200,38000220,38000230,45756840,45756840)
+WHERE C.condition_type_concept_id  in (38000183,38000199,44786627,38000184,38000200,38000215,38000230,45756835,45756843)
 -- End Condition Occurrence Criteria
 
 ) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,0,P.START_DATE) AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= DATEADD(day,0,P.END_DATE)

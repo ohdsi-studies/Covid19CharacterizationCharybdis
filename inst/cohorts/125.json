@@ -1,1050 +1,1059 @@
 {
-  "cdmVersionRange": [">=5.0.0"],
-  "PrimaryCriteria": {
-    "CriteriaList": [
-      {
-        "ConditionOccurrence": {
-          "CodesetId": [0],
-          "ConditionTypeExclude": [false]
-        }
-      },
-      {
-        "ConditionOccurrence": {
-          "CodesetId": [1],
-          "ConditionTypeExclude": [false]
-        }
-      },
-      {
-        "ConditionOccurrence": {
-          "CodesetId": [2],
-          "ConditionTypeExclude": [false]
-        }
-      },
-      {
-        "ConditionOccurrence": {
-          "CodesetId": [3],
-          "ConditionTypeExclude": [false]
-        }
-      },
-      {
-        "ConditionOccurrence": {
-          "CodesetId": [4],
-          "ConditionTypeExclude": [false]
-        }
-      },
-      {
-        "ConditionOccurrence": {
-          "CodesetId": [5],
-          "ConditionTypeExclude": [false]
-        }
-      },
-      {
-        "ConditionOccurrence": {
-          "CodesetId": [6],
-          "ConditionTypeExclude": [false]
-        }
-      },
-      {
-        "ConditionOccurrence": {
-          "CodesetId": [7],
-          "ConditionTypeExclude": [false]
-        }
-      }
-    ],
-    "ObservationWindow": [0, 0],
-    "PrimaryCriteriaLimit": ["First"]
-  },
-  "ConceptSets": [
-    {
-      "id": [0],
-      "name": ["Chronic kidney disease"],
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": [197320],
-              "CONCEPT_NAME": ["Acute renal failure syndrome"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["14669001"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [45768812],
-              "CONCEPT_NAME": ["Anemia in chronic kidney disease"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["707323002"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [194385],
-              "CONCEPT_NAME": ["Aneurysm of renal artery"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["36184004"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [45769152],
-              "CONCEPT_NAME": ["Bartter syndrome"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["707742001"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [46271022],
-              "CONCEPT_NAME": ["Chronic kidney disease"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["709044004"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4263367],
-              "CONCEPT_NAME": ["Glomerulonephritis"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["36171008"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [261071],
-              "CONCEPT_NAME": ["Glomerulosclerosis"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["197661001"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [195289],
-              "CONCEPT_NAME": ["Goodpasture's syndrome"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["50581000"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [195737],
-              "CONCEPT_NAME": ["Hemorrhagic nephroso-nephritis"],
-              "STANDARD_CONCEPT": ["N"],
-              "STANDARD_CONCEPT_CAPTION": ["Non-Standard"],
-              "INVALID_REASON": ["U"],
-              "INVALID_REASON_CAPTION": ["Invalid"],
-              "CONCEPT_CODE": ["102455002"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [201313],
-              "CONCEPT_NAME": ["Hypertensive renal disease"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["38481006"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [43530912],
-              "CONCEPT_NAME": ["Induced termination of pregnancy complicated by renal failure"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["609452007"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4103224],
-              "CONCEPT_NAME": ["Interstitial nephritis"],
-              "STANDARD_CONCEPT": ["N"],
-              "STANDARD_CONCEPT_CAPTION": ["Non-Standard"],
-              "INVALID_REASON": ["U"],
-              "INVALID_REASON_CAPTION": ["Invalid"],
-              "CONCEPT_CODE": ["28689008"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [192279],
-              "CONCEPT_NAME": ["Kidney disorder due to diabetes mellitus"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["127013003"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [193253],
-              "CONCEPT_NAME": ["Nephritis"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["52845002"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [false],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [195314],
-              "CONCEPT_NAME": ["Nephrotic syndrome"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["52254009"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4066005],
-              "CONCEPT_NAME": ["Post-delivery acute renal failure with postnatal problem"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["200118004"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [37116834],
-              "CONCEPT_NAME": ["Postpartum acute renal failure"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["733839001"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [195014],
-              "CONCEPT_NAME": ["Renal failure following molar AND/OR ectopic pregnancy"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["43629001"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [192359],
-              "CONCEPT_NAME": ["Renal failure syndrome"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["42399005"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [197930],
-              "CONCEPT_NAME": ["Renal hypertension complicating pregnancy, childbirth and the puerperium"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["198949009"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          }
-        ]
-      }
-    },
-    {
-      "id": [1],
-      "name": ["Stroke (ischemic or hemorrhagic)"],
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": [372924],
-              "CONCEPT_NAME": ["Cerebral artery occlusion"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["20059004"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [false],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [375557],
-              "CONCEPT_NAME": ["Cerebral embolism"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["75543006"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [false],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [376713],
-              "CONCEPT_NAME": ["Cerebral hemorrhage"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["274100004"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [false],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [443454],
-              "CONCEPT_NAME": ["Cerebral infarction"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["432504007"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [441874],
-              "CONCEPT_NAME": ["Cerebral thrombosis"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["71444005"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [false],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [439847],
-              "CONCEPT_NAME": ["Intracranial hemorrhage"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["1386000"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [43530727],
-              "CONCEPT_NAME": ["Spontaneous cerebral hemorrhage"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["291571000119106"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [false],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4148906],
-              "CONCEPT_NAME": ["Spontaneous subarachnoid hemorrhage"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["270907008"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [false],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [432923],
-              "CONCEPT_NAME": ["Subarachnoid hemorrhage"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["21454007"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [false],
-            "includeMapped": [false]
-          }
-        ]
-      }
-    },
-    {
-      "id": [2],
-      "name": ["HIV excluding HIV-II  "],
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": [4276586],
-              "CONCEPT_NAME": ["Finding of HIV status"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["365866002"],
-              "DOMAIN_ID": ["Measurement"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4013105],
-              "CONCEPT_NAME": ["HIV negative"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["165815009"],
-              "DOMAIN_ID": ["Measurement"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [432554],
-              "CONCEPT_NAME": ["Human immunodeficiency virus II infection"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["79019005"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [44783356],
-              "CONCEPT_NAME": ["Human immunodeficiency virus carrier"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["699433000"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [439727],
-              "CONCEPT_NAME": ["Human immunodeficiency virus infection"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["86406008"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          }
-        ]
-      }
-    },
-    {
-      "id": [3],
-      "name": ["Malignant neoplasms excluding non-melanoma skin cancer"],
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": [4112752],
-              "CONCEPT_NAME": ["Basal cell carcinoma of skin"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["254701007"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4144289],
-              "CONCEPT_NAME": ["H/O: malignant neoplasm"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["266987004"],
-              "DOMAIN_ID": ["Observation"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Context-dependent"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4179242],
-              "CONCEPT_NAME": ["History of malignant neoplasm of skin"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["429050006"],
-              "DOMAIN_ID": ["Observation"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Context-dependent"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [443392],
-              "CONCEPT_NAME": ["Malignant neoplastic disease"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["363346000"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4111921],
-              "CONCEPT_NAME": ["Squamous cell carcinoma of skin"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["254651007"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          }
-        ]
-      }
-    },
-    {
-      "id": [4],
-      "name": ["Type 2 Diabetes Mellitus"],
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": [201820],
-              "CONCEPT_NAME": ["Diabetes mellitus"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["73211009"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [4058243],
-              "CONCEPT_NAME": ["Diabetes mellitus during pregnancy, childbirth and the puerperium"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["199223000"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [443238],
-              "CONCEPT_NAME": ["Diabetic - poor control"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["268519009"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [442793],
-              "CONCEPT_NAME": ["Diabetic complication"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["74627003"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [435216],
-              "CONCEPT_NAME": ["Disorder due to type 1 diabetes mellitus"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["420868002"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [201254],
-              "CONCEPT_NAME": ["Type 1 diabetes mellitus"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["46635009"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [40484648],
-              "CONCEPT_NAME": ["Type 1 diabetes mellitus uncontrolled"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["444073006"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          }
-        ]
-      }
-    },
-    {
-      "id": [5],
-      "name": ["Heart Failure "],
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": [315295],
-              "CONCEPT_NAME": ["Congestive rheumatic heart failure"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["82523003"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [true],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [316139],
-              "CONCEPT_NAME": ["Heart failure"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["84114007"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          }
-        ]
-      }
-    },
-    {
-      "id": [6],
-      "name": ["Cardiac arrhythmia composite"],
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": [4169095],
-              "CONCEPT_NAME": ["Bradycardia"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["48867003"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [false],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [44784217],
-              "CONCEPT_NAME": ["Cardiac arrhythmia"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["698247007"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [38001137],
-              "CONCEPT_NAME": ["Cardiac arrhythmia & conduction disorders w CC"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["309"],
-              "DOMAIN_ID": ["Observation"],
-              "VOCABULARY_ID": ["DRG"],
-              "CONCEPT_CLASS_ID": ["MS-DRG"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [38001138],
-              "CONCEPT_NAME": ["Cardiac arrhythmia & conduction disorders w/o CC/MCC"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["310"],
-              "DOMAIN_ID": ["Observation"],
-              "VOCABULARY_ID": ["DRG"],
-              "CONCEPT_CLASS_ID": ["MS-DRG"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          }
-        ]
-      }
-    },
-    {
-      "id": [7],
-      "name": ["Heart disease conditions"],
-      "expression": {
-        "items": [
-          {
-            "concept": {
-              "CONCEPT_ID": [443563],
-              "CONCEPT_NAME": ["Arteriosclerosis of coronary artery bypass graft"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["429673002"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          },
-          {
-            "concept": {
-              "CONCEPT_ID": [321588],
-              "CONCEPT_NAME": ["Heart disease"],
-              "STANDARD_CONCEPT": ["S"],
-              "STANDARD_CONCEPT_CAPTION": ["Standard"],
-              "INVALID_REASON": ["V"],
-              "INVALID_REASON_CAPTION": ["Valid"],
-              "CONCEPT_CODE": ["56265001"],
-              "DOMAIN_ID": ["Condition"],
-              "VOCABULARY_ID": ["SNOMED"],
-              "CONCEPT_CLASS_ID": ["Clinical Finding"]
-            },
-            "isExcluded": [false],
-            "includeDescendants": [true],
-            "includeMapped": [false]
-          }
-        ]
-      }
-    }
-  ],
-  "QualifiedLimit": ["First"],
-  "ExpressionLimit": ["First"],
-  "InclusionRules": [],
-  "CensoringCriteria": [],
-  "CollapseSettings": {
-    "CollapseType": ["ERA"],
-    "EraPad": [0]
-  },
-  "CensorWindow": {}
+	"cdmVersionRange" : ">=5.0.0",
+	"PrimaryCriteria" : {
+		"CriteriaList" : [
+			{
+				"ConditionOccurrence" : {
+					"CodesetId" : 0,
+					"ConditionTypeExclude" : false
+				}
+			},
+			{
+				"ConditionOccurrence" : {
+					"CodesetId" : 1,
+					"ConditionTypeExclude" : false
+				}
+			},
+			{
+				"ConditionOccurrence" : {
+					"CodesetId" : 2,
+					"ConditionTypeExclude" : false
+				}
+			},
+			{
+				"ConditionOccurrence" : {
+					"CodesetId" : 3,
+					"ConditionTypeExclude" : false
+				}
+			},
+			{
+				"ConditionOccurrence" : {
+					"CodesetId" : 4,
+					"ConditionTypeExclude" : false
+				}
+			},
+			{
+				"ConditionOccurrence" : {
+					"CodesetId" : 5,
+					"ConditionTypeExclude" : false
+				}
+			},
+			{
+				"ConditionOccurrence" : {
+					"CodesetId" : 6,
+					"ConditionTypeExclude" : false
+				}
+			},
+			{
+				"ConditionOccurrence" : {
+					"CodesetId" : 7,
+					"ConditionTypeExclude" : false
+				}
+			}
+		],
+		"ObservationWindow" : {
+			"PriorDays" : 0,
+			"PostDays" : 0
+		},
+		"PrimaryCriteriaLimit" : {
+			"Type" : "First"
+		}
+	},
+	"ConceptSets" : [
+		{
+			"id" : 0,
+			"name" : "Chronic kidney disease",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 197320,
+							"CONCEPT_NAME" : "Acute renal failure syndrome",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "14669001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.576881e+07,
+							"CONCEPT_NAME" : "Anemia in chronic kidney disease",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "707323002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 194385,
+							"CONCEPT_NAME" : "Aneurysm of renal artery",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "36184004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.576915e+07,
+							"CONCEPT_NAME" : "Bartter syndrome",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "707742001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.627102e+07,
+							"CONCEPT_NAME" : "Chronic kidney disease",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "709044004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4263367,
+							"CONCEPT_NAME" : "Glomerulonephritis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "36171008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 261071,
+							"CONCEPT_NAME" : "Glomerulosclerosis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "197661001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 195289,
+							"CONCEPT_NAME" : "Goodpasture's syndrome",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "50581000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 195737,
+							"CONCEPT_NAME" : "Hemorrhagic nephroso-nephritis",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "U",
+							"INVALID_REASON_CAPTION" : "Invalid",
+							"CONCEPT_CODE" : "102455002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 201313,
+							"CONCEPT_NAME" : "Hypertensive renal disease",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38481006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.353091e+07,
+							"CONCEPT_NAME" : "Induced termination of pregnancy complicated by renal failure",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "609452007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4103224,
+							"CONCEPT_NAME" : "Interstitial nephritis",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "U",
+							"INVALID_REASON_CAPTION" : "Invalid",
+							"CONCEPT_CODE" : "28689008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 192279,
+							"CONCEPT_NAME" : "Kidney disorder due to diabetes mellitus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "127013003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 193253,
+							"CONCEPT_NAME" : "Nephritis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "52845002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 195314,
+							"CONCEPT_NAME" : "Nephrotic syndrome",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "52254009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4066005,
+							"CONCEPT_NAME" : "Post-delivery acute renal failure with postnatal problem",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "200118004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 3.711683e+07,
+							"CONCEPT_NAME" : "Postpartum acute renal failure",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "733839001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 195014,
+							"CONCEPT_NAME" : "Renal failure following molar AND/OR ectopic pregnancy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "43629001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 192359,
+							"CONCEPT_NAME" : "Renal failure syndrome",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "42399005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 197930,
+							"CONCEPT_NAME" : "Renal hypertension complicating pregnancy, childbirth and the puerperium",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "198949009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 1,
+			"name" : "Stroke (ischemic or hemorrhagic)",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 372924,
+							"CONCEPT_NAME" : "Cerebral artery occlusion",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "20059004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 375557,
+							"CONCEPT_NAME" : "Cerebral embolism",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "75543006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 376713,
+							"CONCEPT_NAME" : "Cerebral hemorrhage",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "274100004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 443454,
+							"CONCEPT_NAME" : "Cerebral infarction",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "432504007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 441874,
+							"CONCEPT_NAME" : "Cerebral thrombosis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "71444005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 439847,
+							"CONCEPT_NAME" : "Intracranial hemorrhage",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1386000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.353073e+07,
+							"CONCEPT_NAME" : "Spontaneous cerebral hemorrhage",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "291571000119106",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4148906,
+							"CONCEPT_NAME" : "Spontaneous subarachnoid hemorrhage",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "270907008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 432923,
+							"CONCEPT_NAME" : "Subarachnoid hemorrhage",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "21454007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 2,
+			"name" : "HIV excluding HIV-II  ",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4276586,
+							"CONCEPT_NAME" : "Finding of HIV status",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "365866002",
+							"DOMAIN_ID" : "Measurement",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4013105,
+							"CONCEPT_NAME" : "HIV negative",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "165815009",
+							"DOMAIN_ID" : "Measurement",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 432554,
+							"CONCEPT_NAME" : "Human immunodeficiency virus II infection",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "79019005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.478336e+07,
+							"CONCEPT_NAME" : "Human immunodeficiency virus carrier",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "699433000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 439727,
+							"CONCEPT_NAME" : "Human immunodeficiency virus infection",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "86406008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 3,
+			"name" : "Malignant neoplasms excluding non-melanoma skin cancer",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4112752,
+							"CONCEPT_NAME" : "Basal cell carcinoma of skin",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "254701007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4144289,
+							"CONCEPT_NAME" : "H/O: malignant neoplasm",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "266987004",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Context-dependent"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4179242,
+							"CONCEPT_NAME" : "History of malignant neoplasm of skin",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "429050006",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Context-dependent"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 443392,
+							"CONCEPT_NAME" : "Malignant neoplastic disease",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "363346000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4111921,
+							"CONCEPT_NAME" : "Squamous cell carcinoma of skin",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "254651007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 4,
+			"name" : "Type 2 Diabetes Mellitus",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 201820,
+							"CONCEPT_NAME" : "Diabetes mellitus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "73211009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4058243,
+							"CONCEPT_NAME" : "Diabetes mellitus during pregnancy, childbirth and the puerperium",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "199223000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 443238,
+							"CONCEPT_NAME" : "Diabetic - poor control",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "268519009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 442793,
+							"CONCEPT_NAME" : "Diabetic complication",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "74627003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 435216,
+							"CONCEPT_NAME" : "Disorder due to type 1 diabetes mellitus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "420868002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 201254,
+							"CONCEPT_NAME" : "Type 1 diabetes mellitus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "46635009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.048465e+07,
+							"CONCEPT_NAME" : "Type 1 diabetes mellitus uncontrolled",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "444073006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 5,
+			"name" : "Heart Failure ",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 315295,
+							"CONCEPT_NAME" : "Congestive rheumatic heart failure",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "82523003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 316139,
+							"CONCEPT_NAME" : "Heart failure",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "84114007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 6,
+			"name" : "Cardiac arrhythmia composite",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4169095,
+							"CONCEPT_NAME" : "Bradycardia",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "48867003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4.478422e+07,
+							"CONCEPT_NAME" : "Cardiac arrhythmia",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "698247007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 3.800114e+07,
+							"CONCEPT_NAME" : "Cardiac arrhythmia & conduction disorders w CC",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "309",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "DRG",
+							"CONCEPT_CLASS_ID" : "MS-DRG"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 3.800114e+07,
+							"CONCEPT_NAME" : "Cardiac arrhythmia & conduction disorders w/o CC/MCC",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "310",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "DRG",
+							"CONCEPT_CLASS_ID" : "MS-DRG"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 7,
+			"name" : "Heart disease conditions",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 443563,
+							"CONCEPT_NAME" : "Arteriosclerosis of coronary artery bypass graft",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "429673002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 321588,
+							"CONCEPT_NAME" : "Heart disease",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "56265001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		}
+	],
+	"QualifiedLimit" : {
+		"Type" : "First"
+	},
+	"ExpressionLimit" : {
+		"Type" : "First"
+	},
+	"InclusionRules" : [],
+	"CensoringCriteria" : [],
+	"CollapseSettings" : {
+		"CollapseType" : "ERA",
+		"EraPad" : 0
+	},
+	"CensorWindow" : {}
 }

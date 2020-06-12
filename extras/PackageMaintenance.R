@@ -131,13 +131,12 @@ insertCohortDefinitionInPackage <- function(cohortId,
     dir.create(jsonFolder, recursive = TRUE)
   }
   jsonFileName <- file.path(jsonFolder, paste(localCohortId, "json", sep = "."))
-  jsonlite::write_json(object$expression, jsonFileName, pretty = TRUE)
+  json <- RJSONIO::toJSON(object$expression, pretty = TRUE)
+  SqlRender::writeSql(sql = json, targetFile = jsonFileName)
   writeLines(paste("- Created JSON file:", jsonFileName))
   
   # Fetch SQL
-  sql <- ROhdsiWebApi::getCohortDefinitionSql(baseUrl = baseUrl,
-                                              cohortId = cohortId,
-                                              generateStats = generateStats)
+  sql <- ROhdsiWebApi::getCohortSql(baseUrl = baseUrl, cohortDefinition = object, generateStats = generateStats)
   if (!file.exists(sqlFolder)) {
     dir.create(sqlFolder, recursive = TRUE)
   }
@@ -177,18 +176,29 @@ covidCohorts <- read.csv(file.path(settingsPath, "CohortsToCreateCovid.csv"))
 influenzaCohorts <- read.csv(file.path(settingsPath, "CohortsToCreateInfluenza.csv"))
 bulkStrata <- read.csv(file.path(settingsPath, "BulkStrata.csv"))
 atlasCohortStrata <- read.csv(file.path(settingsPath, "CohortsToCreateStrata.csv"))
+featureCohorts <- read.csv(file.path(settingsPath, "CohortsToCreateFeature.csv"))
 
 
 # Ensure all of the IDs are unique
 allCohortIds <- c(covidCohorts[,match("cohortId", names(covidCohorts))], 
                   influenzaCohorts[,match("cohortId", names(influenzaCohorts))],
                   bulkStrata[,match("cohortId", names(bulkStrata))],
-                  atlasCohortStrata[,match("cohortId", names(atlasCohortStrata))])
+                  atlasCohortStrata[,match("cohortId", names(atlasCohortStrata))],
+                  featureCohorts[,match("cohortId", names(featureCohorts))])
+allCohortIds <- sort(allCohortIds)
 
-totalRows <- nrow(covidCohorts) + nrow(influenzaCohorts) + nrow(bulkStrata) + nrow(atlasCohortStrata)
+totalRows <- nrow(covidCohorts) + nrow(influenzaCohorts) + nrow(bulkStrata) + nrow(atlasCohortStrata) + nrow(featureCohorts)
 if (length(unique(allCohortIds)) != totalRows) {
   warning("There are duplicate cohort IDs in the settings files!")
 }
+
+# When necessary, use this to view the full list of cohorts in the study
+fullCohortList <- rbind(covidCohorts[,c("cohortId", "atlasId", "name")],
+                        influenzaCohorts[,c("cohortId", "atlasId", "name")],
+                        atlasCohortStrata[,c("cohortId", "atlasId", "name")],
+                        featureCohorts[,c("cohortId", "atlasId", "name")])
+
+fullCohortList <- fullCohortList[order(fullCohortList$cohortId),]
 
 # Target cohorts
 colNames <- c("name", "cohortId") # Use this to subset to the columns of interest
@@ -196,29 +206,29 @@ targetCohorts <- rbind(covidCohorts, influenzaCohorts)
 targetCohorts <- targetCohorts[, match(colNames, names(targetCohorts))]
 names(targetCohorts) <- c("targetName", "targetId")
 # Strata cohorts
-bulkStrataColNames <- c("inverseName", "name", "cohortId") # Use this to subset to the columns of interest
-bulkStrata <- bulkStrata[, match(bulkStrataColNames, names(bulkStrata))]
+bulkStrata <- bulkStrata[, match(colNames, names(bulkStrata))]
 bulkStrata$name <- paste("with", bulkStrata$name)
-bulkStrata$inverseName <- paste("with", bulkStrata$inverseName)
+bulkStrata$inverseName <- paste("without", bulkStrata$name)
 atlasCohortStrata <- atlasCohortStrata[, match(colNames, names(atlasCohortStrata))]
-atlasCohortStrata$inverseName <- paste0("without ", atlasCohortStrata$name) 
-atlasCohortStrata$name <- paste0("with ", atlasCohortStrata$name) 
+atlasCohortStrata$name <- paste("with ", atlasCohortStrata$name) 
+atlasCohortStrata$inverseName <- paste("without ", atlasCohortStrata$name) 
 strata <- rbind(bulkStrata, atlasCohortStrata)
-names(strata) <- c("strataInverseName", "strataName", "strataId")
+names(strata) <- c("strataName", "strataId", "strataInverseName")
 # Get all of the unique combinations of target + strata
 targetStrataCP <- do.call(expand.grid, lapply(list(targetCohorts$targetId, strata$strataId), unique))
 names(targetStrataCP) <- c("targetId", "strataId")
 targetStrataCP <- merge(targetStrataCP, targetCohorts)
 targetStrataCP <- merge(targetStrataCP, strata)
+targetStrataCP <- targetStrataCP[order(targetStrataCP$strataId, targetStrataCP$targetId),]
 targetStrataCP$cohortId <- (targetStrataCP$targetId * 1000000) + (targetStrataCP$strataId*10)
 tWithS <- targetStrataCP
-tWithoutS <- targetStrataCP
+tWithoutS <- targetStrataCP[targetStrataCP$strataId %in% atlasCohortStrata$cohortId, ]
 tWithS$cohortId <- tWithS$cohortId + 1
 tWithS$cohortType <- "TwS"
 tWithS$name <- paste(tWithS$targetName, tWithS$strataName)
 tWithoutS$cohortId <- tWithoutS$cohortId + 2
 tWithoutS$cohortType <- "TwoS"
-tWithoutS$name <- paste(tWithS$targetName, tWithS$strataInverseName)
+tWithoutS$name <- paste(tWithoutS$targetName, tWithoutS$strataInverseName)
 targetStrataXRef <- rbind(tWithS, tWithoutS)
 targetStrataXRef <- targetStrataXRef[,c("targetId","strataId","cohortId","cohortType","name")]
 
