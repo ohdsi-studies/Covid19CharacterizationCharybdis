@@ -17,13 +17,13 @@ UNION  select c.concept_id
 ) I
 ) C;
 INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 6 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+SELECT 5 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4337047,2831237,2836115,2794811,2862930,2870619,2829384,2829386,2743216,4311023,4195473,4208093)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4166281,2106568,4115488,4337047,4168864,4199580,2831237,2836115,2794811,2862930,2870619,2829384,2829386,4065590,2743216,4311023,4195473,2106569,4208093,2106565,2106567,2106562,2106563,45887989)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4337047,2831237,2836115,2794811,2862930,2870619,2829384,2829386,2743216,4311023,4195473,4208093)
+  and ca.ancestor_concept_id in (4166281,2106568,4115488,4337047,4168864,4199580,2831237,2836115,2794811,2862930,2870619,2829384,2829386,4065590,2743216,4311023,4195473,2106569,4208093,2106565,2106567,2106562,2106563,45887989)
   and c.invalid_reason is null
 
 ) I
@@ -60,7 +60,7 @@ from
 (
   select po.* 
   FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
-JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 6))
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 5))
 ) C
 
 

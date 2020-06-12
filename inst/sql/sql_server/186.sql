@@ -100,7 +100,7 @@ WHERE E.concept_id is null
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 10 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (376713,439847,43530670,43530730,42535430,4148906,432923)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (376713,439847,43530674,43530727,42535425,4148906,432923)
 
 ) I
 ) C;

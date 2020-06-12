@@ -16,3 +16,7 @@ name,atlasName,atlasId,cohortId
 125,[COVID ID125 V1] Prevalent pre-existing condition of COVID risk factor,964,125
 118,[COVID ID118 v1] Prevalent Autoimmune condition,848,118
 200,[COVID ID200 v1] Flu-like symptom episodes,987,200
+203,[COVID ID203 v1] Prevalent chronic kidney disease broad,1021,203
+204,[COVID ID204 v1] Prevalent end stage renal disease broad,1022,204
+205,[COVID ID121 v1] Prevalent Human immunodeficiency virus infection broad,1019,205
+206,[COVID ID102 v1] Prevalent tuberculosis broad,1020,206

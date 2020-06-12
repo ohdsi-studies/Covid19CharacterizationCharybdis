@@ -1,0 +1,104 @@
+﻿Type,Cohort Name,atlasName,cohortId,Atlas Link
+COVID Target,Persons tested for SARS-CoV-2 with at least 365d prior observation,[COVID ID126 V1] Persons tested for SARS-CoV-2 with at least 365d prior observation,126,https://atlas.ohdsi.org/#/cohortdefinition/206
+COVID Target,Persons tested positive for SARS-CoV-2 with at least 365d prior observation,[COVID ID128 V1] Persons tested positive for SARS-CoV-2 with at least 365d prior observation,128,https://atlas.ohdsi.org/#/cohortdefinition/204
+COVID Target,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID130 V1] Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,130,https://atlas.ohdsi.org/#/cohortdefinition/202
+COVID Target,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID132 V1] Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation,132,https://atlas.ohdsi.org/#/cohortdefinition/200
+COVID Target,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID134 V1] Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,134,https://atlas.ohdsi.org/#/cohortdefinition/197
+COVID Target,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID136 V1] Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation,136,https://atlas.ohdsi.org/#/cohortdefinition/196
+COVID Target,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID138 V1] Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation,138,https://atlas.ohdsi.org/#/cohortdefinition/191
+COVID Target,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation,[COVID ID140 V1] Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation,140,https://atlas.ohdsi.org/#/cohortdefinition/193
+COVID Target,Persons tested for SARS-CoV-2 with no required prior observation,[COVID ID127 V1] Persons tested for SARS-CoV-2 with no required prior observation,127,https://atlas.ohdsi.org/#/cohortdefinition/205
+COVID Target,Persons tested positive for SARS-CoV-2 with no required prior observation,[COVID ID129 V1] Persons tested positive for SARS-CoV-2 with no required prior observation,129,https://atlas.ohdsi.org/#/cohortdefinition/203
+COVID Target,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,[COVID ID131 V1] Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,131,https://atlas.ohdsi.org/#/cohortdefinition/201
+COVID Target,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation,[COVID ID133 V1] Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation,133,https://atlas.ohdsi.org/#/cohortdefinition/199
+COVID Target,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,[COVID ID135 V1] Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,135,https://atlas.ohdsi.org/#/cohortdefinition/198
+COVID Target,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,[COVID ID137 V1] Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation,137,https://atlas.ohdsi.org/#/cohortdefinition/195
+COVID Target,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation,[COVID ID139 V1] Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation,139,https://atlas.ohdsi.org/#/cohortdefinition/194
+COVID Target,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation,[COVID ID141 V1] Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation,141,https://atlas.ohdsi.org/#/cohortdefinition/192
+Flu Target,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,[COVID ID111 v1] Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,111,https://atlas.ohdsi.org/#/cohortdefinition/211
+Flu Target,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,[COVID ID113 v1] Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation,113,https://atlas.ohdsi.org/#/cohortdefinition/212
+Flu Target,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation,[COVID ID115 v1] Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation,115,https://atlas.ohdsi.org/#/cohortdefinition/207
+Flu Target,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation,[COVID ID112 v1] Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation,112,https://atlas.ohdsi.org/#/cohortdefinition/210
+Flu Target,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation,[COVID ID114 v1] Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation,114,https://atlas.ohdsi.org/#/cohortdefinition/209
+Flu Target,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation,[COVID ID116 v1] Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation,116,https://atlas.ohdsi.org/#/cohortdefinition/208
+Stratum,Prevalent Type 2 Diabetes Mellitus,[COVID ID100 v1] Prevalent Type 2 Diabetes Mellitus,100,https://atlas.ohdsi.org/#/cohortdefinition/223
+Stratum,Prevalent hypertension,[COVID ID101 v1] Prevalent hypertension,101,https://atlas.ohdsi.org/#/cohortdefinition/227
+Stratum,Prevalent chronic obstructive pulmonary disease (COPD) without asthma,[COVID ID119 V1] Prevalent chronic obstructive pulmonary disease (COPD) without asthma,119,https://atlas.ohdsi.org/#/cohortdefinition/219
+Stratum,Prevalent Asthma without COPD,[COVID ID120 V1] Prevalent Asthma without COPD,120,https://atlas.ohdsi.org/#/cohortdefinition/218
+Stratum,Prevalent chronic kidney disease,[COVID ID102 v1] Prevalent chronic kidney disease,102,https://atlas.ohdsi.org/#/cohortdefinition/228
+Stratum,Prevalent end stage renal disease,[COVID ID103 v1] Prevalent end stage renal disease,103,https://atlas.ohdsi.org/#/cohortdefinition/232
+Stratum,Prevalent heart disease,[COVID ID104 v1] Prevalent heart disease,104,https://atlas.ohdsi.org/#/cohortdefinition/231
+Stratum,Prevalent malignant neoplasm excluding non-melanoma skin cancer,[COVID ID105 v1] Prevalent malignant neoplasm excluding non-melanoma skin cancer,105,https://atlas.ohdsi.org/#/cohortdefinition/222
+Stratum,Pregnant women,[COVID ID199 V1] Pregnant women,199,https://atlas.ohdsi.org/#/cohortdefinition/233
+Stratum,Prevalent Human immunodeficiency virus infection,[COVID ID106 v1] Prevalent Human immunodeficiency virus infection,106,https://atlas.ohdsi.org/#/cohortdefinition/229
+Stratum,Prevalent tuberculosis,[COVID ID106 v1] Prevalent tuberculosis,117,https://atlas.ohdsi.org/#/cohortdefinition/221
+Stratum,Prevalent Hepatitis C,[COVID ID107 V1] Prevalent Hepatitis C,107,https://atlas.ohdsi.org/#/cohortdefinition/230
+Stratum,Prevalent obesity,[COVID ID108 v1] Prevalent obesity,108,https://atlas.ohdsi.org/#/cohortdefinition/224
+Stratum,Prevalent Dementia,[COVID ID109 v1] Prevalent Dementia,109,https://atlas.ohdsi.org/#/cohortdefinition/226
+Stratum,Prevalent pre-existing condition of COVID risk factor,[COVID ID125 V1] Prevalent pre-existing condition of COVID risk factor,125,https://atlas.ohdsi.org/#/cohortdefinition/213
+Stratum,Prevalent Autoimmune condition,[COVID ID118 v1] Prevalent Autoimmune condition,118,https://atlas.ohdsi.org/#/cohortdefinition/220
+Stratum,Flu-like symptom episodes,[COVID ID200 v1] Flu-like symptom episodes,200,https://atlas.ohdsi.org/#/cohortdefinition/290
+Feature,Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),[COVID ID121 V1] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),121,https://atlas.ohdsi.org/#/cohortdefinition/217
+Feature,Asthma/COPD Step 1,[COVID ID122 V1] Asthma/COPD Step 1,122,https://atlas.ohdsi.org/#/cohortdefinition/216
+Feature,Asthma/COPD Step 2,[COVID ID123 V1] Asthma/COPD Step 2,123,https://atlas.ohdsi.org/#/cohortdefinition/215
+Feature,Asthma/COPD Step 3,[COVID ID124 V1] Asthma/COPD Step 3,124,https://atlas.ohdsi.org/#/cohortdefinition/214
+Feature,Gestational diabetes,[COVID ID110 v1] Gestational diabetes episodes,110,https://atlas.ohdsi.org/#/cohortdefinition/225
+Feature,Eclampsia and pre-eclampsia,[COVID ID142 v1] Eclampsia and pre-eclampsia episodes,142,https://atlas.ohdsi.org/#/cohortdefinition/289
+Feature,Fever,[COVID ID143 v1] Fever episodes,143,https://atlas.ohdsi.org/#/cohortdefinition/288
+Feature,Cough,[COVID ID144 v1] Cough episodes,144,https://atlas.ohdsi.org/#/cohortdefinition/287
+Feature,Myalgia,[COVID ID145 v1] Myalgia episodes,145,https://atlas.ohdsi.org/#/cohortdefinition/286
+Feature,Malaise or fatigue,[COVID ID146 v1] Malaise or fatigue episodes,146,https://atlas.ohdsi.org/#/cohortdefinition/285
+Feature,Dyspnea,[COVID ID147 v1] Dyspnea episodes,147,https://atlas.ohdsi.org/#/cohortdefinition/284
+Feature,Anosmia OR Hyposmia OR Dysgeusia,[COVID ID148 v1] Anosmia OR Hyposmia OR Dysgeusia episodes,148,https://atlas.ohdsi.org/#/cohortdefinition/283
+Feature,Persons with additional testing for SARS-Cov-2 (prior test >=1d before test),[COVID ID149 V1] Persons with additional testing for SARS-Cov-2 (prior test >=1d before test),149,https://atlas.ohdsi.org/#/cohortdefinition/282
+Feature,Persons with additional testing for SARS-Cov-2 (prior test >=5d before test),[COVID ID150 V1] Persons with additional testing for SARS-Cov-2 (prior test >=5d before test),150,https://atlas.ohdsi.org/#/cohortdefinition/281
+Feature,Hospitalization episodes,[COVID ID151 V1] Hospitalization episodes,151,https://atlas.ohdsi.org/#/cohortdefinition/280
+Feature,Pneumonia during hospitalization,[COVID ID152 V1] Pneumonia during hospitalization,152,https://atlas.ohdsi.org/#/cohortdefinition/279
+Feature,Acute Respiratory Distress syndrome (ARDS) during hospitalization,[COVID ID153 V1] Acute Respiratory Distress syndrome (ARDS) during hospitalization,153,https://atlas.ohdsi.org/#/cohortdefinition/278
+Feature,Acute kidney injury (AKI) diagnosis during hospitalization,[COVID ID154 V1] Acute kidney injury (AKI) diagnosis during hospitalization,154,https://atlas.ohdsi.org/#/cohortdefinition/276
+Feature,Sepsis during hospitalization,[COVID ID155 V1] Sepsis during hospitalization,155,https://atlas.ohdsi.org/#/cohortdefinition/277
+Feature,Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events ,[COVID ID156 V1] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events ,156,https://atlas.ohdsi.org/#/cohortdefinition/275
+Feature,Pulmonary Embolism events,[COVID ID157 V1] Pulmonary Embolism events,157,https://atlas.ohdsi.org/#/cohortdefinition/274
+Feature,Deep vein thrombosis events,[COVID ID158 V1] Deep vein thrombosis events,158,https://atlas.ohdsi.org/#/cohortdefinition/273
+Feature,Heart failure during hospitalization,[COVID ID159 V1] Heart failure during hospitalization,159,https://atlas.ohdsi.org/#/cohortdefinition/272
+Feature,Cardiac arrhythmia during hospitalization,[COVID ID160 V1] Cardiac arrhythmia during hospitalization,160,https://atlas.ohdsi.org/#/cohortdefinition/248
+Feature,Bradycardia or heart block during hospitalization,[COVID ID161 V1] Bradycardia or heart block during hospitalization,161,https://atlas.ohdsi.org/#/cohortdefinition/271
+Feature,Supraventricular arrythymia during hospitalization,[COVID ID162 V1] Supraventricular arrythymia during hospitalization,162,https://atlas.ohdsi.org/#/cohortdefinition/270
+Feature,ventricular arrhythmia or cardiac arrest during hospitalization,[COVID ID163 V1] ventricular arrhythmia or cardiac arrest during hospitalization,163,https://atlas.ohdsi.org/#/cohortdefinition/269
+Feature,death,[COVID ID164 V1] Death,164,Missing
+Feature,Stillbirth,[COVID ID165 V1] Stillbirth,165,https://atlas.ohdsi.org/#/cohortdefinition/268
+Feature,Livebirth Delivery,[COVID ID166 V1] Livebirth Delivery,166,https://atlas.ohdsi.org/#/cohortdefinition/267
+Feature,Livebirth Preterm Delivery,[COVID ID167 V1] Livebirth Preterm Delivery,167,https://atlas.ohdsi.org/#/cohortdefinition/264
+Feature,Livebirth Post term Delivery,[COVID ID168 V1] Livebirth Post term Delivery,168,https://atlas.ohdsi.org/#/cohortdefinition/265
+Feature,Livebirth excluding preterm and post term delivery,[COVID ID169 V1] Livebirth excluding preterm and post term delivery,169,https://atlas.ohdsi.org/#/cohortdefinition/266
+Feature,Abortion,[COVID ID170 V1] Abortion,170,https://atlas.ohdsi.org/#/cohortdefinition/263
+Feature,Premature Rupture of Membranes,[COVID ID171 V1] Premature Rupture of Membranes,171,https://atlas.ohdsi.org/#/cohortdefinition/262
+Feature,Fetal growth restriction,[COVID ID172 V1] Fetal growth restriction,172,https://atlas.ohdsi.org/#/cohortdefinition/261
+Feature,Cesarean section,[COVID ID173 V1] Cesarean section,173,https://atlas.ohdsi.org/#/cohortdefinition/260
+Feature,Hospitalization for Asthma,[COVID ID174 V1] Hospitalization for Asthma,174,https://atlas.ohdsi.org/#/cohortdefinition/259
+Feature,Hospitalization for COPD,[COVID ID175 V1] Hospitalization for COPD,175,https://atlas.ohdsi.org/#/cohortdefinition/258
+Feature,Pneumonia episodes,[COVID ID176 V1] Pneumonia episodes,176,https://atlas.ohdsi.org/#/cohortdefinition/257
+Feature,intensive services during hospitalization,[COVID ID177 V1] intensive services during hospitalization,177,https://atlas.ohdsi.org/#/cohortdefinition/256
+Feature,mechanical ventilation during hospitalization,[COVID ID178 V1] mechanical ventilation during hospitalization,178,https://atlas.ohdsi.org/#/cohortdefinition/255
+Feature,tracheostomy during hospitalization,[COVID ID179 V1] tracheostomy during hospitalization,179,https://atlas.ohdsi.org/#/cohortdefinition/254
+Feature,ECMO during hospitalization,[COVID ID180 V1] ECMO during hospitalization,180,https://atlas.ohdsi.org/#/cohortdefinition/253
+Feature,dialysis during hospitalization,[COVID ID181 V1] dialysis during hospitalization,181,https://atlas.ohdsi.org/#/cohortdefinition/252
+Feature,Persons with chest pain or angina,[COVID ID182 V1] Persons with chest pain or angina,182,https://atlas.ohdsi.org/#/cohortdefinition/251
+Feature,Angina during hospitalization,[COVID ID183 V1] Angina during hospitalization,183,https://atlas.ohdsi.org/#/cohortdefinition/250
+Feature,Persons with hepatic failure,[COVID ID184 V1] Persons with hepatic failure,184,https://atlas.ohdsi.org/#/cohortdefinition/249
+Feature,Acute pancreatitis events,[COVID ID185 V1] Acute pancreatitis events,185,https://atlas.ohdsi.org/#/cohortdefinition/247
+Feature,Total cardiovascular disease events,[COVID ID186 V1] Total cardiovascular disease events,186,https://atlas.ohdsi.org/#/cohortdefinition/246
+Feature,Gastrointestinal bleeding events,[COVID ID187 V1] Gastrointestinal bleeding events,187,https://atlas.ohdsi.org/#/cohortdefinition/245
+Feature,Cardiovascular-related mortality,[COVID ID188 V1] Cardiovascular-related mortality,188,https://atlas.ohdsi.org/#/cohortdefinition/244
+Feature,Transient ischemic attack events,[COVID ID189 V1] Transient ischemic attack events,189,https://atlas.ohdsi.org/#/cohortdefinition/243
+Feature,Stroke (ischemic or hemorrhagic) events,[COVID ID190 V1] Stroke (ischemic or hemorrhagic) events,190,https://atlas.ohdsi.org/#/cohortdefinition/242
+Feature,Ischemic stroke events,[COVID ID191 V1] Ischemic stroke events,191,https://atlas.ohdsi.org/#/cohortdefinition/241
+Feature,Hemorrhagic stroke (intracerebral bleeding) events,[COVID ID192 V1] Hemorrhagic stroke (intracerebral bleeding) events,192,https://atlas.ohdsi.org/#/cohortdefinition/240
+Feature,Acute myocardial infarction events,[COVID ID193 V1] Acute myocardial infarction events,193,https://atlas.ohdsi.org/#/cohortdefinition/239
+Feature,Bleeding during hospitalization,[COVID ID194 V1] Bleeding during hospitalization,194,https://atlas.ohdsi.org/#/cohortdefinition/238
+Feature,Incident depression with no prior treatment and no mania/psychoses,[COVID ID195 V1] Incident depression with no prior treatment and no mania/psychoses,195,https://atlas.ohdsi.org/#/cohortdefinition/237
+Feature,Hospitalization for psychosis,[COVID ID196 V1] Hospitalization for psychosis,196,https://atlas.ohdsi.org/#/cohortdefinition/236
+Feature,Suicide and suicidal ideation,[COVID ID197 V1] Suicide and suicidal ideation,197,https://atlas.ohdsi.org/#/cohortdefinition/235
+Feature,Multi-system inflammatory syndrome (Kawasaki disease or toxic shock syndrome),[COVID ID198 V1] Multi-system inflammatory syndrome (Kawasaki disease or toxic shock syndrome),198,https://atlas.ohdsi.org/#/cohortdefinition/234
+Feature,Acute kidney injury (AKI) using diagnosis codes and change in measurements during hospitlization,Acute kidney injury (AKI) using diagnosis codes and change in measurements during hospitlization,201,https://atlas.ohdsi.org/#/cohortdefinition/276
+Feature,Discharge from hospitalization,Discharge from hospitalization,202,Missing
