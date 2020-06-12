@@ -230,6 +230,24 @@ tWithoutS$cohortId <- tWithoutS$cohortId + 2
 tWithoutS$cohortType <- "TwoS"
 tWithoutS$name <- paste(tWithoutS$targetName, tWithoutS$strataInverseName)
 targetStrataXRef <- rbind(tWithS, tWithoutS)
+
+# For shiny, construct a data frame to provide details on the original cohort names
+xrefColumnNames <- c("cohortId", "targetId", "targetName", "strataId", "strataName", "cohortType")
+targetCohortsForShiny <- targetCohorts
+targetCohortsForShiny$cohortId <- targetCohortsForShiny$targetId
+targetCohortsForShiny$strataId <- 0
+targetCohortsForShiny$strataName <- "All"
+targetCohortsForShiny$cohortType <- "Target"
+inverseStrata <- targetStrataXRef[targetStrataXRef$cohortType == "TwoS",]
+inverseStrata$strataName <- inverseStrata$strataInverseName
+
+shinyCohortXref <- rbind(targetCohortsForShiny[,xrefColumnNames], 
+                         inverseStrata[,xrefColumnNames],
+                         targetStrataXRef[targetStrataXRef$cohortType == "TwS",xrefColumnNames])
+if (!useSubset) {
+  readr::write_csv(shinyCohortXref, file.path("inst/shiny/CharybdisResultsExplorer", "cohortXref.csv"))
+}
+
 targetStrataXRef <- targetStrataXRef[,c("targetId","strataId","cohortId","cohortType","name")]
 
 # Write out the final targetStrataXRef

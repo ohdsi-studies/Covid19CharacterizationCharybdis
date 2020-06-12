@@ -25,10 +25,11 @@
 launchShinyApp <- function(outputFolder) {
   .ensure_installed("shiny")
   .ensure_installed("shinydashboard")
+  .ensure_installed("shinyWidgets")
   .ensure_installed("DT")
   .ensure_installed("VennDiagram")
   .ensure_installed("htmltools")
-  appDir <- system.file("shiny/CharacterizationExplorer", package = getThisPackageName())
+  appDir <- system.file("shiny/CharybdisResultsExplorer", package = getThisPackageName())
   shinySettings <- list(dataFolder = outputFolder)
   .GlobalEnv$shinySettings <- shinySettings
   on.exit(rm(shinySettings, envir = .GlobalEnv))

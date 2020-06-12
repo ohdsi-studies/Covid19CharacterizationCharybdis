@@ -139,13 +139,13 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 oracleTempSchema <- NULL
 
 # Details specific to the database:
-databaseId <- "CPRD_COVID"
-databaseName <- "CPRD_COVID"
-databaseDescription <- "CPRD_COVID"
+databaseId <- "PREMIER"
+databaseName <- "PREMIER"
+databaseDescription <- "PREMIER"
 
 # Details for connecting to the CDM and storing the results
-outputFolder <- file.path("E:/Covid19Characterization/Results", databaseId)
-cdmDatabaseSchema <- "CDM_CPRD_v1226.dbo"
+outputFolder <- file.path("E:/CHARYBDIS/Runs", databaseId)
+cdmDatabaseSchema <- "CDM_Premier_v1214.dbo"
 cohortDatabaseSchema <- "scratch.dbo"
 cohortTable <- paste0("AS_CHARYBDIS_", databaseId)
 cohortStagingTable <- paste0(cohortTable, "_stg")
@@ -198,8 +198,8 @@ runStudy(connectionDetails = connectionDetails,
 #launchShinyApp(outputFolder)
 
 # For uploading the results. You should have received the key file from the study coordinator:
-keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
-userName <- "study-data-site-covid19"
+#keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
+#userName <- "study-data-site-covid19"
 
 # Upload results to OHDSI SFTP server:
 #uploadResults(outputFolder, keyFileName, userName)
