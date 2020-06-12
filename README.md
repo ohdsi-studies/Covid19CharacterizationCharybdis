@@ -37,7 +37,7 @@ OHDSI study  repos are designed to have information in the README.md (where you 
 1. [CohortDiagnostics](http://www.github.com/ohdsi/cohortDiagnostics) - an OHDSI R package used to perform diagnostics around the fitness of use of the study phenotypes on ouyr CDM. By running this package you will allow study leads to understand: cohort inclusion rule attrition, inspect source code lists for a phenotype, find orphan codes that should be in a particular concept set but are not, compute incidnece across calendar years, age and gender, break down index events into specific concepts that triggered then, compute overlap of two cohorts and compute basic characteristics of selected cohorts. This package will be requested of all sites. It is run on all available data not just your COVID-19 or Influenza populations. This allows us to understand how the study phenotypes perform in your database and identify any potentail gaps in the phenotype definitions.
 2. RunStudy - the characterization package to evaluate Target-Stratum-Outcome pairings computing cohort characteristics and creating tables/visualizations to summarize differences between groups.
 
-#### I don't understand the organization of this Github Repo.
+#### *I don't understand the organization of this Github Repo.*
 The study repo has the following major pieces:
 - `R` folder = the folder which will provide the R library the scripts it needs to execute this study
 - `documents` folder = the folder where you will find study documents (protocols, 1-sliders to explain the study, etc)
@@ -45,6 +45,12 @@ The study repo has the following major pieces:
 - `inst` folder = This is the "install" folder. It contains the most important parts of the study: the study cohort JSONs (analogous to what ATLAS shows you in the Export tab), the study settings, a sub-folder that contains information to the Shiny app, and the study cohort SQL scripts that [SqlRender](https://cran.r-project.org/web/packages/SqlRender/index.html) will use to translate these into your RDBMS.
 
 Below you will find instructions for how to bring this package into your `R`/ `RStudio` environment. Note that if you are not able to connect to the internet in `R`/ `RStudio` to download pacakges, you will have to pull the [TAR file](https://github.com/ohdsi-studies/Covid19CharacterizationCharybdis/archive/master.zip). 
+
+#### *What should I do if I get an error when I run the package?*
+If you have any issues running the package, please report bugs / roadblocks via GitHub Issues on this repo. Where possible, we ask you share error logs and snippets of warning messages that come up in your `R` console. You may also attach screenshots. Please include the RDMBS (aka your SQL dialect) you work on. If possible, run `traceback()` in your `R` and paste this into your error as well. The study leads will triage these errors with you.
+
+#### *What should I do when I finish?*
+If you finish running a study package and upload results to the SFTP, please send an email to [Anthony Sena](mailto:asena5@its.jnj.com) to notify you have dropped results in the folder. The study team will be in touch within 24 hours to acknowledge receipt of your results and review results. If there are no issues, the results will be pushed to the RShiny app. If any errors occur in this process, the study lead will communicate with you and work to resolve this.
 
 ## Package Requirements
 - A database in [Common Data Model version 5](https://github.com/OHDSI/CommonDataModel) in one of these platforms: SQL Server, Oracle, PostgreSQL, IBM Netezza, Apache Impala, Amazon RedShift, or Microsoft APS.
@@ -217,3 +223,5 @@ Once you have checked results, you can use the following code to send:
 # Upload results to OHDSI SFTP server:
 #uploadResults(outputFolder, keyFileName, userName)
 ````
+
+Please send an email to [Anthony Sena](mailto:asena5@its.jnj.com) to notify you have dropped results in the folder.
