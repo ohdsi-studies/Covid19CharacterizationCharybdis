@@ -725,6 +725,94 @@ targetId,strataId,cohortId,cohortType,name
 139,200,139002001,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with  Flu-like symptom episodes
 140,200,140002001,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with  Flu-like symptom episodes
 141,200,141002001,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with  Flu-like symptom episodes
+111,203,111002031,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with  Prevalent chronic kidney disease broad
+112,203,112002031,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with  Prevalent chronic kidney disease broad
+113,203,113002031,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with  Prevalent chronic kidney disease broad
+114,203,114002031,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with  Prevalent chronic kidney disease broad
+115,203,115002031,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with  Prevalent chronic kidney disease broad
+116,203,116002031,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with  Prevalent chronic kidney disease broad
+126,203,126002031,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with  Prevalent chronic kidney disease broad
+127,203,127002031,TwS,Persons tested for SARS-CoV-2 with no required prior observation with  Prevalent chronic kidney disease broad
+128,203,128002031,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with  Prevalent chronic kidney disease broad
+129,203,129002031,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with  Prevalent chronic kidney disease broad
+130,203,130002031,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent chronic kidney disease broad
+131,203,131002031,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent chronic kidney disease broad
+132,203,132002031,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent chronic kidney disease broad
+133,203,133002031,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with  Prevalent chronic kidney disease broad
+134,203,134002031,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent chronic kidney disease broad
+135,203,135002031,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent chronic kidney disease broad
+136,203,136002031,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent chronic kidney disease broad
+137,203,137002031,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent chronic kidney disease broad
+138,203,138002031,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent chronic kidney disease broad
+139,203,139002031,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with  Prevalent chronic kidney disease broad
+140,203,140002031,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent chronic kidney disease broad
+141,203,141002031,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with  Prevalent chronic kidney disease broad
+111,204,111002041,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with  Prevalent end stage renal disease broad
+112,204,112002041,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with  Prevalent end stage renal disease broad
+113,204,113002041,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with  Prevalent end stage renal disease broad
+114,204,114002041,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with  Prevalent end stage renal disease broad
+115,204,115002041,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with  Prevalent end stage renal disease broad
+116,204,116002041,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with  Prevalent end stage renal disease broad
+126,204,126002041,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with  Prevalent end stage renal disease broad
+127,204,127002041,TwS,Persons tested for SARS-CoV-2 with no required prior observation with  Prevalent end stage renal disease broad
+128,204,128002041,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with  Prevalent end stage renal disease broad
+129,204,129002041,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with  Prevalent end stage renal disease broad
+130,204,130002041,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent end stage renal disease broad
+131,204,131002041,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent end stage renal disease broad
+132,204,132002041,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent end stage renal disease broad
+133,204,133002041,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with  Prevalent end stage renal disease broad
+134,204,134002041,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent end stage renal disease broad
+135,204,135002041,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent end stage renal disease broad
+136,204,136002041,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent end stage renal disease broad
+137,204,137002041,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent end stage renal disease broad
+138,204,138002041,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent end stage renal disease broad
+139,204,139002041,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with  Prevalent end stage renal disease broad
+140,204,140002041,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent end stage renal disease broad
+141,204,141002041,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with  Prevalent end stage renal disease broad
+111,205,111002051,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+112,205,112002051,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+113,205,113002051,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+114,205,114002051,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+115,205,115002051,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+116,205,116002051,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+126,205,126002051,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+127,205,127002051,TwS,Persons tested for SARS-CoV-2 with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+128,205,128002051,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+129,205,129002051,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+130,205,130002051,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+131,205,131002051,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+132,205,132002051,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+133,205,133002051,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+134,205,134002051,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+135,205,135002051,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+136,205,136002051,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+137,205,137002051,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+138,205,138002051,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+139,205,139002051,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+140,205,140002051,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent Human immunodeficiency virus infection broad
+141,205,141002051,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with  Prevalent Human immunodeficiency virus infection broad
+111,206,111002061,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with  Prevalent tuberculosis broad
+112,206,112002061,TwS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation with  Prevalent tuberculosis broad
+113,206,113002061,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation with  Prevalent tuberculosis broad
+114,206,114002061,TwS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation with  Prevalent tuberculosis broad
+115,206,115002061,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation with  Prevalent tuberculosis broad
+116,206,116002061,TwS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation with  Prevalent tuberculosis broad
+126,206,126002061,TwS,Persons tested for SARS-CoV-2 with at least 365d prior observation with  Prevalent tuberculosis broad
+127,206,127002061,TwS,Persons tested for SARS-CoV-2 with no required prior observation with  Prevalent tuberculosis broad
+128,206,128002061,TwS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation with  Prevalent tuberculosis broad
+129,206,129002061,TwS,Persons tested positive for SARS-CoV-2 with no required prior observation with  Prevalent tuberculosis broad
+130,206,130002061,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent tuberculosis broad
+131,206,131002061,TwS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent tuberculosis broad
+132,206,132002061,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent tuberculosis broad
+133,206,133002061,TwS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation with  Prevalent tuberculosis broad
+134,206,134002061,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent tuberculosis broad
+135,206,135002061,TwS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent tuberculosis broad
+136,206,136002061,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent tuberculosis broad
+137,206,137002061,TwS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation with  Prevalent tuberculosis broad
+138,206,138002061,TwS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent tuberculosis broad
+139,206,139002061,TwS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation with  Prevalent tuberculosis broad
+140,206,140002061,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation with  Prevalent tuberculosis broad
+141,206,141002061,TwS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation with  Prevalent tuberculosis broad
 111,100,111001002,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent Type 2 Diabetes Mellitus
 112,100,112001002,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without  with  Prevalent Type 2 Diabetes Mellitus
 113,100,113001002,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent Type 2 Diabetes Mellitus
@@ -1099,3 +1187,91 @@ targetId,strataId,cohortId,cohortType,name
 139,200,139002002,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without  with  Flu-like symptom episodes
 140,200,140002002,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without  with  Flu-like symptom episodes
 141,200,141002002,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without  with  Flu-like symptom episodes
+111,203,111002032,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+112,203,112002032,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without  with  Prevalent chronic kidney disease broad
+113,203,113002032,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+114,203,114002032,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without  with  Prevalent chronic kidney disease broad
+115,203,115002032,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+116,203,116002032,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without  with  Prevalent chronic kidney disease broad
+126,203,126002032,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+127,203,127002032,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without  with  Prevalent chronic kidney disease broad
+128,203,128002032,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+129,203,129002032,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without  with  Prevalent chronic kidney disease broad
+130,203,130002032,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+131,203,131002032,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent chronic kidney disease broad
+132,203,132002032,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+133,203,133002032,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent chronic kidney disease broad
+134,203,134002032,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+135,203,135002032,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent chronic kidney disease broad
+136,203,136002032,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+137,203,137002032,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent chronic kidney disease broad
+138,203,138002032,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+139,203,139002032,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent chronic kidney disease broad
+140,203,140002032,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent chronic kidney disease broad
+141,203,141002032,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent chronic kidney disease broad
+111,204,111002042,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+112,204,112002042,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without  with  Prevalent end stage renal disease broad
+113,204,113002042,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+114,204,114002042,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without  with  Prevalent end stage renal disease broad
+115,204,115002042,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+116,204,116002042,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without  with  Prevalent end stage renal disease broad
+126,204,126002042,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+127,204,127002042,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without  with  Prevalent end stage renal disease broad
+128,204,128002042,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+129,204,129002042,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without  with  Prevalent end stage renal disease broad
+130,204,130002042,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+131,204,131002042,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent end stage renal disease broad
+132,204,132002042,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+133,204,133002042,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent end stage renal disease broad
+134,204,134002042,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+135,204,135002042,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent end stage renal disease broad
+136,204,136002042,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+137,204,137002042,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent end stage renal disease broad
+138,204,138002042,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+139,204,139002042,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent end stage renal disease broad
+140,204,140002042,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent end stage renal disease broad
+141,204,141002042,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent end stage renal disease broad
+111,205,111002052,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+112,205,112002052,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+113,205,113002052,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+114,205,114002052,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+115,205,115002052,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+116,205,116002052,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+126,205,126002052,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+127,205,127002052,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+128,205,128002052,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+129,205,129002052,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+130,205,130002052,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+131,205,131002052,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+132,205,132002052,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+133,205,133002052,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+134,205,134002052,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+135,205,135002052,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+136,205,136002052,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+137,205,137002052,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+138,205,138002052,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+139,205,139002052,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+140,205,140002052,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+141,205,141002052,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent Human immunodeficiency virus infection broad
+111,206,111002062,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent tuberculosis broad
+112,206,112002062,TwoS,Persons with Influenza diagnosis or positive test 2017-2018 with no required prior observation without  with  Prevalent tuberculosis broad
+113,206,113002062,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with at least 365d prior observation without  with  Prevalent tuberculosis broad
+114,206,114002062,TwoS,Persons hospitalized with influenza diagnosis or positive test 2017-2018 with no required prior observation without  with  Prevalent tuberculosis broad
+115,206,115002062,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with at least 365d prior observation without  with  Prevalent tuberculosis broad
+116,206,116002062,TwoS,Persons hospitalized with influenza diagnosis or positive test and requiring intensive services 2017-2018 with no required prior observation without  with  Prevalent tuberculosis broad
+126,206,126002062,TwoS,Persons tested for SARS-CoV-2 with at least 365d prior observation without  with  Prevalent tuberculosis broad
+127,206,127002062,TwoS,Persons tested for SARS-CoV-2 with no required prior observation without  with  Prevalent tuberculosis broad
+128,206,128002062,TwoS,Persons tested positive for SARS-CoV-2 with at least 365d prior observation without  with  Prevalent tuberculosis broad
+129,206,129002062,TwoS,Persons tested positive for SARS-CoV-2 with no required prior observation without  with  Prevalent tuberculosis broad
+130,206,130002062,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent tuberculosis broad
+131,206,131002062,TwoS,Persons tested with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent tuberculosis broad
+132,206,132002062,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent tuberculosis broad
+133,206,133002062,TwoS,Persons with a COVID-19 diagnosis or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent tuberculosis broad
+134,206,134002062,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent tuberculosis broad
+135,206,135002062,TwoS,Persons hospitalized with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent tuberculosis broad
+136,206,136002062,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent tuberculosis broad
+137,206,137002062,TwoS,Persons hospitalized and requiring intensive services with a COVID-19 diagnosis record or a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent tuberculosis broad
+138,206,138002062,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent tuberculosis broad
+139,206,139002062,TwoS,Persons hospitalized with a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent tuberculosis broad
+140,206,140002062,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with at least 365d prior observation without  with  Prevalent tuberculosis broad
+141,206,141002062,TwoS,Persons hospitalized and requiring intensive services with a SARS-CoV-2 positive test with no required prior observation without  with  Prevalent tuberculosis broad
