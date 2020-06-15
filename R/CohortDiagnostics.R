@@ -95,4 +95,18 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                             incremental = TRUE,
                                             incrementalFolder = incrementalFolder)
   }
+  
+  # Bundle the diagnosics for export
+  bundledResultsLocation <- bundleDiagnosticsResults(diagnosticOutputFolder, databaseId)
+  ParallelLogger::logInfo(paste("CHARYBDIS cohort diagnostics are bundled for sharing at: ", bundledResultsLocation))
+}
+
+#' @export
+bundleDiagnosticsResults <- function(diagnosticOutputFolder, databaseId) {
+  zipName <- file.path(diagnosticOutputFolder, paste0("Results_diagnostics_", databaseId, ".zip"))  
+  files <- list.files(diagnosticOutputFolder, "^Results_.*.zip$", full.names = TRUE, recursive = TRUE)
+  oldWd <- setwd(diagnosticOutputFolder)
+  on.exit(setwd(oldWd), add = TRUE)
+  DatabaseConnector::createZipFile(zipFile = zipName, files = files)
+  return(zipName)
 }

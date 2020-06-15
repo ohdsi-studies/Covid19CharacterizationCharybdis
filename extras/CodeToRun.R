@@ -155,6 +155,10 @@ useBulkCharacterization <- TRUE
 cohortIdsToExcludeFromExecution <- c()
 cohortIdsToExcludeFromResultsExport <- NULL
 
+# For uploading the results. You should have received the key file from the study coordinator:
+keyFileName <- "E:/CHARYBDIS/study-data-site-covid19.dat"
+userName <- "study-data-site-covid19"
+
 # Run cohort diagnostics -----------------------------------
 runCohortDiagnostics(connectionDetails = connectionDetails,
                      cdmDatabaseSchema = cdmDatabaseSchema,
@@ -173,8 +177,12 @@ runCohortDiagnostics(connectionDetails = connectionDetails,
 # one of these options: "covid", "influenza", "strata", "feature"
 # CohortDiagnostics::launchDiagnosticsExplorer(file.path(outputFolder, "diagnostics", "covid"))
 
+# When finished with reviewing the diagnostics, use the next command
+# to upload the diagnostic results
+#uploadDiagnosticsResults(outputFolder, keyFileName, userName)
+
 # Use this to run the study. The results will be stored in a zip file called 
-# 'AllResults_<databaseId>.zip in the outputFolder. 
+# 'Results_<databaseId>.zip in the outputFolder. 
 runStudy(connectionDetails = connectionDetails,
          cdmDatabaseSchema = cdmDatabaseSchema,
          cohortDatabaseSchema = cohortDatabaseSchema,
@@ -194,12 +202,11 @@ runStudy(connectionDetails = connectionDetails,
          minCellCount = minCellCount) 
 
 
+# Use the next set of commands to compress results
+# and view the output.
 #CohortDiagnostics::preMergeDiagnosticsFiles(outputFolder)
 #launchShinyApp(outputFolder)
 
-# For uploading the results. You should have received the key file from the study coordinator:
-#keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
-#userName <- "study-data-site-covid19"
-
-# Upload results to OHDSI SFTP server:
-#uploadResults(outputFolder, keyFileName, userName)
+# When finished with reviewing the results, use the next command
+# upload study results to OHDSI SFTP server:
+#uploadStudyResults(outputFolder, keyFileName, userName)
