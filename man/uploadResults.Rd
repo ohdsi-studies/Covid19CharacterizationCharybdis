@@ -4,7 +4,7 @@
 \alias{uploadResults}
 \title{Upload results to OHDSI server}
 \usage{
-uploadResults(outputFolder, privateKeyFileName, userName)
+uploadResults(outputFolder, privateKeyFileName, userName, remoteFolder)
 }
 \arguments{
 \item{outputFolder}{Name of local folder to place results; make sure to use forward slashes
@@ -19,6 +19,6 @@ performance.}
 Upload results to OHDSI server
 }
 \details{
-This function uploads the 'AllResults_<databaseId>.zip' to the OHDSI SFTP server. Before sending, you can inspect the zip file,
+This function uploads the 'Results_<databaseId>.zip' to the OHDSI SFTP server. Before sending, you can inspect the zip file,
 wich contains (zipped) CSV files. You can send the zip file from a different computer than the one on which is was created.
 }

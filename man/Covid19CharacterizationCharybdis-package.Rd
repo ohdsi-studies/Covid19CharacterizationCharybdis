@@ -4,9 +4,9 @@
 \name{Covid19CharacterizationCharybdis-package}
 \alias{Covid19CharacterizationCharybdis}
 \alias{Covid19CharacterizationCharybdis-package}
-\title{Covid19CharacterizationCharybdis: Characterization of COVID-19 and Influenza patients}
+\title{Covid19CharacterizationCharybdis: Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 (CHARYBDIS)}
 \description{
-A package for characterizing COVID-19 patients with and without various features.
+Describe the baseline demographic, clinical characteristics, treatments and outcomes of interest among individuals tested for SARS-CoV-2 and/or diagnosed with COVID-19 overall and stratified by sex, age and specific comorbidities. This package also describes the same baseline and outcomes for patients hospitalized with influenza between September 2017 and April 2018.
 }
 \seealso{
 Useful links:

@@ -14,10 +14,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+rootFTPFolder <- function() {
+  return("/CHARYBDIS/")
+}
+
+#' @export
+uploadDiagnosticsResults <- function(outputFolder, privateKeyFileName, userName) {
+  uploadResults(file.path(outputFolder, "diagnostics"), privateKeyFileName, userName, remoteFolder = paste0(rootFTPFolder(), "CohortDiagnostics"))
+}
+
+#' @export
+uploadStudyResults <- function(outputFolder, privateKeyFileName, userName) {
+  uploadResults(outputFolder, privateKeyFileName, userName, remoteFolder = paste0(rootFTPFolder(), "StudyResults"))
+}
+
 #' Upload results to OHDSI server
 #' 
 #' @details 
-#' This function uploads the 'AllResults_<databaseId>.zip' to the OHDSI SFTP server. Before sending, you can inspect the zip file,
+#' This function uploads the 'Results_<databaseId>.zip' to the OHDSI SFTP server. Before sending, you can inspect the zip file,
 #' wich contains (zipped) CSV files. You can send the zip file from a different computer than the one on which is was created.
 #' 
 #' @param privateKeyFileName   A character string denoting the path to the RSA private key provided by the study coordinator.
@@ -26,9 +40,8 @@
 #'                             (/). Do not use a folder on a network drive since this greatly impacts
 #'                             performance.
 #'                             
-#' @export
-uploadResults <- function(outputFolder, privateKeyFileName, userName) {
-  fileName <- list.files(outputFolder, "^AllResults_.*.zip$", full.names = TRUE)
+uploadResults <- function(outputFolder, privateKeyFileName, userName, remoteFolder) {
+  fileName <- list.files(outputFolder, "^Results_.*.zip$", full.names = TRUE)
   if (length(fileName) == 0) {
     stop("Could find results file in folder. Did you run (and complete) execute?") 
   }
@@ -37,7 +50,7 @@ uploadResults <- function(outputFolder, privateKeyFileName, userName) {
   }
   OhdsiSharing::sftpUploadFile(privateKeyFileName = privateKeyFileName, 
                                userName = userName,
-                               remoteFolder = "cohortEvaluation",
+                               remoteFolder = remoteFolder,
                                fileName = fileName)
   ParallelLogger::logInfo("Finished uploading")
 }
