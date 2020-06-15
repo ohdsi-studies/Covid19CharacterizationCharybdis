@@ -41,7 +41,7 @@ getCohortsToCreate <- function(cohortGroups = getCohortGroups()) {
   packageName <- getThisPackageName()
   cohorts <- data.frame()
   for(i in 1:nrow(cohortGroups)) {
-    c <- readr::read_csv(system.file(cohortGroups$fileName[i], package = packageName), col_types = readr::cols())
+    c <- readr::read_csv(system.file(cohortGroups$fileName[i], package = packageName), col_types = readr::cols(), mustWork = TRUE)
     c$cohortType <- cohortGroups$cohortGroup[i]
     cohorts <- rbind(cohorts, c)
   }
@@ -74,13 +74,13 @@ getThisPackageName <- function() {
 
 readCsv <- function(resourceFile) {
   packageName <- getThisPackageName()
-  pathToCsv <- system.file(resourceFile, package = packageName)
+  pathToCsv <- system.file(resourceFile, package = packageName, mustWork = TRUE)
   fileContents <- readr::read_csv(pathToCsv, col_types = readr::cols())
   return(fileContents)
 }
 
 getPathToResource <- function(useSubset = Sys.getenv("USE_SUBSET")) {
-  path <- "settings/"
+  path <- "settings"
   useSubset <- as.logical(useSubset)
   if (is.na(useSubset)) {
     useSubset = FALSE
