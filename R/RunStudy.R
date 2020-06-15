@@ -417,13 +417,13 @@ loadCohortsFromPackage <- function(cohortIds) {
   }
   
   getSql <- function(name) {
-    pathToSql <- system.file("sql", "sql_server", paste0(name, ".sql"), package = packageName)
+    pathToSql <- system.file("sql", "sql_server", paste0(name, ".sql"), package = packageName, mustWork = TRUE)
     sql <- readChar(pathToSql, file.info(pathToSql)$size)
     return(sql)
   }
   cohorts$sql <- sapply(cohorts$cohortId, getSql)
   getJson <- function(name) {
-    pathToJson <- system.file("cohorts", paste0(name, ".json"), package = packageName)
+    pathToJson <- system.file("cohorts", paste0(name, ".json"), package = packageName, mustWork = TRUE)
     json <- readChar(pathToJson, file.info(pathToJson)$size)
     return(json)
   }
@@ -474,11 +474,11 @@ loadCohortsForExportWithChecksumFromPackage <- function(cohortIds) {
   cohortsWithStrata$strataId <- ifelse(is.na(cohortsWithStrata$strataId), 0, cohortsWithStrata$strataId)
   
   getChecksum <- function(targetId, strataId, cohortType) {
-    pathToSql <- system.file("sql", "sql_server", paste0(targetId, ".sql"), package = packageName)
+    pathToSql <- system.file("sql", "sql_server", paste0(targetId, ".sql"), package = packageName, mustWork = TRUE)
     sql <- readChar(pathToSql, file.info(pathToSql)$size)
     if (strataId > 0) {
       sqlFileName <- strata[strata$cohortId == strataId, c("generationScript")][[1]]
-      pathToSql <- system.file("sql", "sql_server", sqlFileName, package = packageName)
+      pathToSql <- system.file("sql", "sql_server", sqlFileName, package = packageName, mustWork = TRUE)
       strataSql <- readChar(pathToSql, file.info(pathToSql)$size)
       sql <- paste(sql, strataSql, cohortType)
     }
