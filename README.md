@@ -217,11 +217,14 @@ As a data owner, you will want to inspect these files for adherence to the minCe
 Once you have checked results, you can use the following code to send:
 ````
 # For uploading the results. You should have received the key file from the study coordinator:
-#keyFileName <- "c:/home/keyFiles/study-data-site-covid19.dat"
+#keyFileName <- "[location where you are storing: e.g. ~/keys/study-data-site-covid19.dat]"
 #userName <- "study-data-site-covid19"
 
 # Upload results to OHDSI SFTP server:
-#uploadResults(outputFolder, keyFileName, userName)
+OhdsiSharing::sftpUploadFile(privateKeyFileName = keyFileName,
+                             userName = userName,
+                             remoteFolder = "CHARYBDIS",
+                             fileName = "[location where you stored your export: e.g. home/studyresults/MyResults.zip])
 ````
 
 Please send an email to [Anthony Sena](mailto:asena5@its.jnj.com) to notify you have dropped results in the folder.
