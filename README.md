@@ -49,12 +49,10 @@ The study repo has the following major pieces:
 
 Below you will find instructions for how to bring this package into your `R`/ `RStudio` environment. Note that if you are not able to connect to the internet in `R`/ `RStudio` to download pacakges, you will have to pull the [TAR file](https://github.com/ohdsi-studies/Covid19CharacterizationCharybdis/archive/master.zip). 
 
-#### *I see you've got a reference `Renviron` but I've never used that? What do I do?
+#### *I see you've got a reference `Renviron` but I've never used that? What do I do?*
 You can install a package like `usethis` to quickly access your Renviron file.  usethis :package: has a useful helper function to modify .Renviron :
-
 `usethis::edit_r_environ()` will open your user .Renviron which is in your home
 `usethis::edit_r_environ("project")` will open the one in your project
-
 Your Renviron file will pop-up. It will give you the opportunity to edit it. If you need more help, consider reviewing this [R Community Resource](https://rviews.rstudio.com/2017/04/19/r-for-enterprise-understanding-r-s-startup/).
 
 #### *What should I do if I get an error when I run the package?*
