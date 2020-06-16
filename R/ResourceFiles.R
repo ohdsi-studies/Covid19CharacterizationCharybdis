@@ -66,6 +66,30 @@ getAllStudyCohorts <- function() {
   cohortsToCreate <- cohortsToCreate[, match(colNames, names(cohortsToCreate))]
   targetStrataXref <- targetStrataXref[, match(colNames, names(targetStrataXref))]
   allCohorts <- rbind(cohortsToCreate, targetStrataXref)
+  return(allCohorts)
+}
+
+#' @export
+getAllStudyCohortsWithDetails <- function() {
+  cohortsToCreate <- getCohortsToCreate()
+  targetStrataXref <- getTargetStrataXref()
+  allStrata <- getAllStrata()
+  colNames <- c("cohortId", "cohortName", "targetCohortId", "targetCohortName", "strataCohortId", "strataCohortName", "cohortType")
+  # Format - cohortsToCreate
+  cohortsToCreate$targetCohortId <- cohortsToCreate$cohortId
+  cohortsToCreate$targetCohortName <- cohortsToCreate$name
+  cohortsToCreate$strataCohortId <- 0
+  cohortsToCreate$strataCohortName <- "All"
+  cohortsToCreate <- dplyr::rename(cohortsToCreate, cohortName = "name")
+  cohortsToCreate <- cohortsToCreate[, match(colNames, names(cohortsToCreate))]
+  # Format - targetStrataXref
+  stratifiedCohorts <- dplyr::inner_join(targetStrataXref, cohortsToCreate[,c("targetCohortId", "targetCohortName")], by = c("targetId" = "targetCohortId"))
+  stratifiedCohorts <- dplyr::inner_join(stratifiedCohorts, allStrata[,c("cohortId", "name")], by=c("strataId" = "cohortId"))
+  stratifiedCohorts <- dplyr::rename(stratifiedCohorts, targetCohortId="targetId",strataCohortId="strataId",cohortName="name.x",strataCohortName="name.y")
+  stratifiedCohorts <- stratifiedCohorts[,match(colNames, names(stratifiedCohorts))]
+  # Bind
+  allCohorts <- rbind(cohortsToCreate, stratifiedCohorts)
+  return(allCohorts)
 }
 
 getThisPackageName <- function() {
