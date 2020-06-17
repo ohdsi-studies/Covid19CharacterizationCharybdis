@@ -204,7 +204,7 @@ runStudy(connectionDetails = connectionDetails,
 
 # Use the next set of commands to compress results
 # and view the output.
-#CohortDiagnostics::preMergeDiagnosticsFiles(outputFolder)
+#preMergeResultsFiles(outputFolder)
 #launchShinyApp(outputFolder)
 
 # When finished with reviewing the results, use the next command
