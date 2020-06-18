@@ -1,7 +1,7 @@
 Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 (CHARYBDIS)
 =============
 
- <img src="https://img.shields.io/badge/Study%20Status-Design%20Finalized-brightgreen.svg" alt="Study Status: Design Finalized"> 
+<img src="https://img.shields.io/badge/Study%20Status-Results%20Available-yellow.svg" alt="Study Status: Results Available">
 
 - Analytics use case(s): **Characterization**
 - Study type: **Clinical Application**
@@ -12,7 +12,12 @@ Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 
 - Study end date: **Mid-June 2020**
 - Protocol: **[Word Doc](https://github.com/ohdsi-studies/Covid19CharacterizationCharybdis/blob/master/documents/Protocol_COVID-19%20Charybdis%20Characterisation_V5.docx)**
 - Publications: **-**
-- Results explorer: **[Shiny App](https://data.ohdsi.org/Covid19CharacterizationCharybdis/)**
+- Results explorer: 
+<br>- **[Shiny App: Cohort Diagnostics - COVID Targets](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagCovid/)**
+<br>- **[Shiny App: Cohort Diagnostics - Influenza Targets](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagInfluenza/)**
+<br>- **[Shiny App: Cohort Diagnostics - Stratum](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagStrata/)**
+<br>- **[Shiny App: Cohort Diagnostics - Features](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagFeature/)**
+<br>- **[Shiny App: Characterization Study](https://data.ohdsi.org/Covid19CharacterizationCharybdis/)**
 
 **Objectives:**<br>
 1) Describe the baseline demographic, clinical characteristics, treatments and outcomes of interest among individuals tested for SARS-CoV-2 and/or diagnosed with COVID-19 overall and stratified by sex, age, race and specific comorbidities;<br>
