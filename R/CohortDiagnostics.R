@@ -43,6 +43,9 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
   ParallelLogger::addDefaultFileLogger(file.path(diagnosticOutputFolder, "cohortDiagnosticsLog.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
 
+  # Write out the system information
+  ParallelLogger::logInfo(.systemInfo())
+  
   if (is.null(connection)) {
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))

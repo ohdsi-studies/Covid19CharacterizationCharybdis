@@ -28,6 +28,9 @@ runStudy <- function(connectionDetails = NULL,
   ParallelLogger::addDefaultFileLogger(file.path(exportFolder, "Covid19CharacterizationCharybdis.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
   
+  # Write out the system information
+  ParallelLogger::logInfo(.systemInfo())
+  
   useSubset = Sys.getenv("USE_SUBSET")
   if (!is.na(as.logical(useSubset)) && as.logical(useSubset)) {
     ParallelLogger::logWarn("Running in subset mode for testing")
