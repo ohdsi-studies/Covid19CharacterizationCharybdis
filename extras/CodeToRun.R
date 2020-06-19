@@ -139,9 +139,9 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 oracleTempSchema <- NULL
 
 # Details specific to the database:
-databaseId <- "PREMIER_LOG_TEST"
-databaseName <- "PREMIER_LOG_TEST"
-databaseDescription <- "PREMIER_LOG_TEST"
+databaseId <- "PREMIER"
+databaseName <- "PREMIER"
+databaseDescription <- "PREMIER"
 
 # Details for connecting to the CDM and storing the results
 outputFolder <- file.path("E:/CHARYBDIS/Runs", databaseId)
