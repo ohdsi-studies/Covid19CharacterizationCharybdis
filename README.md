@@ -20,8 +20,8 @@ Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 
     - **[Shiny App: Characterization Study](https://data.ohdsi.org/Covid19CharacterizationCharybdis/)**
 
 **Objectives:**
-1) Describe the baseline demographic, clinical characteristics, treatments and outcomes of interest among individuals tested for SARS-CoV-2 and/or diagnosed with COVID-19 overall and stratified by sex, age, race and specific comorbidities;<br>
-2) Describe characteristics and outcomes of patients diagnosed/tested positive for influenza as well as patients hospitalized with influenza between September 2017 and April 2018 compared to the COVID-19 population.<br>
+1) Describe the baseline demographic, clinical characteristics, treatments and outcomes of interest among individuals tested for SARS-CoV-2 and/or diagnosed with COVID-19 overall and stratified by sex, age, race and specific comorbidities;
+2) Describe characteristics and outcomes of patients diagnosed/tested positive for influenza as well as patients hospitalized with influenza between September 2017 and April 2018 compared to the COVID-19 population.
 
 ### FAQ
 #### *I'm a data owner. How do I know if this study is right for my data?*
