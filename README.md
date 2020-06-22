@@ -1,5 +1,5 @@
 Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 (CHARYBDIS)
-=============
+===========================================================================================
 
 <img src="https://img.shields.io/badge/Study%20Status-Results%20Available-yellow.svg" alt="Study Status: Results Available">
 
@@ -13,16 +13,15 @@ Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 
 - Protocol: **[Word Doc](https://github.com/ohdsi-studies/Covid19CharacterizationCharybdis/blob/master/documents/Protocol_COVID-19%20Charybdis%20Characterisation_V5.docx)**
 - Publications: **-**
 - Results explorer: 
-<br>- **[Shiny App: Cohort Diagnostics - COVID Targets](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagCovid/)**
-<br>- **[Shiny App: Cohort Diagnostics - Influenza Targets](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagInfluenza/)**
-<br>- **[Shiny App: Cohort Diagnostics - Stratum](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagStrata/)**
-<br>- **[Shiny App: Cohort Diagnostics - Features](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagFeature/)**
-<br>- **[Shiny App: Characterization Study](https://data.ohdsi.org/Covid19CharacterizationCharybdis/)**
+    - **[Shiny App: Cohort Diagnostics - COVID Targets](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagCovid/)**
+    - **[Shiny App: Cohort Diagnostics - Influenza Targets](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagInfluenza/)**
+    - **[Shiny App: Cohort Diagnostics - Stratum](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagStrata/)**
+    - **[Shiny App: Cohort Diagnostics - Features](https://data.ohdsi.org/Covid19CharacterizationCharybdisDiagFeature/)**
+    - **[Shiny App: Characterization Study](https://data.ohdsi.org/Covid19CharacterizationCharybdis/)**
 
-**Objectives:**<br>
+**Objectives:**
 1) Describe the baseline demographic, clinical characteristics, treatments and outcomes of interest among individuals tested for SARS-CoV-2 and/or diagnosed with COVID-19 overall and stratified by sex, age, race and specific comorbidities;<br>
 2) Describe characteristics and outcomes of patients diagnosed/tested positive for influenza as well as patients hospitalized with influenza between September 2017 and April 2018 compared to the COVID-19 population.<br>
-
 
 ### FAQ
 #### *I'm a data owner. How do I know if this study is right for my data?*
