@@ -9,7 +9,7 @@ Characterizing Health Associated Risks, and Your Baseline Disease In SARS-COV-2 
 - Study lead: **Talita Duarte-Salles, Kristin Kostka, Albert Prats-Uribe**
 - Study lead forums tag: **[tduarte](https://forums.ohdsi.org/u/tduarte)**, **[krfeeney](https://forums.ohdsi.org/u/krfeeney)**, **[Albert_Prats](https://forums.ohdsi.org/u/Albert_Prats)**
 - Study start date: **April 21, 2020**
-- Study end date: **Mid-June 2020**
+- Study end date: **Mid-July 2020**
 - Protocol: **[Word Doc](https://github.com/ohdsi-studies/Covid19CharacterizationCharybdis/blob/master/documents/Protocol_COVID-19%20Charybdis%20Characterisation_V5.docx)**
 - Publications: **-**
 - Results explorer: 
