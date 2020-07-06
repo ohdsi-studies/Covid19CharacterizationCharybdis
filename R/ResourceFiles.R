@@ -4,7 +4,7 @@ getBulkStrata <- function() {
 }
 
 getCohortGroupNamesForDiagnostics <- function() {
-  cohortGroupNames <- getCohortGroupsForDiagnostics()$cohortGroup
+  return(getCohortGroupsForDiagnostics()$cohortGroup)
 }
 
 getCohortGroupsForDiagnostics <- function () {

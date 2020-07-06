@@ -242,7 +242,12 @@ runStudy <- function(connectionDetails = NULL,
     ParallelLogger::logInfo("********************************************************************************************")
     ParallelLogger::logInfo("Bulk characterization of all cohorts for all time windows")
     ParallelLogger::logInfo("********************************************************************************************")
-    createBulkCharacteristics(connection, oracleTempSchema, featureExtractionCohorts$cohortId)
+    createBulkCharacteristics(connection, 
+                              oracleTempSchema, 
+                              cohortIds = featureExtractionCohorts$cohortId, 
+                              cdmDatabaseSchema, 
+                              cohortDatabaseSchema, 
+                              cohortTable)
     writeBulkCharacteristics(connection, oracleTempSchema, counts, minCellCount, databaseId, exportFolder)
   } else {
     # Sequential Approach --------------------------------
@@ -569,27 +574,6 @@ subsetToRequiredCohorts <- function(cohorts, task, incremental, recordKeepingFil
   } else {
     return(cohorts)
   }
-}
-
-getRequiredTasks <- function(..., checksum, recordKeepingFile, verbose = TRUE) {
-  tasks <- list(...)
-  if (file.exists(recordKeepingFile) && length(tasks[[1]]) > 0) {
-    recordKeeping <-  readr::read_csv(recordKeepingFile, col_types = readr::cols())
-    tasks$checksum <- checksum
-    tasks <- tibble::as_tibble(tasks)
-    if (all(names(tasks) %in% names(recordKeeping))) {
-      idx <- getKeyIndex(recordKeeping[, names(tasks)], tasks)
-    } else {
-      idx = c()
-    }
-    tasks$checksum <- NULL
-    if (length(idx) > 0) {
-      text <- paste(sprintf("%s = %s", names(tasks), tasks[idx,]), collapse = ", ")
-      ParallelLogger::logInfo("Skipping ", text, " because unchanged from earlier run")
-      tasks <- tasks[-idx, ]
-    }
-  }
-  return(tasks)
 }
 
 getKeyIndex <- function(key, recordKeeping) {

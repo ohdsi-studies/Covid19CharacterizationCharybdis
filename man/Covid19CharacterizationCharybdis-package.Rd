@@ -11,8 +11,8 @@ Describe the baseline demographic, clinical characteristics, treatments and outc
 \seealso{
 Useful links:
 \itemize{
-  \item \url{}
-  \item Report bugs at \url{}
+  \item \url{https://github.com/ohdsi-studies/Covid19CharacterizationCharybdis}
+  \item Report bugs at \url{https://github.com/ohdsi-studies/Covid19CharacterizationCharybdis/issues}
 }
 
 }

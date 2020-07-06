@@ -15,7 +15,6 @@ createBulkStrata <- function(connection,
   
   # Create the bulk strata from the cohorts of interest
   createBulkStrataFromCohorts(connection,
-                               cdmDatabaseSchema,
                                cohortDatabaseSchema,
                                cohortStagingTable,
                                targetIds, 
@@ -61,7 +60,6 @@ createBulkStrataFromFile <- function(connection,
 }
 
 createBulkStrataFromCohorts <- function(connection,
-                                        cdmDatabaseSchema,
                                         cohortDatabaseSchema,
                                         cohortStagingTable,
                                         targetIds, 
