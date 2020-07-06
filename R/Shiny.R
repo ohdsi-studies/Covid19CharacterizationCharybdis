@@ -38,7 +38,7 @@ launchShinyApp <- function(outputFolder) {
 #' The merged data will be stored in the same folder, and will automatically be recognized by the Shiny app.
 #'
 #' @param dataFolder  folder where the exported zip files for the diagnostics are stored. Use
-#'                         the \code{\link{runStudy}} function to generate these zip files. 
+#'                         the runStudy function to generate these zip files. 
 #'                         Zip files containing results from multiple databases can be placed in the same
 #'                         folder.
 #'                         
@@ -97,6 +97,12 @@ preMergeResultsFiles <- function(dataFolder) {
   ageCovariateIdsToReformat <- seq(200031,380031, by=10000) # This represents the covariate IDs that are used to represent age groups from 100-200
   if (exists("covariate", envir = .GlobalEnv)) {
     covars <- get("covariate", envir = .GlobalEnv)
+    
+    #Ensure all covariates are unique by making all covarateName fields lower case
+    covars$covariateName <- tolower(covars$covariateName)
+    covars <- unique(covars)
+    
+    # Reformat age covariates
     ageCovars <- covars[covars$covariateId %in% ageCovariateIdsToReformat, ]
     if (nrow(ageCovars) > 0) {
       for (i in 1:nrow(ageCovars)) {

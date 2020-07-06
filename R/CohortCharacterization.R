@@ -158,7 +158,12 @@ checkIfCohortInstantiated <- function(connection, cohortDatabaseSchema, cohortTa
 #' This function will perform the same actions as the main RunStudy.R::runStudy()
 #' function but in a single SQL operation. 
 #'
-createBulkCharacteristics <- function(connection, oracleTempSchema, cohortIds) {
+createBulkCharacteristics <- function(connection, 
+                                      oracleTempSchema, 
+                                      cohortIds, 
+                                      cdmDatabaseSchema, 
+                                      cohortDatabaseSchema, 
+                                      cohortTable) {
   packageName <- getThisPackageName()
 
   # Subset to the cohorts selected
