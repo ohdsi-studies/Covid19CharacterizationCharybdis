@@ -90,7 +90,7 @@ from
 (
   select o.* 
   FROM @cdm_database_schema.OBSERVATION o
-
+JOIN #Codesets codesets on ((o.observation_concept_id = codesets.concept_id and codesets.codeset_id = 5))
 ) C
 
 

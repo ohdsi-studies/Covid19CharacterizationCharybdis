@@ -16,6 +16,7 @@
 			},
 			{
 				"Observation" : {
+					"CodesetId" : 5,
 					"ObservationTypeExclude" : false
 				}
 			}
