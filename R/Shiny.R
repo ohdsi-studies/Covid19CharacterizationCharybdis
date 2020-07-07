@@ -23,7 +23,7 @@ launchShinyApp <- function(outputFolder) {
   ensure_installed("VennDiagram")
   ensure_installed("htmltools")
   appDir <- system.file("shiny/CharybdisResultsExplorer", package = getThisPackageName(), mustWork = TRUE)
-  shinySettings <- list(dataFolder = outputFolder)
+  shinySettings <- list(storage = "filesystem", dataFolder = outputFolder, dataFile = "PreMerged.RData")
   .GlobalEnv$shinySettings <- shinySettings
   on.exit(rm(shinySettings, envir = .GlobalEnv))
   shiny::runApp(appDir)
@@ -108,8 +108,10 @@ preMergeResultsFiles <- function(dataFolder) {
       for (i in 1:nrow(ageCovars)) {
         covars[covars$covariateId == ageCovars$covariateId[i], ]$covariateName <- reformatAgeCovariateDescription(ageCovars$covariateName[i])
       }
-      assign("covariate", covars, envir = .GlobalEnv)
     }
+    
+    # Re-assign to the global environment
+    assign("covariate", covars, envir = .GlobalEnv)
   }
 
   tableNames <- unique(tableNames)
