@@ -26,6 +26,7 @@ launchShinyApp <- function(outputFolder) {
   shinySettings <- list(storage = "filesystem", dataFolder = outputFolder, dataFile = "PreMerged.RData")
   .GlobalEnv$shinySettings <- shinySettings
   on.exit(rm(shinySettings, envir = .GlobalEnv))
+  shiny::enableBookmarking(store = "url")
   shiny::runApp(appDir)
 }
 
