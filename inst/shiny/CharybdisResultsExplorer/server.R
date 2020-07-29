@@ -52,6 +52,30 @@ styleAbsColorBar <- function(maxValue, colorPositive, colorNegative, angle = 90)
              angle, maxValue, maxValue, colorPositive, colorNegative, maxValue, maxValue))
 }
 
+getCovariateDataSubset <- function(cohortId, databaseList, comparatorCohortId = NULL) {
+  if (usingDbStorage()) {
+    return(getCovariateValue(connPool, cohortId = cohortId, databaseList = databaseList, comparatorCohortId = comparatorCohortId))
+  } else {
+    return(covariateValue[covariateValue$cohortId == cohortId & covariateValue$databaseId %in% databaseList, ])
+  }
+}
+
+getDataTableSettings <- function() {
+  dtSettings <- list(
+    options = list(pageLength = 25,
+                   lengthMenu = c(25, 50, 100, -1),
+                   searching = TRUE,
+                   lengthChange = TRUE,
+                   ordering = TRUE,
+                   paging = TRUE,
+                   info = TRUE,
+                   scrollX = TRUE),
+    extensions = list() #list('Buttons') #'RowGroup'
+  )
+                     
+  return(dtSettings)
+}
+
 shinyServer(function(input, output, session) {
   
   cohortIdList <- reactive({
@@ -172,7 +196,7 @@ shinyServer(function(input, output, session) {
           lapply(databaseIds, th, colspan = 1, class = "dt-center")
         ),
         tr(
-          lapply(rep(c("Subjects"), length(databaseIds)), th)
+          lapply(paste0(database$databaseId, "_persons"), th)
         )
       )
     ))
@@ -196,30 +220,20 @@ shinyServer(function(input, output, session) {
         "})"
     )
     
-    
-    options = list(pageLength = 25,
-                   searching = TRUE,
-                   lengthChange = TRUE,
-                   ordering = TRUE,
-                   paging = TRUE,
-                   info = TRUE,
-                   #dom = 'tip',
-                   scrollX = TRUE,
-                  # rowGroup = list(dataSrc = 0),
-                   columnDefs = list(
-                      #list(targets = c(0), visible = 0),
-                      minCellCountDef(2:(length(databaseIds) - 1))
-                     )
-                   )
-    extensions = c('RowGroup')
-    
+    columnDefs = list(
+      #list(targets = c(0), visible = 0),
+      minCellCountDef(2:(length(databaseIds) - 1))
+    )
+    dtSettings <- getDataTableSettings();
+    dtSettings$options <- append(dtSettings$options, columnDefs)
+
     dataTable <- datatable(table,
                            callback = JS(sortCallback),
-                           options = options,
                            rownames = FALSE,
                            container = sketch, 
                            escape = FALSE,
-                           #extensions = extensions,
+                           options = dtSettings$options,
+                           extensions = dtSettings$extensions,
                            class = "stripe nowrap compact")
     return(dataTable)
   })
@@ -237,13 +251,13 @@ shinyServer(function(input, output, session) {
     comparatorCount <- cohortCount[cohortCount$cohortId == comparatorCohortId() & cohortCount$databaseId == input$database, c("cohortSubjects")] 
     return(htmltools::withTags(
         div(class="cohort-heading",
-            h4("Target: ", targetCohortName(), " (n=", targetCount$cohortSubjects, ")"),
-            h4("Comparator: ", comparatorCohortName(), " (n=", comparatorCount$cohortSubjects, ")"))
+            h4("Target: ", targetCohortName(), " (n=", targetCount, ")"),
+            h4("Comparator: ", comparatorCohortName(), " (n=", comparatorCount, ")"))
         ))
   })
   
   output$characterizationTable <- renderDataTable({
-    data <- covariateValue[covariateValue$cohortId == cohortId() & covariateValue$databaseId %in% input$databases, ]
+    data <- getCovariateDataSubset(cohortId(), input$databases)
     counts <- cohortCount[cohortCount$cohortId == cohortId() & cohortCount$databaseId %in% input$databases, ] 
     data$cohortId <- NULL
     databaseIds <- unique(data$databaseId)
@@ -268,14 +282,8 @@ shinyServer(function(input, output, session) {
     table$covariateId <- NULL
     table$windowId <- NULL
     table <- table[order(table$covariateName), ]
-    options = list(pageLength = 25,
-                   searching = TRUE,
-                   lengthChange = TRUE,
-                   ordering = TRUE,
-                   paging = TRUE,
-                   deferRender = TRUE,
-                   columnDefs = columnDefs
-    )
+    dtSettings <- getDataTableSettings();
+    dtSettings$options <- append(dtSettings$options, columnDefs)
     sketch <- htmltools::withTags(table(
       class = 'display',
       thead(
@@ -287,15 +295,16 @@ shinyServer(function(input, output, session) {
           lapply(paste0("(n = ", format(databaseIdsWithCounts$cohortSubjects, big.mark = ","), ")"), th, colspan = 1, class = "dt-center no-padding")
         ),
         tr(
-          lapply(rep(c("Proportion"), nrow(databaseIdsWithCounts)), th, colspan = 1)
+          lapply(paste0(databaseIdsWithCounts$databaseId, "_pct"), th, colspan = 1)
         )
       )
     ))
     table <- datatable(table,
-                       options = options,
                        rownames = FALSE,
                        container = sketch,
                        escape = FALSE,
+                       options = dtSettings$options,
+                       extensions = dtSettings$extensions,
                        class = "stripe nowrap compact")
     table <- formatStyle(table = table,
                          columns = 1:nrow(databaseIdsWithCounts),
@@ -311,6 +320,7 @@ shinyServer(function(input, output, session) {
       return(data.frame())
     }
     covariateFiltered <- covariateFiltered <- getFilteredCovariates()
+    covariateValue <- getCovariateDataSubset(cohortId(), input$database, comparatorCohortId())
     covs1 <- covariateValue[covariateValue$cohortId == cohortId() & covariateValue$databaseId == input$database, ]
     covs2 <- covariateValue[covariateValue$cohortId == comparatorCohortId() & covariateValue$databaseId == input$database, ]
     covs1 <- merge(covs1, covariateFiltered)
@@ -336,18 +346,13 @@ shinyServer(function(input, output, session) {
     table <- table[, c("covariateName", "mean1", "sd1", "mean2", "sd2", "stdDiff")]
     colnames(table) <- c("Covariate name", "Mean Target", "SD Target", "Mean Comparator", "SD Comparator", "StdDiff")
     
-    options = list(pageLength = 25,
-                   searching = TRUE,
-                   lengthChange = TRUE,
-                   ordering = TRUE,
-                   paging = TRUE,
-                   deferRender = TRUE,
-                   columnDefs = columnDefs
-    )
+    dtSettings <- getDataTableSettings();
+    dtSettings$options <- append(dtSettings$options, columnDefs)
     table <- datatable(table,
-                       options = options,
                        rownames = FALSE,
                        escape = FALSE,
+                       options = dtSettings$options,
+                       extensions = dtSettings$extensions,
                        class = "stripe nowrap compact")
     table <- formatStyle(table = table,
                          columns = c(2,4),
@@ -444,7 +449,7 @@ shinyServer(function(input, output, session) {
   })
   
   getFilteredCovariates <- function() {
-    return(covariate[covariate$windowId %in% windowId() & covariate$covariateAnalysisId %in% covariateAnalysisId(),])
+    return(covariate[covariate$windowId %in% windowId() & covariate$covariateAnalysisId %in% covariateAnalysisId(),c("covariateId","covariateName","covariateAnalysisId","windowId")])
   }
 
   showInfoBox <- function(title, htmlFileName) {
