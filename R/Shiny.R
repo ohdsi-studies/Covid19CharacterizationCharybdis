@@ -15,7 +15,11 @@
 # limitations under the License.
 
 #' @export
-launchShinyApp <- function(outputFolder) {
+launchShinyApp <- function(outputFolder, 
+                           shinySettings = list(storage = "filesystem", 
+                                                dataFolder = outputFolder, 
+                                                dataFile = "PreMerged.RData")) 
+{
   ensure_installed("shiny")
   ensure_installed("shinydashboard")
   ensure_installed("shinyWidgets")
@@ -23,7 +27,6 @@ launchShinyApp <- function(outputFolder) {
   ensure_installed("VennDiagram")
   ensure_installed("htmltools")
   appDir <- system.file("shiny/CharybdisResultsExplorer", package = getThisPackageName(), mustWork = TRUE)
-  shinySettings <- list(storage = "filesystem", dataFolder = outputFolder, dataFile = "PreMerged.RData")
   .GlobalEnv$shinySettings <- shinySettings
   on.exit(rm(shinySettings, envir = .GlobalEnv))
   shiny::runApp(appDir)
