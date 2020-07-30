@@ -219,10 +219,9 @@ shinyServer(function(input, output, session) {
       "  }",
       "})"
     )
-    
     columnDefs = list(
       #list(targets = c(0), visible = 0),
-      minCellCountDef(2:(length(databaseIds) - 1))
+      minCellCountDef(2:(length(databaseIds) + 1))
     )
     dtSettings <- getDataTableSettings();
     dtSettings$options <- append(dtSettings$options, list(columnDefs = columnDefs))
@@ -326,7 +325,7 @@ shinyServer(function(input, output, session) {
                        extensions = dtSettings$extensions,
                        class = "stripe nowrap compact")
     table <- formatStyle(table = table,
-                         columns = 1:nrow(databaseIdsWithCounts),
+                         columns = 1:nrow(databaseIdsWithCounts)+1,
                          background = styleColorBar(c(0,1), "lightblue"),
                          backgroundSize = "98% 88%",
                          backgroundRepeat = "no-repeat",
