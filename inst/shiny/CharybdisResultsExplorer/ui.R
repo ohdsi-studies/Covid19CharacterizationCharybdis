@@ -110,14 +110,20 @@ dashboardPage(
               dataTableOutput("cohortInfoTable")
       ),
       tabItem(tabName = "cohortCounts",
+              downloadButton("dlCohortCounts", "Download Data"),
+              htmlOutput("borderCohortCounts"),
               dataTableOutput("cohortCountsTable")
       ),
       tabItem(tabName = "cohortCharacterization",
               htmlOutput("cohortName"),
+              downloadButton("dlCharacterization", "Download Data"),
+              htmlOutput("borderCharacterization"),
               dataTableOutput("characterizationTable")
       ),
       tabItem(tabName = "compareCohortCharacterization",
               htmlOutput("comparisonName"),
+              downloadButton("dlCharCompare", "Download Data"),
+              htmlOutput("borderCharCompare"),
               radioButtons("charCompareType", "", c("Table", "Plot"), selected = "Table", inline = TRUE),
               conditionalPanel(condition = "input.charCompareType=='Table'",
                                dataTableOutput("charCompareTable")

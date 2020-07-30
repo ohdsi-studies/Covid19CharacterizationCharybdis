@@ -165,7 +165,7 @@ shinyServer(function(input, output, session) {
     
   })
   
-  output$cohortCountsTable <- renderDataTable({
+  getCohortCountsTable <- reactive({
     data <- cohortCount[cohortCount$databaseId %in% input$databases & cohortCount$cohortId %in% cohortIdList(), ]
     if (nrow(data) == 0) {
       return(NULL)
@@ -196,28 +196,28 @@ shinyServer(function(input, output, session) {
           lapply(databaseIds, th, colspan = 1, class = "dt-center")
         ),
         tr(
-          lapply(paste0(database$databaseId, "_persons"), th)
+          lapply(rep(c("Subjects"), length(databaseIds)), th)
         )
       )
     ))
-
+    
     sortCallback <- c(
       "var dt = table.table().node();",
       "$(dt).on('order.dt', function(e, ctx, order) {",
-        "console.log(order);",
-        " if (Array.isArray(order) && order.length > 0) {",
-        "    console.log(order[0]);",
-        "    col = order[0].col;",
-        "    if (col < 2) {",
-        "      var api = new $.fn.DataTable.Api(this);",
-        "      var orderingArr = [];",
-        "      for (var i=0 ; i<order.length ; i++) {",
-        "        orderingArr.push(order[i].col);",
-        "      }",
-        #"      api.rowGroup().dataSrc(orderingArr);",
-        "    }",
-        "  }",
-        "})"
+      "console.log(order);",
+      " if (Array.isArray(order) && order.length > 0) {",
+      "    console.log(order[0]);",
+      "    col = order[0].col;",
+      "    if (col < 2) {",
+      "      var api = new $.fn.DataTable.Api(this);",
+      "      var orderingArr = [];",
+      "      for (var i=0 ; i<order.length ; i++) {",
+      "        orderingArr.push(order[i].col);",
+      "      }",
+      #"      api.rowGroup().dataSrc(orderingArr);",
+      "    }",
+      "  }",
+      "})"
     )
     
     columnDefs = list(
@@ -225,8 +225,8 @@ shinyServer(function(input, output, session) {
       minCellCountDef(2:(length(databaseIds) - 1))
     )
     dtSettings <- getDataTableSettings();
-    dtSettings$options <- append(dtSettings$options, columnDefs)
-
+    dtSettings$options <- append(dtSettings$options, list(columnDefs = columnDefs))
+    
     dataTable <- datatable(table,
                            callback = JS(sortCallback),
                            rownames = FALSE,
@@ -237,26 +237,45 @@ shinyServer(function(input, output, session) {
                            class = "stripe nowrap compact")
     return(dataTable)
   })
+  
+  output$cohortCountsTable <- renderDataTable({
+    return(getCohortCountsTable())
+  })
 
   output$cohortName <- renderUI({ 
     return(htmltools::withTags(
-        div(class="cohort-heading",
-          h4(targetCohortName())
-        )
+        div(h4(targetCohortName()))
       ))
+  })
+  
+  renderBorderTag <-  function() {
+    return(htmltools::withTags(
+      div(class="cohort-heading")
+    ))
+  }
+
+  output$borderCohortCounts <- renderUI({
+    return(renderBorderTag())
+  })
+  
+  output$borderCharacterization <- renderUI({
+    return(renderBorderTag())
+  })
+  
+  output$borderCharCompare <- renderUI({
+    return(renderBorderTag())
   })
   
   output$comparisonName <- renderUI({
     targetCount <- cohortCount[cohortCount$cohortId == cohortId() & cohortCount$databaseId == input$database, c("cohortSubjects")] 
     comparatorCount <- cohortCount[cohortCount$cohortId == comparatorCohortId() & cohortCount$databaseId == input$database, c("cohortSubjects")] 
     return(htmltools::withTags(
-        div(class="cohort-heading",
-            h4("Target: ", targetCohortName(), " (n=", targetCount, ")"),
+        div(h4("Target: ", targetCohortName(), " (n=", targetCount, ")"),
             h4("Comparator: ", comparatorCohortName(), " (n=", comparatorCount, ")"))
         ))
   })
   
-  output$characterizationTable <- renderDataTable({
+  getCharacterizationTable <- reactive({
     data <- getCovariateDataSubset(cohortId(), input$databases)
     counts <- cohortCount[cohortCount$cohortId == cohortId() & cohortCount$databaseId %in% input$databases, ] 
     data$cohortId <- NULL
@@ -283,7 +302,7 @@ shinyServer(function(input, output, session) {
     table$windowId <- NULL
     table <- table[order(table$covariateName), ]
     dtSettings <- getDataTableSettings();
-    dtSettings$options <- append(dtSettings$options, columnDefs)
+    dtSettings$options <- append(dtSettings$options, list(columnDefs = columnDefs))
     sketch <- htmltools::withTags(table(
       class = 'display',
       thead(
@@ -315,6 +334,10 @@ shinyServer(function(input, output, session) {
     return(table)
   })
   
+  output$characterizationTable <- renderDataTable({
+    return(getCharacterizationTable())
+  })
+  
   computeBalance <- reactive({
     if (cohortId() == comparatorCohortId()) {
       return(data.frame())
@@ -330,12 +353,12 @@ shinyServer(function(input, output, session) {
     return(balance)
   })
   
-  output$charCompareTable <- renderDataTable({
+  getCharCompareTable <- reactive({
     balance <- computeBalance()
     if (nrow(balance) == 0) {
       return(NULL)
     }
-
+    
     columnDefs <- list(
       truncateStringDef(0, 150),
       minCellPercentDef(c(1,3)),
@@ -347,7 +370,7 @@ shinyServer(function(input, output, session) {
     colnames(table) <- c("Covariate name", "Mean Target", "SD Target", "Mean Comparator", "SD Comparator", "StdDiff")
     
     dtSettings <- getDataTableSettings();
-    dtSettings$options <- append(dtSettings$options, columnDefs)
+    dtSettings$options <- append(dtSettings$options, list(columnDefs = columnDefs))
     table <- datatable(table,
                        rownames = FALSE,
                        escape = FALSE,
@@ -368,6 +391,10 @@ shinyServer(function(input, output, session) {
                          backgroundPosition = "center")
     table <- formatRound(table, c(3, 5, 6), digits = 2)
     return(table)
+  })
+  
+  output$charCompareTable <- renderDataTable({
+    return(getCharCompareTable())
   })
   
   output$charComparePlot <- renderPlot({
@@ -446,6 +473,33 @@ shinyServer(function(input, output, session) {
                        rownames = FALSE,
                        class = "stripe compact")
     return(table)
+  })
+  
+  output$dlCohortCounts <- downloadHandler('cohort_counts.csv', content = function(file) {
+    table<-getCohortCountsTable()
+    
+    table<-table$x$data
+    table[,1]<- gsub("&nbsp;","", table[,1])
+    
+    write.csv(as.data.frame(table), file, row.names = FALSE, na = "")
+  })
+
+  output$dlCharacterization <- downloadHandler('characterization.csv', content = function(file) {
+    table<-getCharacterizationTable()
+    
+    table<-table$x$data
+    table[,1]<- gsub("&nbsp;","", table[,1])
+    
+    write.csv(as.data.frame(table), file, row.names = FALSE, na = "")
+  })
+  
+  output$dlCharCompare <- downloadHandler('characterization_compare.csv', content = function(file) {
+    table<-getCharCompareTable()
+    
+    table<-table$x$data
+    table[,1]<- gsub("&nbsp;","", table[,1])
+    
+    write.csv(as.data.frame(table), file, row.names = FALSE, na = "")
   })
   
   getFilteredCovariates <- function() {
