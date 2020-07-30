@@ -19,6 +19,7 @@ getCovariateValue <- function(connPool, networkSchema = Sys.getenv("charybdisdbS
                              cohort_id = cohortId,
                              comparator_cohort_id = comparatorCohortId,
                              database_list = paste0("'", databaseList, "'"), warnOnMissingParameters = FALSE)
+    #print(sql)
     data <- queryDb(connPool, sql)
   } else {
     data <- queryTable(connPool, networkSchema, "covariate_value", limit = 0)
