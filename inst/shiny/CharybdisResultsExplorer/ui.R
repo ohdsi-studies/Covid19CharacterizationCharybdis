@@ -5,9 +5,15 @@ library(DT)
 ohdsiBlueHex <- "#20425A"
 ohdsiLightYellowHex <- "FBC209"
 
-addInfo <- function(item, infoId) {
-  infoTag <- tags$small(class = "badge pull-right action-button",
-                        style = "padding: 1px 6px 2px 6px; background-color: steelblue;",
+addInfo <- function(item, infoId, class = NULL, style = NULL) {
+  if (is.null(class)) {
+    class = "badge pull-right action-button"
+  }
+  if (is.null(style)) {
+    style = "padding: 1px 6px 2px 6px; background-color: steelblue;"
+  }
+  infoTag <- tags$small(class = class,
+                        style = style,
                         type = "button", 
                         id = infoId,
                         "i")
@@ -107,16 +113,46 @@ dashboardPage(
               includeMarkdown("md/about.md")
       ),
       tabItem(tabName = "cohorts",
+              downloadButton("dlCohortInfo", "Download Data"),
+              htmlOutput("borderCohortInfo"),
               dataTableOutput("cohortInfoTable")
       ),
       tabItem(tabName = "cohortCounts",
-              downloadButton("dlCohortCounts", "Download Data"),
+              htmltools::withTags(
+                addInfo(
+                  div(class="download-container",
+                    shinyWidgets::dropdownButton(
+                      inputId = "cohortCountsDownload",
+                      label = "Download",
+                      icon = icon("download"),
+                      circle = F,
+                      margin="20px",
+                      downloadButton("dlCohortCountsByDb", "Download Table View"),
+                      downloadButton("dlCohortCountsFlat", "Download Flat Data")
+                    ),
+                  ),
+                "dlCohortCountsInfo"
+              )),
               htmlOutput("borderCohortCounts"),
               dataTableOutput("cohortCountsTable")
       ),
       tabItem(tabName = "cohortCharacterization",
               htmlOutput("cohortName"),
-              downloadButton("dlCharacterization", "Download Data"),
+              htmltools::withTags(
+                addInfo(
+                  div(class="download-container",
+                      shinyWidgets::dropdownButton(
+                        inputId = "characterizationDownload",
+                        label = "Download",
+                        icon = icon("download"),
+                        circle = F,
+                        margin="20px",
+                        downloadButton("dlCharacterizationByDb", "Download Table View"),
+                        downloadButton("dlCharacterizationFlat", "Download Flat Data")
+                      ),
+                  ),
+                  "dlCharacterizationInfo"
+                )),
               htmlOutput("borderCharacterization"),
               dataTableOutput("characterizationTable")
       ),

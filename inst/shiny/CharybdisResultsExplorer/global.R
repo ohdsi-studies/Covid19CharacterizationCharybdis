@@ -8,8 +8,10 @@ connPool <- NULL # Will be initialized if using a DB
 # Cleanup the database connPool if it was created
 onStop(function() {
   if (!is.null(connPool)) {
-    print("Closing database pool")
-    poolClose(connPool)
+    if (DBI::dbIsValid(connPool)) {
+      writeLines("Closing database pool")
+      poolClose(connPool)
+    }
   }
 })
 

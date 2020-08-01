@@ -76,8 +76,14 @@ getDataTableSettings <- function() {
   return(dtSettings)
 }
 
+renderBorderTag <-  function() {
+  return(htmltools::withTags(
+    div(class="cohort-heading")
+  ))
+}
+
 shinyServer(function(input, output, session) {
-  
+  # Filter Options -----
   cohortIdList <- reactive({
     return(unlist(cohortXref[cohortXref$targetId %in% targetCohortIdList() & cohortXref$strataName %in% input$strataCohortList,c("cohortId")]))
   })
@@ -128,15 +134,40 @@ shinyServer(function(input, output, session) {
     return(domain[domain$name %in% input$domainFilter,c("covariateAnalysisId")])
   })
   
-  output$cohortInfoTable <- renderDataTable({
+  output$cohortName <- renderUI({ 
+    return(htmltools::withTags(
+      div(h4(targetCohortName()))
+    ))
+  })
+  
+  output$comparisonName <- renderUI({
+    targetCount <- cohortCount[cohortCount$cohortId == cohortId() & cohortCount$databaseId == input$database, c("cohortSubjects")] 
+    comparatorCount <- cohortCount[cohortCount$cohortId == comparatorCohortId() & cohortCount$databaseId == input$database, c("cohortSubjects")] 
+    return(htmltools::withTags(
+      div(h4("Target: ", targetCohortName(), " (n=", targetCount, ")"),
+          h4("Comparator: ", comparatorCohortName(), " (n=", comparatorCount, ")"))
+    ))
+  })
+  
+  # Cohort Info ---------
+  output$borderCohortInfo <- renderUI({
+    return(renderBorderTag())
+  })
+  
+  getCohortInfoTable <- reactive({
     data <- cohortInfo
     atlasCohortUrl <- "https://atlas.ohdsi.org/#/cohortdefinition/"
     githubCohortUrl <- "https://github.com/ohdsi-studies/Covid19CharacterizationCharybdis/tree/master/inst/sql/sql_server/"
     data$url <- ifelse(data$circeDef == TRUE, 
                        paste0(atlasCohortUrl, data$atlasId),
                        paste0(githubCohortUrl, data$cohortId, ".sql"))
-    data$url <- paste0("<a href='", data$url, "' target='_blank'>", data$url, "</a>")
-    table <- data[, c("name", "url")]
+    data <- data[, c("name", "url")]
+    return(data)
+  })
+  
+  output$cohortInfoTable <- renderDataTable({
+    table <- getCohortInfoTable()
+    table$url <- paste0("<a href='", table$url, "' target='_blank'>", table$url, "</a>")
     sketch <- htmltools::withTags(table(
       class = 'display',
       thead(
@@ -165,11 +196,23 @@ shinyServer(function(input, output, session) {
     
   })
   
+  output$dlCohortInfo <- downloadHandler('cohort_info.csv', content = function(file) {
+    table<-getCohortInfoTable()
+    write.csv(table, file, row.names = FALSE, na = "")
+  })
+
+  # Cohort Counts ---------
+  output$borderCohortCounts <- renderUI({
+    return(renderBorderTag())
+  })
+  
   getCohortCountsTable <- reactive({
     data <- cohortCount[cohortCount$databaseId %in% input$databases & cohortCount$cohortId %in% cohortIdList(), ]
-    if (nrow(data) == 0) {
-      return(NULL)
-    }
+    return(data)
+  })
+  
+  getCohortCountsTablePivotedByDB <- reactive({
+    data <- getCohortCountsTable()    
     databaseIds <- unique(data$databaseId)
     table <- data[data$databaseId == databaseIds[1], c("cohortId", "cohortSubjects")]
     colnames(table)[2] <- paste(colnames(table)[2], databaseIds[1], sep = "_")
@@ -181,11 +224,18 @@ shinyServer(function(input, output, session) {
       }
     }
     table <- dplyr::inner_join(cohortXref, table, by="cohortId")
+    table <- table[order(table$targetName),]
+    return(list(table = table, databaseIds = databaseIds))
+  })
+  
+  output$cohortCountsTable <- renderDataTable({
+    cohortCountsByDB <- getCohortCountsTablePivotedByDB()
+    databaseIds <- cohortCountsByDB$databaseIds
+    table <- cohortCountsByDB$table
     table$cohortId <- NULL
     table$targetId <- NULL
     table$strataId <- NULL
     table$cohortType <- NULL
-    table <- table[order(table$targetName),]
     
     sketch <- htmltools::withTags(table(
       class = 'display',
@@ -234,72 +284,77 @@ shinyServer(function(input, output, session) {
                            options = dtSettings$options,
                            extensions = dtSettings$extensions,
                            class = "stripe nowrap compact")
-    return(dataTable)
+    return(dataTable)    
   })
   
-  output$cohortCountsTable <- renderDataTable({
-    return(getCohortCountsTable())
-  })
+  output$dlCohortCountsByDb <- downloadHandler(
+    filename = function() {
+      'cohort_counts_by_db.csv'
+    },
+    content = function(file) {
+      table<-getCohortCountsTablePivotedByDB()$table
+      write.csv(table, file, row.names = FALSE, na = "")
+    }
+  ) 
+  
+  output$dlCohortCountsFlat <- downloadHandler(
+    filename = function() {
+      'cohort_counts.csv'
+    },
+    content = function(file) {
+      table<-getCohortCountsTable()
+      write.csv(table, file, row.names = FALSE, na = "")
+    }
+  ) 
 
-  output$cohortName <- renderUI({ 
-    return(htmltools::withTags(
-        div(h4(targetCohortName()))
-      ))
-  })
-  
-  renderBorderTag <-  function() {
-    return(htmltools::withTags(
-      div(class="cohort-heading")
-    ))
-  }
-
-  output$borderCohortCounts <- renderUI({
-    return(renderBorderTag())
-  })
-  
+  # Cohort Characterization -------
   output$borderCharacterization <- renderUI({
     return(renderBorderTag())
   })
   
-  output$borderCharCompare <- renderUI({
-    return(renderBorderTag())
-  })
-  
-  output$comparisonName <- renderUI({
-    targetCount <- cohortCount[cohortCount$cohortId == cohortId() & cohortCount$databaseId == input$database, c("cohortSubjects")] 
-    comparatorCount <- cohortCount[cohortCount$cohortId == comparatorCohortId() & cohortCount$databaseId == input$database, c("cohortSubjects")] 
-    return(htmltools::withTags(
-        div(h4("Target: ", targetCohortName(), " (n=", targetCount, ")"),
-            h4("Comparator: ", comparatorCohortName(), " (n=", comparatorCount, ")"))
-        ))
-  })
-  
   getCharacterizationTable <- reactive({
     data <- getCovariateDataSubset(cohortId(), input$databases)
+    covariateFiltered <- getFilteredCovariates()
+    table <- merge(covariateFiltered, data)
+    table$cohortName <- targetCohortName()
+    return(table[,c("cohortId","cohortName","covariateId","covariateName","covariateAnalysisId","windowId","databaseId","mean")])
+  })
+  
+  getCharacterizationTablePivotedByDB <- reactive({
+    columnsToInclude <- c("cohortId","cohortName","covariateId","covariateName","covariateAnalysisId","windowId","mean")
+    meanColumnIndex <-  match("mean", columnsToInclude)
+    data <- getCharacterizationTable()
     counts <- cohortCount[cohortCount$cohortId == cohortId() & cohortCount$databaseId %in% input$databases, ] 
-    data$cohortId <- NULL
     databaseIds <- unique(data$databaseId)
     databaseIdsWithCounts <- merge(databaseIds, counts, by.x="x", by.y="databaseId")
     databaseIdsWithCounts <- dplyr::rename(databaseIdsWithCounts, databaseId="x")
-    table <- data[data$databaseId == databaseIdsWithCounts$databaseId[1], c("covariateId", "mean")]
-    colnames(table)[2] <- paste(colnames(table)[2], databaseIdsWithCounts$databaseId[1], sep = "_")
+    table <- data[data$databaseId == databaseIdsWithCounts$databaseId[1], columnsToInclude]
+    colnames(table)[meanColumnIndex] <- paste(colnames(table)[meanColumnIndex], databaseIdsWithCounts$databaseId[1], sep = "_")
     if (nrow(databaseIdsWithCounts) > 1) {
       for (i in 2:nrow(databaseIdsWithCounts)) {
-        temp <- data[data$databaseId == databaseIdsWithCounts$databaseId[i], c("covariateId", "mean")]
-        colnames(temp)[2] <- paste(colnames(temp)[2], databaseIdsWithCounts$databaseId[i], sep = "_")
+        temp <- data[data$databaseId == databaseIdsWithCounts$databaseId[i], columnsToInclude]
+        colnames(temp)[meanColumnIndex] <- paste(colnames(temp)[meanColumnIndex], databaseIdsWithCounts$databaseId[i], sep = "_")
         table <- merge(table, temp, all = TRUE)
       }
     }
+    table <- table[order(table$covariateName), ]
+    return(list(table = table, databaseIdsWithCounts = databaseIdsWithCounts))
+  })
+  
+  output$characterizationTable <- renderDataTable({
+    characterizationByDB <- getCharacterizationTablePivotedByDB()
+    databaseIdsWithCounts <- characterizationByDB$databaseIdsWithCounts
+    table <- characterizationByDB$table
+    
     columnDefs <- list(
       truncateStringDef(0, 150),
       minCellPercentDef(1:nrow(databaseIdsWithCounts))
     )
-    covariateFiltered <- getFilteredCovariates()
-    table <- merge(covariateFiltered, table)    
-    table$covariateAnalysisId <- NULL
+    table$cohortId <- NULL
+    table$cohortName <- NULL
     table$covariateId <- NULL
+    table$covariateAnalysisId <- NULL
     table$windowId <- NULL
-    table <- table[order(table$covariateName), ]
     dtSettings <- getDataTableSettings();
     dtSettings$options <- append(dtSettings$options, list(columnDefs = columnDefs))
     sketch <- htmltools::withTags(table(
@@ -333,8 +388,29 @@ shinyServer(function(input, output, session) {
     return(table)
   })
   
-  output$characterizationTable <- renderDataTable({
-    return(getCharacterizationTable())
+  output$dlCharacterizationByDb <- downloadHandler(
+    filename = function() {
+      "characterization_by_db.csv"
+    },
+    content = function(file) {
+      table <- getCharacterizationTablePivotedByDB()$table
+      write.csv(table, file, row.names = FALSE, na = "")
+    }
+  )
+  
+  output$dlCharacterizationFlat <- downloadHandler(
+    filename = function() {
+      "characterization.csv"
+    },
+    content = function(file) {
+      table <- getCharacterizationTable()
+      write.csv(table, file, row.names = FALSE, na = "")
+    }
+  )
+  
+  # Cohort Comparison --------------
+  output$borderCharCompare <- renderUI({
+    return(renderBorderTag())
   })
   
   computeBalance <- reactive({
@@ -349,25 +425,30 @@ shinyServer(function(input, output, session) {
     covs2 <- merge(covs2, covariateFiltered)
     balance <- compareCohortCharacteristics(covs1, covs2)
     balance$absStdDiff <- abs(balance$stdDiff)
+    # Rename columns
+    colnames(balance) <- c("covariateId","covariateName","covariateAnalysisId","windowId","targetMean","targetSD","comparatorMean","comparatorSD","sd","stdDiff","absStdDiff")
+    balance$targetCohortId <- cohortId()
+    balance$targetCohortName <- targetCohortName()
+    balance$comparatorCohortId <- comparatorCohortId()
+    balance$comparatorCohortName <- comparatorCohortName()
+    balance$databaseId <- input$database
+    balance <- balance[order(balance$covariateName),]
     return(balance)
   })
   
-  getCharCompareTable <- reactive({
+  output$charCompareTable <- renderDataTable({
     balance <- computeBalance()
     if (nrow(balance) == 0) {
       return(NULL)
     }
     
+    table <- balance[, c("covariateName", "targetMean", "targetSD", "comparatorMean", "comparatorSD", "stdDiff")]
+    colnames(table) <- c("Covariate name", "Mean Target", "SD Target", "Mean Comparator", "SD Comparator", "StdDiff")
     columnDefs <- list(
       truncateStringDef(0, 150),
       minCellPercentDef(c(1,3)),
       minCellRealDef(c(2,4), 2)
     )
-    table <- balance
-    table <- table[order(table$covariateName), ]
-    table <- table[, c("covariateName", "mean1", "sd1", "mean2", "sd2", "stdDiff")]
-    colnames(table) <- c("Covariate name", "Mean Target", "SD Target", "Mean Comparator", "SD Comparator", "StdDiff")
-    
     dtSettings <- getDataTableSettings();
     dtSettings$options <- append(dtSettings$options, list(columnDefs = columnDefs))
     table <- datatable(table,
@@ -392,18 +473,14 @@ shinyServer(function(input, output, session) {
     return(table)
   })
   
-  output$charCompareTable <- renderDataTable({
-    return(getCharCompareTable())
-  })
-  
   output$charComparePlot <- renderPlot({
     balance <- computeBalance()
     if (nrow(balance) == 0) {
       return(NULL)
     }
-    balance$mean1[is.na(balance$mean1)] <- 0
-    balance$mean2[is.na(balance$mean2)] <- 0
-    plot <- ggplot2::ggplot(balance, ggplot2::aes(x = mean1, y = mean2, color = absStdDiff)) +
+    balance$targetMean[is.na(balance$targetMean)] <- 0
+    balance$comparatorMean[is.na(balance$comparatorMean)] <- 0
+    plot <- ggplot2::ggplot(balance, ggplot2::aes(x = targetMean, y = comparatorMean, color = absStdDiff)) +
       ggplot2::geom_point(alpha = 0.3, shape = 16, size = 2) +
       ggplot2::geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
       ggplot2::geom_hline(yintercept = 0) +
@@ -416,8 +493,8 @@ shinyServer(function(input, output, session) {
   
   output$hoverInfoCharComparePlot <- renderUI({
     balance <- computeBalance()
-    balance$mean1[is.na(balance$mean1)] <- 0
-    balance$mean2[is.na(balance$mean2)] <- 0
+    balance$targetMean[is.na(balance$targetMean)] <- 0
+    balance$comparatorMean[is.na(balance$comparatorMean)] <- 0
     if (nrow(balance) == 0) {
       return(NULL)
     } else {
@@ -428,8 +505,8 @@ shinyServer(function(input, output, session) {
       }
       text <- paste(point$covariateName, 
                     "",
-                    sprintf("<b>Mean Target: </b> %0.2f", point$mean1),
-                    sprintf("<b>Mean Comparator: </b> %0.2f", point$mean2), 
+                    sprintf("<b>Mean Target: </b> %0.2f", point$targetMean),
+                    sprintf("<b>Mean Comparator: </b> %0.2f", point$comparatorMean), 
                     sprintf("<b>Std diff.: </b> %0.2f", point$stdDiff), 
                     sep = "<br/>")
       left_px <- hover$coords_css$x
@@ -455,6 +532,18 @@ shinyServer(function(input, output, session) {
     }
   }) 
   
+  output$dlCharCompare <- downloadHandler(
+    filename = function() {
+      "characterization_compare.csv"
+    },
+    content = function(file) {
+      table <- computeBalance()
+      table <- table[,c("targetCohortId","targetCohortName","comparatorCohortId","comparatorCohortName","covariateId","covariateName","covariateAnalysisId","windowId","databaseId","targetMean","targetSD","comparatorMean","comparatorSD","stdDiff")]
+      write.csv(table, file, row.names = FALSE, na = "")
+    }
+  )
+
+  # Database Info ------------------
   output$databaseInformationTable <- renderDataTable({
 
     table <- database[, c("databaseId", "databaseName", "description")]
@@ -474,37 +563,6 @@ shinyServer(function(input, output, session) {
     return(table)
   })
   
-  output$dlCohortCounts <- downloadHandler('cohort_counts.csv', content = function(file) {
-    table<-getCohortCountsTable()
-    
-    table<-table$x$data
-    table[,1]<- gsub("&nbsp;","", table[,1])
-    
-    write.csv(as.data.frame(table), file, row.names = FALSE, na = "")
-  })
-
-  output$dlCharacterization <- downloadHandler('characterization.csv', content = function(file) {
-    table<-getCharacterizationTable()
-    
-    table<-table$x$data
-    table[,1]<- gsub("&nbsp;","", table[,1])
-    
-    write.csv(as.data.frame(table), file, row.names = FALSE, na = "")
-  })
-  
-  output$dlCharCompare <- downloadHandler('characterization_compare.csv', content = function(file) {
-    table<-getCharCompareTable()
-    
-    table<-table$x$data
-    table[,1]<- gsub("&nbsp;","", table[,1])
-    
-    write.csv(as.data.frame(table), file, row.names = FALSE, na = "")
-  })
-  
-  getFilteredCovariates <- function() {
-    return(covariate[covariate$windowId %in% windowId() & covariate$covariateAnalysisId %in% covariateAnalysisId(),c("covariateId","covariateName","covariateAnalysisId","windowId")])
-  }
-
   showInfoBox <- function(title, htmlFileName) {
     showModal(modalDialog(
       title = title,
@@ -515,6 +573,7 @@ shinyServer(function(input, output, session) {
     ))
   }
   
+  # Info boxes -------
   observeEvent(input$cohortCountsInfo, {
     showInfoBox("Cohort Counts", "html/cohortCounts.html")
   })
@@ -526,4 +585,17 @@ shinyServer(function(input, output, session) {
   observeEvent(input$compareCohortCharacterizationInfo, {
     showInfoBox("Compare Cohort Characteristics", "html/compareCohortCharacterization.html")
   })
+  
+  observeEvent(input$dlCohortCountsInfo, {
+    showInfoBox("Download", "html/download.html")
+  })
+  
+  observeEvent(input$dlCharacterizationInfo, {
+    showInfoBox("Download", "html/download.html")
+  })
+
+  # Helper functions ------
+  getFilteredCovariates <- function() {
+    return(covariate[covariate$windowId %in% windowId() & covariate$covariateAnalysisId %in% covariateAnalysisId(),c("covariateId","covariateName","covariateAnalysisId","windowId")])
+  }
 })
