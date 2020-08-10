@@ -82,7 +82,57 @@ renderBorderTag <-  function() {
   ))
 }
 
+showTermsOfUseModal <- function() {
+  showModal(
+    modalDialog(
+      title="Terms of Use", 
+      includeMarkdown("md/terms_of_use.md"),
+      footer = tagList(
+        actionButton("termsOfUseReject", "Reject", style="color: white", class="btn-danger"),
+        actionButton("termsOfUseAccept", "Accept", style="color: white", class="btn-success")
+      )
+    )
+  )
+}
+
+TERMS_OF_USE_ACCEPTED <- "accepted"
+
 shinyServer(function(input, output, session) {
+  # Terms Of Use Modal -------------------
+  observe({
+    # Show this modal whenever the user has not accepted the terms of use
+    if (!is.null(input$jscookie)) {
+      if (input$jscookie != TERMS_OF_USE_ACCEPTED) {
+        showTermsOfUseModal()
+      }
+    }
+  })
+  
+  # Used for testing cookie set/removal
+  # observeEvent(input$cookieGetVal, {
+  #   if (!is.null(input$jscookie)) {
+  #     writeLines(input$jscookie)
+  #   } else {
+  #     writeLines("NULL")
+  #   }
+  # })
+  # 
+  # observeEvent(input$cookieRmVal, {
+  #   writeLines("Cookie removed")
+  #   session$sendCustomMessage("rmCookie", "")
+  #   writeLines("----------------")
+  # })
+  
+  observeEvent(input$termsOfUseReject, {
+    session$sendCustomMessage("alert", "You must accept the terms of use to use the application.")
+  })
+  
+  observeEvent(input$termsOfUseAccept, {
+    writeLines("Set cookie")
+    session$sendCustomMessage("setCookie", TERMS_OF_USE_ACCEPTED)
+    removeModal()
+  })
+  
   # Filter Options -----
   cohortIdList <- reactive({
     return(unlist(cohortXref[cohortXref$targetId %in% targetCohortIdList() & cohortXref$strataName %in% input$strataCohortList,c("cohortId")]))
@@ -218,7 +268,6 @@ shinyServer(function(input, output, session) {
     subjectIndex <-  match("cohortSubjects", columnsToInclude)
     data <- getCohortCountsTable()    
     databaseIds <- unique(data$databaseId)
-    browser()
     table <- data[data$databaseId == databaseIds[1], columnsToInclude]
     colnames(table)[subjectIndex] <- paste(colnames(table)[2], databaseIds[1], sep = "_")
     if (length(databaseIds) > 1) {
