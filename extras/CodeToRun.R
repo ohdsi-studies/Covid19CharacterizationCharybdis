@@ -77,11 +77,13 @@ user <- if (Sys.getenv("DB_USER") == "") NULL else Sys.getenv("DB_USER")
 password <- if (Sys.getenv("DB_PASSWORD") == "") NULL else Sys.getenv("DB_PASSWORD")
 server = Sys.getenv("DB_SERVER")
 port = Sys.getenv("DB_PORT")
+extraSettings <- if (Sys.getenv("DB_EXTRA_SETTINGS") == "") NULL else Sys.getenv("DB_EXTRA_SETTINGS")
 connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
                                                                 server = server,
                                                                 user = user,
                                                                 password = password,
-                                                                port = port)
+                                                                port = port,
+                                                                extraSettings = extraSettings)
 
 
 #-----------------------------------------------------------------------------------------------
@@ -139,14 +141,14 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
 oracleTempSchema <- NULL
 
 # Details specific to the database:
-databaseId <- "CDM_Premier_COVID_v1240"
-databaseName <- "CDM_Premier_COVID_v1240"
-databaseDescription <- "CDM_Premier_COVID_v1240"
+databaseId <- "OptumEhr1351"
+databaseName <- "OptumEhr1351"
+databaseDescription <- "OptumEhr1351"
 
 # Details for connecting to the CDM and storing the results
 outputFolder <- file.path("E:/CHARYBDIS/Runs", databaseId)
-cdmDatabaseSchema <- "CDM_Premier_COVID_v1240.dbo"
-cohortDatabaseSchema <- "scratch.dbo"
+cdmDatabaseSchema <- Sys.getenv("CDM_SCHEMA")
+cohortDatabaseSchema <- Sys.getenv("COHORT_SCHEMA")
 cohortTable <- paste0("AS_CHARYBDIS_", databaseId)
 cohortStagingTable <- paste0(cohortTable, "_stg")
 featureSummaryTable <- paste0(cohortTable, "_smry")
