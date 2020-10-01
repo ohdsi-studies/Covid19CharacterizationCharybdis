@@ -94,6 +94,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                                             runIncidenceRate = TRUE,
                                             runCohortOverlap = FALSE,
                                             runCohortCharacterization = FALSE,
+                                            runTemporalCohortCharacterization = FALSE,
                                             minCellCount = minCellCount,
                                             incremental = TRUE,
                                             incrementalFolder = incrementalFolder)
