@@ -75,7 +75,7 @@ If you finish running a study package and upload results to the SFTP, please sen
 - [Java](http://java.com)
 - Suggested: 25 GB of free disk space
 
-See [this video](https://youtu.be/K9_0s2Rchbo) for instructions on how to set up the R environment on Windows.
+See [this video](https://youtu.be/DjVgbBGK4jM) for instructions on how to set up the R environment on Windows.
 
 ## How to Run the Study
 1. In `R`, you will build an `.Renviron` file. An `.Renviron` is an R environment file that sets variables you will be using in your code. It is encouraged to store these inside your environment so that you can protect sensitive information. Below are brief instructions on how to do this:
