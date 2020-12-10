@@ -95,7 +95,7 @@
       "RemoteHost": "api.github.com",
       "RemoteRepo": "OhdsiRTools",
       "RemoteUsername": "ohdsi",
-      "RemoteRef": "v0.2.2",
+      "RemoteRef": "v1.9.0",
       "Hash": "b816683d336d53c38894c62ae5e52c02"
     },
     "OhdsiSharing": {
