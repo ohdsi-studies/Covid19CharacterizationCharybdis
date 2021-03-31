@@ -1,560 +1,560 @@
 {
-	"cdmVersionRange" : ">=5.0.0",
-	"PrimaryCriteria" : {
-		"CriteriaList" : [
+	"cdmVersionRange": ">=5.0.0",
+	"PrimaryCriteria": {
+		"CriteriaList": [
 			{
-				"ProcedureOccurrence" : {
-					"CodesetId" : 5,
-					"ProcedureTypeExclude" : false
+				"ProcedureOccurrence": {
+					"CodesetId": 5,
+					"ProcedureTypeExclude": false
 				}
 			}
 		],
-		"ObservationWindow" : {
-			"PriorDays" : 0,
-			"PostDays" : 0
+		"ObservationWindow": {
+			"PriorDays": 0,
+			"PostDays": 0
 		},
-		"PrimaryCriteriaLimit" : {
-			"Type" : "All"
+		"PrimaryCriteriaLimit": {
+			"Type": "All"
 		}
 	},
-	"AdditionalCriteria" : {
-		"Type" : "ALL",
-		"CriteriaList" : [
+	"AdditionalCriteria": {
+		"Type": "ALL",
+		"CriteriaList": [
 			{
-				"Criteria" : {
-					"VisitOccurrence" : {
-						"CodesetId" : 4,
-						"VisitTypeExclude" : false
+				"Criteria": {
+					"VisitOccurrence": {
+						"CodesetId": 4,
+						"VisitTypeExclude": false
 					}
 				},
-				"StartWindow" : {
-					"Start" : {
-						"Coeff" : -1
+				"StartWindow": {
+					"Start": {
+						"Coeff": -1
 					},
-					"End" : {
-						"Days" : 0,
-						"Coeff" : 1
+					"End": {
+						"Days": 0,
+						"Coeff": 1
 					},
-					"UseIndexEnd" : false,
-					"UseEventEnd" : false
+					"UseIndexEnd": false,
+					"UseEventEnd": false
 				},
-				"EndWindow" : {
-					"Start" : {
-						"Days" : 0,
-						"Coeff" : -1
+				"EndWindow": {
+					"Start": {
+						"Days": 0,
+						"Coeff": -1
 					},
-					"End" : {
-						"Coeff" : 1
+					"End": {
+						"Coeff": 1
 					},
-					"UseIndexEnd" : false,
-					"UseEventEnd" : true
+					"UseIndexEnd": false,
+					"UseEventEnd": true
 				},
-				"RestrictVisit" : false,
-				"IgnoreObservationPeriod" : false,
-				"Occurrence" : {
-					"Type" : 2,
-					"Count" : 1,
-					"IsDistinct" : false
+				"RestrictVisit": false,
+				"IgnoreObservationPeriod": false,
+				"Occurrence": {
+					"Type": 2,
+					"Count": 1,
+					"IsDistinct": false
 				}
 			}
 		],
-		"DemographicCriteriaList" : [],
-		"Groups" : []
+		"DemographicCriteriaList": [],
+		"Groups": []
 	},
-	"ConceptSets" : [
+	"ConceptSets": [
 		{
-			"id" : 4,
-			"name" : "Inpatient Visit",
-			"expression" : {
-				"items" : [
+			"id": 4,
+			"name": "Inpatient Visit",
+			"expression": {
+				"items": [
 					{
-						"concept" : {
-							"CONCEPT_ID" : 262,
-							"CONCEPT_NAME" : "Emergency Room and Inpatient Visit",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "ERIP",
-							"DOMAIN_ID" : "Visit",
-							"VOCABULARY_ID" : "Visit",
-							"CONCEPT_CLASS_ID" : "Visit"
+						"concept": {
+							"CONCEPT_ID": 262,
+							"CONCEPT_NAME": "Emergency Room and Inpatient Visit",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "ERIP",
+							"DOMAIN_ID": "Visit",
+							"VOCABULARY_ID": "Visit",
+							"CONCEPT_CLASS_ID": "Visit"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 9201,
-							"CONCEPT_NAME" : "Inpatient Visit",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "IP",
-							"DOMAIN_ID" : "Visit",
-							"VOCABULARY_ID" : "Visit",
-							"CONCEPT_CLASS_ID" : "Visit"
+						"concept": {
+							"CONCEPT_ID": 9201,
+							"CONCEPT_NAME": "Inpatient Visit",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "IP",
+							"DOMAIN_ID": "Visit",
+							"VOCABULARY_ID": "Visit",
+							"CONCEPT_CLASS_ID": "Visit"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					}
 				]
 			}
 		},
 		{
-			"id" : 5,
-			"name" : "tracheostomy",
-			"expression" : {
-				"items" : [
+			"id": 5,
+			"name": "tracheostomy",
+			"expression": {
+				"items": [
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4166281,
-							"CONCEPT_NAME" : "Anterior tracheostomy",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "274969000",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 4166281,
+							"CONCEPT_NAME": "Anterior tracheostomy",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "274969000",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2106568,
-							"CONCEPT_NAME" : "Construction of tracheoesophageal fistula and subsequent insertion of an alaryngeal speech prosthesis (eg, voice button, Blom-Singer prosthesis)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "31611",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2106568,
+							"CONCEPT_NAME": "Construction of tracheoesophageal fistula and subsequent insertion of an alaryngeal speech prosthesis (eg, voice button, Blom-Singer prosthesis)",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "31611",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4115488,
-							"CONCEPT_NAME" : "Emergency tracheostomy",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "287439000",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 4115488,
+							"CONCEPT_NAME": "Emergency tracheostomy",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "287439000",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4337047,
-							"CONCEPT_NAME" : "Insertion of tracheostomy tube",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "232685002",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 4337047,
+							"CONCEPT_NAME": "Insertion of tracheostomy tube",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "232685002",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4168864,
-							"CONCEPT_NAME" : "Lateral tracheostomy",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "274970004",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 4168864,
+							"CONCEPT_NAME": "Lateral tracheostomy",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "274970004",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4199580,
-							"CONCEPT_NAME" : "Mediastinal tracheostomy",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "52536006",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 4199580,
+							"CONCEPT_NAME": "Mediastinal tracheostomy",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "52536006",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2831237,
-							"CONCEPT_NAME" : "Medical and Surgical @ Respiratory System @ Bypass @ Trachea @ Open @ Tracheostomy Device",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0B110F",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS Hierarchy"
+						"concept": {
+							"CONCEPT_ID": 2831237,
+							"CONCEPT_NAME": "Medical and Surgical @ Respiratory System @ Bypass @ Trachea @ Open @ Tracheostomy Device",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "0B110F",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "ICD10PCS",
+							"CONCEPT_CLASS_ID": "ICD10PCS Hierarchy"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2836115,
-							"CONCEPT_NAME" : "Medical and Surgical @ Respiratory System @ Bypass @ Trachea @ Percutaneous @ Tracheostomy Device",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0B113F",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS Hierarchy"
+						"concept": {
+							"CONCEPT_ID": 2836115,
+							"CONCEPT_NAME": "Medical and Surgical @ Respiratory System @ Bypass @ Trachea @ Percutaneous @ Tracheostomy Device",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "0B113F",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "ICD10PCS",
+							"CONCEPT_CLASS_ID": "ICD10PCS Hierarchy"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2794811,
-							"CONCEPT_NAME" : "Medical and Surgical @ Respiratory System @ Change @ Trachea @ External @ Tracheostomy Device",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0B21XF",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS Hierarchy"
+						"concept": {
+							"CONCEPT_ID": 2794811,
+							"CONCEPT_NAME": "Medical and Surgical @ Respiratory System @ Change @ Trachea @ External @ Tracheostomy Device",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "0B21XF",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "ICD10PCS",
+							"CONCEPT_CLASS_ID": "ICD10PCS Hierarchy"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2862930,
-							"CONCEPT_NAME" : "Medical and Surgical @ Respiratory System @ Revision @ Trachea @ Open @ Tracheostomy Device",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0BW10F",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS Hierarchy"
+						"concept": {
+							"CONCEPT_ID": 2862930,
+							"CONCEPT_NAME": "Medical and Surgical @ Respiratory System @ Revision @ Trachea @ Open @ Tracheostomy Device",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "0BW10F",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "ICD10PCS",
+							"CONCEPT_CLASS_ID": "ICD10PCS Hierarchy"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2870619,
-							"CONCEPT_NAME" : "Medical and Surgical @ Respiratory System @ Revision @ Trachea @ Percutaneous @ Tracheostomy Device",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0BW13F",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS Hierarchy"
+						"concept": {
+							"CONCEPT_ID": 2870619,
+							"CONCEPT_NAME": "Medical and Surgical @ Respiratory System @ Revision @ Trachea @ Percutaneous @ Tracheostomy Device",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "0BW13F",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "ICD10PCS",
+							"CONCEPT_CLASS_ID": "ICD10PCS Hierarchy"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2829384,
-							"CONCEPT_NAME" : "Medical and Surgical @ Respiratory System @ Revision @ Trachea @ Percutaneous Endoscopic @ Tracheostomy Device",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0BW14F",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS Hierarchy"
+						"concept": {
+							"CONCEPT_ID": 2829384,
+							"CONCEPT_NAME": "Medical and Surgical @ Respiratory System @ Revision @ Trachea @ Percutaneous Endoscopic @ Tracheostomy Device",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "0BW14F",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "ICD10PCS",
+							"CONCEPT_CLASS_ID": "ICD10PCS Hierarchy"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2829386,
-							"CONCEPT_NAME" : "Medical and Surgical @ Respiratory System @ Revision @ Trachea @ Via Natural or Artificial Opening @ Tracheostomy Device",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0BW17F",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS Hierarchy"
+						"concept": {
+							"CONCEPT_ID": 2829386,
+							"CONCEPT_NAME": "Medical and Surgical @ Respiratory System @ Revision @ Trachea @ Via Natural or Artificial Opening @ Tracheostomy Device",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "0BW17F",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "ICD10PCS",
+							"CONCEPT_CLASS_ID": "ICD10PCS Hierarchy"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4065590,
-							"CONCEPT_NAME" : "Permanent tracheostomy",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "21619009",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 4065590,
+							"CONCEPT_NAME": "Permanent tracheostomy",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "21619009",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2743216,
-							"CONCEPT_NAME" : "Removal of Tracheostomy Device from Trachea, Via Natural or Artificial Opening",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "0BP17FZ",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS"
+						"concept": {
+							"CONCEPT_ID": 2743216,
+							"CONCEPT_NAME": "Removal of Tracheostomy Device from Trachea, Via Natural or Artificial Opening",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "0BP17FZ",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "ICD10PCS",
+							"CONCEPT_CLASS_ID": "ICD10PCS"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4311023,
-							"CONCEPT_NAME" : "Revision of stoma of trachea",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "392168001",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 4311023,
+							"CONCEPT_NAME": "Revision of stoma of trachea",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "392168001",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4195473,
-							"CONCEPT_NAME" : "Temporary tracheostomy",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "43988005",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 4195473,
+							"CONCEPT_NAME": "Temporary tracheostomy",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "43988005",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2106569,
-							"CONCEPT_NAME" : "Tracheal puncture, percutaneous with transtracheal aspiration and/or injection",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "31612",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2106569,
+							"CONCEPT_NAME": "Tracheal puncture, percutaneous with transtracheal aspiration and/or injection",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "31612",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4208093,
-							"CONCEPT_NAME" : "Tracheostomy, emergency procedure by transtracheal approach",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "55622001",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 4208093,
+							"CONCEPT_NAME": "Tracheostomy, emergency procedure by transtracheal approach",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "55622001",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2106565,
-							"CONCEPT_NAME" : "Tracheostomy, emergency procedure; cricothyroid membrane",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "31605",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2106565,
+							"CONCEPT_NAME": "Tracheostomy, emergency procedure; cricothyroid membrane",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "31605",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2106567,
-							"CONCEPT_NAME" : "Tracheostomy, fenestration procedure with skin flaps",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "31610",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2106567,
+							"CONCEPT_NAME": "Tracheostomy, fenestration procedure with skin flaps",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "31610",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2106562,
-							"CONCEPT_NAME" : "Tracheostomy, planned (separate procedure)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "31600",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2106562,
+							"CONCEPT_NAME": "Tracheostomy, planned (separate procedure)",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "31600",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2106563,
-							"CONCEPT_NAME" : "Tracheostomy, planned (separate procedure); younger than 2 years",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "31601",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2106563,
+							"CONCEPT_NAME": "Tracheostomy, planned (separate procedure); younger than 2 years",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "31601",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4.588799e+07,
-							"CONCEPT_NAME" : "Transoral approach to skull base, brain stem or upper spinal cord for biopsy, decompression or excision of lesion",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1014232",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4 Hierarchy"
+						"concept": {
+							"CONCEPT_ID": 45887989,
+							"CONCEPT_NAME": "Transoral approach to skull base, brain stem or upper spinal cord for biopsy, decompression or excision of lesion",
+							"STANDARD_CONCEPT": "C",
+							"STANDARD_CONCEPT_CAPTION": "Classification",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "1014232",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4 Hierarchy"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2110486,
-							"CONCEPT_NAME" : "Transoral approach to skull base, brain stem or upper spinal cord for biopsy, decompression or excision of lesion; requiring splitting of tongue and/or mandible (including tracheostomy)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "61576",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2110486,
+							"CONCEPT_NAME": "Transoral approach to skull base, brain stem or upper spinal cord for biopsy, decompression or excision of lesion; requiring splitting of tongue and/or mandible (including tracheostomy)",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "61576",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": true,
+						"includeDescendants": true,
+						"includeMapped": false
 					}
 				]
 			}
 		}
 	],
-	"QualifiedLimit" : {
-		"Type" : "All"
+	"QualifiedLimit": {
+		"Type": "All"
 	},
-	"ExpressionLimit" : {
-		"Type" : "All"
+	"ExpressionLimit": {
+		"Type": "All"
 	},
-	"InclusionRules" : [],
-	"EndStrategy" : {
-		"DateOffset" : {
-			"DateField" : "StartDate",
-			"Offset" : 1
+	"InclusionRules": [],
+	"EndStrategy": {
+		"DateOffset": {
+			"DateField": "StartDate",
+			"Offset": 1
 		}
 	},
-	"CensoringCriteria" : [],
-	"CollapseSettings" : {
-		"CollapseType" : "ERA",
-		"EraPad" : 30
+	"CensoringCriteria": [],
+	"CollapseSettings": {
+		"CollapseType": "ERA",
+		"EraPad": 30
 	},
-	"CensorWindow" : {}
+	"CensorWindow": {}
 }

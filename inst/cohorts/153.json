@@ -1,211 +1,203 @@
 {
-	"cdmVersionRange" : ">=5.0.0",
-	"PrimaryCriteria" : {
-		"CriteriaList" : [
+	"cdmVersionRange": ">=5.0.0",
+	"PrimaryCriteria": {
+		"CriteriaList": [
 			{
-				"ConditionOccurrence" : {
-					"CodesetId" : 3,
-					"ConditionTypeExclude" : false
+				"ConditionOccurrence": {
+					"CodesetId": 3,
+					"ConditionTypeExclude": false
 				}
 			}
 		],
-		"ObservationWindow" : {
-			"PriorDays" : 0,
-			"PostDays" : 0
+		"ObservationWindow": {
+			"PriorDays": 0,
+			"PostDays": 0
 		},
-		"PrimaryCriteriaLimit" : {
-			"Type" : "All"
+		"PrimaryCriteriaLimit": {
+			"Type": "All"
 		}
 	},
-	"AdditionalCriteria" : {
-		"Type" : "ALL",
-		"CriteriaList" : [
+	"AdditionalCriteria": {
+		"Type": "ALL",
+		"CriteriaList": [
 			{
-				"Criteria" : {
-					"VisitOccurrence" : {
-						"CodesetId" : 4,
-						"VisitTypeExclude" : false
+				"Criteria": {
+					"VisitOccurrence": {
+						"CodesetId": 4,
+						"VisitTypeExclude": false
 					}
 				},
-				"StartWindow" : {
-					"Start" : {
-						"Coeff" : -1
+				"StartWindow": {
+					"Start": {
+						"Coeff": -1
 					},
-					"End" : {
-						"Days" : 0,
-						"Coeff" : 1
+					"End": {
+						"Days": 0,
+						"Coeff": 1
 					},
-					"UseIndexEnd" : false,
-					"UseEventEnd" : false
+					"UseIndexEnd": false,
+					"UseEventEnd": false
 				},
-				"EndWindow" : {
-					"Start" : {
-						"Days" : 0,
-						"Coeff" : -1
+				"EndWindow": {
+					"Start": {
+						"Days": 0,
+						"Coeff": -1
 					},
-					"End" : {
-						"Coeff" : 1
+					"End": {
+						"Coeff": 1
 					},
-					"UseIndexEnd" : false,
-					"UseEventEnd" : true
+					"UseIndexEnd": false,
+					"UseEventEnd": true
 				},
-				"RestrictVisit" : false,
-				"IgnoreObservationPeriod" : false,
-				"Occurrence" : {
-					"Type" : 2,
-					"Count" : 1,
-					"IsDistinct" : false
+				"RestrictVisit": false,
+				"IgnoreObservationPeriod": false,
+				"Occurrence": {
+					"Type": 2,
+					"Count": 1,
+					"IsDistinct": false
 				}
 			}
 		],
-		"DemographicCriteriaList" : [
-			{
-				"OccurrenceStartDate" : {
-					"Value" : "2016-09-01",
-					"Op" : "bt",
-					"Extent" : "2020-12-31"
-				}
-			}
-		],
-		"Groups" : []
+		"DemographicCriteriaList": [],
+		"Groups": []
 	},
-	"ConceptSets" : [
+	"ConceptSets": [
 		{
-			"id" : 3,
-			"name" : "Acute respiratory distress syndrome (ARDS) or Acute Respiratory Failure",
-			"expression" : {
-				"items" : [
+			"id": 3,
+			"name": "Acute respiratory distress syndrome (ARDS) or Acute Respiratory Failure",
+			"expression": {
+				"items": [
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4191650,
-							"CONCEPT_NAME" : "Acute respiratory distress",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "373895009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4191650,
+							"CONCEPT_NAME": "Acute respiratory distress",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "373895009",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": true,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4195694,
-							"CONCEPT_NAME" : "Acute respiratory distress syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "67782005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4195694,
+							"CONCEPT_NAME": "Acute respiratory distress syndrome",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "67782005",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 319049,
-							"CONCEPT_NAME" : "Acute respiratory failure",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "65710008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 319049,
+							"CONCEPT_NAME": "Acute respiratory failure",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "65710008",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 258866,
-							"CONCEPT_NAME" : "Respiratory distress syndrome in the newborn",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "46775006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 258866,
+							"CONCEPT_NAME": "Respiratory distress syndrome in the newborn",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "46775006",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": true,
+						"includeDescendants": true,
+						"includeMapped": false
 					}
 				]
 			}
 		},
 		{
-			"id" : 4,
-			"name" : "Inpatient Visit",
-			"expression" : {
-				"items" : [
+			"id": 4,
+			"name": "Inpatient Visit",
+			"expression": {
+				"items": [
 					{
-						"concept" : {
-							"CONCEPT_ID" : 262,
-							"CONCEPT_NAME" : "Emergency Room and Inpatient Visit",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "ERIP",
-							"DOMAIN_ID" : "Visit",
-							"VOCABULARY_ID" : "Visit",
-							"CONCEPT_CLASS_ID" : "Visit"
+						"concept": {
+							"CONCEPT_ID": 262,
+							"CONCEPT_NAME": "Emergency Room and Inpatient Visit",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "ERIP",
+							"DOMAIN_ID": "Visit",
+							"VOCABULARY_ID": "Visit",
+							"CONCEPT_CLASS_ID": "Visit"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 9201,
-							"CONCEPT_NAME" : "Inpatient Visit",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "IP",
-							"DOMAIN_ID" : "Visit",
-							"VOCABULARY_ID" : "Visit",
-							"CONCEPT_CLASS_ID" : "Visit"
+						"concept": {
+							"CONCEPT_ID": 9201,
+							"CONCEPT_NAME": "Inpatient Visit",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "IP",
+							"DOMAIN_ID": "Visit",
+							"VOCABULARY_ID": "Visit",
+							"CONCEPT_CLASS_ID": "Visit"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					}
 				]
 			}
 		}
 	],
-	"QualifiedLimit" : {
-		"Type" : "All"
+	"QualifiedLimit": {
+		"Type": "All"
 	},
-	"ExpressionLimit" : {
-		"Type" : "All"
+	"ExpressionLimit": {
+		"Type": "All"
 	},
-	"InclusionRules" : [],
-	"EndStrategy" : {
-		"DateOffset" : {
-			"DateField" : "EndDate",
-			"Offset" : 1
+	"InclusionRules": [],
+	"EndStrategy": {
+		"DateOffset": {
+			"DateField": "EndDate",
+			"Offset": 1
 		}
 	},
-	"CensoringCriteria" : [],
-	"CollapseSettings" : {
-		"CollapseType" : "ERA",
-		"EraPad" : 30
+	"CensoringCriteria": [],
+	"CollapseSettings": {
+		"CollapseType": "ERA",
+		"EraPad": 30
 	},
-	"CensorWindow" : {}
+	"CensorWindow": {}
 }

@@ -1,135 +1,135 @@
 {
-	"cdmVersionRange" : ">=5.0.0",
-	"PrimaryCriteria" : {
-		"CriteriaList" : [
+	"cdmVersionRange": ">=5.0.0",
+	"PrimaryCriteria": {
+		"CriteriaList": [
 			{
-				"Measurement" : {
-					"CodesetId" : 2,
-					"OccurrenceStartDate" : {
-						"Value" : "2019-12-01",
-						"Op" : "gt"
+				"Measurement": {
+					"CodesetId": 2,
+					"OccurrenceStartDate": {
+						"Value": "2019-12-01",
+						"Op": "gt"
 					},
-					"MeasurementTypeExclude" : false
+					"MeasurementTypeExclude": false
 				}
 			},
 			{
-				"Observation" : {
-					"CodesetId" : 2,
-					"OccurrenceStartDate" : {
-						"Value" : "2019-12-01",
-						"Op" : "gt"
+				"Observation": {
+					"CodesetId": 2,
+					"OccurrenceStartDate": {
+						"Value": "2019-12-01",
+						"Op": "gt"
 					},
-					"ObservationTypeExclude" : false
+					"ObservationTypeExclude": false
 				}
 			},
 			{
-				"ProcedureOccurrence" : {
-					"CodesetId" : 2,
-					"OccurrenceStartDate" : {
-						"Value" : "2019-12-01",
-						"Op" : "gt"
+				"ProcedureOccurrence": {
+					"CodesetId": 2,
+					"OccurrenceStartDate": {
+						"Value": "2019-12-01",
+						"Op": "gt"
 					},
-					"ProcedureTypeExclude" : false
+					"ProcedureTypeExclude": false
 				}
 			}
 		],
-		"ObservationWindow" : {
-			"PriorDays" : 0,
-			"PostDays" : 0
+		"ObservationWindow": {
+			"PriorDays": 0,
+			"PostDays": 0
 		},
-		"PrimaryCriteriaLimit" : {
-			"Type" : "First"
+		"PrimaryCriteriaLimit": {
+			"Type": "First"
 		}
 	},
-	"ConceptSets" : [
+	"ConceptSets": [
 		{
-			"id" : 2,
-			"name" : "SARS-Cov-2 testing",
-			"expression" : {
-				"items" : [
+			"id": 2,
+			"name": "SARS-Cov-2 testing",
+			"expression": {
+				"items": [
 					{
-						"concept" : {
-							"CONCEPT_ID" : 756055,
-							"CONCEPT_NAME" : "Measurement of severe acute respiratory syndrome coronavirus 2",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "OMOP4873969",
-							"DOMAIN_ID" : "Measurement",
-							"VOCABULARY_ID" : "OMOP Extension",
-							"CONCEPT_CLASS_ID" : "Procedure"
+						"concept": {
+							"CONCEPT_ID": 756055,
+							"CONCEPT_NAME": "Measurement of severe acute respiratory syndrome coronavirus 2",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "OMOP4873969",
+							"DOMAIN_ID": "Measurement",
+							"VOCABULARY_ID": "OMOP Extension",
+							"CONCEPT_CLASS_ID": "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					}
 				]
 			}
 		}
 	],
-	"QualifiedLimit" : {
-		"Type" : "All"
+	"QualifiedLimit": {
+		"Type": "All"
 	},
-	"ExpressionLimit" : {
-		"Type" : "First"
+	"ExpressionLimit": {
+		"Type": "First"
 	},
-	"InclusionRules" : [
+	"InclusionRules": [
 		{
-			"name" : "has >=365d of prior observation",
-			"expression" : {
-				"Type" : "ALL",
-				"CriteriaList" : [
+			"name": "has >=365d of prior observation",
+			"expression": {
+				"Type": "ALL",
+				"CriteriaList": [
 					{
-						"Criteria" : {
-							"ObservationPeriod" : {}
+						"Criteria": {
+							"ObservationPeriod": {}
 						},
-						"StartWindow" : {
-							"Start" : {
-								"Coeff" : -1
+						"StartWindow": {
+							"Start": {
+								"Coeff": -1
 							},
-							"End" : {
-								"Days" : 365,
-								"Coeff" : -1
+							"End": {
+								"Days": 365,
+								"Coeff": -1
 							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
+							"UseIndexEnd": false,
+							"UseEventEnd": false
 						},
-						"EndWindow" : {
-							"Start" : {
-								"Days" : 0,
-								"Coeff" : 1
+						"EndWindow": {
+							"Start": {
+								"Days": 0,
+								"Coeff": 1
 							},
-							"End" : {
-								"Coeff" : 1
+							"End": {
+								"Coeff": 1
 							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : true
+							"UseIndexEnd": false,
+							"UseEventEnd": true
 						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 2,
-							"Count" : 1,
-							"IsDistinct" : false
+						"RestrictVisit": false,
+						"IgnoreObservationPeriod": false,
+						"Occurrence": {
+							"Type": 2,
+							"Count": 1,
+							"IsDistinct": false
 						}
 					}
 				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
+				"DemographicCriteriaList": [],
+				"Groups": []
 			}
 		}
 	],
-	"EndStrategy" : {
-		"DateOffset" : {
-			"DateField" : "StartDate",
-			"Offset" : 1
+	"EndStrategy": {
+		"DateOffset": {
+			"DateField": "StartDate",
+			"Offset": 1
 		}
 	},
-	"CensoringCriteria" : [],
-	"CollapseSettings" : {
-		"CollapseType" : "ERA",
-		"EraPad" : 90
+	"CensoringCriteria": [],
+	"CollapseSettings": {
+		"CollapseType": "ERA",
+		"EraPad": 90
 	},
-	"CensorWindow" : {}
+	"CensorWindow": {}
 }

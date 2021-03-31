@@ -1,717 +1,717 @@
 {
-	"cdmVersionRange" : ">=5.0.0",
-	"PrimaryCriteria" : {
-		"CriteriaList" : [
+	"cdmVersionRange": ">=5.0.0",
+	"PrimaryCriteria": {
+		"CriteriaList": [
 			{
-				"ConditionOccurrence" : {
-					"CodesetId" : 0,
-					"ConditionTypeExclude" : false,
-					"Gender" : [
+				"ConditionOccurrence": {
+					"CodesetId": 0,
+					"ConditionTypeExclude": false,
+					"Gender": [
 						{
-							"CONCEPT_ID" : 8532,
-							"CONCEPT_NAME" : "FEMALE",
-							"STANDARD_CONCEPT" : null,
-							"STANDARD_CONCEPT_CAPTION" : "Unknown",
-							"INVALID_REASON" : null,
-							"INVALID_REASON_CAPTION" : "Unknown",
-							"CONCEPT_CODE" : "F",
-							"DOMAIN_ID" : "Gender",
-							"VOCABULARY_ID" : "Gender",
-							"CONCEPT_CLASS_ID" : null
+							"CONCEPT_ID": 8532,
+							"CONCEPT_NAME": "FEMALE",
+							"STANDARD_CONCEPT": null,
+							"STANDARD_CONCEPT_CAPTION": "Unknown",
+							"INVALID_REASON": null,
+							"INVALID_REASON_CAPTION": "Unknown",
+							"CONCEPT_CODE": "F",
+							"DOMAIN_ID": "Gender",
+							"VOCABULARY_ID": "Gender",
+							"CONCEPT_CLASS_ID": null
 						}
 					]
 				}
 			},
 			{
-				"Observation" : {
-					"CodesetId" : 0,
-					"ObservationTypeExclude" : false,
-					"Gender" : [
+				"Observation": {
+					"CodesetId": 0,
+					"ObservationTypeExclude": false,
+					"Gender": [
 						{
-							"CONCEPT_ID" : 8532,
-							"CONCEPT_NAME" : "FEMALE",
-							"STANDARD_CONCEPT" : null,
-							"STANDARD_CONCEPT_CAPTION" : "Unknown",
-							"INVALID_REASON" : null,
-							"INVALID_REASON_CAPTION" : "Unknown",
-							"CONCEPT_CODE" : "F",
-							"DOMAIN_ID" : "Gender",
-							"VOCABULARY_ID" : "Gender",
-							"CONCEPT_CLASS_ID" : null
+							"CONCEPT_ID": 8532,
+							"CONCEPT_NAME": "FEMALE",
+							"STANDARD_CONCEPT": null,
+							"STANDARD_CONCEPT_CAPTION": "Unknown",
+							"INVALID_REASON": null,
+							"INVALID_REASON_CAPTION": "Unknown",
+							"CONCEPT_CODE": "F",
+							"DOMAIN_ID": "Gender",
+							"VOCABULARY_ID": "Gender",
+							"CONCEPT_CLASS_ID": null
 						}
 					]
 				}
 			}
 		],
-		"ObservationWindow" : {
-			"PriorDays" : 0,
-			"PostDays" : 0
+		"ObservationWindow": {
+			"PriorDays": 0,
+			"PostDays": 0
 		},
-		"PrimaryCriteriaLimit" : {
-			"Type" : "All"
+		"PrimaryCriteriaLimit": {
+			"Type": "All"
 		}
 	},
-	"ConceptSets" : [
+	"ConceptSets": [
 		{
-			"id" : 0,
-			"name" : "Livebirth",
-			"expression" : {
-				"items" : [
+			"id": 0,
+			"name": "Livebirth",
+			"expression": {
+				"items": [
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4092289,
-							"CONCEPT_NAME" : "Livebirth",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "281050002",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4092289,
+							"CONCEPT_NAME": "Livebirth",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "281050002",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4163851,
-							"CONCEPT_NAME" : "Multiple birth",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "45384004",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4163851,
+							"CONCEPT_NAME": "Multiple birth",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "45384004",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4015162,
-							"CONCEPT_NAME" : "Twins - both stillborn",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "169830007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4015162,
+							"CONCEPT_NAME": "Twins - both stillborn",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "169830007",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": true,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4.04831e+07,
-							"CONCEPT_NAME" : "Twin liveborn born in hospital by cesarean section",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "442342003",
-							"DOMAIN_ID" : "Observation",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Context-dependent"
+						"concept": {
+							"CONCEPT_ID": 40483101,
+							"CONCEPT_NAME": "Twin liveborn born in hospital by cesarean section",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "442342003",
+							"DOMAIN_ID": "Observation",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Context-dependent"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4.048274e+07,
-							"CONCEPT_NAME" : "Liveborn born in hospital",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "442311008",
-							"DOMAIN_ID" : "Observation",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Context-dependent"
+						"concept": {
+							"CONCEPT_ID": 40482735,
+							"CONCEPT_NAME": "Liveborn born in hospital",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "442311008",
+							"DOMAIN_ID": "Observation",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Context-dependent"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					}
 				]
 			}
 		},
 		{
-			"id" : 1,
-			"name" : "Preterm delivery",
-			"expression" : {
-				"items" : [
+			"id": 1,
+			"name": "Preterm delivery",
+			"expression": {
+				"items": [
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4014461,
-							"CONCEPT_NAME" : "Baby birth weight equal to 50%-74%",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "169864006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4014461,
+							"CONCEPT_NAME": "Baby birth weight equal to 50%-74%",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "169864006",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4151169,
-							"CONCEPT_NAME" : "Baby birth weight less than 751gm",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "310491007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4151169,
+							"CONCEPT_NAME": "Baby birth weight less than 751gm",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "310491007",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4149449,
-							"CONCEPT_NAME" : "Baby premature 24-26 weeks",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "310523002",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4149449,
+							"CONCEPT_NAME": "Baby premature 24-26 weeks",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "310523002",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4149457,
-							"CONCEPT_NAME" : "Baby premature 26-28 weeks",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "310548004",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4149457,
+							"CONCEPT_NAME": "Baby premature 26-28 weeks",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "310548004",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4014299,
-							"CONCEPT_NAME" : "Baby premature 36-38 weeks",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "169849006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4014299,
+							"CONCEPT_NAME": "Baby premature 36-38 weeks",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "169849006",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4149451,
-							"CONCEPT_NAME" : "Baby premature 36 weeks",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "310530008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4149451,
+							"CONCEPT_NAME": "Baby premature 36 weeks",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "310530008",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4150406,
-							"CONCEPT_NAME" : "Baby premature 37 weeks",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "310529003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4150406,
+							"CONCEPT_NAME": "Baby premature 37 weeks",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "310529003",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4150405,
-							"CONCEPT_NAME" : "Baby premature 38 weeks",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "310528006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4150405,
+							"CONCEPT_NAME": "Baby premature 38 weeks",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "310528006",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4150404,
-							"CONCEPT_NAME" : "Baby premature 39 weeks",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "310527001",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4150404,
+							"CONCEPT_NAME": "Baby premature 39 weeks",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "310527001",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4195545,
-							"CONCEPT_NAME" : "Disorder relating to short gestation AND/OR low birthweight",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "67645006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4195545,
+							"CONCEPT_NAME": "Disorder relating to short gestation AND/OR low birthweight",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "67645006",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4148097,
-							"CONCEPT_NAME" : "Fetal or neonatal effect of abruptio placentae",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "268803008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4148097,
+							"CONCEPT_NAME": "Fetal or neonatal effect of abruptio placentae",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "268803008",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4118056,
-							"CONCEPT_NAME" : "Fetal or neonatal effect of maternal premature rupture of membrane",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "206037001",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4118056,
+							"CONCEPT_NAME": "Fetal or neonatal effect of maternal premature rupture of membrane",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "206037001",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 72726,
-							"CONCEPT_NAME" : "Light-for-dates with signs of fetal malnutrition",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "64177003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 72726,
+							"CONCEPT_NAME": "Light-for-dates with signs of fetal malnutrition",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "64177003",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4171115,
-							"CONCEPT_NAME" : "Low birth weight infant",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "276610007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4171115,
+							"CONCEPT_NAME": "Low birth weight infant",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "276610007",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 440847,
-							"CONCEPT_NAME" : "Neonatal jaundice associated with preterm delivery",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "73749009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 440847,
+							"CONCEPT_NAME": "Neonatal jaundice associated with preterm delivery",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "73749009",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4086393,
-							"CONCEPT_NAME" : "Premature delivery",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "282020008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4086393,
+							"CONCEPT_NAME": "Premature delivery",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "282020008",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4147874,
-							"CONCEPT_NAME" : "Premature infant 28-37 weeks",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "310661005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4147874,
+							"CONCEPT_NAME": "Premature infant 28-37 weeks",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "310661005",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4175637,
-							"CONCEPT_NAME" : "Premature pregnancy delivered",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "49550006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4175637,
+							"CONCEPT_NAME": "Premature pregnancy delivered",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "49550006",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4064709,
-							"CONCEPT_NAME" : "Premature rupture of membranes, labor delayed by therapy",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "199661007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4064709,
+							"CONCEPT_NAME": "Premature rupture of membranes, labor delayed by therapy",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "199661007",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4058403,
-							"CONCEPT_NAME" : "Premature separation of placenta with coagulation defect",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "198912003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 4058403,
+							"CONCEPT_NAME": "Premature separation of placenta with coagulation defect",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "198912003",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4.575718e+07,
-							"CONCEPT_NAME" : "Preterm labor in second trimester with preterm delivery in second trimester",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "10761141000119107",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 45757175,
+							"CONCEPT_NAME": "Preterm labor in second trimester with preterm delivery in second trimester",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "10761141000119107",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4.575718e+07,
-							"CONCEPT_NAME" : "Preterm labor in third trimester with preterm delivery in third trimester",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "10761191000119104",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 45757176,
+							"CONCEPT_NAME": "Preterm labor in third trimester with preterm delivery in third trimester",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "10761191000119104",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 3.67127e+07,
-							"CONCEPT_NAME" : "Preterm labor with preterm delivery",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "10761241000119104",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 36712702,
+							"CONCEPT_NAME": "Preterm labor with preterm delivery",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "10761241000119104",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 136530,
-							"CONCEPT_NAME" : "Sclerema neonatorum",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "206539008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						"concept": {
+							"CONCEPT_ID": 136530,
+							"CONCEPT_NAME": "Sclerema neonatorum",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "206539008",
+							"DOMAIN_ID": "Condition",
+							"VOCABULARY_ID": "SNOMED",
+							"CONCEPT_CLASS_ID": "Clinical Finding"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2514572,
-							"CONCEPT_NAME" : "Subsequent intensive care, per day, for the evaluation and management of the recovering infant (present body weight of 2501-5000 grams)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "99480",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2514572,
+							"CONCEPT_NAME": "Subsequent intensive care, per day, for the evaluation and management of the recovering infant (present body weight of 2501-5000 grams)",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "99480",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 4.27404e+07,
-							"CONCEPT_NAME" : "Subsequent intensive care, per day, for the evaluation and management of the recovering low birth weight infant (present body weight of 1500-2500 grams) Infants with present body weight of 1500-2500 grams who are no longer critically ill continue to requ",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "99299",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 42740403,
+							"CONCEPT_NAME": "Subsequent intensive care, per day, for the evaluation and management of the recovering low birth weight infant (present body weight of 1500-2500 grams) Infants with present body weight of 1500-2500 grams who are no longer critically ill continue to requ",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "99299",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2514571,
-							"CONCEPT_NAME" : "Subsequent intensive care, per day, for the evaluation and management of the recovering low birth weight infant (present body weight of 1500-2500 grams)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "99479",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2514571,
+							"CONCEPT_NAME": "Subsequent intensive care, per day, for the evaluation and management of the recovering low birth weight infant (present body weight of 1500-2500 grams)",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "99479",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					},
 					{
-						"concept" : {
-							"CONCEPT_ID" : 2514570,
-							"CONCEPT_NAME" : "Subsequent intensive care, per day, for the evaluation and management of the recovering very low birth weight infant (present body weight less than 1500 grams)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "99478",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
+						"concept": {
+							"CONCEPT_ID": 2514570,
+							"CONCEPT_NAME": "Subsequent intensive care, per day, for the evaluation and management of the recovering very low birth weight infant (present body weight less than 1500 grams)",
+							"STANDARD_CONCEPT": "S",
+							"STANDARD_CONCEPT_CAPTION": "Standard",
+							"INVALID_REASON": "V",
+							"INVALID_REASON_CAPTION": "Valid",
+							"CONCEPT_CODE": "99478",
+							"DOMAIN_ID": "Procedure",
+							"VOCABULARY_ID": "CPT4",
+							"CONCEPT_CLASS_ID": "CPT4"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
+						"isExcluded": false,
+						"includeDescendants": true,
+						"includeMapped": false
 					}
 				]
 			}
 		}
 	],
-	"QualifiedLimit" : {
-		"Type" : "First"
+	"QualifiedLimit": {
+		"Type": "First"
 	},
-	"ExpressionLimit" : {
-		"Type" : "All"
+	"ExpressionLimit": {
+		"Type": "All"
 	},
-	"InclusionRules" : [
+	"InclusionRules": [
 		{
-			"name" : "Preterm delivery",
-			"expression" : {
-				"Type" : "ANY",
-				"CriteriaList" : [
+			"name": "Preterm delivery",
+			"expression": {
+				"Type": "ANY",
+				"CriteriaList": [
 					{
-						"Criteria" : {
-							"ConditionOccurrence" : {
-								"CodesetId" : 1,
-								"ConditionTypeExclude" : false
+						"Criteria": {
+							"ConditionOccurrence": {
+								"CodesetId": 1,
+								"ConditionTypeExclude": false
 							}
 						},
-						"StartWindow" : {
-							"Start" : {
-								"Days" : 0,
-								"Coeff" : -1
+						"StartWindow": {
+							"Start": {
+								"Days": 0,
+								"Coeff": -1
 							},
-							"End" : {
-								"Days" : 0,
-								"Coeff" : 1
+							"End": {
+								"Days": 0,
+								"Coeff": 1
 							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
+							"UseIndexEnd": false,
+							"UseEventEnd": false
 						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 2,
-							"Count" : 1,
-							"IsDistinct" : false
+						"RestrictVisit": false,
+						"IgnoreObservationPeriod": false,
+						"Occurrence": {
+							"Type": 2,
+							"Count": 1,
+							"IsDistinct": false
 						}
 					},
 					{
-						"Criteria" : {
-							"ProcedureOccurrence" : {
-								"CodesetId" : 1,
-								"ProcedureTypeExclude" : false
+						"Criteria": {
+							"ProcedureOccurrence": {
+								"CodesetId": 1,
+								"ProcedureTypeExclude": false
 							}
 						},
-						"StartWindow" : {
-							"Start" : {
-								"Days" : 0,
-								"Coeff" : -1
+						"StartWindow": {
+							"Start": {
+								"Days": 0,
+								"Coeff": -1
 							},
-							"End" : {
-								"Days" : 0,
-								"Coeff" : 1
+							"End": {
+								"Days": 0,
+								"Coeff": 1
 							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
+							"UseIndexEnd": false,
+							"UseEventEnd": false
 						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 2,
-							"Count" : 1,
-							"IsDistinct" : false
+						"RestrictVisit": false,
+						"IgnoreObservationPeriod": false,
+						"Occurrence": {
+							"Type": 2,
+							"Count": 1,
+							"IsDistinct": false
 						}
 					}
 				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
+				"DemographicCriteriaList": [],
+				"Groups": []
 			}
 		}
 	],
-	"EndStrategy" : {
-		"DateOffset" : {
-			"DateField" : "EndDate",
-			"Offset" : 1
+	"EndStrategy": {
+		"DateOffset": {
+			"DateField": "EndDate",
+			"Offset": 1
 		}
 	},
-	"CensoringCriteria" : [],
-	"CollapseSettings" : {
-		"CollapseType" : "ERA",
-		"EraPad" : 90
+	"CensoringCriteria": [],
+	"CollapseSettings": {
+		"CollapseType": "ERA",
+		"EraPad": 90
 	},
-	"CensorWindow" : {}
+	"CensorWindow": {}
 }
