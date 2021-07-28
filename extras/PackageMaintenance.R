@@ -256,3 +256,8 @@ readr::write_csv(targetStrataXRef, file.path(settingsPath, "targetStrataXref.csv
 
 # Store environment in which the study was executed -----------------------
 OhdsiRTools::insertEnvironmentSnapshotInPackage("Covid19CharacterizationCharybdis")
+
+packageFiles <- list.files(path=".", recursive = TRUE)
+if (!all(utf8::utf8_valid(packageFiles))) {
+  print("Found invalid UTF-8 encoded files")
+}
